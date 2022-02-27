@@ -1,0 +1,2 @@
+include src/bengali_analyzer/assets/*.csv
+include src/bengali_analyzer/assets/*.txt
