@@ -175,7 +175,7 @@ class BengaliAnalyzer:
                     "Form": None,
                     "Related_Indices": [],
                 },
-            "Non_Verb": None,
+            "PoS": None,
             "Composite_Word":
                 {
                     "Suffix": None,
@@ -190,10 +190,12 @@ class BengaliAnalyzer:
         }
         tokens = {}
         punctuation_flags = []
-        punctuations = {" ", ".", ",", ";", ":", "!", "?", "\"", "'", "`", "~", "^", "*", "(", ")", "[", "]", "{", "}",
+
+        punctuations = {" ", ".", ",", ";", ":", "!", "?", '"', "'", "`", "~", "^", "*", "(", ")", "[", "]", "{", "}",
                         "।"}
 
         string_buffer = ""
+
         end_index = 0
         start_index = 0
         for index in range(len(sentence)):
@@ -203,13 +205,15 @@ class BengaliAnalyzer:
                 if index == len(sentence) - 1:
                     if string_buffer != "":
                         global_index = (start_index, end_index)
-                        tokens[string_buffer] = copy.deepcopy(token)
+                        if string_buffer not in tokens.keys():
+                            tokens[string_buffer] = copy.deepcopy(token)
                         tokens[string_buffer]["Punctuation_Flag"] = False
                         tokens[string_buffer]["Global_Index"].append(global_index)
             else:
                 if string_buffer != "":
                     global_index = (start_index, end_index)
-                    tokens[string_buffer] = copy.deepcopy(token)
+                    if string_buffer not in tokens.keys():
+                        tokens[string_buffer] = copy.deepcopy(token)
                     tokens[string_buffer]["Punctuation_Flag"] = False
                     tokens[string_buffer]["Global_Index"].append(global_index)
                     string_buffer = ""
@@ -217,6 +221,7 @@ class BengaliAnalyzer:
                 punctuation_flags.append(index)
                 start_index = index + 1
                 punctuation = sentence[index]
+
                 if punctuation not in tokens.keys():
                     tokens[punctuation] = copy.deepcopy(token)
                 tokens[punctuation]["Punctuation_Flag"] = True
