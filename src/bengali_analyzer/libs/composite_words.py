@@ -13,6 +13,8 @@ class CompositeWordAnalyzer:
 
     # Validate prefix
     def validate_prefix(self, word):
+        if self.graphemes is None:
+            self.graphemes = self.grapheme_parser.process(word)
         for i in range(len(word) + 1):
             substring = word[:i]
             if substring in self.dictionary_words and substring not in self.graphemes and len(substring) > 1:
@@ -21,7 +23,8 @@ class CompositeWordAnalyzer:
 
     # Validate suffix
     def validate_suffix(self, word):
-        self.graphemes = self.grapheme_parser.process(word)
+        if self.graphemes is None:
+            self.graphemes = self.grapheme_parser.process(word)
         for i in range(len(word)):
             substring = word[-i:]
             if substring in self.dictionary_words and substring not in self.graphemes and len(substring) > 1:
@@ -29,14 +32,20 @@ class CompositeWordAnalyzer:
         return False
 
     # Create all the combinations of substrings
-    def get_powerset(self):
+    def get_powerset(self, word):
+        if self.graphemes is None:
+            self.graphemes = self.grapheme_parser.process(word)
+
         length = len(self.substring_set)
         return {
             frozenset({e for e, b in zip(self.substring_set, f'{i:{length}b}') if b == '1'})
             for i in range(2 ** length)}
 
     # Get all valid substrings of a word
-    def get_all_possible_substrings(self):
+    def get_all_possible_substrings(self, word):
+        if self.graphemes is None:
+            self.graphemes = self.grapheme_parser.process(word)
+
         all_possible_substrings = set()
         for index, grapheme1 in enumerate(self.graphemes):
             substring = grapheme1
@@ -50,11 +59,11 @@ class CompositeWordAnalyzer:
                 all_possible_substrings.discard(key)
         return all_possible_substrings
 
-    # Return valid stand alone words
+    # Return valid stand-alone words
     def get_constructing_substrings(self, word):
-        self.substring_set = self.get_all_possible_substrings()
+        self.substring_set = self.get_all_possible_substrings(word)
         valid_substrings = set()
-        all_possible_subset = self.get_powerset()
+        all_possible_subset = self.get_powerset(word)
         all_possible_subset.discard(frozenset())
         for subset in all_possible_subset:
             constructed_word = ''
@@ -83,7 +92,6 @@ class CompositeWordAnalyzer:
                 self.generate_word_configuration(word, tokens)
 
     def generate_word_configuration(self, word, tokens):
-        self.graphemes = []
         key = word
         matched_suffixes = []
         matched_prefixes = []
