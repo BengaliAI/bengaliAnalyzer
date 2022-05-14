@@ -92,6 +92,7 @@ class CompositeWordAnalyzer:
                 self.generate_word_configuration(word, tokens)
 
     def generate_word_configuration(self, word, tokens):
+        self.graphemes = []
         key = word
         matched_suffixes = []
         matched_prefixes = []
