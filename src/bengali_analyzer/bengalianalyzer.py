@@ -22,9 +22,48 @@ global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes
 
 def remove_symbols(string_line):
     clean_string = string_line
-    symbols = ['০', '১', '২', '৩', '৪', '৫', '৬', '৭', '৮', '৯', '_', '-', '(', ')', ' ', '.', ';', '[', ']', "'",
-               '&', ".", ",", ";", ":", "!", "?", "\"", "'", "`", "~", "^", "*", "(", ")", "[", "]", "{", "}",
-               "।"]  # Add more if necessary # ? -> '’'
+    symbols = [
+        "০",
+        "১",
+        "২",
+        "৩",
+        "৪",
+        "৫",
+        "৬",
+        "৭",
+        "৮",
+        "৯",
+        "_",
+        "-",
+        "(",
+        ")",
+        " ",
+        ".",
+        ";",
+        "[",
+        "]",
+        "'",
+        "&",
+        ".",
+        ",",
+        ";",
+        ":",
+        "!",
+        "?",
+        '"',
+        "'",
+        "`",
+        "~",
+        "^",
+        "*",
+        "(",
+        ")",
+        "[",
+        "]",
+        "{",
+        "}",
+        "।",
+    ]  # Add more if necessary # ? -> '’'
     symbols += string.ascii_letters
     for symbol in symbols:
         if symbol in clean_string:
@@ -33,7 +72,9 @@ def remove_symbols(string_line):
 
 
 def prepare_special_suffixes(datafile):
-    data = pandas.read_csv(datafile, encoding="utf8", header=None, names=["keys", "values"])
+    data = pandas.read_csv(
+        datafile, encoding="utf8", header=None, names=["keys", "values"]
+    )
     data.dropna(inplace=True)
     data.reset_index(drop=True, inplace=True)
     dictionary = {}
@@ -45,7 +86,9 @@ def prepare_special_suffixes(datafile):
 
 
 def prepare_non_verb_data(data_file):
-    data = pandas.read_csv(data_file, encoding="utf8", header=None, names=["keys", "values"])
+    data = pandas.read_csv(
+        data_file, encoding="utf8", header=None, names=["keys", "values"]
+    )
     data = data.drop_duplicates()
     data.dropna(inplace=True)
     data.reset_index(drop=True, inplace=True)
@@ -62,18 +105,18 @@ def prepare_non_verb_data(data_file):
 def prepare_verb_data(data):
     data = pandas.read_csv(data)
     count = []
-    for each in data['word'].values:
-        count.append(len(each.split(' ')))
-    data['count'] = count
-    data2 = data[data['count'] == 2]
-    data1 = data[data['count'] == 1]
+    for each in data["word"].values:
+        count.append(len(each.split(" ")))
+    data["count"] = count
+    data2 = data[data["count"] == 2]
+    data1 = data[data["count"] == 1]
     return data, data1, data2
 
 
 def clean_generated_dictionary(dictionary):
     clean_dictionary = dictionary.copy()
     for key in dictionary.keys():
-        if key == '' or key[-1] == '্':
+        if key == "" or key[-1] == "্":
             clean_dictionary.pop(key)
 
     for key in suffixes.keys():
@@ -102,18 +145,18 @@ def generate_dictionary(file):
     with open(file, "r", encoding="utf8") as raw_file:
         lines = raw_file.readlines()
         for line in lines:
-            if ' - ' or ' ' or ',' or '.' in line:
-                noisy_separators = [' - ', ' ', ' . ']
+            if " - " or " " or "," or "." in line:
+                noisy_separators = [" - ", " ", " . "]
                 for noisy_separator in noisy_separators:
-                    line = line.replace(noisy_separator, ',')
-                line = line.split(',')
+                    line = line.replace(noisy_separator, ",")
+                line = line.split(",")
                 for word in line:
                     word = remove_symbols(word).strip()
-                    if word != '' and word[-1] != '্':
+                    if word != "" and word[-1] != "্":
                         dictionary[word] = []
             else:
                 line = remove_symbols(line)
-                if line != '' and line[-1] != '্':
+                if line != "" and line[-1] != "্":
                     dictionary[remove_symbols(line.strip())] = []
     return dictionary
 
@@ -122,21 +165,21 @@ def generate_dictionary(file):
 def load_data():
     global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes
     path = os.path.dirname(os.path.abspath(__file__))
-    asset_directory = os.path.join(path, 'assets')
+    asset_directory = os.path.join(path, "assets")
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
     verb_data, verb_data_1, verb_data_2 = prepare_verb_data(verb_data)
 
     # Generate non-verb data
-    non_verb_words = os.path.join(asset_directory, 'non_verbs.csv')
+    non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
     non_verb_words = prepare_non_verb_data(non_verb_words)
 
     # Generate other data,
-    not_to_be_broken_file = os.path.join(asset_directory, 'not_to_be_broken.txt')
-    suffix_file = os.path.join(asset_directory, 'suffixes.csv')
-    prefix_file = os.path.join(asset_directory, 'prefixes.csv')
-    special_suffixes_file = os.path.join(asset_directory, 'special_suffixes.csv')
+    not_to_be_broken_file = os.path.join(asset_directory, "not_to_be_broken.txt")
+    suffix_file = os.path.join(asset_directory, "suffixes.csv")
+    prefix_file = os.path.join(asset_directory, "prefixes.csv")
+    special_suffixes_file = os.path.join(asset_directory, "special_suffixes.csv")
 
     special_suffixes = prepare_special_suffixes(special_suffixes_file)
     not_to_be_broken = generate_special_entity(not_to_be_broken_file)
@@ -152,47 +195,58 @@ class BengaliAnalyzer:
         self.numeric_analyzer = numerics.NumericAnalyzer()
         self.verbs_analyzer = verbs.VerbAnalyzer(verb_data, verb_data_1, verb_data_2)
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
-        self.composite_words_analyzer = composite_words.CompositeWordAnalyzer(non_verb_words, prefixes, suffixes,
-                                                                              special_suffixes)
-        self.special_entity_analyzer = special_entity.SpecialEntityAnalyzer(not_to_be_broken)
+        self.composite_words_analyzer = composite_words.CompositeWordAnalyzer(
+            non_verb_words, prefixes, suffixes, special_suffixes
+        )
+        self.special_entity_analyzer = special_entity.SpecialEntityAnalyzer(
+            not_to_be_broken
+        )
 
     @staticmethod
     def tokenize_sentence(sentence):
         token = {
             "Global_Index": [],
             "Punctuation_Flag": True,
-            "Numeric":
-                {
-                    "Digit": None,
-                    "Literal": None,
-                    "Weight": None,
-                    "Suffix": []
-                },
-            "Verb":
-                {
-                    "Parent_Verb": None,
-                    "Tense_Person_Emphasis": None,
-                    "Form": None,
-                    "Related_Indices": [],
-                },
+            "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
+            "Verb": {
+                "Parent_Verb": None,
+                "Tense_Person_Emphasis": None,
+                "Form": None,
+                "Related_Indices": [],
+            },
             "PoS": None,
-            "Composite_Word":
-                {
-                    "Suffix": None,
-                    "Prefix": None,
-                    "Stand_Alone_Words": set(),
-                },
-            "Special_Entity":
-                {
-                    "Definition": None,
-                    "Related_Indices": []
-                }
+            "Composite_Word": {
+                "Suffix": None,
+                "Prefix": None,
+                "Stand_Alone_Words": set(),
+            },
+            "Special_Entity": {"Definition": None, "Related_Indices": []},
         }
         tokens = {}
         punctuation_flags = []
 
-        punctuations = {" ", ".", ",", ";", ":", "!", "?", '"', "'", "`", "~", "^", "*", "(", ")", "[", "]", "{", "}",
-                        "।"}
+        punctuations = {
+            " ",
+            ".",
+            ",",
+            ";",
+            ":",
+            "!",
+            "?",
+            '"',
+            "'",
+            "`",
+            "~",
+            "^",
+            "*",
+            "(",
+            ")",
+            "[",
+            "]",
+            "{",
+            "}",
+            "।",
+        }
 
         string_buffer = ""
 
@@ -238,7 +292,9 @@ class BengaliAnalyzer:
         numeric_flags = self.numeric_analyzer.get_numerics(tokens)
         flags.extend(numeric_flags)
 
-        special_entity_flags = self.special_entity_analyzer.flag_special_entity(tokens, sentence)
+        special_entity_flags = self.special_entity_analyzer.flag_special_entity(
+            tokens, sentence
+        )
         flags.extend(special_entity_flags)
 
         verb_flags = self.verbs_analyzer.get_verbs(tokens, sentence)
