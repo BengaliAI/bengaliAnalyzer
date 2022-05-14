@@ -211,6 +211,9 @@ class BengaliAnalyzer:
             "Verb": {
                 "Parent_Verb": None,
                 "Tense_Person_Emphasis": None,
+                "Tense": None,
+                "Person": None,
+                "Emphasis": None,
                 "Form": None,
                 "Related_Indices": [],
             },

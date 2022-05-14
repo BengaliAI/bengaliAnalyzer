@@ -197,6 +197,10 @@ class VerbAnalyzer:
             tense_person_emp = []
 
             for eachx in zip(info["tense"], info["person"]):
+                eachx = (
+                    self.verb_form_mapper["tense"][eachx[0]],
+                    self.verb_form_mapper["person"][eachx[1]],
+                )
                 tense_person_emp.append(eachx + tuple(each["emphasis"]))
 
             verb.append(
@@ -204,6 +208,9 @@ class VerbAnalyzer:
                     "Index": each["location"],
                     "original_word": each["original_verb"],
                     "Parent_Verb": info["parent_word"].iloc[0],
+                    "Tense": tense_person_emp[0][0],
+                    "Person": tense_person_emp[0][1],
+                    "Emphasis": tense_person_emp[0][2],
                     "Tense_Person_Emphasis": tense_person_emp,
                     "Language_Form": "standard",
                 }
@@ -225,6 +232,9 @@ class VerbAnalyzer:
                     tokens[y]["Verb"]["Related_Indices"].append(index)
 
                 tokens[y]["Verb"]["Parent_Verb"] = x["Parent_Verb"]
+                tokens[y]["Verb"]["Tense"] = x["Tense"]
+                tokens[y]["Verb"]["Person"] = x["Person"]
+                tokens[y]["Verb"]["Emphasis"] = x["Emphasis"]
                 tokens[y]["Verb"]["Tense_Person_Emphasis"] = x["Tense_Person_Emphasis"]
                 tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
 

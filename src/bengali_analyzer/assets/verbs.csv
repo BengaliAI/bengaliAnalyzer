@@ -29490,7 +29490,7 @@ word,parent_word,tense,person
 আঁকে,আঁকা,sb,ae
 আঁকেন,আঁকা,sb,in
 আঁকে,আঁকা,sb,er
-আঁকেন,আঁকা,sb,eN
+আঁকেন,আঁকা,sb,eR
 আঁকছি,আঁকা,gb,am
 আঁকছেন,আঁকা,gb,ap
 আঁকছ,আঁকা,gb,tm
@@ -29569,7 +29569,7 @@ word,parent_word,tense,person
 আঁটে,আঁটা,sb,ae
 আঁটেন,আঁটা,sb,in
 আঁটে,আঁটা,sb,er
-আঁটেন,আঁটা,sb,eN
+আঁটেন,আঁটা,sb,eR
 আঁটছি,আঁটা,gb,am
 আঁটছেন,আঁটা,gb,ap
 আঁটছ,আঁটা,gb,tm
@@ -29648,7 +29648,7 @@ word,parent_word,tense,person
 আনে,আনা,sb,ae
 আনেন,আনা,sb,in
 আনে,আনা,sb,er
-আনেন,আনা,sb,eN
+আনেন,আনা,sb,eR
 আনছি,আনা,gb,am
 আনছেন,আনা,gb,ap
 আনছ,আনা,gb,tm
@@ -29727,7 +29727,7 @@ word,parent_word,tense,person
 আসে,আসা,sb,ae
 আসেন,আসা,sb,in
 আসে,আসা,sb,er
-আসেন,আসা,sb,eN
+আসেন,আসা,sb,eR
 আসছি,আসা,gb,am
 আসছেন,আসা,gb,ap
 আসছ,আসা,gb,tm
@@ -29806,7 +29806,7 @@ word,parent_word,tense,person
 কাঁড়ে,কাঁড়া,sb,ae
 কাঁড়েন,কাঁড়া,sb,in
 কাঁড়ে,কাঁড়া,sb,er
-কাঁড়েন,কাঁড়া,sb,eN
+কাঁড়েন,কাঁড়া,sb,eR
 কাঁড়ছি,কাঁড়া,gb,am
 কাঁড়ছেন,কাঁড়া,gb,ap
 কাঁড়ছ,কাঁড়া,gb,tm
@@ -29885,7 +29885,7 @@ word,parent_word,tense,person
 কাঁদে,কাঁদা,sb,ae
 কাঁদেন,কাঁদা,sb,in
 কাঁদে,কাঁদা,sb,er
-কাঁদেন,কাঁদা,sb,eN
+কাঁদেন,কাঁদা,sb,eR
 কাঁদছি,কাঁদা,gb,am
 কাঁদছেন,কাঁদা,gb,ap
 কাঁদছ,কাঁদা,gb,tm
@@ -29964,7 +29964,7 @@ word,parent_word,tense,person
 কাঁপে,কাঁপা,sb,ae
 কাঁপেন,কাঁপা,sb,in
 কাঁপে,কাঁপা,sb,er
-কাঁপেন,কাঁপা,sb,eN
+কাঁপেন,কাঁপা,sb,eR
 কাঁপছি,কাঁপা,gb,am
 কাঁপছেন,কাঁপা,gb,ap
 কাঁপছ,কাঁপা,gb,tm
@@ -30043,7 +30043,7 @@ word,parent_word,tense,person
 কাচে,কাচা,sb,ae
 কাচেন,কাচা,sb,in
 কাচে,কাচা,sb,er
-কাচেন,কাচা,sb,eN
+কাচেন,কাচা,sb,eR
 কাচছি,কাচা,gb,am
 কাচছেন,কাচা,gb,ap
 কাচছ,কাচা,gb,tm
@@ -30122,7 +30122,7 @@ word,parent_word,tense,person
 কাটে,কাটা,sb,ae
 কাটেন,কাটা,sb,in
 কাটে,কাটা,sb,er
-কাটেন,কাটা,sb,eN
+কাটেন,কাটা,sb,eR
 কাটছি,কাটা,gb,am
 কাটছেন,কাটা,gb,ap
 কাটছ,কাটা,gb,tm
@@ -30201,7 +30201,7 @@ word,parent_word,tense,person
 খাটে,খাটা,sb,ae
 খাটেন,খাটা,sb,in
 খাটে,খাটা,sb,er
-খাটেন,খাটা,sb,eN
+খাটেন,খাটা,sb,eR
 খাটছি,খাটা,gb,am
 খাটছেন,খাটা,gb,ap
 খাটছ,খাটা,gb,tm
@@ -30280,7 +30280,7 @@ word,parent_word,tense,person
 গাঁথে,গাঁথা,sb,ae
 গাঁথেন,গাঁথা,sb,in
 গাঁথে,গাঁথা,sb,er
-গাঁথেন,গাঁথা,sb,eN
+গাঁথেন,গাঁথা,sb,eR
 গাঁথছি,গাঁথা,gb,am
 গাঁথছেন,গাঁথা,gb,ap
 গাঁথছ,গাঁথা,gb,tm
@@ -30359,7 +30359,7 @@ word,parent_word,tense,person
 গাড়ে,গাড়া,sb,ae
 গাড়েন,গাড়া,sb,in
 গাড়ে,গাড়া,sb,er
-গাড়েন,গাড়া,sb,eN
+গাড়েন,গাড়া,sb,eR
 গাড়ছি,গাড়া,gb,am
 গাড়ছেন,গাড়া,gb,ap
 গাড়ছ,গাড়া,gb,tm
@@ -30438,7 +30438,7 @@ word,parent_word,tense,person
 ঘাঁটে,ঘাঁটা,sb,ae
 ঘাঁটেন,ঘাঁটা,sb,in
 ঘাঁটে,ঘাঁটা,sb,er
-ঘাঁটেন,ঘাঁটা,sb,eN
+ঘাঁটেন,ঘাঁটা,sb,eR
 ঘাঁটছি,ঘাঁটা,gb,am
 ঘাঁটছেন,ঘাঁটা,gb,ap
 ঘাঁটছ,ঘাঁটা,gb,tm
@@ -30517,7 +30517,7 @@ word,parent_word,tense,person
 চাঁছে,চাঁছা,sb,ae
 চাঁছেন,চাঁছা,sb,in
 চাঁছে,চাঁছা,sb,er
-চাঁছেন,চাঁছা,sb,eN
+চাঁছেন,চাঁছা,sb,eR
 চাঁছছি,চাঁছা,gb,am
 চাঁছছেন,চাঁছা,gb,ap
 চাঁছছ,চাঁছা,gb,tm
@@ -30596,7 +30596,7 @@ word,parent_word,tense,person
 চাপে,চাপা,sb,ae
 চাপেন,চাপা,sb,in
 চাপে,চাপা,sb,er
-চাপেন,চাপা,sb,eN
+চাপেন,চাপা,sb,eR
 চাপছি,চাপা,gb,am
 চাপছেন,চাপা,gb,ap
 চাপছ,চাপা,gb,tm
@@ -30675,7 +30675,7 @@ word,parent_word,tense,person
 ছাঁটে,ছাঁটা,sb,ae
 ছাঁটেন,ছাঁটা,sb,in
 ছাঁটে,ছাঁটা,sb,er
-ছাঁটেন,ছাঁটা,sb,eN
+ছাঁটেন,ছাঁটা,sb,eR
 ছাঁটছি,ছাঁটা,gb,am
 ছাঁটছেন,ছাঁটা,gb,ap
 ছাঁটছ,ছাঁটা,gb,tm
@@ -30754,7 +30754,7 @@ word,parent_word,tense,person
 ছাড়ে,ছাড়া,sb,ae
 ছাড়েন,ছাড়া,sb,in
 ছাড়ে,ছাড়া,sb,er
-ছাড়েন,ছাড়া,sb,eN
+ছাড়েন,ছাড়া,sb,eR
 ছাড়ছি,ছাড়া,gb,am
 ছাড়ছেন,ছাড়া,gb,ap
 ছাড়ছ,ছাড়া,gb,tm
@@ -30833,7 +30833,7 @@ word,parent_word,tense,person
 ছাপে,ছাপা,sb,ae
 ছাপেন,ছাপা,sb,in
 ছাপে,ছাপা,sb,er
-ছাপেন,ছাপা,sb,eN
+ছাপেন,ছাপা,sb,eR
 ছাপছি,ছাপা,gb,am
 ছাপছেন,ছাপা,gb,ap
 ছাপছ,ছাপা,gb,tm
@@ -30912,7 +30912,7 @@ word,parent_word,tense,person
 টানে,টানা,sb,ae
 টানেন,টানা,sb,in
 টানে,টানা,sb,er
-টানেন,টানা,sb,eN
+টানেন,টানা,sb,eR
 টানছি,টানা,gb,am
 টানছেন,টানা,gb,ap
 টানছ,টানা,gb,tm
@@ -30991,7 +30991,7 @@ word,parent_word,tense,person
 ডাকে,ডাকা,sb,ae
 ডাকেন,ডাকা,sb,in
 ডাকে,ডাকা,sb,er
-ডাকেন,ডাকা,sb,eN
+ডাকেন,ডাকা,sb,eR
 ডাকছি,ডাকা,gb,am
 ডাকছেন,ডাকা,gb,ap
 ডাকছ,ডাকা,gb,tm
@@ -31070,7 +31070,7 @@ word,parent_word,tense,person
 ঢালে,ঢালা,sb,ae
 ঢালেন,ঢালা,sb,in
 ঢালে,ঢালা,sb,er
-ঢালেন,ঢালা,sb,eN
+ঢালেন,ঢালা,sb,eR
 ঢালছি,ঢালা,gb,am
 ঢালছেন,ঢালা,gb,ap
 ঢালছ,ঢালা,gb,tm
@@ -31149,7 +31149,7 @@ word,parent_word,tense,person
 থাকে,থাকা,sb,ae
 থাকেন,থাকা,sb,in
 থাকে,থাকা,sb,er
-থাকেন,থাকা,sb,eN
+থাকেন,থাকা,sb,eR
 থাকছি,থাকা,gb,am
 থাকছেন,থাকা,gb,ap
 থাকছ,থাকা,gb,tm
@@ -31228,7 +31228,7 @@ word,parent_word,tense,person
 থামে,থামা,sb,ae
 থামেন,থামা,sb,in
 থামে,থামা,sb,er
-থামেন,থামা,sb,eN
+থামেন,থামা,sb,eR
 থামছি,থামা,gb,am
 থামছেন,থামা,gb,ap
 থামছ,থামা,gb,tm
@@ -31307,7 +31307,7 @@ word,parent_word,tense,person
 দাগে,দাগা,sb,ae
 দাগেন,দাগা,sb,in
 দাগে,দাগা,sb,er
-দাগেন,দাগা,sb,eN
+দাগেন,দাগা,sb,eR
 দাগছি,দাগা,gb,am
 দাগছেন,দাগা,gb,ap
 দাগছ,দাগা,gb,tm
@@ -31386,7 +31386,7 @@ word,parent_word,tense,person
 নাচে,নাচা,sb,ae
 নাচেন,নাচা,sb,in
 নাচে,নাচা,sb,er
-নাচেন,নাচা,sb,eN
+নাচেন,নাচা,sb,eR
 নাচছি,নাচা,gb,am
 নাচছেন,নাচা,gb,ap
 নাচছ,নাচা,gb,tm
@@ -31465,7 +31465,7 @@ word,parent_word,tense,person
 নামে,নামা,sb,ae
 নামেন,নামা,sb,in
 নামে,নামা,sb,er
-নামেন,নামা,sb,eN
+নামেন,নামা,sb,eR
 নামছি,নামা,gb,am
 নামছেন,নামা,gb,ap
 নামছ,নামা,gb,tm
@@ -31544,7 +31544,7 @@ word,parent_word,tense,person
 পাতে,পাতা,sb,ae
 পাতেন,পাতা,sb,in
 পাতে,পাতা,sb,er
-পাতেন,পাতা,sb,eN
+পাতেন,পাতা,sb,eR
 পাতছি,পাতা,gb,am
 পাতছেন,পাতা,gb,ap
 পাতছ,পাতা,gb,tm
@@ -31623,7 +31623,7 @@ word,parent_word,tense,person
 পারে,পারা,sb,ae
 পারেন,পারা,sb,in
 পারে,পারা,sb,er
-পারেন,পারা,sb,eN
+পারেন,পারা,sb,eR
 পারছি,পারা,gb,am
 পারছেন,পারা,gb,ap
 পারছ,পারা,gb,tm
@@ -31702,7 +31702,7 @@ word,parent_word,tense,person
 বাঁচে,বাঁচা,sb,ae
 বাঁচেন,বাঁচা,sb,in
 বাঁচে,বাঁচা,sb,er
-বাঁচেন,বাঁচা,sb,eN
+বাঁচেন,বাঁচা,sb,eR
 বাঁচছি,বাঁচা,gb,am
 বাঁচছেন,বাঁচা,gb,ap
 বাঁচছ,বাঁচা,gb,tm
@@ -31781,7 +31781,7 @@ word,parent_word,tense,person
 বাঁধে,বাঁধা,sb,ae
 বাঁধেন,বাঁধা,sb,in
 বাঁধে,বাঁধা,sb,er
-বাঁধেন,বাঁধা,sb,eN
+বাঁধেন,বাঁধা,sb,eR
 বাঁধছি,বাঁধা,gb,am
 বাঁধছেন,বাঁধা,gb,ap
 বাঁধছ,বাঁধা,gb,tm
@@ -31860,7 +31860,7 @@ word,parent_word,tense,person
 বাছে,বাছা,sb,ae
 বাছেন,বাছা,sb,in
 বাছে,বাছা,sb,er
-বাছেন,বাছা,sb,eN
+বাছেন,বাছা,sb,eR
 বাছছি,বাছা,gb,am
 বাছছেন,বাছা,gb,ap
 বাছছ,বাছা,gb,tm
@@ -31939,7 +31939,7 @@ word,parent_word,tense,person
 বাসে,বাসা,sb,ae
 বাসেন,বাসা,sb,in
 বাসে,বাসা,sb,er
-বাসেন,বাসা,sb,eN
+বাসেন,বাসা,sb,eR
 বাসছি,বাসা,gb,am
 বাসছেন,বাসা,gb,ap
 বাসছ,বাসা,gb,tm
@@ -32018,7 +32018,7 @@ word,parent_word,tense,person
 ভাঙে,ভাঙা,sb,ae
 ভাঙেন,ভাঙা,sb,in
 ভাঙে,ভাঙা,sb,er
-ভাঙেন,ভাঙা,sb,eN
+ভাঙেন,ভাঙা,sb,eR
 ভাঙছি,ভাঙা,gb,am
 ভাঙছেন,ভাঙা,gb,ap
 ভাঙছ,ভাঙা,gb,tm
@@ -32097,7 +32097,7 @@ word,parent_word,tense,person
 ভাজে,ভাজা,sb,ae
 ভাজেন,ভাজা,sb,in
 ভাজে,ভাজা,sb,er
-ভাজেন,ভাজা,sb,eN
+ভাজেন,ভাজা,sb,eR
 ভাজছি,ভাজা,gb,am
 ভাজছেন,ভাজা,gb,ap
 ভাজছ,ভাজা,gb,tm
@@ -32176,7 +32176,7 @@ word,parent_word,tense,person
 ভাবে,ভাবা,sb,ae
 ভাবেন,ভাবা,sb,in
 ভাবে,ভাবা,sb,er
-ভাবেন,ভাবা,sb,eN
+ভাবেন,ভাবা,sb,eR
 ভাবছি,ভাবা,gb,am
 ভাবছেন,ভাবা,gb,ap
 ভাবছ,ভাবা,gb,tm
@@ -32255,7 +32255,7 @@ word,parent_word,tense,person
 জাগে,জাগা,sb,ae
 জাগেন,জাগা,sb,in
 জাগে,জাগা,sb,er
-জাগেন,জাগা,sb,eN
+জাগেন,জাগা,sb,eR
 জাগছি,জাগা,gb,am
 জাগছেন,জাগা,gb,ap
 জাগছ,জাগা,gb,tm
@@ -32334,7 +32334,7 @@ word,parent_word,tense,person
 জানে,জানা,sb,ae
 জানেন,জানা,sb,in
 জানে,জানা,sb,er
-জানেন,জানা,sb,eN
+জানেন,জানা,sb,eR
 জানছি,জানা,gb,am
 জানছেন,জানা,gb,ap
 জানছ,জানা,gb,tm
@@ -32413,7 +32413,7 @@ word,parent_word,tense,person
 ভাসে,ভাসা,sb,ae
 ভাসেন,ভাসা,sb,in
 ভাসে,ভাসা,sb,er
-ভাসেন,ভাসা,sb,eN
+ভাসেন,ভাসা,sb,eR
 ভাসছি,ভাসা,gb,am
 ভাসছেন,ভাসা,gb,ap
 ভাসছ,ভাসা,gb,tm
@@ -32492,7 +32492,7 @@ word,parent_word,tense,person
 মাখে,মাখা,sb,ae
 মাখেন,মাখা,sb,in
 মাখে,মাখা,sb,er
-মাখেন,মাখা,sb,eN
+মাখেন,মাখা,sb,eR
 মাখছি,মাখা,gb,am
 মাখছেন,মাখা,gb,ap
 মাখছ,মাখা,gb,tm
@@ -32571,7 +32571,7 @@ word,parent_word,tense,person
 মাগে,মাগা,sb,ae
 মাগেন,মাগা,sb,in
 মাগে,মাগা,sb,er
-মাগেন,মাগা,sb,eN
+মাগেন,মাগা,sb,eR
 মাগছি,মাগা,gb,am
 মাগছেন,মাগা,gb,ap
 মাগছ,মাগা,gb,tm
@@ -32650,7 +32650,7 @@ word,parent_word,tense,person
 মাজে,মাজা,sb,ae
 মাজেন,মাজা,sb,in
 মাজে,মাজা,sb,er
-মাজেন,মাজা,sb,eN
+মাজেন,মাজা,sb,eR
 মাজছি,মাজা,gb,am
 মাজছেন,মাজা,gb,ap
 মাজছ,মাজা,gb,tm
@@ -32729,7 +32729,7 @@ word,parent_word,tense,person
 মাতে,মাতা,sb,ae
 মাতেন,মাতা,sb,in
 মাতে,মাতা,sb,er
-মাতেন,মাতা,sb,eN
+মাতেন,মাতা,sb,eR
 মাতছি,মাতা,gb,am
 মাতছেন,মাতা,gb,ap
 মাতছ,মাতা,gb,tm
@@ -32808,7 +32808,7 @@ word,parent_word,tense,person
 মানে,মানা,sb,ae
 মানেন,মানা,sb,in
 মানে,মানা,sb,er
-মানেন,মানা,sb,eN
+মানেন,মানা,sb,eR
 মানছি,মানা,gb,am
 মানছেন,মানা,gb,ap
 মানছ,মানা,gb,tm
@@ -32887,7 +32887,7 @@ word,parent_word,tense,person
 মারে,মারা,sb,ae
 মারেন,মারা,sb,in
 মারে,মারা,sb,er
-মারেন,মারা,sb,eN
+মারেন,মারা,sb,eR
 মারছি,মারা,gb,am
 মারছেন,মারা,gb,ap
 মারছ,মারা,gb,tm
@@ -32966,7 +32966,7 @@ word,parent_word,tense,person
 রাঁধে,রাঁধা,sb,ae
 রাঁধেন,রাঁধা,sb,in
 রাঁধে,রাঁধা,sb,er
-রাঁধেন,রাঁধা,sb,eN
+রাঁধেন,রাঁধা,sb,eR
 রাঁধছি,রাঁধা,gb,am
 রাঁধছেন,রাঁধা,gb,ap
 রাঁধছ,রাঁধা,gb,tm
@@ -33045,7 +33045,7 @@ word,parent_word,tense,person
 রাখে,রাখা,sb,ae
 রাখেন,রাখা,sb,in
 রাখে,রাখা,sb,er
-রাখেন,রাখা,sb,eN
+রাখেন,রাখা,sb,eR
 রাখছি,রাখা,gb,am
 রাখছেন,রাখা,gb,ap
 রাখছ,রাখা,gb,tm
@@ -33124,7 +33124,7 @@ word,parent_word,tense,person
 রাগে,রাগা,sb,ae
 রাগেন,রাগা,sb,in
 রাগে,রাগা,sb,er
-রাগেন,রাগা,sb,eN
+রাগেন,রাগা,sb,eR
 রাগছি,রাগা,gb,am
 রাগছেন,রাগা,gb,ap
 রাগছ,রাগা,gb,tm
@@ -33203,7 +33203,7 @@ word,parent_word,tense,person
 লাগে,লাগা,sb,ae
 লাগেন,লাগা,sb,in
 লাগে,লাগা,sb,er
-লাগেন,লাগা,sb,eN
+লাগেন,লাগা,sb,eR
 লাগছি,লাগা,gb,am
 লাগছেন,লাগা,gb,ap
 লাগছ,লাগা,gb,tm
@@ -33282,7 +33282,7 @@ word,parent_word,tense,person
 সাজে,সাজা,sb,ae
 সাজেন,সাজা,sb,in
 সাজে,সাজা,sb,er
-সাজেন,সাজা,sb,eN
+সাজেন,সাজা,sb,eR
 সাজছি,সাজা,gb,am
 সাজছেন,সাজা,gb,ap
 সাজছ,সাজা,gb,tm
@@ -33361,7 +33361,7 @@ word,parent_word,tense,person
 সাধে,সাধা,sb,ae
 সাধেন,সাধা,sb,in
 সাধে,সাধা,sb,er
-সাধেন,সাধা,sb,eN
+সাধেন,সাধা,sb,eR
 সাধছি,সাধা,gb,am
 সাধছেন,সাধা,gb,ap
 সাধছ,সাধা,gb,tm
@@ -33440,7 +33440,7 @@ word,parent_word,tense,person
 হাঁকে,হাঁকা,sb,ae
 হাঁকেন,হাঁকা,sb,in
 হাঁকে,হাঁকা,sb,er
-হাঁকেন,হাঁকা,sb,eN
+হাঁকেন,হাঁকা,sb,eR
 হাঁকছি,হাঁকা,gb,am
 হাঁকছেন,হাঁকা,gb,ap
 হাঁকছ,হাঁকা,gb,tm
@@ -33519,7 +33519,7 @@ word,parent_word,tense,person
 হাঁচে,হাঁচা,sb,ae
 হাঁচেন,হাঁচা,sb,in
 হাঁচে,হাঁচা,sb,er
-হাঁচেন,হাঁচা,sb,eN
+হাঁচেন,হাঁচা,sb,eR
 হাঁচছি,হাঁচা,gb,am
 হাঁচছেন,হাঁচা,gb,ap
 হাঁচছ,হাঁচা,gb,tm
@@ -33598,7 +33598,7 @@ word,parent_word,tense,person
 হাঁটে,হাঁটা,sb,ae
 হাঁটেন,হাঁটা,sb,in
 হাঁটে,হাঁটা,sb,er
-হাঁটেন,হাঁটা,sb,eN
+হাঁটেন,হাঁটা,sb,eR
 হাঁটছি,হাঁটা,gb,am
 হাঁটছেন,হাঁটা,gb,ap
 হাঁটছ,হাঁটা,gb,tm
@@ -33677,7 +33677,7 @@ word,parent_word,tense,person
 হারে,হারা,sb,ae
 হারেন,হারা,sb,in
 হারে,হারা,sb,er
-হারেন,হারা,sb,eN
+হারেন,হারা,sb,eR
 হারছি,হারা,gb,am
 হারছেন,হারা,gb,ap
 হারছ,হারা,gb,tm
@@ -33756,7 +33756,7 @@ word,parent_word,tense,person
 হাসে,হাসা,sb,ae
 হাসেন,হাসা,sb,in
 হাসে,হাসা,sb,er
-হাসেন,হাসা,sb,eN
+হাসেন,হাসা,sb,eR
 হাসছি,হাসা,gb,am
 হাসছেন,হাসা,gb,ap
 হাসছ,হাসা,gb,tm
@@ -33835,7 +33835,7 @@ word,parent_word,tense,person
 করে,করা,sb,ae
 করেন,করা,sb,in
 করে,করা,sb,er
-করেন,করা,sb,eN
+করেন,করা,sb,eR
 করছি,করা,gb,am
 করছেন,করা,gb,ap
 করছ,করা,gb,tm
@@ -33914,7 +33914,7 @@ word,parent_word,tense,person
 গড়ে,গড়া,sb,ae
 গড়েন,গড়া,sb,in
 গড়ে,গড়া,sb,er
-গড়েন,গড়া,sb,eN
+গড়েন,গড়া,sb,eR
 গড়ছি,গড়া,gb,am
 গড়ছেন,গড়া,gb,ap
 গড়ছ,গড়া,gb,tm
@@ -33993,7 +33993,7 @@ word,parent_word,tense,person
 ঘষে,ঘষা,sb,ae
 ঘষেন,ঘষা,sb,in
 ঘষে,ঘষা,sb,er
-ঘষেন,ঘষা,sb,eN
+ঘষেন,ঘষা,sb,eR
 ঘষছি,ঘষা,gb,am
 ঘষছেন,ঘষা,gb,ap
 ঘষছ,ঘষা,gb,tm
@@ -34072,7 +34072,7 @@ word,parent_word,tense,person
 চটে,চটা,sb,ae
 চটেন,চটা,sb,in
 চটে,চটা,sb,er
-চটেন,চটা,sb,eN
+চটেন,চটা,sb,eR
 চটছি,চটা,gb,am
 চটছেন,চটা,gb,ap
 চটছ,চটা,gb,tm
@@ -34151,7 +34151,7 @@ word,parent_word,tense,person
 চড়ে,চড়া,sb,ae
 চড়েন,চড়া,sb,in
 চড়ে,চড়া,sb,er
-চড়েন,চড়া,sb,eN
+চড়েন,চড়া,sb,eR
 চড়ছি,চড়া,gb,am
 চড়ছেন,চড়া,gb,ap
 চড়ছ,চড়া,gb,tm
@@ -34230,7 +34230,7 @@ word,parent_word,tense,person
 চরে,চরা,sb,ae
 চরেন,চরা,sb,in
 চরে,চরা,sb,er
-চরেন,চরা,sb,eN
+চরেন,চরা,sb,eR
 চরছি,চরা,gb,am
 চরছেন,চরা,gb,ap
 চরছ,চরা,gb,tm
@@ -34309,7 +34309,7 @@ word,parent_word,tense,person
 চষে,চষা,sb,ae
 চষেন,চষা,sb,in
 চষে,চষা,sb,er
-চষেন,চষা,sb,eN
+চষেন,চষা,sb,eR
 চষছি,চষা,gb,am
 চষছেন,চষা,gb,ap
 চষছ,চষা,gb,tm
@@ -34388,7 +34388,7 @@ word,parent_word,tense,person
 জপে,জপা,sb,ae
 জপেন,জপা,sb,in
 জপে,জপা,sb,er
-জপেন,জপা,sb,eN
+জপেন,জপা,sb,eR
 জপছি,জপা,gb,am
 জপছেন,জপা,gb,ap
 জপছ,জপা,gb,tm
@@ -34467,7 +34467,7 @@ word,parent_word,tense,person
 ঠকে,ঠকা,sb,ae
 ঠকেন,ঠকা,sb,in
 ঠকে,ঠকা,sb,er
-ঠকেন,ঠকা,sb,eN
+ঠকেন,ঠকা,sb,eR
 ঠকছি,ঠকা,gb,am
 ঠকছেন,ঠকা,gb,ap
 ঠকছ,ঠকা,gb,tm
@@ -34546,7 +34546,7 @@ word,parent_word,tense,person
 ঢলে,ঢলা,sb,ae
 ঢলেন,ঢলা,sb,in
 ঢলে,ঢলা,sb,er
-ঢলেন,ঢলা,sb,eN
+ঢলেন,ঢলা,sb,eR
 ঢলছি,ঢলা,gb,am
 ঢলছেন,ঢলা,gb,ap
 ঢলছ,ঢলা,gb,tm
@@ -34625,7 +34625,7 @@ word,parent_word,tense,person
 ধরে,ধরা,sb,ae
 ধরেন,ধরা,sb,in
 ধরে,ধরা,sb,er
-ধরেন,ধরা,sb,eN
+ধরেন,ধরা,sb,eR
 ধরছি,ধরা,gb,am
 ধরছেন,ধরা,gb,ap
 ধরছ,ধরা,gb,tm
@@ -34704,7 +34704,7 @@ word,parent_word,tense,person
 পচে,পচা,sb,ae
 পচেন,পচা,sb,in
 পচে,পচা,sb,er
-পচেন,পচা,sb,eN
+পচেন,পচা,sb,eR
 পচছি,পচা,gb,am
 পচছেন,পচা,gb,ap
 পচছ,পচা,gb,tm
@@ -34783,7 +34783,7 @@ word,parent_word,tense,person
 পড়ে,পড়া,sb,ae
 পড়েন,পড়া,sb,in
 পড়ে,পড়া,sb,er
-পড়েন,পড়া,sb,eN
+পড়েন,পড়া,sb,eR
 পড়ছি,পড়া,gb,am
 পড়ছেন,পড়া,gb,ap
 পড়ছ,পড়া,gb,tm
@@ -34862,7 +34862,7 @@ word,parent_word,tense,person
 পরে,পরা,sb,ae
 পরেন,পরা,sb,in
 পরে,পরা,sb,er
-পরেন,পরা,sb,eN
+পরেন,পরা,sb,eR
 পরছি,পরা,gb,am
 পরছেন,পরা,gb,ap
 পরছ,পরা,gb,tm
@@ -34941,7 +34941,7 @@ word,parent_word,tense,person
 দমে,দমা,sb,ae
 দমেন,দমা,sb,in
 দমে,দমা,sb,er
-দমেন,দমা,sb,eN
+দমেন,দমা,sb,eR
 দমছি,দমা,gb,am
 দমছেন,দমা,gb,ap
 দমছ,দমা,gb,tm
@@ -35020,7 +35020,7 @@ word,parent_word,tense,person
 বলে,বলা,sb,ae
 বলেন,বলা,sb,in
 বলে,বলা,sb,er
-বলেন,বলা,sb,eN
+বলেন,বলা,sb,eR
 বলছি,বলা,gb,am
 বলছেন,বলা,gb,ap
 বলছ,বলা,gb,tm
@@ -35099,7 +35099,7 @@ word,parent_word,tense,person
 বসে,বসা,sb,ae
 বসেন,বসা,sb,in
 বসে,বসা,sb,er
-বসেন,বসা,sb,eN
+বসেন,বসা,sb,eR
 বসছি,বসা,gb,am
 বসছেন,বসা,gb,ap
 বসছ,বসা,gb,tm
@@ -35178,7 +35178,7 @@ word,parent_word,tense,person
 ভজে,ভজা,sb,ae
 ভজেন,ভজা,sb,in
 ভজে,ভজা,sb,er
-ভজেন,ভজা,sb,eN
+ভজেন,ভজা,sb,eR
 ভজছি,ভজা,gb,am
 ভজছেন,ভজা,gb,ap
 ভজছ,ভজা,gb,tm
@@ -35257,7 +35257,7 @@ word,parent_word,tense,person
 মরে,মরা,sb,ae
 মরেন,মরা,sb,in
 মরে,মরা,sb,er
-মরেন,মরা,sb,eN
+মরেন,মরা,sb,eR
 মরছি,মরা,gb,am
 মরছেন,মরা,gb,ap
 মরছ,মরা,gb,tm
@@ -35336,7 +35336,7 @@ word,parent_word,tense,person
 ফলে,ফলা,sb,ae
 ফলেন,ফলা,sb,in
 ফলে,ফলা,sb,er
-ফলেন,ফলা,sb,eN
+ফলেন,ফলা,sb,eR
 ফলছি,ফলা,gb,am
 ফলছেন,ফলা,gb,ap
 ফলছ,ফলা,gb,tm
@@ -35415,7 +35415,7 @@ word,parent_word,tense,person
 কাটে,কাটা,sb,ae
 কাটেন,কাটা,sb,in
 কাটে,কাটা,sb,er
-কাটেন,কাটা,sb,eN
+কাটেন,কাটা,sb,eR
 কাটছি,কাটা,gb,am
 কাটছেন,কাটা,gb,ap
 কাটছ,কাটা,gb,tm
@@ -35494,7 +35494,7 @@ word,parent_word,tense,person
 কামে,কামা,sb,ae
 কামেন,কামা,sb,in
 কামে,কামা,sb,er
-কামেন,কামা,sb,eN
+কামেন,কামা,sb,eR
 কামছি,কামা,gb,am
 কামছেন,কামা,gb,ap
 কামছ,কামা,gb,tm
@@ -35573,7 +35573,7 @@ word,parent_word,tense,person
 কাশে,কাশা,sb,ae
 কাশেন,কাশা,sb,in
 কাশে,কাশা,sb,er
-কাশেন,কাশা,sb,eN
+কাশেন,কাশা,sb,eR
 কাশছি,কাশা,gb,am
 কাশছেন,কাশা,gb,ap
 কাশছ,কাশা,gb,tm
@@ -35652,7 +35652,7 @@ word,parent_word,tense,person
 কাড়ে,কাড়া,sb,ae
 কাড়েন,কাড়া,sb,in
 কাড়ে,কাড়া,sb,er
-কাড়েন,কাড়া,sb,eN
+কাড়েন,কাড়া,sb,eR
 কাড়ছি,কাড়া,gb,am
 কাড়ছেন,কাড়া,gb,ap
 কাড়ছ,কাড়া,gb,tm
@@ -35731,7 +35731,7 @@ word,parent_word,tense,person
 চাটে,চাটা,sb,ae
 চাটেন,চাটা,sb,in
 চাটে,চাটা,sb,er
-চাটেন,চাটা,sb,eN
+চাটেন,চাটা,sb,eR
 চাটছি,চাটা,gb,am
 চাটছেন,চাটা,gb,ap
 চাটছ,চাটা,gb,tm
@@ -35810,7 +35810,7 @@ word,parent_word,tense,person
 চাহে,চাহা,sb,ae
 চাহেন,চাহা,sb,in
 চাহে,চাহা,sb,er
-চাহেন,চাহা,sb,eN
+চাহেন,চাহা,sb,eR
 চাহছি,চাহা,gb,am
 চাহছেন,চাহা,gb,ap
 চাহছ,চাহা,gb,tm
@@ -35889,7 +35889,7 @@ word,parent_word,tense,person
 ছাকে,ছাকা,sb,ae
 ছাকেন,ছাকা,sb,in
 ছাকে,ছাকা,sb,er
-ছাকেন,ছাকা,sb,eN
+ছাকেন,ছাকা,sb,eR
 ছাকছি,ছাকা,gb,am
 ছাকছেন,ছাকা,gb,ap
 ছাকছ,ছাকা,gb,tm
@@ -35968,7 +35968,7 @@ word,parent_word,tense,person
 ছাড়ে,ছাড়া,sb,ae
 ছাড়েন,ছাড়া,sb,in
 ছাড়ে,ছাড়া,sb,er
-ছাড়েন,ছাড়া,sb,eN
+ছাড়েন,ছাড়া,sb,eR
 ছাড়ছি,ছাড়া,gb,am
 ছাড়ছেন,ছাড়া,gb,ap
 ছাড়ছ,ছাড়া,gb,tm
@@ -36047,7 +36047,7 @@ word,parent_word,tense,person
 ছাপে,ছাপা,sb,ae
 ছাপেন,ছাপা,sb,in
 ছাপে,ছাপা,sb,er
-ছাপেন,ছাপা,sb,eN
+ছাপেন,ছাপা,sb,eR
 ছাপছি,ছাপা,gb,am
 ছাপছেন,ছাপা,gb,ap
 ছাপছ,ছাপা,gb,tm
@@ -36126,7 +36126,7 @@ word,parent_word,tense,person
 জাগে,জাগা,sb,ae
 জাগেন,জাগা,sb,in
 জাগে,জাগা,sb,er
-জাগেন,জাগা,sb,eN
+জাগেন,জাগা,sb,eR
 জাগছি,জাগা,gb,am
 জাগছেন,জাগা,gb,ap
 জাগছ,জাগা,gb,tm
@@ -36205,7 +36205,7 @@ word,parent_word,tense,person
 জালে,জালা,sb,ae
 জালেন,জালা,sb,in
 জালে,জালা,sb,er
-জালেন,জালা,sb,eN
+জালেন,জালা,sb,eR
 জালছি,জালা,gb,am
 জালছেন,জালা,gb,ap
 জালছ,জালা,gb,tm
@@ -36284,7 +36284,7 @@ word,parent_word,tense,person
 ঝালে,ঝালা,sb,ae
 ঝালেন,ঝালা,sb,in
 ঝালে,ঝালা,sb,er
-ঝালেন,ঝালা,sb,eN
+ঝালেন,ঝালা,sb,eR
 ঝালছি,ঝালা,gb,am
 ঝালছেন,ঝালা,gb,ap
 ঝালছ,ঝালা,gb,tm
@@ -36363,7 +36363,7 @@ word,parent_word,tense,person
 ঝাড়ে,ঝাড়া,sb,ae
 ঝাড়েন,ঝাড়া,sb,in
 ঝাড়ে,ঝাড়া,sb,er
-ঝাড়েন,ঝাড়া,sb,eN
+ঝাড়েন,ঝাড়া,sb,eR
 ঝাড়ছি,ঝাড়া,gb,am
 ঝাড়ছেন,ঝাড়া,gb,ap
 ঝাড়ছ,ঝাড়া,gb,tm
@@ -36442,7 +36442,7 @@ word,parent_word,tense,person
 টাঙে,টাঙা,sb,ae
 টাঙেন,টাঙা,sb,in
 টাঙে,টাঙা,sb,er
-টাঙেন,টাঙা,sb,eN
+টাঙেন,টাঙা,sb,eR
 টাঙছি,টাঙা,gb,am
 টাঙছেন,টাঙা,gb,ap
 টাঙছ,টাঙা,gb,tm
@@ -36521,7 +36521,7 @@ word,parent_word,tense,person
 ঠাসে,ঠাসা,sb,ae
 ঠাসেন,ঠাসা,sb,in
 ঠাসে,ঠাসা,sb,er
-ঠাসেন,ঠাসা,sb,eN
+ঠাসেন,ঠাসা,sb,eR
 ঠাসছি,ঠাসা,gb,am
 ঠাসছেন,ঠাসা,gb,ap
 ঠাসছ,ঠাসা,gb,tm
@@ -36600,7 +36600,7 @@ word,parent_word,tense,person
 ঢাকে,ঢাকা,sb,ae
 ঢাকেন,ঢাকা,sb,in
 ঢাকে,ঢাকা,sb,er
-ঢাকেন,ঢাকা,sb,eN
+ঢাকেন,ঢাকা,sb,eR
 ঢাকছি,ঢাকা,gb,am
 ঢাকছেন,ঢাকা,gb,ap
 ঢাকছ,ঢাকা,gb,tm
@@ -36679,7 +36679,7 @@ word,parent_word,tense,person
 তাতে,তাতা,sb,ae
 তাতেন,তাতা,sb,in
 তাতে,তাতা,sb,er
-তাতেন,তাতা,sb,eN
+তাতেন,তাতা,sb,eR
 তাতছি,তাতা,gb,am
 তাতছেন,তাতা,gb,ap
 তাতছ,তাতা,gb,tm
@@ -36758,7 +36758,7 @@ word,parent_word,tense,person
 দাবে,দাবা,sb,ae
 দাবেন,দাবা,sb,in
 দাবে,দাবা,sb,er
-দাবেন,দাবা,sb,eN
+দাবেন,দাবা,sb,eR
 দাবছি,দাবা,gb,am
 দাবছেন,দাবা,gb,ap
 দাবছ,দাবা,gb,tm
@@ -36837,7 +36837,7 @@ word,parent_word,tense,person
 নাড়ে,নাড়া,sb,ae
 নাড়েন,নাড়া,sb,in
 নাড়ে,নাড়া,sb,er
-নাড়েন,নাড়া,sb,eN
+নাড়েন,নাড়া,sb,eR
 নাড়ছি,নাড়া,gb,am
 নাড়ছেন,নাড়া,gb,ap
 নাড়ছ,নাড়া,gb,tm
@@ -36916,7 +36916,7 @@ word,parent_word,tense,person
 পাড়ে,পাড়া,sb,ae
 পাড়েন,পাড়া,sb,in
 পাড়ে,পাড়া,sb,er
-পাড়েন,পাড়া,sb,eN
+পাড়েন,পাড়া,sb,eR
 পাড়ছি,পাড়া,gb,am
 পাড়ছেন,পাড়া,gb,ap
 পাড়ছ,পাড়া,gb,tm
@@ -36995,7 +36995,7 @@ word,parent_word,tense,person
 ফাটে,ফাটা,sb,ae
 ফাটেন,ফাটা,sb,in
 ফাটে,ফাটা,sb,er
-ফাটেন,ফাটা,sb,eN
+ফাটেন,ফাটা,sb,eR
 ফাটছি,ফাটা,gb,am
 ফাটছেন,ফাটা,gb,ap
 ফাটছ,ফাটা,gb,tm
@@ -37074,7 +37074,7 @@ word,parent_word,tense,person
 ফাড়ে,ফাড়া,sb,ae
 ফাড়েন,ফাড়া,sb,in
 ফাড়ে,ফাড়া,sb,er
-ফাড়েন,ফাড়া,sb,eN
+ফাড়েন,ফাড়া,sb,eR
 ফাড়ছি,ফাড়া,gb,am
 ফাড়ছেন,ফাড়া,gb,ap
 ফাড়ছ,ফাড়া,gb,tm
@@ -37153,7 +37153,7 @@ word,parent_word,tense,person
 বাটে,বাটা,sb,ae
 বাটেন,বাটা,sb,in
 বাটে,বাটা,sb,er
-বাটেন,বাটা,sb,eN
+বাটেন,বাটা,sb,eR
 বাটছি,বাটা,gb,am
 বাটছেন,বাটা,gb,ap
 বাটছ,বাটা,gb,tm
@@ -37232,7 +37232,7 @@ word,parent_word,tense,person
 বাধে,বাধা,sb,ae
 বাধেন,বাধা,sb,in
 বাধে,বাধা,sb,er
-বাধেন,বাধা,sb,eN
+বাধেন,বাধা,sb,eR
 বাধছি,বাধা,gb,am
 বাধছেন,বাধা,gb,ap
 বাধছ,বাধা,gb,tm
@@ -37311,7 +37311,7 @@ word,parent_word,tense,person
 বাড়ে,বাড়া,sb,ae
 বাড়েন,বাড়া,sb,in
 বাড়ে,বাড়া,sb,er
-বাড়েন,বাড়া,sb,eN
+বাড়েন,বাড়া,sb,eR
 বাড়ছি,বাড়া,gb,am
 বাড়ছেন,বাড়া,gb,ap
 বাড়ছ,বাড়া,gb,tm
@@ -37390,7 +37390,7 @@ word,parent_word,tense,person
 হানে,হানা,sb,ae
 হানেন,হানা,sb,in
 হানে,হানা,sb,er
-হানেন,হানা,sb,eN
+হানেন,হানা,sb,eR
 হানছি,হানা,gb,am
 হানছেন,হানা,gb,ap
 হানছ,হানা,gb,tm
@@ -37469,7 +37469,7 @@ word,parent_word,tense,person
 ভাগে,ভাগা,sb,ae
 ভাগেন,ভাগা,sb,in
 ভাগে,ভাগা,sb,er
-ভাগেন,ভাগা,sb,eN
+ভাগেন,ভাগা,sb,eR
 ভাগছি,ভাগা,gb,am
 ভাগছেন,ভাগা,gb,ap
 ভাগছ,ভাগা,gb,tm
@@ -37548,7 +37548,7 @@ word,parent_word,tense,person
 ভানে,ভানা,sb,ae
 ভানেন,ভানা,sb,in
 ভানে,ভানা,sb,er
-ভানেন,ভানা,sb,eN
+ভানেন,ভানা,sb,eR
 ভানছি,ভানা,gb,am
 ভানছেন,ভানা,gb,ap
 ভানছ,ভানা,gb,tm
@@ -37627,7 +37627,7 @@ word,parent_word,tense,person
 ভাবে,ভাবা,sb,ae
 ভাবেন,ভাবা,sb,in
 ভাবে,ভাবা,sb,er
-ভাবেন,ভাবা,sb,eN
+ভাবেন,ভাবা,sb,eR
 ভাবছি,ভাবা,gb,am
 ভাবছেন,ভাবা,gb,ap
 ভাবছ,ভাবা,gb,tm
@@ -37706,7 +37706,7 @@ word,parent_word,tense,person
 মাপে,মাপা,sb,ae
 মাপেন,মাপা,sb,in
 মাপে,মাপা,sb,er
-মাপেন,মাপা,sb,eN
+মাপেন,মাপা,sb,eR
 মাপছি,মাপা,gb,am
 মাপছেন,মাপা,gb,ap
 মাপছ,মাপা,gb,tm
@@ -37785,7 +37785,7 @@ word,parent_word,tense,person
 যাচে,যাচা,sb,ae
 যাচেন,যাচা,sb,in
 যাচে,যাচা,sb,er
-যাচেন,যাচা,sb,eN
+যাচেন,যাচা,sb,eR
 যাচছি,যাচা,gb,am
 যাচছেন,যাচা,gb,ap
 যাচছ,যাচা,gb,tm
@@ -37864,7 +37864,7 @@ word,parent_word,tense,person
 শানাকশে,শানাকশা,sb,ae
 শানাকশেন,শানাকশা,sb,in
 শানাকশে,শানাকশা,sb,er
-শানাকশেন,শানাকশা,sb,eN
+শানাকশেন,শানাকশা,sb,eR
 শানাকশছি,শানাকশা,gb,am
 শানাকশছেন,শানাকশা,gb,ap
 শানাকশছ,শানাকশা,gb,tm
@@ -37943,7 +37943,7 @@ word,parent_word,tense,person
 কসে,কসা,sb,ae
 কসেন,কসা,sb,in
 কসে,কসা,sb,er
-কসেন,কসা,sb,eN
+কসেন,কসা,sb,eR
 কসছি,কসা,gb,am
 কসছেন,কসা,gb,ap
 কসছ,কসা,gb,tm
@@ -38022,7 +38022,7 @@ word,parent_word,tense,person
 খসে,খসা,sb,ae
 খসেন,খসা,sb,in
 খসে,খসা,sb,er
-খসেন,খসা,sb,eN
+খসেন,খসা,sb,eR
 খসছি,খসা,gb,am
 খসছেন,খসা,gb,ap
 খসছ,খসা,gb,tm
@@ -38101,7 +38101,7 @@ word,parent_word,tense,person
 গছে,গছা,sb,ae
 গছেন,গছা,sb,in
 গছে,গছা,sb,er
-গছেন,গছা,sb,eN
+গছেন,গছা,sb,eR
 গছছি,গছা,gb,am
 গছছেন,গছা,gb,ap
 গছছ,গছা,gb,tm
@@ -38180,7 +38180,7 @@ word,parent_word,tense,person
 গজে,গজা,sb,ae
 গজেন,গজা,sb,in
 গজে,গজা,sb,er
-গজেন,গজা,sb,eN
+গজেন,গজা,sb,eR
 গজছি,গজা,gb,am
 গজছেন,গজা,gb,ap
 গজছ,গজা,gb,tm
@@ -38259,7 +38259,7 @@ word,parent_word,tense,person
 ঘষে,ঘষা,sb,ae
 ঘষেন,ঘষা,sb,in
 ঘষে,ঘষা,sb,er
-ঘষেন,ঘষা,sb,eN
+ঘষেন,ঘষা,sb,eR
 ঘষছি,ঘষা,gb,am
 ঘষছেন,ঘষা,gb,ap
 ঘষছ,ঘষা,gb,tm
@@ -38338,7 +38338,7 @@ word,parent_word,tense,person
 চড়ে,চড়া,sb,ae
 চড়েন,চড়া,sb,in
 চড়ে,চড়া,sb,er
-চড়েন,চড়া,sb,eN
+চড়েন,চড়া,sb,eR
 চড়ছি,চড়া,gb,am
 চড়ছেন,চড়া,gb,ap
 চড়ছ,চড়া,gb,tm
@@ -38417,7 +38417,7 @@ word,parent_word,tense,person
 জরে,জরা,sb,ae
 জরেন,জরা,sb,in
 জরে,জরা,sb,er
-জরেন,জরা,sb,eN
+জরেন,জরা,sb,eR
 জরছি,জরা,gb,am
 জরছেন,জরা,gb,ap
 জরছ,জরা,gb,tm
@@ -38496,7 +38496,7 @@ word,parent_word,tense,person
 জড়ে,জড়া,sb,ae
 জড়েন,জড়া,sb,in
 জড়ে,জড়া,sb,er
-জড়েন,জড়া,sb,eN
+জড়েন,জড়া,sb,eR
 জড়ছি,জড়া,gb,am
 জড়ছেন,জড়া,gb,ap
 জড়ছ,জড়া,gb,tm
@@ -38575,7 +38575,7 @@ word,parent_word,tense,person
 ঝরে,ঝরা,sb,ae
 ঝরেন,ঝরা,sb,in
 ঝরে,ঝরা,sb,er
-ঝরেন,ঝরা,sb,eN
+ঝরেন,ঝরা,sb,eR
 ঝরছি,ঝরা,gb,am
 ঝরছেন,ঝরা,gb,ap
 ঝরছ,ঝরা,gb,tm
@@ -38654,7 +38654,7 @@ word,parent_word,tense,person
 টকে,টকা,sb,ae
 টকেন,টকা,sb,in
 টকে,টকা,sb,er
-টকেন,টকা,sb,eN
+টকেন,টকা,sb,eR
 টকছি,টকা,gb,am
 টকছেন,টকা,gb,ap
 টকছ,টকা,gb,tm
@@ -38733,7 +38733,7 @@ word,parent_word,tense,person
 টলে,টলা,sb,ae
 টলেন,টলা,sb,in
 টলে,টলা,sb,er
-টলেন,টলা,sb,eN
+টলেন,টলা,sb,eR
 টলছি,টলা,gb,am
 টলছেন,টলা,gb,ap
 টলছ,টলা,gb,tm
@@ -38812,7 +38812,7 @@ word,parent_word,tense,person
 ডলে,ডলা,sb,ae
 ডলেন,ডলা,sb,in
 ডলে,ডলা,sb,er
-ডলেন,ডলা,sb,eN
+ডলেন,ডলা,sb,eR
 ডলছি,ডলা,gb,am
 ডলছেন,ডলা,gb,ap
 ডলছ,ডলা,gb,tm
@@ -38891,7 +38891,7 @@ word,parent_word,tense,person
 তলে,তলা,sb,ae
 তলেন,তলা,sb,in
 তলে,তলা,sb,er
-তলেন,তলা,sb,eN
+তলেন,তলা,sb,eR
 তলছি,তলা,gb,am
 তলছেন,তলা,gb,ap
 তলছ,তলা,gb,tm
@@ -38970,7 +38970,7 @@ word,parent_word,tense,person
 দলে,দলা,sb,ae
 দলেন,দলা,sb,in
 দলে,দলা,sb,er
-দলেন,দলা,sb,eN
+দলেন,দলা,sb,eR
 দলছি,দলা,gb,am
 দলছেন,দলা,gb,ap
 দলছ,দলা,gb,tm
@@ -39049,7 +39049,7 @@ word,parent_word,tense,person
 ধসে,ধসা,sb,ae
 ধসেন,ধসা,sb,in
 ধসে,ধসা,sb,er
-ধসেন,ধসা,sb,eN
+ধসেন,ধসা,sb,eR
 ধসছি,ধসা,gb,am
 ধসছেন,ধসা,gb,ap
 ধসছ,ধসা,gb,tm
@@ -39128,7 +39128,7 @@ word,parent_word,tense,person
 পড়ে,পড়া,sb,ae
 পড়েন,পড়া,sb,in
 পড়ে,পড়া,sb,er
-পড়েন,পড়া,sb,eN
+পড়েন,পড়া,sb,eR
 পড়ছি,পড়া,gb,am
 পড়ছেন,পড়া,gb,ap
 পড়ছ,পড়া,gb,tm
@@ -39207,7 +39207,7 @@ word,parent_word,tense,person
 পড়ে,পড়া,sb,ae
 পড়েন,পড়া,sb,in
 পড়ে,পড়া,sb,er
-পড়েন,পড়া,sb,eN
+পড়েন,পড়া,sb,eR
 পড়ছি,পড়া,gb,am
 পড়ছেন,পড়া,gb,ap
 পড়ছ,পড়া,gb,tm
@@ -39286,7 +39286,7 @@ word,parent_word,tense,person
 বখাবনে,বখাবনা,sb,ae
 বখাবনেন,বখাবনা,sb,in
 বখাবনে,বখাবনা,sb,er
-বখাবনেন,বখাবনা,sb,eN
+বখাবনেন,বখাবনা,sb,eR
 বখাবনছি,বখাবনা,gb,am
 বখাবনছেন,বখাবনা,gb,ap
 বখাবনছ,বখাবনা,gb,tm
@@ -39365,7 +39365,7 @@ word,parent_word,tense,person
 বহে,বহা,sb,ae
 বহেন,বহা,sb,in
 বহে,বহা,sb,er
-বহেন,বহা,sb,eN
+বহেন,বহা,sb,eR
 বহছি,বহা,gb,am
 বহছেন,বহা,gb,ap
 বহছ,বহা,gb,tm
@@ -39444,7 +39444,7 @@ word,parent_word,tense,person
 ভরে,ভরা,sb,ae
 ভরেন,ভরা,sb,in
 ভরে,ভরা,sb,er
-ভরেন,ভরা,sb,eN
+ভরেন,ভরা,sb,eR
 ভরছি,ভরা,gb,am
 ভরছেন,ভরা,gb,ap
 ভরছ,ভরা,gb,tm
@@ -39523,7 +39523,7 @@ word,parent_word,tense,person
 মজে,মজা,sb,ae
 মজেন,মজা,sb,in
 মজে,মজা,sb,er
-মজেন,মজা,sb,eN
+মজেন,মজা,sb,eR
 মজছি,মজা,gb,am
 মজছেন,মজা,gb,ap
 মজছ,মজা,gb,tm
@@ -39602,7 +39602,7 @@ word,parent_word,tense,person
 মলে,মলা,sb,ae
 মলেন,মলা,sb,in
 মলে,মলা,sb,er
-মলেন,মলা,sb,eN
+মলেন,মলা,sb,eR
 মলছি,মলা,gb,am
 মলছেন,মলা,gb,ap
 মলছ,মলা,gb,tm
@@ -39681,7 +39681,7 @@ word,parent_word,tense,person
 এলে,এলা,sb,ae
 এলেন,এলা,sb,in
 এলে,এলা,sb,er
-এলেন,এলা,sb,eN
+এলেন,এলা,sb,eR
 এলছি,এলা,gb,am
 এলছেন,এলা,gb,ap
 এলছ,এলা,gb,tm
@@ -39760,7 +39760,7 @@ word,parent_word,tense,person
 এড়ে,এড়া,sb,ae
 এড়েন,এড়া,sb,in
 এড়ে,এড়া,sb,er
-এড়েন,এড়া,sb,eN
+এড়েন,এড়া,sb,eR
 এড়ছি,এড়া,gb,am
 এড়ছেন,এড়া,gb,ap
 এড়ছ,এড়া,gb,tm
@@ -39839,7 +39839,7 @@ word,parent_word,tense,person
 রসে,রসা,sb,ae
 রসেন,রসা,sb,in
 রসে,রসা,sb,er
-রসেন,রসা,sb,eN
+রসেন,রসা,sb,eR
 রসছি,রসা,gb,am
 রসছেন,রসা,gb,ap
 রসছ,রসা,gb,tm
@@ -39918,7 +39918,7 @@ word,parent_word,tense,person
 রহে,রহা,sb,ae
 রহেন,রহা,sb,in
 রহে,রহা,sb,er
-রহেন,রহা,sb,eN
+রহেন,রহা,sb,eR
 রহছি,রহা,gb,am
 রহছেন,রহা,gb,ap
 রহছ,রহা,gb,tm
@@ -39997,7 +39997,7 @@ word,parent_word,tense,person
 রটে,রটা,sb,ae
 রটেন,রটা,sb,in
 রটে,রটা,sb,er
-রটেন,রটা,sb,eN
+রটেন,রটা,sb,eR
 রটছি,রটা,gb,am
 রটছেন,রটা,gb,ap
 রটছ,রটা,gb,tm
@@ -40076,7 +40076,7 @@ word,parent_word,tense,person
 রয়ে,রয়া,sb,ae
 রয়েন,রয়া,sb,in
 রয়ে,রয়া,sb,er
-রয়েন,রয়া,sb,eN
+রয়েন,রয়া,sb,eR
 রয়ছি,রয়া,gb,am
 রয়ছেন,রয়া,gb,ap
 রয়ছ,রয়া,gb,tm
@@ -40155,7 +40155,7 @@ word,parent_word,tense,person
 সঁপে,সঁপা,sb,ae
 সঁপেন,সঁপা,sb,in
 সঁপে,সঁপা,sb,er
-সঁপেন,সঁপা,sb,eN
+সঁপেন,সঁপা,sb,eR
 সঁপছি,সঁপা,gb,am
 সঁপছেন,সঁপা,gb,ap
 সঁপছ,সঁপা,gb,tm
@@ -40234,7 +40234,7 @@ word,parent_word,tense,person
 সরে,সরা,sb,ae
 সরেন,সরা,sb,in
 সরে,সরা,sb,er
-সরেন,সরা,sb,eN
+সরেন,সরা,sb,eR
 সরছি,সরা,gb,am
 সরছেন,সরা,gb,ap
 সরছ,সরা,gb,tm
@@ -40313,7 +40313,7 @@ word,parent_word,tense,person
 সহে,সহা,sb,ae
 সহেন,সহা,sb,in
 সহে,সহা,sb,er
-সহেন,সহা,sb,eN
+সহেন,সহা,sb,eR
 সহছি,সহা,gb,am
 সহছেন,সহা,gb,ap
 সহছ,সহা,gb,tm
@@ -40392,7 +40392,7 @@ word,parent_word,tense,person
 হটে,হটা,sb,ae
 হটেন,হটা,sb,in
 হটে,হটা,sb,er
-হটেন,হটা,sb,eN
+হটেন,হটা,sb,eR
 হটছি,হটা,gb,am
 হটছেন,হটা,gb,ap
 হটছ,হটা,gb,tm
@@ -40471,7 +40471,7 @@ word,parent_word,tense,person
 হরে,হরা,sb,ae
 হরেন,হরা,sb,in
 হরে,হরা,sb,er
-হরেন,হরা,sb,eN
+হরেন,হরা,sb,eR
 হরছি,হরা,gb,am
 হরছেন,হরা,gb,ap
 হরছ,হরা,gb,tm
@@ -40550,7 +40550,7 @@ word,parent_word,tense,person
 লড়ে,লড়া,sb,ae
 লড়েন,লড়া,sb,in
 লড়ে,লড়া,sb,er
-লড়েন,লড়া,sb,eN
+লড়েন,লড়া,sb,eR
 লড়ছি,লড়া,gb,am
 লড়ছেন,লড়া,gb,ap
 লড়ছ,লড়া,gb,tm
@@ -40629,7 +40629,7 @@ word,parent_word,tense,person
 অস্তে,অস্তা,sb,ae
 অস্তেন,অস্তা,sb,in
 অস্তে,অস্তা,sb,er
-অস্তেন,অস্তা,sb,eN
+অস্তেন,অস্তা,sb,eR
 অস্তছি,অস্তা,gb,am
 অস্তছেন,অস্তা,gb,ap
 অস্তছ,অস্তা,gb,tm
@@ -40708,7 +40708,7 @@ word,parent_word,tense,person
 আউটে,আউটা,sb,ae
 আউটেন,আউটা,sb,in
 আউটে,আউটা,sb,er
-আউটেন,আউটা,sb,eN
+আউটেন,আউটা,sb,eR
 আউটছি,আউটা,gb,am
 আউটছেন,আউটা,gb,ap
 আউটছ,আউটা,gb,tm
@@ -40787,7 +40787,7 @@ word,parent_word,tense,person
 আউরে,আউরা,sb,ae
 আউরেন,আউরা,sb,in
 আউরে,আউরা,sb,er
-আউরেন,আউরা,sb,eN
+আউরেন,আউরা,sb,eR
 আউরছি,আউরা,gb,am
 আউরছেন,আউরা,gb,ap
 আউরছ,আউরা,gb,tm
@@ -40866,7 +40866,7 @@ word,parent_word,tense,person
 আওটে,আওটা,sb,ae
 আওটেন,আওটা,sb,in
 আওটে,আওটা,sb,er
-আওটেন,আওটা,sb,eN
+আওটেন,আওটা,sb,eR
 আওটছি,আওটা,gb,am
 আওটছেন,আওটা,gb,ap
 আওটছ,আওটা,gb,tm
@@ -40945,7 +40945,7 @@ word,parent_word,tense,person
 আঙলে,আঙলা,sb,ae
 আঙলেন,আঙলা,sb,in
 আঙলে,আঙলা,sb,er
-আঙলেন,আঙলা,sb,eN
+আঙলেন,আঙলা,sb,eR
 আঙলছি,আঙলা,gb,am
 আঙলছেন,আঙলা,gb,ap
 আঙলছ,আঙলা,gb,tm
@@ -41024,7 +41024,7 @@ word,parent_word,tense,person
 উছলে,উছলা,sb,ae
 উছলেন,উছলা,sb,in
 উছলে,উছলা,sb,er
-উছলেন,উছলা,sb,eN
+উছলেন,উছলা,sb,eR
 উছলছি,উছলা,gb,am
 উছলছেন,উছলা,gb,ap
 উছলছ,উছলা,gb,tm
@@ -41103,7 +41103,7 @@ word,parent_word,tense,person
 উথলে,উথলা,sb,ae
 উথলেন,উথলা,sb,in
 উথলে,উথলা,sb,er
-উথলেন,উথলা,sb,eN
+উথলেন,উথলা,sb,eR
 উথলছি,উথলা,gb,am
 উথলছেন,উথলা,gb,ap
 উথলছ,উথলা,gb,tm
@@ -41182,7 +41182,7 @@ word,parent_word,tense,person
 উপচে,উপচা,sb,ae
 উপচেন,উপচা,sb,in
 উপচে,উপচা,sb,er
-উপচেন,উপচা,sb,eN
+উপচেন,উপচা,sb,eR
 উপচছি,উপচা,gb,am
 উপচছেন,উপচা,gb,ap
 উপচছ,উপচা,gb,tm
@@ -41261,7 +41261,7 @@ word,parent_word,tense,person
 উলটে,উলটা,sb,ae
 উলটেন,উলটা,sb,in
 উলটে,উলটা,sb,er
-উলটেন,উলটা,sb,eN
+উলটেন,উলটা,sb,eR
 উলটছি,উলটা,gb,am
 উলটছেন,উলটা,gb,ap
 উলটছ,উলটা,gb,tm
@@ -41340,7 +41340,7 @@ word,parent_word,tense,person
 ওখরে,ওখরা,sb,ae
 ওখরেন,ওখরা,sb,in
 ওখরে,ওখরা,sb,er
-ওখরেন,ওখরা,sb,eN
+ওখরেন,ওখরা,sb,eR
 ওখরছি,ওখরা,gb,am
 ওখরছেন,ওখরা,gb,ap
 ওখরছ,ওখরা,gb,tm
@@ -41419,7 +41419,7 @@ word,parent_word,tense,person
 ওখড়ে,ওখড়া,sb,ae
 ওখড়েন,ওখড়া,sb,in
 ওখড়ে,ওখড়া,sb,er
-ওখড়েন,ওখড়া,sb,eN
+ওখড়েন,ওখড়া,sb,eR
 ওখড়ছি,ওখড়া,gb,am
 ওখড়ছেন,ওখড়া,gb,ap
 ওখড়ছ,ওখড়া,gb,tm
@@ -41498,7 +41498,7 @@ word,parent_word,tense,person
 ওগরে,ওগরা,sb,ae
 ওগরেন,ওগরা,sb,in
 ওগরে,ওগরা,sb,er
-ওগরেন,ওগরা,sb,eN
+ওগরেন,ওগরা,sb,eR
 ওগরছি,ওগরা,gb,am
 ওগরছেন,ওগরা,gb,ap
 ওগরছ,ওগরা,gb,tm
@@ -41577,7 +41577,7 @@ word,parent_word,tense,person
 ওল্টে,ওল্টা,sb,ae
 ওল্টেন,ওল্টা,sb,in
 ওল্টে,ওল্টা,sb,er
-ওল্টেন,ওল্টা,sb,eN
+ওল্টেন,ওল্টা,sb,eR
 ওল্টছি,ওল্টা,gb,am
 ওল্টছেন,ওল্টা,gb,ap
 ওল্টছ,ওল্টা,gb,tm
@@ -41656,7 +41656,7 @@ word,parent_word,tense,person
 দৌড়ে,দৌড়া,sb,ae
 দৌড়েন,দৌড়া,sb,in
 দৌড়ে,দৌড়া,sb,er
-দৌড়েন,দৌড়া,sb,eN
+দৌড়েন,দৌড়া,sb,eR
 দৌড়ছি,দৌড়া,gb,am
 দৌড়ছেন,দৌড়া,gb,ap
 দৌড়ছ,দৌড়া,gb,tm
@@ -41735,7 +41735,7 @@ word,parent_word,tense,person
 কড়কে,কড়কা,sb,ae
 কড়কেন,কড়কা,sb,in
 কড়কে,কড়কা,sb,er
-কড়কেন,কড়কা,sb,eN
+কড়কেন,কড়কা,sb,eR
 কড়কছি,কড়কা,gb,am
 কড়কছেন,কড়কা,gb,ap
 কড়কছ,কড়কা,gb,tm
@@ -41814,7 +41814,7 @@ word,parent_word,tense,person
 ঘবড়ে,ঘবড়া,sb,ae
 ঘবড়েন,ঘবড়া,sb,in
 ঘবড়ে,ঘবড়া,sb,er
-ঘবড়েন,ঘবড়া,sb,eN
+ঘবড়েন,ঘবড়া,sb,eR
 ঘবড়ছি,ঘবড়া,gb,am
 ঘবড়ছেন,ঘবড়া,gb,ap
 ঘবড়ছ,ঘবড়া,gb,tm
@@ -41893,7 +41893,7 @@ word,parent_word,tense,person
 চাবকে,চাবকা,sb,ae
 চাবকেন,চাবকা,sb,in
 চাবকে,চাবকা,sb,er
-চাবকেন,চাবকা,sb,eN
+চাবকেন,চাবকা,sb,eR
 চাবকছি,চাবকা,gb,am
 চাবকছেন,চাবকা,gb,ap
 চাবকছ,চাবকা,gb,tm
@@ -41972,7 +41972,7 @@ word,parent_word,tense,person
 চাপড়ে,চাপড়া,sb,ae
 চাপড়েন,চাপড়া,sb,in
 চাপড়ে,চাপড়া,sb,er
-চাপড়েন,চাপড়া,sb,eN
+চাপড়েন,চাপড়া,sb,eR
 চাপড়ছি,চাপড়া,gb,am
 চাপড়ছেন,চাপড়া,gb,ap
 চাপড়ছ,চাপড়া,gb,tm
@@ -42051,7 +42051,7 @@ word,parent_word,tense,person
 ছটকে,ছটকা,sb,ae
 ছটকেন,ছটকা,sb,in
 ছটকে,ছটকা,sb,er
-ছটকেন,ছটকা,sb,eN
+ছটকেন,ছটকা,sb,eR
 ছটকছি,ছটকা,gb,am
 ছটকছেন,ছটকা,gb,ap
 ছটকছ,ছটকা,gb,tm
@@ -42130,7 +42130,7 @@ word,parent_word,tense,person
 ধমকে,ধমকা,sb,ae
 ধমকেন,ধমকা,sb,in
 ধমকে,ধমকা,sb,er
-ধমকেন,ধমকা,sb,eN
+ধমকেন,ধমকা,sb,eR
 ধমকছি,ধমকা,gb,am
 ধমকছেন,ধমকা,gb,ap
 ধমকছ,ধমকা,gb,tm
@@ -42209,7 +42209,7 @@ word,parent_word,tense,person
 ধাবড়ে,ধাবড়া,sb,ae
 ধাবড়েন,ধাবড়া,sb,in
 ধাবড়ে,ধাবড়া,sb,er
-ধাবড়েন,ধাবড়া,sb,eN
+ধাবড়েন,ধাবড়া,sb,eR
 ধাবড়ছি,ধাবড়া,gb,am
 ধাবড়ছেন,ধাবড়া,gb,ap
 ধাবড়ছ,ধাবড়া,gb,tm
@@ -42288,7 +42288,7 @@ word,parent_word,tense,person
 নিংড়ে,নিংড়া,sb,ae
 নিংড়েন,নিংড়া,sb,in
 নিংড়ে,নিংড়া,sb,er
-নিংড়েন,নিংড়া,sb,eN
+নিংড়েন,নিংড়া,sb,eR
 নিংড়ছি,নিংড়া,gb,am
 নিংড়ছেন,নিংড়া,gb,ap
 নিংড়ছ,নিংড়া,gb,tm
@@ -42367,7 +42367,7 @@ word,parent_word,tense,person
 ফসকে,ফসকা,sb,ae
 ফসকেন,ফসকা,sb,in
 ফসকে,ফসকা,sb,er
-ফসকেন,ফসকা,sb,eN
+ফসকেন,ফসকা,sb,eR
 ফসকছি,ফসকা,gb,am
 ফসকছেন,ফসকা,gb,ap
 ফসকছ,ফসকা,gb,tm
@@ -42446,7 +42446,7 @@ word,parent_word,tense,person
 ভড়কে,ভড়কা,sb,ae
 ভড়কেন,ভড়কা,sb,in
 ভড়কে,ভড়কা,sb,er
-ভড়কেন,ভড়কা,sb,eN
+ভড়কেন,ভড়কা,sb,eR
 ভড়কছি,ভড়কা,gb,am
 ভড়কছেন,ভড়কা,gb,ap
 ভড়কছ,ভড়কা,gb,tm
@@ -42525,7 +42525,7 @@ word,parent_word,tense,person
 মটকে,মটকা,sb,ae
 মটকেন,মটকা,sb,in
 মটকে,মটকা,sb,er
-মটকেন,মটকা,sb,eN
+মটকেন,মটকা,sb,eR
 মটকছি,মটকা,gb,am
 মটকছেন,মটকা,gb,ap
 মটকছ,মটকা,gb,tm
@@ -42604,7 +42604,7 @@ word,parent_word,tense,person
 লটকে,লটকা,sb,ae
 লটকেন,লটকা,sb,in
 লটকে,লটকা,sb,er
-লটকেন,লটকা,sb,eN
+লটকেন,লটকা,sb,eR
 লটকছি,লটকা,gb,am
 লটকছেন,লটকা,gb,ap
 লটকছ,লটকা,gb,tm
@@ -42683,7 +42683,7 @@ word,parent_word,tense,person
 সটকে,সটকা,sb,ae
 সটকেন,সটকা,sb,in
 সটকে,সটকা,sb,er
-সটকেন,সটকা,sb,eN
+সটকেন,সটকা,sb,eR
 সটকছি,সটকা,gb,am
 সটকছেন,সটকা,gb,ap
 সটকছ,সটকা,gb,tm
@@ -42762,7 +42762,7 @@ word,parent_word,tense,person
 কোচে,কুচা,sb,ae
 কোচেন,কুচা,sb,in
 কোচে,কুচা,sb,er
-কোচেন,কুচা,sb,eN
+কোচেন,কুচা,sb,eR
 কুচছি,কুচা,gb,am
 কুচছেন,কুচা,gb,ap
 কুচছ,কুচা,gb,tm
@@ -42840,7 +42840,7 @@ word,parent_word,tense,person
 খোঁঁজে,খুঁজা,sb,ae
 খোঁঁজেন,খুঁজা,sb,in
 খোঁঁজে,খুঁজা,sb,er
-খোঁঁজেন,খুঁজা,sb,eN
+খোঁঁজেন,খুঁজা,sb,eR
 খুঁজছি,খুঁজা,gb,am
 খুঁজছেন,খুঁজা,gb,ap
 খুঁজছ,খুঁজা,gb,tm
@@ -42918,7 +42918,7 @@ word,parent_word,tense,person
 খোঁঁটে,খুঁটা,sb,ae
 খোঁঁটেন,খুঁটা,sb,in
 খোঁঁটে,খুঁটা,sb,er
-খোঁঁটেন,খুঁটা,sb,eN
+খোঁঁটেন,খুঁটা,sb,eR
 খুঁটছি,খুঁটা,gb,am
 খুঁটছেন,খুঁটা,gb,ap
 খুঁটছ,খুঁটা,gb,tm
@@ -42996,7 +42996,7 @@ word,parent_word,tense,person
 খোলে,খুলা,sb,ae
 খোলেন,খুলা,sb,in
 খোলে,খুলা,sb,er
-খোলেন,খুলা,sb,eN
+খোলেন,খুলা,sb,eR
 খুলছি,খুলা,gb,am
 খুলছেন,খুলা,gb,ap
 খুলছ,খুলা,gb,tm
@@ -43074,7 +43074,7 @@ word,parent_word,tense,person
 গোনে,গুনা,sb,ae
 গোনেন,গুনা,sb,in
 গোনে,গুনা,sb,er
-গোনেন,গুনা,sb,eN
+গোনেন,গুনা,sb,eR
 গুনছি,গুনা,gb,am
 গুনছেন,গুনা,gb,ap
 গুনছ,গুনা,gb,tm
@@ -43152,7 +43152,7 @@ word,parent_word,tense,person
 গোঁঁতে,গুঁতা,sb,ae
 গোঁঁতেন,গুঁতা,sb,in
 গোঁঁতে,গুঁতা,sb,er
-গোঁঁতেন,গুঁতা,sb,eN
+গোঁঁতেন,গুঁতা,sb,eR
 গুঁতছি,গুঁতা,gb,am
 গুঁতছেন,গুঁতা,gb,ap
 গুঁতছ,গুঁতা,gb,tm
@@ -43230,7 +43230,7 @@ word,parent_word,tense,person
 গোঁঁড়ে,গুঁড়া,sb,ae
 গোঁঁড়েন,গুঁড়া,sb,in
 গোঁঁড়ে,গুঁড়া,sb,er
-গোঁঁড়েন,গুঁড়া,sb,eN
+গোঁঁড়েন,গুঁড়া,sb,eR
 গুঁড়ছি,গুঁড়া,gb,am
 গুঁড়ছেন,গুঁড়া,gb,ap
 গুঁড়ছ,গুঁড়া,gb,tm
@@ -43308,7 +43308,7 @@ word,parent_word,tense,person
 গোঙে,গুঙা,sb,ae
 গোঙেন,গুঙা,sb,in
 গোঙে,গুঙা,sb,er
-গোঙেন,গুঙা,sb,eN
+গোঙেন,গুঙা,sb,eR
 গুঙছি,গুঙা,gb,am
 গুঙছেন,গুঙা,gb,ap
 গুঙছ,গুঙা,gb,tm
@@ -43386,7 +43386,7 @@ word,parent_word,tense,person
 গোছে,গুছা,sb,ae
 গোছেন,গুছা,sb,in
 গোছে,গুছা,sb,er
-গোছেন,গুছা,sb,eN
+গোছেন,গুছা,sb,eR
 গুছছি,গুছা,gb,am
 গুছছেন,গুছা,gb,ap
 গুছছ,গুছা,gb,tm
@@ -43464,7 +43464,7 @@ word,parent_word,tense,person
 গোটে,গুটা,sb,ae
 গোটেন,গুটা,sb,in
 গোটে,গুটা,sb,er
-গোটেন,গুটা,sb,eN
+গোটেন,গুটা,sb,eR
 গুটছি,গুটা,gb,am
 গুটছেন,গুটা,gb,ap
 গুটছ,গুটা,gb,tm
@@ -43542,7 +43542,7 @@ word,parent_word,tense,person
 গোনে,গুনা,sb,ae
 গোনেন,গুনা,sb,in
 গোনে,গুনা,sb,er
-গোনেন,গুনা,sb,eN
+গোনেন,গুনা,sb,eR
 গুনছি,গুনা,gb,am
 গুনছেন,গুনা,gb,ap
 গুনছ,গুনা,gb,tm
@@ -43620,7 +43620,7 @@ word,parent_word,tense,person
 ঘোটে,ঘুটা,sb,ae
 ঘোটেন,ঘুটা,sb,in
 ঘোটে,ঘুটা,sb,er
-ঘোটেন,ঘুটা,sb,eN
+ঘোটেন,ঘুটা,sb,eR
 ঘুটছি,ঘুটা,gb,am
 ঘুটছেন,ঘুটা,gb,ap
 ঘুটছ,ঘুটা,gb,tm
@@ -43698,7 +43698,7 @@ word,parent_word,tense,person
 ঘোড়ে,ঘুড়া,sb,ae
 ঘোড়েন,ঘুড়া,sb,in
 ঘোড়ে,ঘুড়া,sb,er
-ঘোড়েন,ঘুড়া,sb,eN
+ঘোড়েন,ঘুড়া,sb,eR
 ঘুড়ছি,ঘুড়া,gb,am
 ঘুড়ছেন,ঘুড়া,gb,ap
 ঘুড়ছ,ঘুড়া,gb,tm
@@ -43776,7 +43776,7 @@ word,parent_word,tense,person
 ঘোলে,ঘুলা,sb,ae
 ঘোলেন,ঘুলা,sb,in
 ঘোলে,ঘুলা,sb,er
-ঘোলেন,ঘুলা,sb,eN
+ঘোলেন,ঘুলা,sb,eR
 ঘুলছি,ঘুলা,gb,am
 ঘুলছেন,ঘুলা,gb,ap
 ঘুলছ,ঘুলা,gb,tm
@@ -43854,7 +43854,7 @@ word,parent_word,tense,person
 ঘোষে,ঘুষা,sb,ae
 ঘোষেন,ঘুষা,sb,in
 ঘোষে,ঘুষা,sb,er
-ঘোষেন,ঘুষা,sb,eN
+ঘোষেন,ঘুষা,sb,eR
 ঘুষছি,ঘুষা,gb,am
 ঘুষছেন,ঘুষা,gb,ap
 ঘুষছ,ঘুষা,gb,tm
@@ -43932,7 +43932,7 @@ word,parent_word,tense,person
 চোবে,চুবা,sb,ae
 চোবেন,চুবা,sb,in
 চোবে,চুবা,sb,er
-চোবেন,চুবা,sb,eN
+চোবেন,চুবা,sb,eR
 চুবছি,চুবা,gb,am
 চুবছেন,চুবা,gb,ap
 চুবছ,চুবা,gb,tm
@@ -44010,7 +44010,7 @@ word,parent_word,tense,person
 ছোটে,ছুটা,sb,ae
 ছোটেন,ছুটা,sb,in
 ছোটে,ছুটা,sb,er
-ছোটেন,ছুটা,sb,eN
+ছোটেন,ছুটা,sb,eR
 ছুটছি,ছুটা,gb,am
 ছুটছেন,ছুটা,gb,ap
 ছুটছ,ছুটা,gb,tm
@@ -44088,7 +44088,7 @@ word,parent_word,tense,person
 ছোড়ে,ছুড়া,sb,ae
 ছোড়েন,ছুড়া,sb,in
 ছোড়ে,ছুড়া,sb,er
-ছোড়েন,ছুড়া,sb,eN
+ছোড়েন,ছুড়া,sb,eR
 ছুড়ছি,ছুড়া,gb,am
 ছুড়ছেন,ছুড়া,gb,ap
 ছুড়ছ,ছুড়া,gb,tm
@@ -44166,7 +44166,7 @@ word,parent_word,tense,person
 জোটে,জুটা,sb,ae
 জোটেন,জুটা,sb,in
 জোটে,জুটা,sb,er
-জোটেন,জুটা,sb,eN
+জোটেন,জুটা,sb,eR
 জুটছি,জুটা,gb,am
 জুটছেন,জুটা,gb,ap
 জুটছ,জুটা,gb,tm
@@ -44244,7 +44244,7 @@ word,parent_word,tense,person
 জোড়ে,জুড়া,sb,ae
 জোড়েন,জুড়া,sb,in
 জোড়ে,জুড়া,sb,er
-জোড়েন,জুড়া,sb,eN
+জোড়েন,জুড়া,sb,eR
 জুড়ছি,জুড়া,gb,am
 জুড়ছেন,জুড়া,gb,ap
 জুড়ছ,জুড়া,gb,tm
@@ -44322,7 +44322,7 @@ word,parent_word,tense,person
 ঝোলে,ঝুলা,sb,ae
 ঝোলেন,ঝুলা,sb,in
 ঝোলে,ঝুলা,sb,er
-ঝোলেন,ঝুলা,sb,eN
+ঝোলেন,ঝুলা,sb,eR
 ঝুলছি,ঝুলা,gb,am
 ঝুলছেন,ঝুলা,gb,ap
 ঝুলছ,ঝুলা,gb,tm
@@ -44400,7 +44400,7 @@ word,parent_word,tense,person
 ঠোকে,ঠুকা,sb,ae
 ঠোকেন,ঠুকা,sb,in
 ঠোকে,ঠুকা,sb,er
-ঠোকেন,ঠুকা,sb,eN
+ঠোকেন,ঠুকা,sb,eR
 ঠুকছি,ঠুকা,gb,am
 ঠুকছেন,ঠুকা,gb,ap
 ঠুকছ,ঠুকা,gb,tm
@@ -44478,7 +44478,7 @@ word,parent_word,tense,person
 ঠোসে,ঠুসা,sb,ae
 ঠোসেন,ঠুসা,sb,in
 ঠোসে,ঠুসা,sb,er
-ঠোসেন,ঠুসা,sb,eN
+ঠোসেন,ঠুসা,sb,eR
 ঠুসছি,ঠুসা,gb,am
 ঠুসছেন,ঠুসা,gb,ap
 ঠুসছ,ঠুসা,gb,tm
@@ -44556,7 +44556,7 @@ word,parent_word,tense,person
 ঢোকে,ঢুকা,sb,ae
 ঢোকেন,ঢুকা,sb,in
 ঢোকে,ঢুকা,sb,er
-ঢোকেন,ঢুকা,sb,eN
+ঢোকেন,ঢুকা,sb,eR
 ঢুকছি,ঢুকা,gb,am
 ঢুকছেন,ঢুকা,gb,ap
 ঢুকছ,ঢুকা,gb,tm
@@ -44634,7 +44634,7 @@ word,parent_word,tense,person
 ঢোলে,ঢুলা,sb,ae
 ঢোলেন,ঢুলা,sb,in
 ঢোলে,ঢুলা,sb,er
-ঢোলেন,ঢুলা,sb,eN
+ঢোলেন,ঢুলা,sb,eR
 ঢুলছি,ঢুলা,gb,am
 ঢুলছেন,ঢুলা,gb,ap
 ঢুলছ,ঢুলা,gb,tm
@@ -44712,7 +44712,7 @@ word,parent_word,tense,person
 ঢোসে,ঢুসা,sb,ae
 ঢোসেন,ঢুসা,sb,in
 ঢোসে,ঢুসা,sb,er
-ঢোসেন,ঢুসা,sb,eN
+ঢোসেন,ঢুসা,sb,eR
 ঢুসছি,ঢুসা,gb,am
 ঢুসছেন,ঢুসা,gb,ap
 ঢুসছ,ঢুসা,gb,tm
@@ -44790,7 +44790,7 @@ word,parent_word,tense,person
 তোলে,তুলা,sb,ae
 তোলেন,তুলা,sb,in
 তোলে,তুলা,sb,er
-তোলেন,তুলা,sb,eN
+তোলেন,তুলা,sb,eR
 তুলছি,তুলা,gb,am
 তুলছেন,তুলা,gb,ap
 তুলছ,তুলা,gb,tm
@@ -44868,7 +44868,7 @@ word,parent_word,tense,person
 থোলে,থুলা,sb,ae
 থোলেন,থুলা,sb,in
 থোলে,থুলা,sb,er
-থোলেন,থুলা,sb,eN
+থোলেন,থুলা,sb,eR
 থুলছি,থুলা,gb,am
 থুলছেন,থুলা,gb,ap
 থুলছ,থুলা,gb,tm
@@ -44946,7 +44946,7 @@ word,parent_word,tense,person
 দোলে,দুলা,sb,ae
 দোলেন,দুলা,sb,in
 দোলে,দুলা,sb,er
-দোলেন,দুলা,sb,eN
+দোলেন,দুলা,sb,eR
 দুলছি,দুলা,gb,am
 দুলছেন,দুলা,gb,ap
 দুলছ,দুলা,gb,tm
@@ -45024,7 +45024,7 @@ word,parent_word,tense,person
 দোষে,দুষা,sb,ae
 দোষেন,দুষা,sb,in
 দোষে,দুষা,sb,er
-দোষেন,দুষা,sb,eN
+দোষেন,দুষা,sb,eR
 দুষছি,দুষা,gb,am
 দুষছেন,দুষা,gb,ap
 দুষছ,দুষা,gb,tm
@@ -45102,7 +45102,7 @@ word,parent_word,tense,person
 চোদে,চুদা,sb,ae
 চোদেন,চুদা,sb,in
 চোদে,চুদা,sb,er
-চোদেন,চুদা,sb,eN
+চোদেন,চুদা,sb,eR
 চুদছি,চুদা,gb,am
 চুদছেন,চুদা,gb,ap
 চুদছ,চুদা,gb,tm
@@ -45180,7 +45180,7 @@ word,parent_word,tense,person
 নোয়ে,নুয়া,sb,ae
 নোয়েন,নুয়া,sb,in
 নোয়ে,নুয়া,sb,er
-নোয়েন,নুয়া,sb,eN
+নোয়েন,নুয়া,sb,eR
 নুয়ছি,নুয়া,gb,am
 নুয়ছেন,নুয়া,gb,ap
 নুয়ছ,নুয়া,gb,tm
@@ -45258,7 +45258,7 @@ word,parent_word,tense,person
 পোরে,পুরা,sb,ae
 পোরেন,পুরা,sb,in
 পোরে,পুরা,sb,er
-পোরেন,পুরা,sb,eN
+পোরেন,পুরা,sb,eR
 পুরছি,পুরা,gb,am
 পুরছেন,পুরা,gb,ap
 পুরছ,পুরা,gb,tm
@@ -45336,7 +45336,7 @@ word,parent_word,tense,person
 পোষে,পুষা,sb,ae
 পোষেন,পুষা,sb,in
 পোষে,পুষা,sb,er
-পোষেন,পুষা,sb,eN
+পোষেন,পুষা,sb,eR
 পুষছি,পুষা,gb,am
 পুষছেন,পুষা,gb,ap
 পুষছ,পুষা,gb,tm
@@ -45414,7 +45414,7 @@ word,parent_word,tense,person
 পোড়ে,পুড়া,sb,ae
 পোড়েন,পুড়া,sb,in
 পোড়ে,পুড়া,sb,er
-পোড়েন,পুড়া,sb,eN
+পোড়েন,পুড়া,sb,eR
 পুড়ছি,পুড়া,gb,am
 পুড়ছেন,পুড়া,gb,ap
 পুড়ছ,পুড়া,gb,tm
@@ -45492,7 +45492,7 @@ word,parent_word,tense,person
 ফোটে,ফুটা,sb,ae
 ফোটেন,ফুটা,sb,in
 ফোটে,ফুটা,sb,er
-ফোটেন,ফুটা,sb,eN
+ফোটেন,ফুটা,sb,eR
 ফুটছি,ফুটা,gb,am
 ফুটছেন,ফুটা,gb,ap
 ফুটছ,ফুটা,gb,tm
@@ -45570,7 +45570,7 @@ word,parent_word,tense,person
 ফোরে,ফুরা,sb,ae
 ফোরেন,ফুরা,sb,in
 ফোরে,ফুরা,sb,er
-ফোরেন,ফুরা,sb,eN
+ফোরেন,ফুরা,sb,eR
 ফুরছি,ফুরা,gb,am
 ফুরছেন,ফুরা,gb,ap
 ফুরছ,ফুরা,gb,tm
@@ -45648,7 +45648,7 @@ word,parent_word,tense,person
 বোজে,বুজা,sb,ae
 বোজেন,বুজা,sb,in
 বোজে,বুজা,sb,er
-বোজেন,বুজা,sb,eN
+বোজেন,বুজা,sb,eR
 বুজছি,বুজা,gb,am
 বুজছেন,বুজা,gb,ap
 বুজছ,বুজা,gb,tm
@@ -45726,7 +45726,7 @@ word,parent_word,tense,person
 বোঝাবুনে,বুঝাবুনা,sb,ae
 বোঝাবুনেন,বুঝাবুনা,sb,in
 বোঝাবুনে,বুঝাবুনা,sb,er
-বোঝাবুনেন,বুঝাবুনা,sb,eN
+বোঝাবুনেন,বুঝাবুনা,sb,eR
 বুঝাবুনছি,বুঝাবুনা,gb,am
 বুঝাবুনছেন,বুঝাবুনা,gb,ap
 বুঝাবুনছ,বুঝাবুনা,gb,tm
@@ -45804,7 +45804,7 @@ word,parent_word,tense,person
 বোলে,বুলা,sb,ae
 বোলেন,বুলা,sb,in
 বোলে,বুলা,sb,er
-বোলেন,বুলা,sb,eN
+বোলেন,বুলা,sb,eR
 বুলছি,বুলা,gb,am
 বুলছেন,বুলা,gb,ap
 বুলছ,বুলা,gb,tm
@@ -45882,7 +45882,7 @@ word,parent_word,tense,person
 ভোগে,ভুগা,sb,ae
 ভোগেন,ভুগা,sb,in
 ভোগে,ভুগা,sb,er
-ভোগেন,ভুগা,sb,eN
+ভোগেন,ভুগা,sb,eR
 ভুগছি,ভুগা,gb,am
 ভুগছেন,ভুগা,gb,ap
 ভুগছ,ভুগা,gb,tm
@@ -45960,7 +45960,7 @@ word,parent_word,tense,person
 ভোলে,ভুলা,sb,ae
 ভোলেন,ভুলা,sb,in
 ভোলে,ভুলা,sb,er
-ভোলেন,ভুলা,sb,eN
+ভোলেন,ভুলা,sb,eR
 ভুলছি,ভুলা,gb,am
 ভুলছেন,ভুলা,gb,ap
 ভুলছ,ভুলা,gb,tm
@@ -46038,7 +46038,7 @@ word,parent_word,tense,person
 মোছে,মুছা,sb,ae
 মোছেন,মুছা,sb,in
 মোছে,মুছা,sb,er
-মোছেন,মুছা,sb,eN
+মোছেন,মুছা,sb,eR
 মুছছি,মুছা,gb,am
 মুছছেন,মুছা,gb,ap
 মুছছ,মুছা,gb,tm
@@ -46116,7 +46116,7 @@ word,parent_word,tense,person
 মোতে,মুতা,sb,ae
 মোতেন,মুতা,sb,in
 মোতে,মুতা,sb,er
-মোতেন,মুতা,sb,eN
+মোতেন,মুতা,sb,eR
 মুতছি,মুতা,gb,am
 মুতছেন,মুতা,gb,ap
 মুতছ,মুতা,gb,tm
@@ -46194,7 +46194,7 @@ word,parent_word,tense,person
 মোড়ে,মুড়া,sb,ae
 মোড়েন,মুড়া,sb,in
 মোড়ে,মুড়া,sb,er
-মোড়েন,মুড়া,sb,eN
+মোড়েন,মুড়া,sb,eR
 মুড়ছি,মুড়া,gb,am
 মুড়ছেন,মুড়া,gb,ap
 মুড়ছ,মুড়া,gb,tm
@@ -46272,7 +46272,7 @@ word,parent_word,tense,person
 রোখে,রুখা,sb,ae
 রোখেন,রুখা,sb,in
 রোখে,রুখা,sb,er
-রোখেন,রুখা,sb,eN
+রোখেন,রুখা,sb,eR
 রুখছি,রুখা,gb,am
 রুখছেন,রুখা,gb,ap
 রুখছ,রুখা,gb,tm
@@ -46350,7 +46350,7 @@ word,parent_word,tense,person
 লোফে,লুফা,sb,ae
 লোফেন,লুফা,sb,in
 লোফে,লুফা,sb,er
-লোফেন,লুফা,sb,eN
+লোফেন,লুফা,sb,eR
 লুফছি,লুফা,gb,am
 লুফছেন,লুফা,gb,ap
 লুফছ,লুফা,gb,tm
@@ -46428,7 +46428,7 @@ word,parent_word,tense,person
 শোনে,শুনা,sb,ae
 শোনেন,শুনা,sb,in
 শোনে,শুনা,sb,er
-শোনেন,শুনা,sb,eN
+শোনেন,শুনা,sb,eR
 শুনছি,শুনা,gb,am
 শুনছেন,শুনা,gb,ap
 শুনছ,শুনা,gb,tm
@@ -46506,7 +46506,7 @@ word,parent_word,tense,person
 শোষে,শুষা,sb,ae
 শোষেন,শুষা,sb,in
 শোষে,শুষা,sb,er
-শোষেন,শুষা,sb,eN
+শোষেন,শুষা,sb,eR
 শুষছি,শুষা,gb,am
 শুষছেন,শুষা,gb,ap
 শুষছ,শুষা,gb,tm
@@ -46584,7 +46584,7 @@ word,parent_word,tense,person
 শোয়ে,শুয়া,sb,ae
 শোয়েন,শুয়া,sb,in
 শোয়ে,শুয়া,sb,er
-শোয়েন,শুয়া,sb,eN
+শোয়েন,শুয়া,sb,eR
 শুয়ছি,শুয়া,gb,am
 শুয়ছেন,শুয়া,gb,ap
 শুয়ছ,শুয়া,gb,tm
@@ -46662,7 +46662,7 @@ word,parent_word,tense,person
 গোঁঁজে,গুঁজা,sb,ae
 গোঁঁজেন,গুঁজা,sb,in
 গোঁঁজে,গুঁজা,sb,er
-গোঁঁজেন,গুঁজা,sb,eN
+গোঁঁজেন,গুঁজা,sb,eR
 গুঁজছি,গুঁজা,gb,am
 গুঁজছেন,গুঁজা,gb,ap
 গুঁজছ,গুঁজা,gb,tm
@@ -46740,7 +46740,7 @@ word,parent_word,tense,person
 ঝোড়ে,ঝুড়া,sb,ae
 ঝোড়েন,ঝুড়া,sb,in
 ঝোড়ে,ঝুড়া,sb,er
-ঝোড়েন,ঝুড়া,sb,eN
+ঝোড়েন,ঝুড়া,sb,eR
 ঝুড়ছি,ঝুড়া,gb,am
 ঝুড়ছেন,ঝুড়া,gb,ap
 ঝুড়ছ,ঝুড়া,gb,tm
@@ -46818,7 +46818,7 @@ word,parent_word,tense,person
 টোকে,টুকা,sb,ae
 টোকেন,টুকা,sb,in
 টোকে,টুকা,sb,er
-টোকেন,টুকা,sb,eN
+টোকেন,টুকা,sb,eR
 টুকছি,টুকা,gb,am
 টুকছেন,টুকা,gb,ap
 টুকছ,টুকা,gb,tm
@@ -46896,7 +46896,7 @@ word,parent_word,tense,person
 ডোবে,ডুবা,sb,ae
 ডোবেন,ডুবা,sb,in
 ডোবে,ডুবা,sb,er
-ডোবেন,ডুবা,sb,eN
+ডোবেন,ডুবা,sb,eR
 ডুবছি,ডুবা,gb,am
 ডুবছেন,ডুবা,gb,ap
 ডুবছ,ডুবা,gb,tm
@@ -46974,7 +46974,7 @@ word,parent_word,tense,person
 যায়,যাওয়া,sb,ae
 যান,যাওয়া,sb,in
 যায়,যাওয়া,sb,er
-যান,যাওয়া,sb,eN
+যান,যাওয়া,sb,eR
 যাচ্ছি,যাওয়া,gb,am
 যাচ্ছেন,যাওয়া,gb,ap
 যাচ্ছ,যাওয়া,gb,tm
@@ -47095,7 +47095,7 @@ word,parent_word,tense,person
 বায়,বাওয়া,sb,ae
 বান,বাওয়া,sb,in
 বায়,বাওয়া,sb,er
-বান,বাওয়া,sb,eN
+বান,বাওয়া,sb,eR
 বাচ্ছি,বাওয়া,gb,am
 বাচ্ছেন,বাওয়া,gb,ap
 বাচ্ছ,বাওয়া,gb,tm
@@ -47208,7 +47208,7 @@ word,parent_word,tense,person
 গায়,গাওয়া,sb,ae
 গান,গাওয়া,sb,in
 গায়,গাওয়া,sb,er
-গান,গাওয়া,sb,eN
+গান,গাওয়া,sb,eR
 গাচ্ছি,গাওয়া,gb,am
 গাচ্ছেন,গাওয়া,gb,ap
 গাচ্ছ,গাওয়া,gb,tm
@@ -47321,7 +47321,7 @@ word,parent_word,tense,person
 খায়,খাওয়া,sb,ae
 খান,খাওয়া,sb,in
 খায়,খাওয়া,sb,er
-খান,খাওয়া,sb,eN
+খান,খাওয়া,sb,eR
 খাচ্ছি,খাওয়া,gb,am
 খাচ্ছেন,খাওয়া,gb,ap
 খাচ্ছ,খাওয়া,gb,tm
@@ -47434,7 +47434,7 @@ word,parent_word,tense,person
 পায়,পাওয়া,sb,ae
 পান,পাওয়া,sb,in
 পায়,পাওয়া,sb,er
-পান,পাওয়া,sb,eN
+পান,পাওয়া,sb,eR
 পাচ্ছি,পাওয়া,gb,am
 পাচ্ছেন,পাওয়া,gb,ap
 পাচ্ছ,পাওয়া,gb,tm
@@ -47547,7 +47547,7 @@ word,parent_word,tense,person
 ধায়,ধাওয়া,sb,ae
 ধান,ধাওয়া,sb,in
 ধায়,ধাওয়া,sb,er
-ধান,ধাওয়া,sb,eN
+ধান,ধাওয়া,sb,eR
 ধাচ্ছি,ধাওয়া,gb,am
 ধাচ্ছেন,ধাওয়া,gb,ap
 ধাচ্ছ,ধাওয়া,gb,tm
@@ -47660,7 +47660,7 @@ word,parent_word,tense,person
 ছোয়,ছোওয়া,sb,ae
 ছোন,ছোওয়া,sb,in
 ছোয়,ছোওয়া,sb,er
-ছোন,ছোওয়া,sb,eN
+ছোন,ছোওয়া,sb,eR
 ছোচ্ছি,ছোওয়া,gb,am
 ছোচ্ছেন,ছোওয়া,gb,ap
 ছোচ্ছ,ছোওয়া,gb,tm
@@ -47773,7 +47773,7 @@ word,parent_word,tense,person
 সয়,সওয়া,sb,ae
 সন,সওয়া,sb,in
 সয়,সওয়া,sb,er
-সন,সওয়া,sb,eN
+সন,সওয়া,sb,eR
 সচ্ছি,সওয়া,gb,am
 সচ্ছেন,সওয়া,gb,ap
 সচ্ছ,সওয়া,gb,tm
@@ -47886,7 +47886,7 @@ word,parent_word,tense,person
 হয়,হওয়া,sb,ae
 হন,হওয়া,sb,in
 হয়,হওয়া,sb,er
-হন,হওয়া,sb,eN
+হন,হওয়া,sb,eR
 হচ্ছি,হওয়া,gb,am
 হচ্ছেন,হওয়া,gb,ap
 হচ্ছ,হওয়া,gb,tm
@@ -47999,7 +47999,7 @@ word,parent_word,tense,person
 লয়,লওয়া,sb,ae
 লন,লওয়া,sb,in
 লয়,লওয়া,sb,er
-লন,লওয়া,sb,eN
+লন,লওয়া,sb,eR
 লচ্ছি,লওয়া,gb,am
 লচ্ছেন,লওয়া,gb,ap
 লচ্ছ,লওয়া,gb,tm
@@ -48112,7 +48112,7 @@ word,parent_word,tense,person
 চায়,চাওয়া,sb,ae
 চান,চাওয়া,sb,in
 চায়,চাওয়া,sb,er
-চান,চাওয়া,sb,eN
+চান,চাওয়া,sb,eR
 চাচ্ছি,চাওয়া,gb,am
 চাচ্ছেন,চাওয়া,gb,ap
 চাচ্ছ,চাওয়া,gb,tm
@@ -48225,7 +48225,7 @@ word,parent_word,tense,person
 রয়,রওয়া,sb,ae
 রন,রওয়া,sb,in
 রয়,রওয়া,sb,er
-রন,রওয়া,sb,eN
+রন,রওয়া,sb,eR
 রচ্ছি,রওয়া,gb,am
 রচ্ছেন,রওয়া,gb,ap
 রচ্ছ,রওয়া,gb,tm
@@ -48338,7 +48338,7 @@ word,parent_word,tense,person
 কেনে,কেনা,sb,ae
 কেনেন,কেনা,sb,in
 কেনে,কেনা,sb,er
-কেনেন,কেনা,sb,eN
+কেনেন,কেনা,sb,eR
 কিনছি,কেনা,gb,am
 কিনছেন,কেনা,gb,ap
 কিনছ,কেনা,gb,tm
@@ -48416,7 +48416,7 @@ word,parent_word,tense,person
 গেলে,গেলা,sb,ae
 গেলেন,গেলা,sb,in
 গেলে,গেলা,sb,er
-গেলেন,গেলা,sb,eN
+গেলেন,গেলা,sb,eR
 গিলছি,গেলা,gb,am
 গিলছেন,গেলা,gb,ap
 গিলছ,গেলা,gb,tm
@@ -48494,7 +48494,7 @@ word,parent_word,tense,person
 ঘেরে,ঘেরা,sb,ae
 ঘেরেন,ঘেরা,sb,in
 ঘেরে,ঘেরা,sb,er
-ঘেরেন,ঘেরা,sb,eN
+ঘেরেন,ঘেরা,sb,eR
 ঘিরছি,ঘেরা,gb,am
 ঘিরছেন,ঘেরা,gb,ap
 ঘিরছ,ঘেরা,gb,tm
@@ -48572,7 +48572,7 @@ word,parent_word,tense,person
 চেনে,চেনা,sb,ae
 চেনেন,চেনা,sb,in
 চেনে,চেনা,sb,er
-চেনেন,চেনা,sb,eN
+চেনেন,চেনা,sb,eR
 চিনছি,চেনা,gb,am
 চিনছেন,চেনা,gb,ap
 চিনছ,চেনা,gb,tm
@@ -48650,7 +48650,7 @@ word,parent_word,tense,person
 ছেঁড়ে,ছেঁড়া,sb,ae
 ছেঁড়েন,ছেঁড়া,sb,in
 ছেঁড়ে,ছেঁড়া,sb,er
-ছেঁড়েন,ছেঁড়া,sb,eN
+ছেঁড়েন,ছেঁড়া,sb,eR
 ছিঁড়ছি,ছেঁড়া,gb,am
 ছিঁড়ছেন,ছেঁড়া,gb,ap
 ছিঁড়ছ,ছেঁড়া,gb,tm
@@ -48728,7 +48728,7 @@ word,parent_word,tense,person
 টেকে,টেকা,sb,ae
 টেকেন,টেকা,sb,in
 টেকে,টেকা,sb,er
-টেকেন,টেকা,sb,eN
+টেকেন,টেকা,sb,eR
 টিকছি,টেকা,gb,am
 টিকছেন,টেকা,gb,ap
 টিকছ,টেকা,gb,tm
@@ -48806,7 +48806,7 @@ word,parent_word,tense,person
 ফেরে,ফেরা,sb,ae
 ফেরেন,ফেরা,sb,in
 ফেরে,ফেরা,sb,er
-ফেরেন,ফেরা,sb,eN
+ফেরেন,ফেরা,sb,eR
 ফিরছি,ফেরা,gb,am
 ফিরছেন,ফেরা,gb,ap
 ফিরছ,ফেরা,gb,tm
@@ -48884,7 +48884,7 @@ word,parent_word,tense,person
 ভেজে,ভেজা,sb,ae
 ভেজেন,ভেজা,sb,in
 ভেজে,ভেজা,sb,er
-ভেজেন,ভেজা,sb,eN
+ভেজেন,ভেজা,sb,eR
 ভিজছি,ভেজা,gb,am
 ভিজছেন,ভেজা,gb,ap
 ভিজছ,ভেজা,gb,tm
@@ -48962,7 +48962,7 @@ word,parent_word,tense,person
 মেশে,মেশা,sb,ae
 মেশেন,মেশা,sb,in
 মেশে,মেশা,sb,er
-মেশেন,মেশা,sb,eN
+মেশেন,মেশা,sb,eR
 মিশছি,মেশা,gb,am
 মিশছেন,মেশা,gb,ap
 মিশছ,মেশা,gb,tm
@@ -49040,7 +49040,7 @@ word,parent_word,tense,person
 লেখে,লেখা,sb,ae
 লেখেন,লেখা,sb,in
 লেখে,লেখা,sb,er
-লেখেন,লেখা,sb,eN
+লেখেন,লেখা,sb,eR
 লিখছি,লেখা,gb,am
 লিখছেন,লেখা,gb,ap
 লিখছ,লেখা,gb,tm
@@ -49118,7 +49118,7 @@ word,parent_word,tense,person
 শেখে,শেখা,sb,ae
 শেখেন,শেখা,sb,in
 শেখে,শেখা,sb,er
-শেখেন,শেখা,sb,eN
+শেখেন,শেখা,sb,eR
 শিখছি,শেখা,gb,am
 শিখছেন,শেখা,gb,ap
 শিখছ,শেখা,gb,tm
@@ -49196,7 +49196,7 @@ word,parent_word,tense,person
 মিলে,মিলা,sb,ae
 মিলেন,মিলা,sb,in
 মিলে,মিলা,sb,er
-মিলেন,মিলা,sb,eN
+মিলেন,মিলা,sb,eR
 মিলছি,মিলা,gb,am
 মিলছেন,মিলা,gb,ap
 মিলছ,মিলা,gb,tm
@@ -49274,7 +49274,7 @@ word,parent_word,tense,person
 মেলে,মেলা,sb,ae
 মেলেন,মেলা,sb,in
 মেলে,মেলা,sb,er
-মেলেন,মেলা,sb,eN
+মেলেন,মেলা,sb,eR
 মিলছি,মেলা,gb,am
 মিলছেন,মেলা,gb,ap
 মিলছ,মেলা,gb,tm
@@ -49352,7 +49352,7 @@ word,parent_word,tense,person
 খেপে,খেপা,sb,ae
 খেপেন,খেপা,sb,in
 খেপে,খেপা,sb,er
-খেপেন,খেপা,sb,eN
+খেপেন,খেপা,sb,eR
 খেপছি,খেপা,gb,am
 খেপছেন,খেপা,gb,ap
 খেপছ,খেপা,gb,tm
@@ -49430,7 +49430,7 @@ word,parent_word,tense,person
 খেলে,খেলা,sb,ae
 খেলেন,খেলা,sb,in
 খেলে,খেলা,sb,er
-খেলেন,খেলা,sb,eN
+খেলেন,খেলা,sb,eR
 খেলছি,খেলা,gb,am
 খেলছেন,খেলা,gb,ap
 খেলছ,খেলা,gb,tm
@@ -49508,7 +49508,7 @@ word,parent_word,tense,person
 ঘেষে,ঘেষা,sb,ae
 ঘেষেন,ঘেষা,sb,in
 ঘেষে,ঘেষা,sb,er
-ঘেষেন,ঘেষা,sb,eN
+ঘেষেন,ঘেষা,sb,eR
 ঘেষছি,ঘেষা,gb,am
 ঘেষছেন,ঘেষা,gb,ap
 ঘেষছ,ঘেষা,gb,tm
@@ -49586,7 +49586,7 @@ word,parent_word,tense,person
 ঠেলে,ঠেলা,sb,ae
 ঠেলেন,ঠেলা,sb,in
 ঠেলে,ঠেলা,sb,er
-ঠেলেন,ঠেলা,sb,eN
+ঠেলেন,ঠেলা,sb,eR
 ঠেলছি,ঠেলা,gb,am
 ঠেলছেন,ঠেলা,gb,ap
 ঠেলছ,ঠেলা,gb,tm
@@ -49664,7 +49664,7 @@ word,parent_word,tense,person
 দেখে,দেখা,sb,ae
 দেখেন,দেখা,sb,in
 দেখে,দেখা,sb,er
-দেখেন,দেখা,sb,eN
+দেখেন,দেখা,sb,eR
 দেখছি,দেখা,gb,am
 দেখছেন,দেখা,gb,ap
 দেখছ,দেখা,gb,tm
@@ -49742,7 +49742,7 @@ word,parent_word,tense,person
 ফেলে,ফেলা,sb,ae
 ফেলেন,ফেলা,sb,in
 ফেলে,ফেলা,sb,er
-ফেলেন,ফেলা,sb,eN
+ফেলেন,ফেলা,sb,eR
 ফেলছি,ফেলা,gb,am
 ফেলছেন,ফেলা,gb,ap
 ফেলছ,ফেলা,gb,tm
@@ -49820,7 +49820,7 @@ word,parent_word,tense,person
 বেচে,বেচা,sb,ae
 বেচেন,বেচা,sb,in
 বেচে,বেচা,sb,er
-বেচেন,বেচা,sb,eN
+বেচেন,বেচা,sb,eR
 বেচছি,বেচা,gb,am
 বেচছেন,বেচা,gb,ap
 বেচছ,বেচা,gb,tm
@@ -49898,7 +49898,7 @@ word,parent_word,tense,person
 খেঁচে,খেঁচা,sb,ae
 খেঁচেন,খেঁচা,sb,in
 খেঁচে,খেঁচা,sb,er
-খেঁচেন,খেঁচা,sb,eN
+খেঁচেন,খেঁচা,sb,eR
 খেঁচছি,খেঁচা,gb,am
 খেঁচছেন,খেঁচা,gb,ap
 খেঁচছ,খেঁচা,gb,tm
@@ -49976,7 +49976,7 @@ word,parent_word,tense,person
 ছেঁকে,ছেঁকা,sb,ae
 ছেঁকেন,ছেঁকা,sb,in
 ছেঁকে,ছেঁকা,sb,er
-ছেঁকেন,ছেঁকা,sb,eN
+ছেঁকেন,ছেঁকা,sb,eR
 ছেঁকছি,ছেঁকা,gb,am
 ছেঁকছেন,ছেঁকা,gb,ap
 ছেঁকছ,ছেঁকা,gb,tm
@@ -50054,7 +50054,7 @@ word,parent_word,tense,person
 জেতে,জেতা,sb,ae
 জেতেন,জেতা,sb,in
 জেতে,জেতা,sb,er
-জেতেন,জেতা,sb,eN
+জেতেন,জেতা,sb,eR
 জিতছি,জেতা,gb,am
 জিতছেন,জেতা,gb,ap
 জিতছ,জেতা,gb,tm
@@ -50132,7 +50132,7 @@ word,parent_word,tense,person
 ঠেকে,ঠেকা,sb,ae
 ঠেকেন,ঠেকা,sb,in
 ঠেকে,ঠেকা,sb,er
-ঠেকেন,ঠেকা,sb,eN
+ঠেকেন,ঠেকা,sb,eR
 ঠেকছি,ঠেকা,gb,am
 ঠেকছেন,ঠেকা,gb,ap
 ঠেকছ,ঠেকা,gb,tm
@@ -50210,7 +50210,7 @@ word,parent_word,tense,person
 ঠেসে,ঠেসা,sb,ae
 ঠেসেন,ঠেসা,sb,in
 ঠেসে,ঠেসা,sb,er
-ঠেসেন,ঠেসা,sb,eN
+ঠেসেন,ঠেসা,sb,eR
 ঠেসছি,ঠেসা,gb,am
 ঠেসছেন,ঠেসা,gb,ap
 ঠেসছ,ঠেসা,gb,tm
@@ -50288,7 +50288,7 @@ word,parent_word,tense,person
 দেয়ে,দেয়া,sb,ae
 দেয়েন,দেয়া,sb,in
 দেয়ে,দেয়া,sb,er
-দেয়েন,দেয়া,sb,eN
+দেয়েন,দেয়া,sb,eR
 দেয়ছি,দেয়া,gb,am
 দেয়ছেন,দেয়া,gb,ap
 দেয়ছ,দেয়া,gb,tm
@@ -50366,7 +50366,7 @@ word,parent_word,tense,person
 নেবে,নেবা,sb,ae
 নেবেন,নেবা,sb,in
 নেবে,নেবা,sb,er
-নেবেন,নেবা,sb,eN
+নেবেন,নেবা,sb,eR
 নিবছি,নেবা,gb,am
 নিবছেন,নেবা,gb,ap
 নিবছ,নেবা,gb,tm
@@ -50444,7 +50444,7 @@ word,parent_word,tense,person
 নেভে,নেভা,sb,ae
 নেভেন,নেভা,sb,in
 নেভে,নেভা,sb,er
-নেভেন,নেভা,sb,eN
+নেভেন,নেভা,sb,eR
 নিভছি,নেভা,gb,am
 নিভছেন,নেভা,gb,ap
 নিভছ,নেভা,gb,tm
@@ -50522,7 +50522,7 @@ word,parent_word,tense,person
 নেয়ে,নেয়া,sb,ae
 নেয়েন,নেয়া,sb,in
 নেয়ে,নেয়া,sb,er
-নেয়েন,নেয়া,sb,eN
+নেয়েন,নেয়া,sb,eR
 নিয়ছি,নেয়া,gb,am
 নিয়ছেন,নেয়া,gb,ap
 নিয়ছ,নেয়া,gb,tm
@@ -50600,7 +50600,7 @@ word,parent_word,tense,person
 মেটে,মেটা,sb,ae
 মেটেন,মেটা,sb,in
 মেটে,মেটা,sb,er
-মেটেন,মেটা,sb,eN
+মেটেন,মেটা,sb,eR
 মেটছি,মেটা,gb,am
 মেটছেন,মেটা,gb,ap
 মেটছ,মেটা,gb,tm
@@ -50678,7 +50678,7 @@ word,parent_word,tense,person
 হেলে,হেলা,sb,ae
 হেলেন,হেলা,sb,in
 হেলে,হেলা,sb,er
-হেলেন,হেলা,sb,eN
+হেলেন,হেলা,sb,eR
 হেলছি,হেলা,gb,am
 হেলছেন,হেলা,gb,ap
 হেলছ,হেলা,gb,tm
@@ -50756,7 +50756,7 @@ word,parent_word,tense,person
 সেকে,সেকা,sb,ae
 সেকেন,সেকা,sb,in
 সেকে,সেকা,sb,er
-সেকেন,সেকা,sb,eN
+সেকেন,সেকা,sb,eR
 সেকছি,সেকা,gb,am
 সেকছেন,সেকা,gb,ap
 সেকছ,সেকা,gb,tm
@@ -50834,7 +50834,7 @@ word,parent_word,tense,person
 কিনে,কিনা,sb,ae
 কিনেন,কিনা,sb,in
 কিনে,কিনা,sb,er
-কিনেন,কিনা,sb,eN
+কিনেন,কিনা,sb,eR
 কিনছি,কিনা,gb,am
 কিনছেন,কিনা,gb,ap
 কিনছ,কিনা,gb,tm
@@ -50912,7 +50912,7 @@ word,parent_word,tense,person
 খিচে,খিচা,sb,ae
 খিচেন,খিচা,sb,in
 খিচে,খিচা,sb,er
-খিচেন,খিচা,sb,eN
+খিচেন,খিচা,sb,eR
 খিচছি,খিচা,gb,am
 খিচছেন,খিচা,gb,ap
 খিচছ,খিচা,gb,tm
@@ -50990,7 +50990,7 @@ word,parent_word,tense,person
 ঘিরে,ঘিরা,sb,ae
 ঘিরেন,ঘিরা,sb,in
 ঘিরে,ঘিরা,sb,er
-ঘিরেন,ঘিরা,sb,eN
+ঘিরেন,ঘিরা,sb,eR
 ঘিরছি,ঘিরা,gb,am
 ঘিরছেন,ঘিরা,gb,ap
 ঘিরছ,ঘিরা,gb,tm
@@ -51068,7 +51068,7 @@ word,parent_word,tense,person
 চিবে,চিবা,sb,ae
 চিবেন,চিবা,sb,in
 চিবে,চিবা,sb,er
-চিবেন,চিবা,sb,eN
+চিবেন,চিবা,sb,eR
 চিবছি,চিবা,gb,am
 চিবছেন,চিবা,gb,ap
 চিবছ,চিবা,gb,tm
@@ -51146,7 +51146,7 @@ word,parent_word,tense,person
 ছিড়ে,ছিড়া,sb,ae
 ছিড়েন,ছিড়া,sb,in
 ছিড়ে,ছিড়া,sb,er
-ছিড়েন,ছিড়া,sb,eN
+ছিড়েন,ছিড়া,sb,eR
 ছিড়ছি,ছিড়া,gb,am
 ছিড়ছেন,ছিড়া,gb,ap
 ছিড়ছ,ছিড়া,gb,tm
@@ -51224,7 +51224,7 @@ word,parent_word,tense,person
 ছিটে,ছিটা,sb,ae
 ছিটেন,ছিটা,sb,in
 ছিটে,ছিটা,sb,er
-ছিটেন,ছিটা,sb,eN
+ছিটেন,ছিটা,sb,eR
 ছিটছি,ছিটা,gb,am
 ছিটছেন,ছিটা,gb,ap
 ছিটছ,ছিটা,gb,tm
@@ -51302,7 +51302,7 @@ word,parent_word,tense,person
 ছিনে,ছিনা,sb,ae
 ছিনেন,ছিনা,sb,in
 ছিনে,ছিনা,sb,er
-ছিনেন,ছিনা,sb,eN
+ছিনেন,ছিনা,sb,eR
 ছিনছি,ছিনা,gb,am
 ছিনছেন,ছিনা,gb,ap
 ছিনছ,ছিনা,gb,tm
@@ -51380,7 +51380,7 @@ word,parent_word,tense,person
 জিতে,জিতা,sb,ae
 জিতেন,জিতা,sb,in
 জিতে,জিতা,sb,er
-জিতেন,জিতা,sb,eN
+জিতেন,জিতা,sb,eR
 জিতছি,জিতা,gb,am
 জিতছেন,জিতা,gb,ap
 জিতছ,জিতা,gb,tm
@@ -51458,7 +51458,7 @@ word,parent_word,tense,person
 জিরে,জিরা,sb,ae
 জিরেন,জিরা,sb,in
 জিরে,জিরা,sb,er
-জিরেন,জিরা,sb,eN
+জিরেন,জিরা,sb,eR
 জিরছি,জিরা,gb,am
 জিরছেন,জিরা,gb,ap
 জিরছ,জিরা,gb,tm
@@ -51536,7 +51536,7 @@ word,parent_word,tense,person
 ঝিমে,ঝিমা,sb,ae
 ঝিমেন,ঝিমা,sb,in
 ঝিমে,ঝিমা,sb,er
-ঝিমেন,ঝিমা,sb,eN
+ঝিমেন,ঝিমা,sb,eR
 ঝিমছি,ঝিমা,gb,am
 ঝিমছেন,ঝিমা,gb,ap
 ঝিমছ,ঝিমা,gb,tm
@@ -51614,7 +51614,7 @@ word,parent_word,tense,person
 টিকে,টিকা,sb,ae
 টিকেন,টিকা,sb,in
 টিকে,টিকা,sb,er
-টিকেন,টিকা,sb,eN
+টিকেন,টিকা,sb,eR
 টিকছি,টিকা,gb,am
 টিকছেন,টিকা,gb,ap
 টিকছ,টিকা,gb,tm
@@ -51692,7 +51692,7 @@ word,parent_word,tense,person
 টিপে,টিপা,sb,ae
 টিপেন,টিপা,sb,in
 টিপে,টিপা,sb,er
-টিপেন,টিপা,sb,eN
+টিপেন,টিপা,sb,eR
 টিপছি,টিপা,gb,am
 টিপছেন,টিপা,gb,ap
 টিপছ,টিপা,gb,tm
@@ -51770,7 +51770,7 @@ word,parent_word,tense,person
 ডিঙে,ডিঙা,sb,ae
 ডিঙেন,ডিঙা,sb,in
 ডিঙে,ডিঙা,sb,er
-ডিঙেন,ডিঙা,sb,eN
+ডিঙেন,ডিঙা,sb,eR
 ডিঙছি,ডিঙা,gb,am
 ডিঙছেন,ডিঙা,gb,ap
 ডিঙছ,ডিঙা,gb,tm
@@ -51848,7 +51848,7 @@ word,parent_word,tense,person
 ঢিকে,ঢিকা,sb,ae
 ঢিকেন,ঢিকা,sb,in
 ঢিকে,ঢিকা,sb,er
-ঢিকেন,ঢিকা,sb,eN
+ঢিকেন,ঢিকা,sb,eR
 ঢিকছি,ঢিকা,gb,am
 ঢিকছেন,ঢিকা,gb,ap
 ঢিকছ,ঢিকা,gb,tm
@@ -51926,7 +51926,7 @@ word,parent_word,tense,person
 থিতে,থিতা,sb,ae
 থিতেন,থিতা,sb,in
 থিতে,থিতা,sb,er
-থিতেন,থিতা,sb,eN
+থিতেন,থিতা,sb,eR
 থিতছি,থিতা,gb,am
 থিতছেন,থিতা,gb,ap
 থিতছ,থিতা,gb,tm
@@ -52004,7 +52004,7 @@ word,parent_word,tense,person
 নিভে,নিভা,sb,ae
 নিভেন,নিভা,sb,in
 নিভে,নিভা,sb,er
-নিভেন,নিভা,sb,eN
+নিভেন,নিভা,sb,eR
 নিভছি,নিভা,gb,am
 নিভছেন,নিভা,gb,ap
 নিভছ,নিভা,gb,tm
@@ -52082,7 +52082,7 @@ word,parent_word,tense,person
 নিড়ে,নিড়া,sb,ae
 নিড়েন,নিড়া,sb,in
 নিড়ে,নিড়া,sb,er
-নিড়েন,নিড়া,sb,eN
+নিড়েন,নিড়া,sb,eR
 নিড়ছি,নিড়া,gb,am
 নিড়ছেন,নিড়া,gb,ap
 নিড়ছ,নিড়া,gb,tm
@@ -52160,7 +52160,7 @@ word,parent_word,tense,person
 পিষে,পিষা,sb,ae
 পিষেন,পিষা,sb,in
 পিষে,পিষা,sb,er
-পিষেন,পিষা,sb,eN
+পিষেন,পিষা,sb,eR
 পিষছি,পিষা,gb,am
 পিষছেন,পিষা,gb,ap
 পিষছ,পিষা,gb,tm
@@ -52238,7 +52238,7 @@ word,parent_word,tense,person
 ফিরে,ফিরা,sb,ae
 ফিরেন,ফিরা,sb,in
 ফিরে,ফিরা,sb,er
-ফিরেন,ফিরা,sb,eN
+ফিরেন,ফিরা,sb,eR
 ফিরছি,ফিরা,gb,am
 ফিরছেন,ফিরা,gb,ap
 ফিরছ,ফিরা,gb,tm
@@ -52316,7 +52316,7 @@ word,parent_word,tense,person
 বিকে,বিকা,sb,ae
 বিকেন,বিকা,sb,in
 বিকে,বিকা,sb,er
-বিকেন,বিকা,sb,eN
+বিকেন,বিকা,sb,eR
 বিকছি,বিকা,gb,am
 বিকছেন,বিকা,gb,ap
 বিকছ,বিকা,gb,tm
@@ -52394,7 +52394,7 @@ word,parent_word,tense,person
 ভিজে,ভিজা,sb,ae
 ভিজেন,ভিজা,sb,in
 ভিজে,ভিজা,sb,er
-ভিজেন,ভিজা,sb,eN
+ভিজেন,ভিজা,sb,eR
 ভিজছি,ভিজা,gb,am
 ভিজছেন,ভিজা,gb,ap
 ভিজছ,ভিজা,gb,tm
@@ -52472,7 +52472,7 @@ word,parent_word,tense,person
 ভিড়ামিশে,ভিড়ামিশা,sb,ae
 ভিড়ামিশেন,ভিড়ামিশা,sb,in
 ভিড়ামিশে,ভিড়ামিশা,sb,er
-ভিড়ামিশেন,ভিড়ামিশা,sb,eN
+ভিড়ামিশেন,ভিড়ামিশা,sb,eR
 ভিড়ামিশছি,ভিড়ামিশা,gb,am
 ভিড়ামিশছেন,ভিড়ামিশা,gb,ap
 ভিড়ামিশছ,ভিড়ামিশা,gb,tm
@@ -52550,7 +52550,7 @@ word,parent_word,tense,person
 লিখে,লিখা,sb,ae
 লিখেন,লিখা,sb,in
 লিখে,লিখা,sb,er
-লিখেন,লিখা,sb,eN
+লিখেন,লিখা,sb,eR
 লিখছি,লিখা,gb,am
 লিখছেন,লিখা,gb,ap
 লিখছ,লিখা,gb,tm
@@ -52628,7 +52628,7 @@ word,parent_word,tense,person
 সেঁচে,সেঁচা,sb,ae
 সেঁচেন,সেঁচা,sb,in
 সেঁচে,সেঁচা,sb,er
-সেঁচেন,সেঁচা,sb,eN
+সেঁচেন,সেঁচা,sb,eR
 সেঁচছি,সেঁচা,gb,am
 সেঁচছেন,সেঁচা,gb,ap
 সেঁচছ,সেঁচা,gb,tm
@@ -52706,7 +52706,7 @@ word,parent_word,tense,person
 খোঁজে,খোঁজা,sb,ae
 খোঁজেন,খোঁজা,sb,in
 খোঁজে,খোঁজা,sb,er
-খোঁজেন,খোঁজা,sb,eN
+খোঁজেন,খোঁজা,sb,eR
 খুঁজছি,খোঁজা,gb,am
 খুঁজছেন,খোঁজা,gb,ap
 খুঁজছ,খোঁজা,gb,tm
@@ -52784,7 +52784,7 @@ word,parent_word,tense,person
 ঝোড়ে,ঝোড়া,sb,ae
 ঝোড়েন,ঝোড়া,sb,in
 ঝোড়ে,ঝোড়া,sb,er
-ঝোড়েন,ঝোড়া,sb,eN
+ঝোড়েন,ঝোড়া,sb,eR
 ঝুড়ছি,ঝোড়া,gb,am
 ঝুড়ছেন,ঝোড়া,gb,ap
 ঝুড়ছ,ঝোড়া,gb,tm
@@ -52862,7 +52862,7 @@ word,parent_word,tense,person
 পোষে,পোষা,sb,ae
 পোষেন,পোষা,sb,in
 পোষে,পোষা,sb,er
-পোষেন,পোষা,sb,eN
+পোষেন,পোষা,sb,eR
 পুষছি,পোষা,gb,am
 পুষছেন,পোষা,gb,ap
 পুষছ,পোষা,gb,tm
@@ -52940,7 +52940,7 @@ word,parent_word,tense,person
 মোছে,মোছা,sb,ae
 মোছেন,মোছা,sb,in
 মোছে,মোছা,sb,er
-মোছেন,মোছা,sb,eN
+মোছেন,মোছা,sb,eR
 মুছছি,মোছা,gb,am
 মুছছেন,মোছা,gb,ap
 মুছছ,মোছা,gb,tm
@@ -53018,7 +53018,7 @@ word,parent_word,tense,person
 মোড়ে,মোড়া,sb,ae
 মোড়েন,মোড়া,sb,in
 মোড়ে,মোড়া,sb,er
-মোড়েন,মোড়া,sb,eN
+মোড়েন,মোড়া,sb,eR
 মুড়ছি,মোড়া,gb,am
 মুড়ছেন,মোড়া,gb,ap
 মুড়ছ,মোড়া,gb,tm
@@ -53096,7 +53096,7 @@ word,parent_word,tense,person
 বোজে,বোজা,sb,ae
 বোজেন,বোজা,sb,in
 বোজে,বোজা,sb,er
-বোজেন,বোজা,sb,eN
+বোজেন,বোজা,sb,eR
 বুজছি,বোজা,gb,am
 বুজছেন,বোজা,gb,ap
 বুজছ,বোজা,gb,tm
@@ -53174,7 +53174,7 @@ word,parent_word,tense,person
 রোপে,রোপা,sb,ae
 রোপেন,রোপা,sb,in
 রোপে,রোপা,sb,er
-রোপেন,রোপা,sb,eN
+রোপেন,রোপা,sb,eR
 রুপছি,রোপা,gb,am
 রুপছেন,রোপা,gb,ap
 রুপছ,রোপা,gb,tm
@@ -53252,7 +53252,7 @@ word,parent_word,tense,person
 কোটে,কোটা,sb,ae
 কোটেন,কোটা,sb,in
 কোটে,কোটা,sb,er
-কোটেন,কোটা,sb,eN
+কোটেন,কোটা,sb,eR
 কুটছি,কোটা,gb,am
 কুটছেন,কোটা,gb,ap
 কুটছ,কোটা,gb,tm
@@ -53330,7 +53330,7 @@ word,parent_word,tense,person
 খোঁজে,খোঁজা,sb,ae
 খোঁজেন,খোঁজা,sb,in
 খোঁজে,খোঁজা,sb,er
-খোঁজেন,খোঁজা,sb,eN
+খোঁজেন,খোঁজা,sb,eR
 খুঁজছি,খোঁজা,gb,am
 খুঁজছেন,খোঁজা,gb,ap
 খুঁজছ,খোঁজা,gb,tm
@@ -53408,7 +53408,7 @@ word,parent_word,tense,person
 খোলে,খোলা,sb,ae
 খোলেন,খোলা,sb,in
 খোলে,খোলা,sb,er
-খোলেন,খোলা,sb,eN
+খোলেন,খোলা,sb,eR
 খুলছি,খোলা,gb,am
 খুলছেন,খোলা,gb,ap
 খুলছ,খোলা,gb,tm
@@ -53486,7 +53486,7 @@ word,parent_word,tense,person
 গােনে,গােনা,sb,ae
 গােনেন,গােনা,sb,in
 গােনে,গােনা,sb,er
-গােনেন,গােনা,sb,eN
+গােনেন,গােনা,sb,eR
 গুনছি,গােনা,gb,am
 গুনছেন,গােনা,gb,ap
 গুনছ,গােনা,gb,tm
@@ -53564,7 +53564,7 @@ word,parent_word,tense,person
 ঘােরে,ঘােরা,sb,ae
 ঘােরেন,ঘােরা,sb,in
 ঘােরে,ঘােরা,sb,er
-ঘােরেন,ঘােরা,sb,eN
+ঘােরেন,ঘােরা,sb,eR
 ঘুরছি,ঘােরা,gb,am
 ঘুরছেন,ঘােরা,gb,ap
 ঘুরছ,ঘােরা,gb,tm
@@ -53642,7 +53642,7 @@ word,parent_word,tense,person
 ছােটে,ছােটা,sb,ae
 ছােটেন,ছােটা,sb,in
 ছােটে,ছােটা,sb,er
-ছােটেন,ছােটা,sb,eN
+ছােটেন,ছােটা,sb,eR
 ছুটছি,ছােটা,gb,am
 ছুটছেন,ছােটা,gb,ap
 ছুটছ,ছােটা,gb,tm
@@ -53720,7 +53720,7 @@ word,parent_word,tense,person
 জোটে,জোটা,sb,ae
 জোটেন,জোটা,sb,in
 জোটে,জোটা,sb,er
-জোটেন,জোটা,sb,eN
+জোটেন,জোটা,sb,eR
 জুটছি,জোটা,gb,am
 জুটছেন,জোটা,gb,ap
 জুটছ,জোটা,gb,tm
@@ -53798,7 +53798,7 @@ word,parent_word,tense,person
 জোড়ে,জোড়া,sb,ae
 জোড়েন,জোড়া,sb,in
 জোড়ে,জোড়া,sb,er
-জোড়েন,জোড়া,sb,eN
+জোড়েন,জোড়া,sb,eR
 জুড়ছি,জোড়া,gb,am
 জুড়ছেন,জোড়া,gb,ap
 জুড়ছ,জোড়া,gb,tm
@@ -53876,7 +53876,7 @@ word,parent_word,tense,person
 ঠোকে,ঠোকা,sb,ae
 ঠোকেন,ঠোকা,sb,in
 ঠোকে,ঠোকা,sb,er
-ঠোকেন,ঠোকা,sb,eN
+ঠোকেন,ঠোকা,sb,eR
 ঠুকছি,ঠোকা,gb,am
 ঠুকছেন,ঠোকা,gb,ap
 ঠুকছ,ঠোকা,gb,tm
@@ -53954,7 +53954,7 @@ word,parent_word,tense,person
 দোলে,দোলা,sb,ae
 দোলেন,দোলা,sb,in
 দোলে,দোলা,sb,er
-দোলেন,দোলা,sb,eN
+দোলেন,দোলা,sb,eR
 দুলছি,দোলা,gb,am
 দুলছেন,দোলা,gb,ap
 দুলছ,দোলা,gb,tm
@@ -54032,7 +54032,7 @@ word,parent_word,tense,person
 দোষে,দোষা,sb,ae
 দোষেন,দোষা,sb,in
 দোষে,দোষা,sb,er
-দোষেন,দোষা,sb,eN
+দোষেন,দোষা,sb,eR
 দুষছি,দোষা,gb,am
 দুষছেন,দোষা,gb,ap
 দুষছ,দোষা,gb,tm
@@ -54110,7 +54110,7 @@ word,parent_word,tense,person
 পােড়ে,পােড়া,sb,ae
 পােড়েন,পােড়া,sb,in
 পােড়ে,পােড়া,sb,er
-পােড়েন,পােড়া,sb,eN
+পােড়েন,পােড়া,sb,eR
 পু়ছি,পােড়া,gb,am
 পু়ছেন,পােড়া,gb,ap
 পু়ছ,পােড়া,gb,tm
@@ -54188,7 +54188,7 @@ word,parent_word,tense,person
 ফোঁসে,ফোঁসা,sb,ae
 ফোঁসেন,ফোঁসা,sb,in
 ফোঁসে,ফোঁসা,sb,er
-ফোঁসেন,ফোঁসা,sb,eN
+ফোঁসেন,ফোঁসা,sb,eR
 ফুঁসছি,ফোঁসা,gb,am
 ফুঁসছেন,ফোঁসা,gb,ap
 ফুঁসছ,ফোঁসা,gb,tm
@@ -54266,7 +54266,7 @@ word,parent_word,tense,person
 ফোটে,ফোটা,sb,ae
 ফোটেন,ফোটা,sb,in
 ফোটে,ফোটা,sb,er
-ফোটেন,ফোটা,sb,eN
+ফোটেন,ফোটা,sb,eR
 ফুটছি,ফোটা,gb,am
 ফুটছেন,ফোটা,gb,ap
 ফুটছ,ফোটা,gb,tm
@@ -54344,7 +54344,7 @@ word,parent_word,tense,person
 বােঝে,বােঝা,sb,ae
 বােঝেন,বােঝা,sb,in
 বােঝে,বােঝা,sb,er
-বােঝেন,বােঝা,sb,eN
+বােঝেন,বােঝা,sb,eR
 বুঝছি,বােঝা,gb,am
 বুঝছেন,বােঝা,gb,ap
 বুঝছ,বােঝা,gb,tm
@@ -54422,7 +54422,7 @@ word,parent_word,tense,person
 বােনে,বােনা,sb,ae
 বােনেন,বােনা,sb,in
 বােনে,বােনা,sb,er
-বােনেন,বােনা,sb,eN
+বােনেন,বােনা,sb,eR
 বুনছি,বােনা,gb,am
 বুনছেন,বােনা,gb,ap
 বুনছ,বােনা,gb,tm
@@ -54500,7 +54500,7 @@ word,parent_word,tense,person
 ভােলে,ভােলা,sb,ae
 ভােলেন,ভােলা,sb,in
 ভােলে,ভােলা,sb,er
-ভােলেন,ভােলা,sb,eN
+ভােলেন,ভােলা,sb,eR
 ভুলছি,ভােলা,gb,am
 ভুলছেন,ভােলা,gb,ap
 ভুলছ,ভােলা,gb,tm
@@ -54578,7 +54578,7 @@ word,parent_word,tense,person
 মােছে,মােছা,sb,ae
 মােছেন,মােছা,sb,in
 মােছে,মােছা,sb,er
-মােছেন,মােছা,sb,eN
+মােছেন,মােছা,sb,eR
 মুছছি,মােছা,gb,am
 মুছছেন,মােছা,gb,ap
 মুছছ,মােছা,gb,tm
@@ -54656,7 +54656,7 @@ word,parent_word,tense,person
 শােনে,শােনা,sb,ae
 শােনেন,শােনা,sb,in
 শােনে,শােনা,sb,er
-শােনেন,শােনা,sb,eN
+শােনেন,শােনা,sb,eR
 শুনছি,শােনা,gb,am
 শুনছেন,শােনা,gb,ap
 শুনছ,শােনা,gb,tm

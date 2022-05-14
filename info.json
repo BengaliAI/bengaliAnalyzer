@@ -1,9 +1,9 @@
 {
-    "বঙ্গবন্ধু": {
+    "ধান": {
         "Global_Index": [
             [
                 0,
-                8
+                2
             ]
         ],
         "Punctuation_Flag": false,
@@ -14,127 +14,41 @@
             "Suffix": []
         },
         "Verb": {
-            "Parent_Verb": null,
-            "Tense_Person_Emphasis": null,
-            "Form": null,
-            "Related_Indices": []
-        },
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [
-                [
-                    0,
-                    8
-                ],
-                9,
-                13,
-                19,
-                27,
-                [
-                    10,
-                    12
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    20,
-                    26
-                ],
-                [
-                    28,
-                    31
-                ]
-            ]
-        }
-    },
-    " ": {
-        "Global_Index": [
-            9,
-            13,
-            19,
-            27
-        ],
-        "Punctuation_Flag": true,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": null,
-            "Tense_Person_Emphasis": null,
-            "Form": null,
-            "Related_Indices": []
-        },
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [
-                [
-                    0,
-                    8
-                ],
-                9,
-                13,
-                19,
-                27,
-                [
-                    10,
-                    12
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    20,
-                    26
-                ],
-                [
-                    28,
-                    31
-                ]
-            ]
-        }
-    },
-    "শেখ": {
-        "Global_Index": [
-            [
-                10,
-                12
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": "শেখা",
+            "Parent_Verb": "ধাওয়া",
             "Tense_Person_Emphasis": [
                 [
-                    "bo",
-                    "tu",
+                    "সাধারণ বর্তমান",
+                    "আপনি/আপনারা",
+                    [
+                        null
+                    ]
+                ],
+                [
+                    "সাধারণ বর্তমান",
+                    "ইনি/উনি/তিনি/যিনি",
+                    [
+                        null
+                    ]
+                ],
+                [
+                    "সাধারণ বর্তমান",
+                    "এঁরা/ওঁরা/তাঁরা/যাঁরা",
+                    [
+                        null
+                    ]
+                ],
+                [
+                    "বর্তমান অনুজ্ঞা",
+                    "আপনি/আপনারা",
                     [
                         null
                     ]
                 ]
+            ],
+            "Tense": "সাধারণ বর্তমান",
+            "Person": "আপনি/আপনারা",
+            "Emphasis": [
+                null
             ],
             "Form": null,
             "Related_Indices": [],
@@ -151,40 +65,17 @@
             "Related_Indices": [
                 [
                     0,
-                    8
-                ],
-                9,
-                13,
-                19,
-                27,
-                [
-                    10,
-                    12
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    20,
-                    26
-                ],
-                [
-                    28,
-                    31
+                    2
                 ]
             ]
         },
         "Non_Verb": "বিশেষ্য"
     },
-    "মুজিব": {
+    " ": {
         "Global_Index": [
-            [
-                14,
-                18
-            ]
+            3
         ],
-        "Punctuation_Flag": false,
+        "Punctuation_Flag": true,
         "Numeric": {
             "Digit": null,
             "Literal": null,
@@ -194,6 +85,9 @@
         "Verb": {
             "Parent_Verb": null,
             "Tense_Person_Emphasis": null,
+            "Tense": null,
+            "Person": null,
+            "Emphasis": null,
             "Form": null,
             "Related_Indices": []
         },
@@ -205,39 +99,14 @@
         },
         "Special_Entity": {
             "Definition": null,
-            "Related_Indices": [
-                [
-                    0,
-                    8
-                ],
-                9,
-                13,
-                19,
-                27,
-                [
-                    10,
-                    12
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    20,
-                    26
-                ],
-                [
-                    28,
-                    31
-                ]
-            ]
+            "Related_Indices": []
         }
     },
-    "মেডিকেল": {
+    "খানও": {
         "Global_Index": [
             [
-                20,
-                26
+                4,
+                7
             ]
         ],
         "Punctuation_Flag": false,
@@ -248,102 +117,57 @@
             "Suffix": []
         },
         "Verb": {
-            "Parent_Verb": null,
-            "Tense_Person_Emphasis": null,
+            "Parent_Verb": "খাওয়া",
+            "Tense_Person_Emphasis": [
+                [
+                    "সাধারণ বর্তমান",
+                    "আপনি/আপনারা",
+                    [
+                        "ও"
+                    ]
+                ],
+                [
+                    "সাধারণ বর্তমান",
+                    "ইনি/উনি/তিনি/যিনি",
+                    [
+                        "ও"
+                    ]
+                ],
+                [
+                    "সাধারণ বর্তমান",
+                    "এঁরা/ওঁরা/তাঁরা/যাঁরা",
+                    [
+                        "ও"
+                    ]
+                ],
+                [
+                    "বর্তমান অনুজ্ঞা",
+                    "আপনি/আপনারা",
+                    [
+                        "ও"
+                    ]
+                ]
+            ],
+            "Tense": "সাধারণ বর্তমান",
+            "Person": "আপনি/আপনারা",
+            "Emphasis": [
+                "ও"
+            ],
             "Form": null,
-            "Related_Indices": []
+            "Related_Indices": [],
+            "Language_Form": "standard"
         },
         "PoS": null,
         "Composite_Word": {
-            "Suffix": null,
+            "Suffix": "ও",
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "খান"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
-            "Related_Indices": [
-                [
-                    0,
-                    8
-                ],
-                9,
-                13,
-                19,
-                27,
-                [
-                    10,
-                    12
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    20,
-                    26
-                ],
-                [
-                    28,
-                    31
-                ]
-            ]
+            "Related_Indices": []
         }
-    },
-    "কলেজ": {
-        "Global_Index": [
-            [
-                28,
-                31
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": null,
-            "Tense_Person_Emphasis": null,
-            "Form": null,
-            "Related_Indices": []
-        },
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [
-                [
-                    0,
-                    8
-                ],
-                9,
-                13,
-                19,
-                27,
-                [
-                    10,
-                    12
-                ],
-                [
-                    14,
-                    18
-                ],
-                [
-                    20,
-                    26
-                ],
-                [
-                    28,
-                    31
-                ]
-            ]
-        },
-        "Non_Verb": "বিশেষ্য"
     }
 }
