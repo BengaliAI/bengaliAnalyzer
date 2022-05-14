@@ -15,9 +15,10 @@ from .libs import composite_words
 from .libs import non_verbs
 from .libs import numerics
 from .libs import special_entity
+from .libs import pronouns
 
 
-global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes
+global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data
 
 
 def remove_symbols(string_line):
@@ -102,6 +103,16 @@ def prepare_non_verb_data(data_file):
     return data_dict
 
 
+def prepare_pronoun_data(data_file):
+    data = pandas.read_csv(
+        data_file, encoding="utf8", delimiter=",", usecols=["Pronoun", "Pronoun Tag"]
+    )
+    data_dict = {}
+    for idx in range(len(data)):
+        data_dict[data.iloc[idx]["Pronoun"]] = data.iloc[idx]["Pronoun Tag"]
+    return data_dict
+
+
 def prepare_verb_data(data):
     data = pandas.read_csv(data)
     count = []
@@ -163,7 +174,7 @@ def generate_dictionary(file):
 
 # Required to preload datasets
 def load_data():
-    global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes
+    global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data
     path = os.path.dirname(os.path.abspath(__file__))
     asset_directory = os.path.join(path, "assets")
 
@@ -174,6 +185,10 @@ def load_data():
     # Generate non-verb data
     non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
     non_verb_words = prepare_non_verb_data(non_verb_words)
+
+    # Genereate pronoun-data
+    pronoun_data = os.path.join(asset_directory, "pronouns.csv")
+    pronoun_data = prepare_pronoun_data(pronoun_data)
 
     # Generate other data,
     not_to_be_broken_file = os.path.join(asset_directory, "not_to_be_broken.txt")
@@ -195,6 +210,7 @@ class BengaliAnalyzer:
         self.numeric_analyzer = numerics.NumericAnalyzer()
         self.verbs_analyzer = verbs.VerbAnalyzer(verb_data, verb_data_1, verb_data_2)
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
+        self.pronoun_analyzer = pronouns.PronounAnalyzer(pronoun_data)
         self.composite_words_analyzer = composite_words.CompositeWordAnalyzer(
             non_verb_words, prefixes, suffixes, special_suffixes
         )
@@ -217,6 +233,7 @@ class BengaliAnalyzer:
                 "Form": None,
                 "Related_Indices": [],
             },
+            "Pronoun": None,
             "PoS": None,
             "Composite_Word": {
                 "Suffix": None,
@@ -302,6 +319,10 @@ class BengaliAnalyzer:
 
         verb_flags = self.verbs_analyzer.get_verbs(tokens, sentence)
         flags.extend(verb_flags)
+
+        pronoun_flags = self.pronoun_analyzer.get_pronouns(tokens)
+        # print(pronoun_flags)
+        flags.extend(pronoun_flags)
 
         non_verb_flags = self.non_verbs_analyzer.get_non_verbs(tokens)
         flags.extend(non_verb_flags)
