@@ -17,7 +17,7 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/BengaliAI/bengaliAnalyzer/issues",
     },
-    install_requires=['pandas', 'indicparser'],
+    install_requires=['pandas', 'indicparser', 'bnunicodenormalizer'],
     include_package_data=True,
     package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt']},
     classifiers=[

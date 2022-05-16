@@ -2,7 +2,8 @@ import copy
 import os
 import string
 import pandas
-
+import unicodedata
+import json
 
 # from libs import verbs
 # from libs import composite_words
@@ -17,8 +18,7 @@ from .libs import numerics
 from .libs import special_entity
 from .libs import pronouns
 
-
-global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data
+global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
 
 
 def remove_symbols(string_line):
@@ -113,6 +113,20 @@ def prepare_pronoun_data(data_file):
     return data_dict
 
 
+def prepare_numeric_data(file):
+    with open(file, 'r', encoding="utf8") as f:
+        data = json.load(f)
+    numeric_digit = data["digits"]
+    numeric_literals = data["literals"]
+    numeric_weights = data["weights"]
+    numeric_suffixes = data["suffixes"]
+    numeric_prefixes = data["prefixes"]
+    numeric_special_cases = data["special_cases"]
+    numeric_months = data["months"]
+    numeric_days = data["days"]
+    return numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+
+
 def prepare_verb_data(data):
     data = pandas.read_csv(data)
     count = []
@@ -143,7 +157,7 @@ def clean_generated_dictionary(dictionary):
 
 
 def generate_special_entity(file):
-    a_file = open(file)
+    a_file = open(file, encoding="utf8")
 
     file_contents = a_file.read()
     dictionary = file_contents.splitlines()
@@ -174,9 +188,14 @@ def generate_dictionary(file):
 
 # Required to preload datasets
 def load_data():
-    global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data
+    global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
     path = os.path.dirname(os.path.abspath(__file__))
     asset_directory = os.path.join(path, "assets")
+
+    # Generate numeric data
+    numeric_data = os.path.join(asset_directory, "numerics.json")
+    numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days = prepare_numeric_data(
+        numeric_data)
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
@@ -207,7 +226,7 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         load_data()
-        self.numeric_analyzer = numerics.NumericAnalyzer()
+        self.numeric_analyzer = numerics.NumericAnalyzer(numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days)
         self.verbs_analyzer = verbs.VerbAnalyzer(verb_data, verb_data_1, verb_data_2)
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
         self.pronoun_analyzer = pronouns.PronounAnalyzer(pronoun_data)
@@ -300,10 +319,14 @@ class BengaliAnalyzer:
                     tokens[punctuation] = copy.deepcopy(token)
                 tokens[punctuation]["Punctuation_Flag"] = True
                 tokens[punctuation]["Global_Index"].append(index)
-
+        if " " in tokens:
+            tokens.pop(" ")
         return tokens, punctuation_flags
 
     def analyze_sentence(self, sentence):
+        NORMALIZATION_FORM = "NFC"
+        sentence = unicodedata.normalize(NORMALIZATION_FORM, sentence)
+
         flags = []
 
         tokens, punctuation_flags = self.tokenize_sentence(sentence)
