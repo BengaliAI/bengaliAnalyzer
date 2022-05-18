@@ -1,9 +1,9 @@
 {
-    "হাত": {
+    "বঙ্গবন্ধু": {
         "Global_Index": [
             [
                 0,
-                2
+                8
             ]
         ],
         "Punctuation_Flag": false,
@@ -27,24 +27,20 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "বন্ধু"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
-            "Related_Indices": [
-                [
-                    0,
-                    2
-                ]
-            ]
-        },
-        "Non_Verb": "বিশেষ্য"
+            "Related_Indices": []
+        }
     },
-    "দেও": {
+    "শেখ": {
         "Global_Index": [
             [
-                4,
-                6
+                10,
+                12
             ]
         ],
         "Punctuation_Flag": false,
@@ -55,27 +51,27 @@
             "Suffix": []
         },
         "Verb": {
-            "Parent_Verb": "দেওয়া",
+            "Parent_Verb": "শেখা",
             "Tense_Person_Emphasis": [
                 [
                     "বর্তমান অনুজ্ঞা",
                     "তুই/তোরা",
                     [
-                        "ও"
+                        null
                     ]
                 ]
             ],
             "Tense": "বর্তমান অনুজ্ঞা",
             "Person": "তুই/তোরা",
             "Emphasis": [
-                "ও"
+                null
             ],
             "Form": null,
             "Related_Indices": [],
             "Language_Form": "standard"
         },
         "Pronoun": null,
-        "PoS": null,
+        "PoS": "বিশেষ্য",
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
@@ -84,7 +80,115 @@
         "Special_Entity": {
             "Definition": null,
             "Related_Indices": []
+        }
+    },
+    "মুজিব": {
+        "Global_Index": [
+            [
+                14,
+                18
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
         },
-        "Non_Verb": "ক্রিয়া"
+        "Verb": {
+            "Parent_Verb": null,
+            "Tense_Person_Emphasis": null,
+            "Tense": null,
+            "Person": null,
+            "Emphasis": null,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": null,
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": [
+                "জিব"
+            ]
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": []
+        }
+    },
+    "মেডিকেল": {
+        "Global_Index": [
+            [
+                20,
+                26
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Tense_Person_Emphasis": null,
+            "Tense": null,
+            "Person": null,
+            "Emphasis": null,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": null,
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": [
+                "মেডিকেল"
+            ]
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": []
+        }
+    },
+    "কলেজ": {
+        "Global_Index": [
+            [
+                28,
+                31
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Tense_Person_Emphasis": null,
+            "Tense": null,
+            "Person": null,
+            "Emphasis": null,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": null,
+        "PoS": "বিশেষ্য",
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": []
+        }
     }
 }
