@@ -22,32 +22,6 @@ class VerbAnalyzer:
         self.data1 = data1
         self.data2 = data2
 
-        self.verb_form_mapper = {
-            "tense": {
-                "sb": "সাধারণ বর্তমান",
-                "gb": "ঘটমান বর্তমান",
-                "pb": "পুরাঘটিত বর্তমান",
-                "bo": "বর্তমান অনুজ্ঞা",
-                "so": "সাধারণ অতীত",
-                "no": "নিত্যবৃত্ত অতীত",
-                "go": "ঘটমান অতীত",
-                "po": "পুরাঘটিত অতীত",
-                "sv": "সাধারণ ভবিষ্যত",
-                "gv": "ঘটমান ভবিষ্যত",
-                "vo": "ভবিষ্যত অনুজ্ঞা",
-            },
-            "person": {
-                "am": "আমি/আমরা",
-                "ap": "আপনি/আপনারা",
-                "tm": "তুমি/তোমরা",
-                "tu": "তুই/তোরা",
-                "ae": "এ/ও/যে/সে",
-                "in": "ইনি/উনি/তিনি/যিনি",
-                "er": "এরা/ওরা/তারা/যারা",
-                "eR": "এঁরা/ওঁরা/তাঁরা/যাঁরা",
-            },
-        }
-
     @staticmethod
     def punctuation_remover(sentence):
         tmp = ""
@@ -73,18 +47,14 @@ class VerbAnalyzer:
             "।",
         ]
 
-        for idx, each in enumerate(sentence):
+        for each in sentence:
             if each not in punctuations:
                 tmp += each
         return tmp
 
     def get_verbs(self, tokens, sentence):
-        # print("----------GET VERB-----------")
-
         verb_indexes = []
-
         sentence = sentence.strip()
-
         sentence = self.punctuation_remover(sentence)
 
         sentence_x = sentence
@@ -194,32 +164,32 @@ class VerbAnalyzer:
         # generating information for every found verbs
         for each in verb_locations:
             info = self.data[self.data["word"] == each["verb"]]
+
             tense_person_emp = []
 
             for eachx in zip(info["tense"], info["person"]):
-                eachx = (
-                    self.verb_form_mapper["tense"][eachx[0]],
-                    self.verb_form_mapper["person"][eachx[1]],
+                tense_person_emp.append(
+                    {
+                        "tense": eachx[0],
+                        "person": eachx[1],
+                        "emphasis": each["emphasis"],
+                    }
                 )
-                tense_person_emp.append(eachx + tuple(each["emphasis"]))
 
             verb.append(
                 {
                     "Index": each["location"],
                     "original_word": each["original_verb"],
                     "Parent_Verb": info["parent_word"].iloc[0],
-                    "Tense": tense_person_emp[0][0],
-                    "Person": tense_person_emp[0][1],
-                    "Emphasis": tense_person_emp[0][2],
-                    "Tense_Person_Emphasis": tense_person_emp,
+                    "TPE": tense_person_emp,
                     "Language_Form": "standard",
                 }
             )
 
         flag = []
         for x in verb:
-            index = []
             keys = []
+            index = []
             x_bar = x["original_word"].split(" ")
 
             for y in x_bar:
@@ -231,11 +201,8 @@ class VerbAnalyzer:
                 if len(index) > 1:
                     tokens[y]["Verb"]["Related_Indices"].append(index)
 
+                tokens[y]["Verb"]["TPE"] = x["TPE"]
                 tokens[y]["Verb"]["Parent_Verb"] = x["Parent_Verb"]
-                tokens[y]["Verb"]["Tense"] = x["Tense"]
-                tokens[y]["Verb"]["Person"] = x["Person"]
-                tokens[y]["Verb"]["Emphasis"] = x["Emphasis"]
-                tokens[y]["Verb"]["Tense_Person_Emphasis"] = x["Tense_Person_Emphasis"]
                 tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
 
         return verb_indexes

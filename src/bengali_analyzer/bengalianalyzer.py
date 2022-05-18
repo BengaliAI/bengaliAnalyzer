@@ -24,7 +24,7 @@ global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes
 def normalize_token(word):
     bn_normalizer = Normalizer()
     normalized_token = bn_normalizer(word)
-    return normalized_token['normalized']
+    return normalized_token["normalized"]
 
 
 def remove_symbols(string_line):
@@ -120,7 +120,7 @@ def prepare_pronoun_data(data_file):
 
 
 def prepare_numeric_data(file):
-    with open(file, 'r', encoding="utf8") as f:
+    with open(file, "r", encoding="utf8") as f:
         data = json.load(f)
     numeric_digit = data["digits"]
     numeric_literals = data["literals"]
@@ -130,7 +130,16 @@ def prepare_numeric_data(file):
     numeric_special_cases = data["special_cases"]
     numeric_months = data["months"]
     numeric_days = data["days"]
-    return numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+    return (
+        numeric_digit,
+        numeric_literals,
+        numeric_weights,
+        numeric_suffixes,
+        numeric_prefixes,
+        numeric_months,
+        numeric_special_cases,
+        numeric_days,
+    )
 
 
 def prepare_verb_data(data):
@@ -200,8 +209,16 @@ def load_data():
 
     # Generate numeric data
     numeric_data = os.path.join(asset_directory, "numerics.json")
-    numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days = prepare_numeric_data(
-        numeric_data)
+    (
+        numeric_digit,
+        numeric_literals,
+        numeric_weights,
+        numeric_suffixes,
+        numeric_prefixes,
+        numeric_months,
+        numeric_special_cases,
+        numeric_days,
+    ) = prepare_numeric_data(numeric_data)
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
@@ -232,7 +249,16 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         load_data()
-        self.numeric_analyzer = numerics.NumericAnalyzer(numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days)
+        self.numeric_analyzer = numerics.NumericAnalyzer(
+            numeric_digit,
+            numeric_literals,
+            numeric_weights,
+            numeric_suffixes,
+            numeric_prefixes,
+            numeric_months,
+            numeric_special_cases,
+            numeric_days,
+        )
         self.verbs_analyzer = verbs.VerbAnalyzer(verb_data, verb_data_1, verb_data_2)
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
         self.pronoun_analyzer = pronouns.PronounAnalyzer(pronoun_data)
@@ -251,10 +277,7 @@ class BengaliAnalyzer:
             "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
             "Verb": {
                 "Parent_Verb": None,
-                "Tense_Person_Emphasis": None,
-                "Tense": None,
-                "Person": None,
-                "Emphasis": None,
+                "TPE": None,
                 "Form": None,
                 "Related_Indices": [],
             },
@@ -331,7 +354,6 @@ class BengaliAnalyzer:
         return tokens, punctuation_flags
 
     def analyze_sentence(self, sentence):
-
 
         flags = []
 
