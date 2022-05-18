@@ -3,7 +3,9 @@ import os
 import string
 import pandas
 import json
+import csv
 from bnunicodenormalizer import Normalizer
+
 
 # from libs import verbs
 # from libs import composite_words
@@ -110,12 +112,21 @@ def prepare_non_verb_data(data_file):
 
 
 def prepare_pronoun_data(data_file):
-    data = pandas.read_csv(
-        data_file, encoding="utf8", delimiter=",", usecols=["Pronoun", "Pronoun Tag"]
-    )
+    data = pandas.read_csv(data_file, encoding="utf8", delimiter=",")
     data_dict = {}
-    for idx in range(len(data)):
-        data_dict[data.iloc[idx]["Pronoun"]] = data.iloc[idx]["Pronoun Tag"]
+    with open(data_file, "r") as csvfile:
+        datareader = csv.reader(csvfile)
+        datareader = list(datareader)
+        for row in datareader[1:]:
+            temp_dict = {}
+            i = 1
+            for col in row[1:]:
+                if not col:
+                    temp_dict[datareader[0][i]] = None
+                else:
+                    temp_dict[datareader[0][i]] = col
+                i += 1
+            data_dict[row[0]] = temp_dict
     return data_dict
 
 
@@ -281,7 +292,14 @@ class BengaliAnalyzer:
                 "Form": None,
                 "Related_Indices": [],
             },
-            "Pronoun": None,
+            "Pronoun": {
+                "Pronoun Tag": None,
+                "Number Tag": None,
+                "Honorificity": None,
+                "Case": None,
+                "Proximity": None,
+                "Encoding": None,
+            },
             "PoS": None,
             "Composite_Word": {
                 "Suffix": None,

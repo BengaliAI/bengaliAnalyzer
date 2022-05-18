@@ -1,11 +1,6 @@
 {
     "আমি": {
-        "Global_Index": [
-            [
-                0,
-                2
-            ]
-        ],
+        "Global_Index": [[0, 2]],
         "Punctuation_Flag": false,
         "Numeric": {
             "Digit": null,
@@ -32,12 +27,7 @@
         }
     },
     "শুনতেই": {
-        "Global_Index": [
-            [
-                4,
-                9
-            ]
-        ],
+        "Global_Index": [[4, 9]],
         "Punctuation_Flag": false,
         "Numeric": {
             "Digit": null,
@@ -51,33 +41,19 @@
                 {
                     "tense": "no",
                     "person": "tm",
-                    "emphasis": [
-                        [
-                            "ই"
-                        ]
-                    ]
+                    "emphasis": [["ই"]]
                 },
                 {
                     "tense": "no",
                     "person": "tm",
-                    "emphasis": [
-                        [
-                            "ই"
-                        ]
-                    ]
+                    "emphasis": [["ই"]]
                 }
             ],
             "Form": null,
             "Related_Indices": [
                 [
-                    [
-                        4,
-                        9
-                    ],
-                    [
-                        11,
-                        15
-                    ]
+                    [4, 9],
+                    [11, 15]
                 ]
             ],
             "Language_Form": "standard"
@@ -87,9 +63,7 @@
         "Composite_Word": {
             "Suffix": "তেই",
             "Prefix": null,
-            "Stand_Alone_Words": [
-                "শুন"
-            ]
+            "Stand_Alone_Words": ["শুন"]
         },
         "Special_Entity": {
             "Definition": null,
@@ -97,12 +71,7 @@
         }
     },
     "থাকবই": {
-        "Global_Index": [
-            [
-                11,
-                15
-            ]
-        ],
+        "Global_Index": [[11, 15]],
         "Punctuation_Flag": false,
         "Numeric": {
             "Digit": null,
@@ -116,24 +85,14 @@
                 {
                     "tense": "sv",
                     "person": "am",
-                    "emphasis": [
-                        [
-                            "ই"
-                        ]
-                    ]
+                    "emphasis": [["ই"]]
                 }
             ],
             "Form": null,
             "Related_Indices": [
                 [
-                    [
-                        4,
-                        9
-                    ],
-                    [
-                        11,
-                        15
-                    ]
+                    [4, 9],
+                    [11, 15]
                 ]
             ],
             "Language_Form": "standard"
@@ -143,9 +102,7 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": [
-                "থাক"
-            ]
+            "Stand_Alone_Words": ["থাক"]
         },
         "Special_Entity": {
             "Definition": null,
