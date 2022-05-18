@@ -4,6 +4,7 @@ import string
 import pandas
 import unicodedata
 import json
+import csv
 
 # from libs import verbs
 # from libs import composite_words
@@ -104,17 +105,26 @@ def prepare_non_verb_data(data_file):
 
 
 def prepare_pronoun_data(data_file):
-    data = pandas.read_csv(
-        data_file, encoding="utf8", delimiter=",", usecols=["Pronoun", "Pronoun Tag"]
-    )
+    data = pandas.read_csv(data_file, encoding="utf8", delimiter=",")
     data_dict = {}
-    for idx in range(len(data)):
-        data_dict[data.iloc[idx]["Pronoun"]] = data.iloc[idx]["Pronoun Tag"]
+    with open(data_file, "r") as csvfile:
+        datareader = csv.reader(csvfile)
+        datareader = list(datareader)
+        for row in datareader[1:]:
+            temp_dict = {}
+            i = 1
+            for col in row[1:]:
+                if not col:
+                    temp_dict[datareader[0][i]] = None
+                else:
+                    temp_dict[datareader[0][i]] = col
+                i += 1
+            data_dict[row[0]] = temp_dict
     return data_dict
 
 
 def prepare_numeric_data(file):
-    with open(file, 'r', encoding="utf8") as f:
+    with open(file, "r", encoding="utf8") as f:
         data = json.load(f)
     numeric_digit = data["digits"]
     numeric_literals = data["literals"]
@@ -124,7 +134,16 @@ def prepare_numeric_data(file):
     numeric_special_cases = data["special_cases"]
     numeric_months = data["months"]
     numeric_days = data["days"]
-    return numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+    return (
+        numeric_digit,
+        numeric_literals,
+        numeric_weights,
+        numeric_suffixes,
+        numeric_prefixes,
+        numeric_months,
+        numeric_special_cases,
+        numeric_days,
+    )
 
 
 def prepare_verb_data(data):
@@ -194,8 +213,16 @@ def load_data():
 
     # Generate numeric data
     numeric_data = os.path.join(asset_directory, "numerics.json")
-    numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days = prepare_numeric_data(
-        numeric_data)
+    (
+        numeric_digit,
+        numeric_literals,
+        numeric_weights,
+        numeric_suffixes,
+        numeric_prefixes,
+        numeric_months,
+        numeric_special_cases,
+        numeric_days,
+    ) = prepare_numeric_data(numeric_data)
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
@@ -226,7 +253,16 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         load_data()
-        self.numeric_analyzer = numerics.NumericAnalyzer(numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days)
+        self.numeric_analyzer = numerics.NumericAnalyzer(
+            numeric_digit,
+            numeric_literals,
+            numeric_weights,
+            numeric_suffixes,
+            numeric_prefixes,
+            numeric_months,
+            numeric_special_cases,
+            numeric_days,
+        )
         self.verbs_analyzer = verbs.VerbAnalyzer(verb_data, verb_data_1, verb_data_2)
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
         self.pronoun_analyzer = pronouns.PronounAnalyzer(pronoun_data)
@@ -252,7 +288,14 @@ class BengaliAnalyzer:
                 "Form": None,
                 "Related_Indices": [],
             },
-            "Pronoun": None,
+            "Pronoun": {
+                "Pronoun Tag": None,
+                "Number Tag": None,
+                "Honorificity": None,
+                "Case": None,
+                "Proximity": None,
+                "Encoding": None,
+            },
             "PoS": None,
             "Composite_Word": {
                 "Suffix": None,
