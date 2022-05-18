@@ -7,5 +7,5 @@ class NonVerbAnalyzer:
         for key, value in tokens.items():
             if key in self.dictionary_words.keys():
                 new_flags.extend(tokens[key]["Global_Index"])
-                tokens[key]["Non_Verb"] = self.dictionary_words[key]
+                tokens[key]["PoS"] = self.dictionary_words[key]
         return new_flags

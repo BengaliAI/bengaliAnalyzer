@@ -1,3 +1,6 @@
+# MAC
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -127,3 +130,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+test.ipynb
+info.json
+test.ipynb
