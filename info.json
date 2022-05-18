@@ -1,50 +1,16 @@
 {
-    "আপনি": {
+    "তেতাল্লিশহাজার": {
         "Global_Index": [
             [
                 0,
-                3
+                13
             ]
         ],
         "Punctuation_Flag": false,
         "Numeric": {
             "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": null,
-            "Tense_Person_Emphasis": null,
-            "Tense": null,
-            "Person": null,
-            "Emphasis": null,
-            "Form": null,
-            "Related_Indices": []
-        },
-        "Pronoun": "Pro.Pers2",
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": []
-        },
-        "Non_Verb": "সর্বনাম"
-    },
-    " ": {
-        "Global_Index": [
-            4,
-            8
-        ],
-        "Punctuation_Flag": true,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
+            "Literal": "তেতাল্লিশ",
+            "Weight": "হাজার",
             "Suffix": []
         },
         "Verb": {
@@ -67,127 +33,5 @@
             "Definition": null,
             "Related_Indices": []
         }
-    },
-    "ভাত": {
-        "Global_Index": [
-            [
-                5,
-                7
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": null,
-            "Tense_Person_Emphasis": null,
-            "Tense": null,
-            "Person": null,
-            "Emphasis": null,
-            "Form": null,
-            "Related_Indices": []
-        },
-        "Pronoun": null,
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [
-                [
-                    9,
-                    11
-                ],
-                [
-                    5,
-                    7
-                ]
-            ]
-        },
-        "Non_Verb": "বিশেষ্য"
-    },
-    "খান": {
-        "Global_Index": [
-            [
-                9,
-                11
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": "খাওয়া",
-            "Tense_Person_Emphasis": [
-                [
-                    "সাধারণ বর্তমান",
-                    "আপনি/আপনারা",
-                    [
-                        null
-                    ]
-                ],
-                [
-                    "সাধারণ বর্তমান",
-                    "ইনি/উনি/তিনি/যিনি",
-                    [
-                        null
-                    ]
-                ],
-                [
-                    "সাধারণ বর্তমান",
-                    "এঁরা/ওঁরা/তাঁরা/যাঁরা",
-                    [
-                        null
-                    ]
-                ],
-                [
-                    "বর্তমান অনুজ্ঞা",
-                    "আপনি/আপনারা",
-                    [
-                        null
-                    ]
-                ]
-            ],
-            "Tense": "সাধারণ বর্তমান",
-            "Person": "আপনি/আপনারা",
-            "Emphasis": [
-                null
-            ],
-            "Form": null,
-            "Related_Indices": [],
-            "Language_Form": "standard"
-        },
-        "Pronoun": null,
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [
-                [
-                    9,
-                    11
-                ],
-                [
-                    5,
-                    7
-                ]
-            ]
-        },
-        "Non_Verb": "বিশেষণ"
     }
 }
