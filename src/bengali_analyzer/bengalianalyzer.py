@@ -2,8 +2,8 @@ import copy
 import os
 import string
 import pandas
-import unicodedata
 import json
+from bnunicodenormalizer import Normalizer
 
 # from libs import verbs
 # from libs import composite_words
@@ -19,6 +19,12 @@ from .libs import special_entity
 from .libs import pronouns
 
 global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+
+
+def normalize_token(word):
+    bn_normalizer = Normalizer()
+    normalized_token = bn_normalizer(word)
+    return normalized_token['normalized']
 
 
 def remove_symbols(string_line):
@@ -304,6 +310,7 @@ class BengaliAnalyzer:
                         tokens[string_buffer]["Global_Index"].append(global_index)
             else:
                 if string_buffer != "":
+                    string_buffer = normalize_token(string_buffer)
                     global_index = (start_index, end_index)
                     if string_buffer not in tokens.keys():
                         tokens[string_buffer] = copy.deepcopy(token)
@@ -324,8 +331,7 @@ class BengaliAnalyzer:
         return tokens, punctuation_flags
 
     def analyze_sentence(self, sentence):
-        NORMALIZATION_FORM = "NFC"
-        sentence = unicodedata.normalize(NORMALIZATION_FORM, sentence)
+
 
         flags = []
 
