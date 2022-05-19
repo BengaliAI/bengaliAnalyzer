@@ -62,7 +62,7 @@ class VerbAnalyzer:
 
         verb = []
         verb_locations = []
-        emphasis_characters = ["ই", "ও"]
+        emphasizer_characters = ["ই", "ও"]
 
         # for handling multi-word verb
         # currently only bigrams are being handled
@@ -71,25 +71,25 @@ class VerbAnalyzer:
             second = []
 
             bigrams = []
-            emphasis_list = []
+            emphasizer_list = []
 
-            # the list inside the emphasis list are there
+            # the list inside the emphasizer list are there
             # incase we need to handle multiple emphasizer later on
-            emphasis = [[None], [None]]
+            emphasizer = [[None], [None]]
 
             try:
                 first.append(sentence_x_tokens[idx])
                 second.append(sentence_x_tokens[idx + 1])
 
-                if first[0][-1] in emphasis_characters:
-                    emphasis[0] = [first[0][-1]]
+                if first[0][-1] in emphasizer_characters:
+                    emphasizer[0] = [first[0][-1]]
 
                     # keeping the both শুনতেই and শুনতে
                     # to check if both শুনতেই or শুনতে exists in verb-dictionary
                     first.append(first[0][:-1])
 
-                if second[0][-1] in emphasis_characters:
-                    emphasis[1] = [second[0][-1]]
+                if second[0][-1] in emphasizer_characters:
+                    emphasizer[1] = [second[0][-1]]
 
                     # keeping the both শুনতেই and শুনতে
                     # to check if both শুনতেই or শুনতে exists in verb-dictionary
@@ -100,22 +100,22 @@ class VerbAnalyzer:
                     for j, s in enumerate(second):
                         bigrams.append(f + " " + s)
 
-                        emphasis_list.append(
+                        emphasizer_list.append(
                             [
-                                (lambda: [None], lambda: emphasis[0])[i == 0](),
-                                (lambda: [None], lambda: emphasis[1])[j == 0](),
+                                (lambda: [None], lambda: emphasizer[0])[i == 0](),
+                                (lambda: [None], lambda: emphasizer[1])[j == 0](),
                             ]
                         )
 
                 # checking if any bigram represents verb
-                # if so then the emphasis char is being tracked
+                # if so then the emphasizer char is being tracked
                 for each in bigrams:
                     if each in self.data2["word"].values:
                         verb_locations.append(
                             {
                                 "verb": each,
                                 "location": [idx, idx + 1],
-                                "emphasis": emphasis_list[0],
+                                "emphasizer": emphasizer_list[0],
                                 "original_verb": bigrams[0],
                             }
                         )
@@ -129,26 +129,26 @@ class VerbAnalyzer:
 
         # for handling single-word verb
         for idx, each in enumerate(sentence_x_tokens):
-            emphasis = [[None]]
+            emphasizer = [[None]]
 
-            # check verb which last char doesn't emphasize, that emphasis char is part of the word
+            # check verb which last char doesn't emphasize, that emphasizer char is part of the word
             if each in self.data1["word"].values:
                 verb_locations.append(
                     {
                         "verb": each,
                         "location": [idx],
-                        "emphasis": emphasis,
+                        "emphasizer": emphasizer,
                         "original_verb": each,
                     }
                 )
 
-            # removing last char if it is an emphais char and checking the word without it
+            # removing last char if it is an emphasis char, and checking the word without it
             lastChar = each[-1]
             original_verb = each
 
-            if lastChar in emphasis_characters:
+            if lastChar in emphasizer_characters:
                 each = each[:-1]
-                emphasis = [[lastChar]]
+                emphasizer = [[lastChar]]
 
             # check verb which last char does emphasize
             if each in self.data1["word"].values:
@@ -156,7 +156,7 @@ class VerbAnalyzer:
                     {
                         "verb": each,
                         "location": [idx],
-                        "emphasis": emphasis,
+                        "emphasizer": emphasizer,
                         "original_verb": original_verb,
                     }
                 )
@@ -172,7 +172,7 @@ class VerbAnalyzer:
                     {
                         "tense": eachx[0],
                         "person": eachx[1],
-                        "emphasis": each["emphasis"],
+                        "emphasizer": each["emphasizer"],
                     }
                 )
 
