@@ -114,7 +114,7 @@ def prepare_non_verb_data(data_file):
 def prepare_pronoun_data(data_file):
     data = pandas.read_csv(data_file, encoding="utf8", delimiter=",")
     data_dict = {}
-    with open(data_file, "r") as csvfile:
+    with open(data_file, "r", encoding="utf8") as csvfile:
         datareader = csv.reader(csvfile)
         datareader = list(datareader)
         for row in datareader[1:]:
