@@ -1,6 +1,11 @@
 {
-    "আমি": {
-        "Global_Index": [[0, 2]],
+    "ভাত": {
+        "Global_Index": [
+            [
+                0,
+                2
+            ]
+        ],
         "Punctuation_Flag": false,
         "Numeric": {
             "Digit": null,
@@ -14,8 +19,15 @@
             "Form": null,
             "Related_Indices": []
         },
-        "Pronoun": "Pro.Pers1",
-        "PoS": null,
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": "বিশেষ্য",
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
@@ -26,8 +38,13 @@
             "Related_Indices": []
         }
     },
-    "শুনতেই": {
-        "Global_Index": [[4, 9]],
+    "খাবই": {
+        "Global_Index": [
+            [
+                4,
+                7
+            ]
+        ],
         "Punctuation_Flag": false,
         "Numeric": {
             "Digit": null,
@@ -36,73 +53,37 @@
             "Suffix": []
         },
         "Verb": {
-            "Parent_Verb": "শুনা",
-            "TPE": [
-                {
-                    "tense": "no",
-                    "person": "tm",
-                    "emphasis": [["ই"]]
-                },
-                {
-                    "tense": "no",
-                    "person": "tm",
-                    "emphasis": [["ই"]]
-                }
-            ],
-            "Form": null,
-            "Related_Indices": [
-                [
-                    [4, 9],
-                    [11, 15]
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "Pronoun": null,
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": "তেই",
-            "Prefix": null,
-            "Stand_Alone_Words": ["শুন"]
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": []
-        }
-    },
-    "থাকবই": {
-        "Global_Index": [[11, 15]],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": "থাকা",
+            "Parent_Verb": "খাওয়া",
             "TPE": [
                 {
                     "tense": "sv",
                     "person": "am",
-                    "emphasis": [["ই"]]
+                    "emphasizer": [
+                        [
+                            "ই"
+                        ]
+                    ]
                 }
             ],
             "Form": null,
-            "Related_Indices": [
-                [
-                    [4, 9],
-                    [11, 15]
-                ]
-            ],
+            "Related_Indices": [],
             "Language_Form": "standard"
         },
-        "Pronoun": null,
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
         "PoS": null,
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": ["থাক"]
+            "Stand_Alone_Words": [
+                "খাবই"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
