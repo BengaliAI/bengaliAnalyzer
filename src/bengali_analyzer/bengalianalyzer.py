@@ -98,7 +98,6 @@ def prepare_non_verb_data(data_file):
     data = pandas.read_csv(
         data_file, encoding="utf8", header=None, names=["keys", "values"]
     )
-    data = data.drop_duplicates()
     data.dropna(inplace=True)
     data.reset_index(drop=True, inplace=True)
     data_dict = {}
@@ -106,7 +105,10 @@ def prepare_non_verb_data(data_file):
     for idx in range(len(data)):
         _key = remove_symbols(data.iloc[idx, 0])
         _value = remove_symbols(data.iloc[idx, 1])
-        data_dict[_key] = _value
+        if data_dict.get(_key):
+            data_dict[_key].append(_value)
+        else:
+            data_dict[_key] = [_value]
 
     return data_dict
 
