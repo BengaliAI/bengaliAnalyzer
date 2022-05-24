@@ -19,6 +19,7 @@ class CompositeWordAnalyzer:
             substring = word[:i]
             if substring in self.dictionary_words and substring not in self.graphemes and len(substring) > 1:
                 return True
+        self.graphemes = None
         return False
 
     # Validate suffix
@@ -29,6 +30,7 @@ class CompositeWordAnalyzer:
             substring = word[-i:]
             if substring in self.dictionary_words and substring not in self.graphemes and len(substring) > 1:
                 return True
+        self.graphemes = None
         return False
 
     # Create all the combinations of substrings
@@ -45,7 +47,6 @@ class CompositeWordAnalyzer:
     def get_all_possible_substrings(self, word):
         if self.graphemes is None:
             self.graphemes = self.grapheme_parser.process(word)
-
         all_possible_substrings = set()
         for index, grapheme1 in enumerate(self.graphemes):
             substring = grapheme1
