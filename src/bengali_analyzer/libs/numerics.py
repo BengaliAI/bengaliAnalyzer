@@ -45,18 +45,17 @@ class NumericAnalyzer:
 
         if weight:
             text_copy = text_copy[:- len(weight)]
-            tokens[text]['Numeric']['Weight'] = weight
-            verdict = True
+            
 
-        if weight and suffix:
-            tokens[text]['Numeric']['Suffix'] = suffix
-
-        if self.validate_literal(tokens, text, text_copy) or self.validate_literal(tokens, text, text_copy) or self.validate_digit(tokens, text, text_copy):
+        if self.validate_literal(tokens, text, text_copy) or self.validate_digit(tokens, text, text_copy):
             verdict = True
+        
 
         if suffix and verdict:
             tokens[text]['Numeric']['Suffix'] = suffix
-
+        if weight and verdict:
+            tokens[text]['Numeric']['Weight'] = weight
+            
         return verdict
 
     def get_numerics(self, tokens):
