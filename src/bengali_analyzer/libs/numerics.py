@@ -51,7 +51,7 @@ class NumericAnalyzer:
         if weight and suffix:
             tokens[text]['Numeric']['Suffix'] = suffix
 
-        if self.validate_literal(tokens, text, text_copy) or self.validate_literal(tokens, text, text_copy):
+        if self.validate_literal(tokens, text, text_copy) or self.validate_literal(tokens, text, text_copy) or self.validate_digit(tokens, text, text_copy):
             verdict = True
 
         if suffix and verdict:
