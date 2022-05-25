@@ -2,6 +2,10 @@
 .DS_Store
 .vscode/
 
+# test files
+test.ipynb
+info.json
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
