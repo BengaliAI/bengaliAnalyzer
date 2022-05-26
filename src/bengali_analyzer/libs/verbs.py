@@ -102,8 +102,10 @@ class VerbAnalyzer:
 
                         emphasizer_list.append(
                             [
-                                (lambda: [None], lambda: emphasizer[0])[i == 0](),
-                                (lambda: [None], lambda: emphasizer[1])[j == 0](),
+                                (lambda: [None], lambda: emphasizer[0])[
+                                    i == 0](),
+                                (lambda: [None], lambda: emphasizer[1])[
+                                    j == 0](),
                             ]
                         )
 
