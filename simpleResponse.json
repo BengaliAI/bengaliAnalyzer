@@ -1,0 +1,136 @@
+{
+    "সে": {
+        "Global_Index": [
+            [
+                0,
+                1
+            ]
+        ],
+        "Pronoun": {
+            "Pronoun Tag": "Pro.Pers3.CoRel",
+            "Number Tag": "Sing",
+            "Honorificity": "informal",
+            "Case": "genitive",
+            "Proximity": "distal"
+        }
+    },
+    "ভাত": {
+        "Global_Index": [
+            [
+                3,
+                5
+            ]
+        ],
+        "PoS": [
+            "বিশেষণ",
+            "বিশেষ্য"
+        ]
+    },
+    "মাখাইয়া": {
+        "Global_Index": [
+            [
+                7,
+                13
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "মাখানো",
+            "Non_Finite": true,
+            "Language_Form": "standard"
+        },
+        "Composite_Word": {
+            "Stand_Alone_Words": [
+                "ইয়া",
+                "মাখা",
+                "খাই"
+            ]
+        }
+    },
+    "দিলেই": {
+        "Global_Index": [
+            [
+                15,
+                19
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "দেওয়া",
+            "Emphasizer": [
+                "ই"
+            ],
+            "TP": [
+                {
+                    "tense": "so",
+                    "person": "tm"
+                }
+            ],
+            "Non_Finite": true,
+            "Language_Form": "standard"
+        },
+        "Composite_Word": {
+            "Suffix": "েই",
+            "Stand_Alone_Words": [
+                "দিল"
+            ]
+        }
+    },
+    "খেতে": {
+        "Global_Index": [
+            [
+                21,
+                24
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "খাওয়া",
+            "TP": [
+                {
+                    "tense": "gv",
+                    "person": "am"
+                }
+            ],
+            "Non_Finite": true,
+            "Related_Indices": [
+                [
+                    26,
+                    29
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Composite_Word": {
+            "Stand_Alone_Words": [
+                "খেতে"
+            ]
+        }
+    },
+    "থাকব": {
+        "Global_Index": [
+            [
+                26,
+                29
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "খাওয়া",
+            "TP": [
+                {
+                    "tense": "gv",
+                    "person": "am"
+                }
+            ],
+            "Related_Indices": [
+                [
+                    21,
+                    24
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Composite_Word": {
+            "Stand_Alone_Words": [
+                "থাক"
+            ]
+        }
+    }
+}
