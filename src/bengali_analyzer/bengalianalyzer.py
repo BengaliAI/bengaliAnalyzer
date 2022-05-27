@@ -155,15 +155,16 @@ def prepare_numeric_data(file):
     )
 
 
-def prepare_verb_data(data):
-    data = pandas.read_csv(data)
+def prepare_verb_data(allVerbData, nonFiniteVerbData):
+    data = pandas.read_csv(allVerbData)
     count = []
     for each in data["word"].values:
         count.append(len(each.split(" ")))
     data["count"] = count
     data2 = data[data["count"] == 2]
     data1 = data[data["count"] == 1]
-    return data, data1, data2
+    nonFiniteVerbs = pandas.read_csv(nonFiniteVerbData)
+    return data, data1, data2, nonFiniteVerbs
 
 
 def clean_generated_dictionary(dictionary):
@@ -216,7 +217,7 @@ def generate_dictionary(file):
 
 # Required to preload datasets
 def load_data():
-    global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+    global verb_data, verb_data_1, verb_data_2, non_finite_verbs, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
     path = os.path.dirname(os.path.abspath(__file__))
     asset_directory = os.path.join(path, "assets")
 
@@ -235,7 +236,10 @@ def load_data():
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
-    verb_data, verb_data_1, verb_data_2 = prepare_verb_data(verb_data)
+    nonFiniteVerb_data = os.path.join(
+        asset_directory, "banglaNonFiniteVerbs.csv")
+    verb_data, verb_data_1, verb_data_2, non_finite_verbs = prepare_verb_data(
+        verb_data, nonFiniteVerb_data)
 
     # Generate non-verb data
     non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
@@ -246,10 +250,12 @@ def load_data():
     pronoun_data = prepare_pronoun_data(pronoun_data)
 
     # Generate other data,
-    not_to_be_broken_file = os.path.join(asset_directory, "not_to_be_broken.txt")
+    not_to_be_broken_file = os.path.join(
+        asset_directory, "not_to_be_broken.txt")
     suffix_file = os.path.join(asset_directory, "suffixes.csv")
     prefix_file = os.path.join(asset_directory, "prefixes.csv")
-    special_suffixes_file = os.path.join(asset_directory, "special_suffixes.csv")
+    special_suffixes_file = os.path.join(
+        asset_directory, "special_suffixes.csv")
 
     special_suffixes = prepare_special_suffixes(special_suffixes_file)
     not_to_be_broken = generate_special_entity(not_to_be_broken_file)
@@ -272,7 +278,8 @@ class BengaliAnalyzer:
             numeric_special_cases,
             numeric_days,
         )
-        self.verbs_analyzer = verbs.VerbAnalyzer(verb_data, verb_data_1, verb_data_2)
+        self.verbs_analyzer = verbs.VerbAnalyzer(
+            verb_data, verb_data_1, verb_data_2, non_finite_verbs)
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
         self.pronoun_analyzer = pronouns.PronounAnalyzer(pronoun_data)
         self.composite_words_analyzer = composite_words.CompositeWordAnalyzer(
@@ -290,7 +297,9 @@ class BengaliAnalyzer:
             "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
             "Verb": {
                 "Parent_Verb": None,
-                "TPE": None,
+                "Emphasizer": None,
+                "TP": None,
+                "Non_Finite": False,
                 "Form": None,
                 "Related_Indices": [],
             },
@@ -350,7 +359,8 @@ class BengaliAnalyzer:
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
                         tokens[string_buffer]["Punctuation_Flag"] = False
-                        tokens[string_buffer]["Global_Index"].append(global_index)
+                        tokens[string_buffer]["Global_Index"].append(
+                            global_index)
             else:
                 if string_buffer != "":
                     string_buffer = normalize_token(string_buffer)
