@@ -26,8 +26,8 @@ global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes
 def normalize_token(word):
     bn_normalizer = Normalizer()
     normalized_token = bn_normalizer(word)
-    return word
-    # return normalized_token["normalized"]
+    # return word
+    return normalized_token["normalized"]
 
 
 def remove_symbols(string_line):

@@ -1,136 +1,74 @@
 {
-    "সে": {
+    "বঙ্গবন্ধু": {
         "Global_Index": [
             [
                 0,
-                1
+                8
             ]
         ],
-        "Pronoun": {
-            "Pronoun Tag": "Pro.Pers3.CoRel",
-            "Number Tag": "Sing",
-            "Honorificity": "informal",
-            "Case": "genitive",
-            "Proximity": "distal"
+        "Composite_Word": {
+            "Stand_Alone_Words": [
+                "বঙ্গ",
+                "বন্ধু"
+            ]
         }
     },
-    "ভাত": {
+    "শেখ": {
         "Global_Index": [
             [
-                3,
-                5
+                10,
+                12
             ]
         ],
+        "Verb": {
+            "Parent_Verb": "শেখা",
+            "TP": [
+                {
+                    "tense": "bo",
+                    "person": "tu"
+                }
+            ],
+            "Language_Form": "standard"
+        },
         "PoS": [
-            "বিশেষণ",
             "বিশেষ্য"
         ]
     },
-    "মাখাইয়া": {
+    "মুজিব": {
         "Global_Index": [
             [
-                7,
-                13
+                14,
+                18
             ]
         ],
-        "Verb": {
-            "Parent_Verb": "মাখানো",
-            "Non_Finite": true,
-            "Language_Form": "standard"
-        },
         "Composite_Word": {
             "Stand_Alone_Words": [
-                "ইয়া",
-                "মাখা",
-                "খাই"
+                "জিব"
             ]
         }
     },
-    "দিলেই": {
+    "মেডিকেল": {
         "Global_Index": [
             [
-                15,
-                19
+                20,
+                26
             ]
         ],
-        "Verb": {
-            "Parent_Verb": "দেওয়া",
-            "Emphasizer": [
-                "ই"
-            ],
-            "TP": [
-                {
-                    "tense": "so",
-                    "person": "tm"
-                }
-            ],
-            "Non_Finite": true,
-            "Language_Form": "standard"
-        },
         "Composite_Word": {
-            "Suffix": "েই",
             "Stand_Alone_Words": [
-                "দিল"
+                "মেডিকেল"
             ]
         }
     },
-    "খেতে": {
+    "কলেজ": {
         "Global_Index": [
             [
-                21,
-                24
+                28,
+                31
             ]
         ],
-        "Verb": {
-            "Parent_Verb": "খাওয়া",
-            "TP": [
-                {
-                    "tense": "gv",
-                    "person": "am"
-                }
-            ],
-            "Non_Finite": true,
-            "Related_Indices": [
-                [
-                    26,
-                    29
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "Composite_Word": {
-            "Stand_Alone_Words": [
-                "খেতে"
-            ]
-        }
-    },
-    "থাকব": {
-        "Global_Index": [
-            [
-                26,
-                29
-            ]
-        ],
-        "Verb": {
-            "Parent_Verb": "খাওয়া",
-            "TP": [
-                {
-                    "tense": "gv",
-                    "person": "am"
-                }
-            ],
-            "Related_Indices": [
-                [
-                    21,
-                    24
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "Composite_Word": {
-            "Stand_Alone_Words": [
-                "থাক"
-            ]
-        }
+        "PoS": [
+            "বিশেষ্য"
+        ]
     }
 }
