@@ -240,7 +240,7 @@ class VerbAnalyzer:
                 index.extend(tokens[y]["Global_Index"])
 
             for i, y in enumerate(keys):
-                if len(index) > 1:
+                if len(index) > 1 and index[(i+1) % 2] not in tokens[y]["Verb"]["Related_Indices"]:
                     tokens[y]["Verb"]["Related_Indices"].append(
                         index[(i+1) % 2])
                 tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
