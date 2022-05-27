@@ -121,7 +121,7 @@ class VerbAnalyzer:
                                     "original_verb": bigrams[0],
                                 }
                             )
-                            non_finte[len(verb_locations)-1] = [False, True]
+                            non_finte[len(verb_locations)-1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
                             break
             except:
@@ -245,8 +245,9 @@ class VerbAnalyzer:
                         index[(i+1) % 2])
                 tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
                 tokens[y]["Verb"]["TP"] = x["TP"]
+                tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"] if i == 0 else False
                 tokens[y]["Verb"]["Parent_Verb"] = x["Parent_Verb"]
-                tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"]
+                # tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"]
                 tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
 
         return verb_indexes
