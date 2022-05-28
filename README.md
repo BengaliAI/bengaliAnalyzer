@@ -89,6 +89,10 @@ tokens[token] = {
         }
 ```
 
+## Quick Guide
+- [What does the response mean?](./documentation/response.md)
+- [How does we generate the response?](./documentation/breakdown.md)
+
 ## Team
 This tool is developed by people with diverse affiliations. The following are the people behind this effort.
 
