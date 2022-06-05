@@ -12,10 +12,15 @@ class NumericAnalyzer:
         self.days = numeric_days
 
     def validate_digit(self, tokens, text, text_copy):
-        if text_copy in self.digits:
-            tokens[text]['Numeric']['Digit'] = text_copy
-            return True
-        return False
+        digit = ""
+        flag = False
+        for char in text_copy:
+            if char in self.digits:
+                digit += char
+                flag = True
+        if flag:
+            tokens[text]['Numeric']['Digit'] = digit
+        return flag
 
     def validate_literal(self, tokens, text, text_copy):
         if text_copy in self.literals:
