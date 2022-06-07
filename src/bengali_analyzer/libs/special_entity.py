@@ -2,26 +2,20 @@ class SpecialEntityAnalyzer:
     def __init__(self, suffixes,entity_list):
         self.suffixes = suffixes
         self.entity_list = entity_list
-
-    #data = sorted(data, key = lambda a: a[0] if type(a) is tuple else a)
     
-    def flag_special_entity(self, tokens, sentence):
-        flags = []
-        found_entities = []
-        for entity in self.entity_list:
-            if entity in sentence:
-                found_entities.append(entity)
+    def validate_suffix(self, tokens, entity):
+        entity = entity.strip()
+        token_index = None
+        token_candidate = None
+        for token in tokens.keys():
+            if len(token) > len(entity) and token[:len(entity)] == entity and token[-len(entity):] in self.suffixes:
+                tokens[token]["Special_Entity"]["Suffix"] = token[-len(entity):]
+                token_index = tokens[token]["Global_Index"]
+                token_candidate = token
+                break
+        return token_candidate, token_index
 
-        print(found_entities, "found entry initial")
-
-        found_entities_copy = found_entities.copy()
-
-        for entity in found_entities_copy:
-            for entity2 in found_entities_copy:
-                if entity in entity2 and len(entity) < len(entity2) and entity in found_entities:
-                    found_entities.remove(entity)
-
-        print(found_entities, "found entry after removing instersecting strings")
+    def tokenize_special_entity(self,tokens,entity):
 
         punctuations = {
             " ",
@@ -46,66 +40,61 @@ class SpecialEntityAnalyzer:
             "।",
         }
 
-        for entity in found_entities:
-            index = 1
-            while (entity[-index] not in punctuation):
-                index += 1
-            last_token = entity[-index:]    
-            if not tokens[last_token]:
-                for token in tokens.keys():
-                    if last_token in token:
-                        probable_suffix = token[:-len(last_token)]     
+        related_indices = {}
 
-        string_buffer = ""
+        releated_tokens = {}
 
-        end_index = 0
-        start_index = 0
-        for index in range(len(sentence)):
-            if sentence[index] not in punctuations:
-                string_buffer += sentence[index]
-                end_index = index
-                if index == len(sentence) - 1:
-                    if string_buffer != "":
-                        global_index = (start_index, end_index)
-                        if string_buffer not in tokens.keys():
-                            tokens[string_buffer] = copy.deepcopy(token)
-                        tokens[string_buffer]["Punctuation_Flag"] = False
-                        tokens[string_buffer]["Global_Index"].append(
-                            global_index)
+        # The spacing indice
+        space_index = {}
+        for x in range(len(entity)):
+            if entity[x] == " ":
+                space_index.add(x)
+
+        punctuation_list = [p for p in punctuations if p in entity and p != " "]
+        for punctuation in punctuation_list:
+            related_indices.add(tokens[punctuation]["Global_Index"])
+            releated_tokens.add(punctuation)
+
+        for p in punctuation_list:
+            entity = entity.replace(p, "")
+        words = entity.split(" ")
+        for word in words:
+            if word in tokens.keys():
+                related_indices.add(tokens[word]["Global_Index"])
+                releated_tokens.add(word)
             else:
-                if string_buffer != "":
-                    string_buffer = normalize_token(string_buffer)
-                    global_index = (start_index, end_index)
-                    if string_buffer not in tokens.keys():
-                        tokens[string_buffer] = copy.deepcopy(token)
-                    tokens[string_buffer]["Punctuation_Flag"] = False
-                    tokens[string_buffer]["Global_Index"].append(global_index)
-                    string_buffer = ""
+                token, index = self.validate_suffix(tokens, word)
+                if token is not None:
+                    related_indices.add(index)
+                    releated_tokens.add(token)
 
-                punctuation_flags.append(index)
-                start_index = index + 1
-                punctuation = sentence[index]
+        data = related_indices.to_list()
+        data = sorted(data, key = lambda a: a[0] if type(a) is tuple else a)
+        for token in releated_tokens:
+            tokens[token]["Special_Entity"]["Related_Indices"] = related_indices
+            tokens[token]["Special_Entity"]["SpaceIndices"] = space_index
+        return data
 
-                if punctuation not in tokens.keys():
-                    tokens[punctuation] = copy.deepcopy(token)
-                tokens[punctuation]["Punctuation_Flag"] = True
-                tokens[punctuation]["Global_Index"].append(index)
+    # A slave function to find special entities in a sentence
+    def find_special_entity(self, sentence):
+        found_entities = []
+        for entity in self.entity_list:
+            if entity in sentence:
+                found_entities.append(entity)
 
+        found_entities_copy = found_entities.copy()
 
+        for entity in found_entities_copy:
+            for entity2 in found_entities_copy:
+                if entity in entity2 and len(entity) < len(entity2) and entity in found_entities:
+                    found_entities.remove(entity)
+        return found_entities
 
-        related_index = {}
-        flagged_token = set()
+    def flag_special_entity(self, tokens, sentence):
+        found_entities = self.find_special_entity(sentence)
+        
+        flags = []
         for entity in found_entities:
-            indices = []
-            for token in tokens.keys():
-                if token in entity:
-                    flagged_token.add(token)
-                    indices.extend(tokens[token]["Global_Index"])
-                    flags.extend(tokens[token]["Global_Index"])
-            related_index[entity] = indices
-
-        for entity in related_index.keys():
-            for indices in related_index[entity]:
-                for token in flagged_token:
-                    tokens[token]["Special_Entity"]["Related_Indices"].append(indices)
+            flags.extend(self.tokenize_special_entity(tokens, entity))
+        
         return flags

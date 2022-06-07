@@ -318,7 +318,7 @@ class BengaliAnalyzer:
                 "Prefix": None,
                 "Stand_Alone_Words": set(),
             },
-            "Special_Entity": {"Definition": None, "Related_Indices": []},
+            "Special_Entity": {"Definition": None, "Related_Indices": [], "SpaceIndices": set()},
         }
         tokens = {}
         punctuation_flags = []
