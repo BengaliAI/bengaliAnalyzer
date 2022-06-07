@@ -395,7 +395,7 @@ class BengaliAnalyzer:
         flags.extend(numeric_flags)
 
         special_entity_flags = self.special_entity_analyzer.flag_special_entity(
-            tokens, sentence
+            tokens, suffixes, sentence
         )
         flags.extend(special_entity_flags)
 

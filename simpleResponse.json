@@ -1,73 +1,81 @@
 {
-    "বঙ্গবন্ধু": {
+    "২১শে": {
         "Global_Index": [
             [
                 0,
-                8
+                3
             ]
         ],
         "Composite_Word": {
             "Stand_Alone_Words": [
-                "বঙ্গ",
-                "বন্ধু"
+                "২১শে"
             ]
         }
     },
-    "শেখ": {
+    "ফেব্রুয়ারী": {
         "Global_Index": [
             [
-                10,
-                12
+                5,
+                14
+            ]
+        ],
+        "Composite_Word": {
+            "Stand_Alone_Words": [
+                "ফেব্রুয়ারী"
+            ]
+        }
+    },
+    "একটা": {
+        "Global_Index": [
+            [
+                16,
+                19
+            ]
+        ],
+        "Numeric": {
+            "Literal": "এক",
+            "Suffix": [
+                "টা"
+            ]
+        },
+        "Pronoun": {
+            "Pronoun Tag": "Pro.Indef",
+            "Number Tag": "Sing"
+        },
+        "PoS": [
+            "বিশেষণ"
+        ]
+    },
+    "ভাল": {
+        "Global_Index": [
+            [
+                21,
+                23
+            ]
+        ],
+        "PoS": [
+            "বিশেষ্য"
+        ]
+    },
+    "দিন": {
+        "Global_Index": [
+            [
+                25,
+                27
             ]
         ],
         "Verb": {
-            "Parent_Verb": "শেখা",
+            "Parent_Verb": "দেওয়া",
             "TP": [
                 {
                     "tense": "bo",
-                    "person": "tu"
+                    "person": "ap"
                 }
             ],
             "Language_Form": "standard"
         },
         "PoS": [
-            "বিশেষ্য"
-        ]
-    },
-    "মুজিব": {
-        "Global_Index": [
-            [
-                14,
-                18
-            ]
-        ],
-        "Composite_Word": {
-            "Stand_Alone_Words": [
-                "জিব"
-            ]
-        }
-    },
-    "মেডিকেল": {
-        "Global_Index": [
-            [
-                20,
-                26
-            ]
-        ],
-        "Composite_Word": {
-            "Stand_Alone_Words": [
-                "মেডিকেল"
-            ]
-        }
-    },
-    "কলেজ": {
-        "Global_Index": [
-            [
-                28,
-                31
-            ]
-        ],
-        "PoS": [
+            "বিশেষ্য",
             "বিশেষ্য"
         ]
     }

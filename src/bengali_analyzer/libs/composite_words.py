@@ -91,7 +91,7 @@ class CompositeWordAnalyzer:
             indices = tokens[word]['Global_Index']
             if set(indices).isdisjoint(set(flags)):
                 self.generate_word_configuration(word, tokens)
-
+    
     def generate_word_configuration(self, word, tokens):
         self.graphemes = None
         key = word
