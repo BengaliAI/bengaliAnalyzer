@@ -287,7 +287,7 @@ class BengaliAnalyzer:
             non_verb_words, prefixes, suffixes, special_suffixes
         )
         self.special_entity_analyzer = special_entity.SpecialEntityAnalyzer(
-            not_to_be_broken
+            suffixes, not_to_be_broken
         )
 
     @staticmethod
@@ -393,12 +393,12 @@ class BengaliAnalyzer:
 
         numeric_flags = self.numeric_analyzer.get_numerics(tokens)
         flags.extend(numeric_flags)
-
+        print(flags)
         special_entity_flags = self.special_entity_analyzer.flag_special_entity(
-            tokens, suffixes, sentence
+            tokens, sentence
         )
         flags.extend(special_entity_flags)
-
+        print(flags)
         verb_flags = self.verbs_analyzer.get_verbs(tokens, sentence)
         flags.extend(verb_flags)
 
@@ -409,6 +409,6 @@ class BengaliAnalyzer:
         non_verb_flags = self.non_verbs_analyzer.get_non_verbs(tokens)
         flags.extend(non_verb_flags)
 
-        self.composite_words_analyzer.analyze_composite_words(tokens, flags)
+        #self.composite_words_analyzer.analyze_composite_words(tokens, flags)
 
         return tokens
