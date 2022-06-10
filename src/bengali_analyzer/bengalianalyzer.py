@@ -110,7 +110,30 @@ def prepare_non_verb_data(data_file):
             data_dict[_key].append(_value)
         else:
             data_dict[_key] = [_value]
+    return data_dict
 
+def prepare_word_list_data(data_file):
+    data = pandas.read_csv(
+        data_file, encoding="utf8", header=None,
+    )
+    data_dict = {}
+    print(len(data))
+    for idx in range(len(data)):
+        _key = data.iloc[idx, 0]
+        _value = data.iloc[idx, 1:].values
+
+        for each in _value:
+            if each == each:
+                if data_dict.get(_key):
+                    if not each in data_dict[_key]:
+                        data_dict[_key].append(each)
+                else:
+                    data_dict[_key] = [each]
+        
+    # print(data_dict['অ'], ':dict(অ)')
+    # print(data_dict['অংশক'], ':dict(অংশক)')
+    # print(data_dict['অংশীদার'], ':dict(অংশীদার)')
+    # print(data_dict['অকথ্য'], ':dict(অকথ্য)')
     return data_dict
 
 
@@ -243,8 +266,12 @@ def load_data():
         verb_data, nonFiniteVerb_data)
 
     # Generate non-verb data
-    non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
-    non_verb_words = prepare_non_verb_data(non_verb_words)
+    # non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
+    # non_verb_words = prepare_non_verb_data(non_verb_words)
+
+    # Generate word-list data
+    big_word_list = os.path.join(asset_directory, "wordListPoS.csv")
+    non_verb_words = prepare_word_list_data(big_word_list)
 
     # Genereate pronoun-data
     pronoun_data = os.path.join(asset_directory, "pronouns.csv")
@@ -263,7 +290,7 @@ def load_data():
     suffixes = generate_dictionary(suffix_file)
     prefixes = generate_dictionary(prefix_file)
 
-    non_verb_words = clean_generated_dictionary(non_verb_words)
+    # non_verb_words = clean_generated_dictionary(non_verb_words)
 
 
 class BengaliAnalyzer:
