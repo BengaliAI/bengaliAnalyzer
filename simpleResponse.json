@@ -4,21 +4,10 @@
             [
                 0,
                 3
-            ],
-            [
-                9,
-                12
-            ],
-            [
-                47,
-                50
             ]
         ],
         "Verb": {
             "Parent_Verb": "যাওয়া",
-            "Emphasizer": [
-                "ই"
-            ],
             "TP": [
                 {
                     "tense": "no",
@@ -26,12 +15,6 @@
                 }
             ],
             "Non_Finite": true,
-            "Related_Indices": [
-                [
-                    9,
-                    12
-                ]
-            ],
             "Language_Form": "standard"
         }
     },
@@ -43,11 +26,33 @@
             ]
         ]
     },
+    "যেত": {
+        "Global_Index": [
+            [
+                9,
+                11
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "যাওয়া",
+            "TP": [
+                {
+                    "tense": "no",
+                    "person": "ae"
+                },
+                {
+                    "tense": "no",
+                    "person": "er"
+                }
+            ],
+            "Language_Form": "standard"
+        }
+    },
     "সে": {
         "Global_Index": [
             [
-                14,
-                15
+                13,
+                14
             ]
         ],
         "Pronoun": {
@@ -67,8 +72,8 @@
     "ভাত": {
         "Global_Index": [
             [
-                17,
-                19
+                16,
+                18
             ]
         ],
         "PoS": [
@@ -79,8 +84,8 @@
     "মাখাইয়াই": {
         "Global_Index": [
             [
-                21,
-                28
+                20,
+                27
             ]
         ],
         "Verb": {
@@ -92,18 +97,21 @@
             "Language_Form": "standard"
         }
     },
-    "দিলেই": {
+    ",": {
+        "Global_Index": [
+            28
+        ],
+        "Punctuation_Flag": true
+    },
+    "দিলে": {
         "Global_Index": [
             [
                 30,
-                34
+                33
             ]
         ],
         "Verb": {
             "Parent_Verb": "দেওয়া",
-            "Emphasizer": [
-                "ই"
-            ],
             "TP": [
                 {
                     "tense": "so",
@@ -117,8 +125,8 @@
     "খেতে": {
         "Global_Index": [
             [
-                36,
-                39
+                35,
+                38
             ]
         ],
         "Verb": {
@@ -132,8 +140,8 @@
             "Non_Finite": true,
             "Related_Indices": [
                 [
-                    41,
-                    44
+                    40,
+                    43
                 ]
             ],
             "Language_Form": "standard"
@@ -142,8 +150,8 @@
     "থাকব": {
         "Global_Index": [
             [
-                41,
-                44
+                40,
+                43
             ]
         ],
         "Verb": {
@@ -156,16 +164,27 @@
             ],
             "Related_Indices": [
                 [
-                    36,
-                    39
+                    35,
+                    38
                 ]
             ],
             "Language_Form": "standard"
         }
     },
-    ",": {
+    "অনতিবিলম্বে": {
         "Global_Index": [
-            45
+            [
+                45,
+                55
+            ]
+        ],
+        "PoS": [
+            "ক্রিয়ামূল"
+        ]
+    },
+    "।": {
+        "Global_Index": [
+            56
         ],
         "Punctuation_Flag": true
     }
