@@ -1,82 +1,172 @@
 {
-    "২১শে": {
+    "যেতে": {
         "Global_Index": [
             [
                 0,
                 3
+            ],
+            [
+                9,
+                12
+            ],
+            [
+                47,
+                50
             ]
         ],
-        "Composite_Word": {
-            "Stand_Alone_Words": [
-                "২১শে"
-            ]
+        "Verb": {
+            "Parent_Verb": "যাওয়া",
+            "Emphasizer": [
+                "ই"
+            ],
+            "TP": [
+                {
+                    "tense": "no",
+                    "person": "tm"
+                }
+            ],
+            "Non_Finite": true,
+            "Related_Indices": [
+                [
+                    9,
+                    12
+                ]
+            ],
+            "Language_Form": "standard"
         }
     },
-    "ফেব্রুয়ারী": {
+    "পথে": {
         "Global_Index": [
             [
                 5,
-                14
+                7
             ]
-        ],
-        "Composite_Word": {
-            "Stand_Alone_Words": [
-                "ফেব্রুয়ারী"
-            ]
-        }
+        ]
     },
-    "একটা": {
+    "সে": {
         "Global_Index": [
             [
-                16,
+                14,
+                15
+            ]
+        ],
+        "Pronoun": {
+            "Pronoun Tag": "Pro.Pers3.CoRel",
+            "Number Tag": "Sing",
+            "Honorificity": "informal",
+            "Case": "genitive",
+            "Proximity": "distal"
+        },
+        "PoS": [
+            "বিশেষণ",
+            "সর্বনাম",
+            "অব্যয়",
+            "ক্রিয়া"
+        ]
+    },
+    "ভাত": {
+        "Global_Index": [
+            [
+                17,
                 19
             ]
         ],
-        "Numeric": {
-            "Literal": "এক",
-            "Suffix": [
-                "টা"
-            ]
-        },
-        "Pronoun": {
-            "Pronoun Tag": "Pro.Indef",
-            "Number Tag": "Sing"
-        },
         "PoS": [
-            "বিশেষণ"
+            "বিশেষণ",
+            "সর্বনাম"
         ]
     },
-    "ভাল": {
+    "মাখাইয়াই": {
         "Global_Index": [
             [
                 21,
-                23
+                28
             ]
         ],
-        "PoS": [
-            "বিশেষ্য"
-        ]
+        "Verb": {
+            "Parent_Verb": "মাখানো",
+            "Emphasizer": [
+                "ই"
+            ],
+            "Non_Finite": true,
+            "Language_Form": "standard"
+        }
     },
-    "দিন": {
+    "দিলেই": {
         "Global_Index": [
             [
-                25,
-                27
+                30,
+                34
             ]
         ],
         "Verb": {
             "Parent_Verb": "দেওয়া",
+            "Emphasizer": [
+                "ই"
+            ],
             "TP": [
                 {
-                    "tense": "bo",
-                    "person": "ap"
+                    "tense": "so",
+                    "person": "tm"
                 }
             ],
+            "Non_Finite": true,
             "Language_Form": "standard"
-        },
-        "PoS": [
-            "বিশেষ্য",
-            "বিশেষ্য"
-        ]
+        }
+    },
+    "খেতে": {
+        "Global_Index": [
+            [
+                36,
+                39
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "খাওয়া",
+            "TP": [
+                {
+                    "tense": "gv",
+                    "person": "am"
+                }
+            ],
+            "Non_Finite": true,
+            "Related_Indices": [
+                [
+                    41,
+                    44
+                ]
+            ],
+            "Language_Form": "standard"
+        }
+    },
+    "থাকব": {
+        "Global_Index": [
+            [
+                41,
+                44
+            ]
+        ],
+        "Verb": {
+            "Parent_Verb": "খাওয়া",
+            "TP": [
+                {
+                    "tense": "gv",
+                    "person": "am"
+                }
+            ],
+            "Related_Indices": [
+                [
+                    36,
+                    39
+                ]
+            ],
+            "Language_Form": "standard"
+        }
+    },
+    ",": {
+        "Global_Index": [
+            45
+        ],
+        "Punctuation_Flag": true
     }
 }
