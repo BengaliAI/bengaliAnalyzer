@@ -8,8 +8,6 @@ class SpecialEntityAnalyzer:
         token_index = None
         token_candidate = None
         for token in tokens.keys():
-            print(token[:len(entity)], token, "token")
-            print(token[len(entity):], "suffix")
             if len(token) > len(entity) and token[len(entity):] in self.suffixes:
                 tokens[token]["Special_Entity"]["Suffix"] = token[-len(entity):]
                 token_index = tokens[token]["Global_Index"]
@@ -94,7 +92,6 @@ class SpecialEntityAnalyzer:
 
     def flag_special_entity(self, tokens, sentence):
         found_entities = self.find_special_entity(sentence)
-        print(found_entities)
         flags = []
         for entity in found_entities:
             flags.extend(self.tokenize_special_entity(tokens, entity))
