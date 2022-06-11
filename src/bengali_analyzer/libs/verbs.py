@@ -62,7 +62,7 @@ class VerbAnalyzer:
         sentence = self.punctuation_remover(sentence)
 
         sentence_x = sentence
-        sentence_x_tokens = sentence_x.split(" ")
+        sentence_x_tokens = sentence_x.split()
 
         verb = []
         verb_locations = []
@@ -121,18 +121,20 @@ class VerbAnalyzer:
                                     "original_verb": bigrams[0],
                                 }
                             )
+                            tokens[f]["Verb"]["Bigram"] = True
+                            tokens[s]["Verb"]["Bigram"] = True
+
                             non_finte[len(verb_locations)-1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
                             break
             except:
                 continue
 
-        sentence_x_tokens = sentence_x.split(" ")
+        sentence_x_tokens = sentence_x.split()
 
         # for handling single-word verb
         emphasizer = [[None]]
         for idx, each in enumerate(sentence_x_tokens):
-
             # check verb which last char doesn't emphasize, that emphasizer char is part of the word
             alreadyFound = False
             if each in self.data1["word"].values:
@@ -149,7 +151,6 @@ class VerbAnalyzer:
             if not alreadyFound:
                 # removing last char if it is an emphasis char, and checking the word without it
                 lastChar = each[-1]
-
                 if lastChar in emphasizer_characters:
                     temp = each[:-1]
 
@@ -199,7 +200,7 @@ class VerbAnalyzer:
             if non_F or alreadyFound:
                 non_finte[vlen] = [non_F, alreadyFound]
 
-            # generating information for every found verbs
+        # generating information for every found verbs
         for i, each in enumerate(verb_locations):
             info = []
             tense_person_emp = []
@@ -240,16 +241,15 @@ class VerbAnalyzer:
                 index.extend(tokens[y]["Global_Index"])
 
             for i, y in enumerate(keys):
-                if len(index) > 1 and index[(i+1) % 2] not in tokens[y]["Verb"]["Related_Indices"]:
-                    tokens[y]["Verb"]["Related_Indices"].append(
-                        index[(i+1) % 2])
+                for ind in index:
+                    if ind not in tokens[y]["Verb"]["Related_Indices"]:
+                        tokens[y]["Verb"]["Related_Indices"].append(ind)
                 tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
                 tokens[y]["Verb"]["TP"] = x["TP"]
                 tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"] if i == 0 else False
                 tokens[y]["Verb"]["Parent_Verb"] = x["Parent_Verb"]
                 # tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"]
                 tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
-
         return verb_indexes
 
     # print(sentence)
