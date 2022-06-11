@@ -26,8 +26,7 @@
             "Number Tag": "Sing",
             "Honorificity": "None",
             "Case": "genitive",
-            "Proximity": "None",
-            "Encoding": null
+            "Proximity": "None"
         },
         "PoS": [
             "সর্বনাম"
@@ -77,7 +76,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "ফযামিলি"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -118,8 +119,11 @@
         "PoS": null,
         "Composite_Word": {
             "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
+            "Prefix": "প্র",
+            "Stand_Alone_Words": [
+                "বলে",
+                "বলেমের"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -159,9 +163,11 @@
         },
         "PoS": null,
         "Composite_Word": {
-            "Suffix": null,
+            "Suffix": "ে",
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "কারণ"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -203,7 +209,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "কুয়েটে"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -236,7 +244,7 @@
                     "person": "am"
                 }
             ],
-            "Non_Finite": false,
+            "Non_Finite": true,
             "Form": null,
             "Related_Indices": [
                 [
@@ -256,9 +264,11 @@
         },
         "PoS": null,
         "Composite_Word": {
-            "Suffix": null,
+            "Suffix": "ই",
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "পড়া"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -333,7 +343,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "হবে"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -508,7 +520,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "টিউশন"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -565,9 +579,11 @@
         },
         "PoS": null,
         "Composite_Word": {
-            "Suffix": null,
+            "Suffix": "ে",
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "কর"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -608,8 +624,10 @@
         "PoS": null,
         "Composite_Word": {
             "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
+            "Prefix": "সা",
+            "Stand_Alone_Words": [
+                "পোর্ট"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -676,7 +694,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "লাগ"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -763,7 +783,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "চুয়েট"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -805,7 +827,9 @@
         "Composite_Word": {
             "Suffix": null,
             "Prefix": null,
-            "Stand_Alone_Words": []
+            "Stand_Alone_Words": [
+                "চুজ"
+            ]
         },
         "Special_Entity": {
             "Definition": null,
@@ -838,7 +862,7 @@
                     "person": "tu"
                 }
             ],
-            "Non_Finite": false,
+            "Non_Finite": true,
             "Form": null,
             "Related_Indices": [
                 [

@@ -1,3 +1,6 @@
+# Normalizer's temporary files
+defective_assests
+
 # MAC
 .DS_Store
 .vscode/
