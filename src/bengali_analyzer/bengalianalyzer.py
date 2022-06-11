@@ -498,51 +498,51 @@ class BengaliAnalyzer:
         for word in res:
             word_obj = res[word]
             indexes = word_obj['Global_Index']
-            appearence_already_covered = 0
-            for index in indexes:
-                if type(index) is list:
-                    if index[0] in covered_by_related_indexes:
-                        appearence_already_covered = appearence_already_covered + 1
-                    
-            words = []
-            # checked if all the appearence is already covered by other words through related_indices
-            # if not, then will run
-            if len(indexes) > appearence_already_covered:
-                
-                if 'Verb' in word_obj:
-                    if 'Related_Indices' in word_obj['Verb']:
+
+            for global_index in indexes:
+                words = []
+                if global_index not in covered_by_related_indexes:
+                    if 'Verb' in word_obj:
                         full_word = word
+                        useOriginalWord = False
+                        
                         for related_index in word_obj['Verb']['Related_Indices']:
-                            covered_by_related_indexes.append(related_index[0])
-                            relatedWord = self.utils.getRelatedWords(res,related_index[0])
-                            if relatedWord != -1:
-                                full_word = full_word + " " + self.utils.getRelatedWords(res,related_index[0])
-                        words.append(full_word)
+                            if related_index not in indexes and related_index not in covered_by_related_indexes:
+                                relatedWord = self.utils.getRelatedWords(res,related_index)
+                                if relatedWord != -1:
+                                    covered_by_related_indexes.append(related_index)
+                                    full_word = full_word + " " + relatedWord
+                                    useOriginalWord = True
+                                    break
+
+                        if useOriginalWord:
+                            words.append(full_word)
+                        else:
+                            words.append(word_obj['Verb']['Parent_Verb'])
+                            if 'Emphasizer' in word_obj['Verb']:
+                                for emphasizer in word_obj['Verb']['Emphasizer']:
+                                    words.append(emphasizer)
+                        
+                    elif 'Composite_Word' in word_obj:
+                        if 'Prefix' in word_obj['Composite_Word']:
+                            words.append(word_obj['Composite_Word']['Prefix'])
+
+                        if 'Stand_Alone_Words' in word_obj['Composite_Word']:
+                            words.append(word_obj['Composite_Word']['Stand_Alone_Words'])
+
+                        if 'Suffix' in word_obj['Composite_Word']:
+                            words.append(word_obj['Composite_Word']['Suffix'])
+                        
                     else:
-                        words.append(word_obj['Verb']['Parent_Verb'])   
-                        if 'Emphasizer' in word_obj['Verb']:
-                            for emphasizer in word_obj['Verb']['Emphasizer']:
-                                words.append(emphasizer)
+                        words.append(word)
+
+                    covered_by_related_indexes.append(global_index)
 
 
-                elif 'Composite_Word' in word_obj:
-                    if 'Prefix' in word_obj['Composite_Word']:
-                        words.append(word_obj['Composite_Word']['Prefix'])
-
-                    if 'Stand_Alone_Words' in word_obj['Composite_Word']:
-                        words.append(word_obj['Composite_Word']['Stand_Alone_Words'])
-
-                    if 'Suffix' in word_obj['Composite_Word']:
-                        words.append(word_obj['Composite_Word']['Suffix'])
-
-                else:
-                    words.append(word)
-            
-                for index in indexes:
-                    if type(index) is list:
-                        word_objects.append({'word':words, 'index':index[0]})
+                    if type(global_index) is list:
+                        word_objects.append({'word':words, 'index':global_index[0]})
                     else: 
-                        word_objects.append({'word': words, 'index': index})
+                        word_objects.append({'word': words, 'index': global_index})
             
         word_objects.sort(key=self.utils.sortFunc)
         

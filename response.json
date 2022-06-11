@@ -1,98 +1,23 @@
-{
-  "ভাত": {
-    "Global_Index": [[0, 2]],
-    "PoS": ["বিশেষ্য", "বিশেষণ"]
-  },
-  "খেতে": {
-    "Global_Index": [
-      [4, 7],
-      [15, 18]
-    ],
-    "Verb": {
-      "Parent_Verb": "খাওয়া",
-      "TP": [
-        {
-          "tense": "gv",
-          "person": "tm"
-        },
-        {
-          "tense": "gv",
-          "person": "ae"
-        },
-        {
-          "tense": "gv",
-          "person": "er"
-        }
-      ],
-      "Non_Finite": true,
-      "Related_Indices": [
-        [4, 7],
-        [15, 18],
-        [9, 13],
-        [20, 24]
-      ],
-      "Bigram": true,
-      "Language_Form": "standard"
-    }
-  },
-  "থাকবে": {
-    "Global_Index": [
-      [9, 13],
-      [20, 24]
-    ],
-    "Verb": {
-      "Parent_Verb": "খাওয়া",
-      "TP": [
-        {
-          "tense": "gv",
-          "person": "tm"
-        },
-        {
-          "tense": "gv",
-          "person": "ae"
-        },
-        {
-          "tense": "gv",
-          "person": "er"
-        }
-      ],
-      "Related_Indices": [
-        [4, 7],
-        [15, 18],
-        [9, 13],
-        [20, 24]
-      ],
-      "Bigram": true,
-      "Language_Form": "standard"
-    }
-  },
-  "যেতে": {
-    "Global_Index": [[26, 29]],
-    "Verb": {
-      "Parent_Verb": "যাওয়া",
-      "TP": [
-        {
-          "tense": "no",
-          "person": "tm"
-        }
-      ],
-      "Non_Finite": true,
-      "Related_Indices": [[26, 29]],
-      "Language_Form": "standard"
-    }
-  },
-  "পড়াই": {
-    "Global_Index": [[31, 34]],
-    "Verb": {
-      "Parent_Verb": "পড়ানো",
-      "TP": [
-        {
-          "tense": "sb",
-          "person": "am"
-        }
-      ],
-      "Related_Indices": [[31, 34]],
-      "Language_Form": "standard"
-    }
-  }
-}
+[
+  ["আমার"],
+  ["ফযামিলি"],
+  ["প্রবলেমের"],
+  ["কারণে"],
+  ["কুয়েটে"],
+  ["পড়ানো"],
+  ["হওয়া"],
+  ["না"],
+  ["কিন্তু"],
+  ["অনতিবিলম্বে"],
+  ["টিউশন"],
+  ["করা"],
+  ["সাপোর্ট"],
+  ["লাগা"],
+  ["এজন্য"],
+  ["চুয়েট"],
+  ["চুজ"],
+  ["করানো"],
+  ["ভুল"],
+  ["হওয়া"],
+  ["?"]
+]

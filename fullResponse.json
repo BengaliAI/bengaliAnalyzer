@@ -1,9 +1,880 @@
 {
-    "ভাত": {
+    "আমার": {
         "Global_Index": [
             [
                 0,
-                2
+                3
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": "Pro.Pers1",
+            "Number Tag": "Sing",
+            "Honorificity": "None",
+            "Case": "genitive",
+            "Proximity": "None",
+            "Encoding": null
+        },
+        "PoS": [
+            "সর্বনাম"
+        ],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "ফযামিলি": {
+        "Global_Index": [
+            [
+                5,
+                12
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "প্রবলেমের": {
+        "Global_Index": [
+            [
+                14,
+                22
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "কারণে": {
+        "Global_Index": [
+            [
+                24,
+                28
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "কুয়েটে": {
+        "Global_Index": [
+            [
+                30,
+                35
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "পড়াই": {
+        "Global_Index": [
+            [
+                37,
+                40
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "পড়ানো",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "sb",
+                    "person": "am"
+                }
+            ],
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    37,
+                    40
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "হবে": {
+        "Global_Index": [
+            [
+                42,
+                44
+            ],
+            [
+                116,
+                118
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "হওয়া",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "sv",
+                    "person": "tm"
+                },
+                {
+                    "tense": "sv",
+                    "person": "ae"
+                },
+                {
+                    "tense": "sv",
+                    "person": "er"
+                },
+                {
+                    "tense": "vo",
+                    "person": "tm"
+                }
+            ],
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    42,
+                    44
+                ],
+                [
+                    116,
+                    118
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "না": {
+        "Global_Index": [
+            [
+                46,
+                47
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": [
+            "অব্যয়",
+            "বিশেষ্য"
+        ],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "কিন্তু": {
+        "Global_Index": [
+            [
+                49,
+                54
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": [
+            "অব্যয়"
+        ],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "অনতিবিলম্বে": {
+        "Global_Index": [
+            [
+                56,
+                66
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": [
+            "ক্রিয়াবিশেষণ"
+        ],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "টিউশন": {
+        "Global_Index": [
+            [
+                68,
+                72
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "করে": {
+        "Global_Index": [
+            [
+                74,
+                76
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "করা",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "sb",
+                    "person": "ae"
+                },
+                {
+                    "tense": "sb",
+                    "person": "er"
+                }
+            ],
+            "Non_Finite": true,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    74,
+                    76
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "সাপোর্ট": {
+        "Global_Index": [
+            [
+                78,
+                84
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "লাগবে": {
+        "Global_Index": [
+            [
+                86,
+                90
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "লাগা",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "sv",
+                    "person": "tm"
+                },
+                {
+                    "tense": "sv",
+                    "person": "ae"
+                },
+                {
+                    "tense": "sv",
+                    "person": "er"
+                },
+                {
+                    "tense": "vo",
+                    "person": "tm"
+                }
+            ],
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    86,
+                    90
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "এজন্য": {
+        "Global_Index": [
+            [
+                92,
+                96
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": [
+            "অব্যয়",
+            "ক্রিয়াবিশেষণ"
+        ],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "চুয়েট": {
+        "Global_Index": [
+            [
+                98,
+                102
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "চুজ": {
+        "Global_Index": [
+            [
+                104,
+                106
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "করা": {
+        "Global_Index": [
+            [
+                108,
+                110
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "করানো",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "bo",
+                    "person": "tu"
+                }
+            ],
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    108,
+                    110
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": [
+            "ক্রিয়াবিশেষ্য"
+        ],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": []
+        }
+    },
+    "ভুল": {
+        "Global_Index": [
+            [
+                112,
+                114
             ]
         ],
         "Punctuation_Flag": false,
@@ -44,18 +915,11 @@
             "SpaceIndices": []
         }
     },
-    "খেতে": {
+    "?": {
         "Global_Index": [
-            [
-                4,
-                7
-            ],
-            [
-                15,
-                18
-            ]
+            119
         ],
-        "Punctuation_Flag": false,
+        "Punctuation_Flag": true,
         "Numeric": {
             "Digit": null,
             "Literal": null,
@@ -63,236 +927,12 @@
             "Suffix": []
         },
         "Verb": {
-            "Parent_Verb": "খাওয়া",
-            "Emphasizer": [
-                null
-            ],
-            "TP": [
-                {
-                    "tense": "gv",
-                    "person": "tm"
-                },
-                {
-                    "tense": "gv",
-                    "person": "ae"
-                },
-                {
-                    "tense": "gv",
-                    "person": "er"
-                }
-            ],
-            "Non_Finite": true,
-            "Form": null,
-            "Related_Indices": [
-                [
-                    4,
-                    7
-                ],
-                [
-                    15,
-                    18
-                ],
-                [
-                    9,
-                    13
-                ],
-                [
-                    20,
-                    24
-                ]
-            ],
-            "Bigram": true,
-            "Language_Form": "standard"
-        },
-        "Pronoun": {
-            "Pronoun Tag": null,
-            "Number Tag": null,
-            "Honorificity": null,
-            "Case": null,
-            "Proximity": null,
-            "Encoding": null
-        },
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [],
-            "SpaceIndices": []
-        }
-    },
-    "থাকবে": {
-        "Global_Index": [
-            [
-                9,
-                13
-            ],
-            [
-                20,
-                24
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": "খাওয়া",
-            "Emphasizer": [
-                null
-            ],
-            "TP": [
-                {
-                    "tense": "gv",
-                    "person": "tm"
-                },
-                {
-                    "tense": "gv",
-                    "person": "ae"
-                },
-                {
-                    "tense": "gv",
-                    "person": "er"
-                }
-            ],
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
             "Non_Finite": false,
             "Form": null,
-            "Related_Indices": [
-                [
-                    4,
-                    7
-                ],
-                [
-                    15,
-                    18
-                ],
-                [
-                    9,
-                    13
-                ],
-                [
-                    20,
-                    24
-                ]
-            ],
-            "Bigram": true,
-            "Language_Form": "standard"
-        },
-        "Pronoun": {
-            "Pronoun Tag": null,
-            "Number Tag": null,
-            "Honorificity": null,
-            "Case": null,
-            "Proximity": null,
-            "Encoding": null
-        },
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [],
-            "SpaceIndices": []
-        }
-    },
-    "যেতে": {
-        "Global_Index": [
-            [
-                26,
-                29
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": "যাওয়া",
-            "Emphasizer": [
-                null
-            ],
-            "TP": [
-                {
-                    "tense": "no",
-                    "person": "tm"
-                }
-            ],
-            "Non_Finite": true,
-            "Form": null,
-            "Related_Indices": [
-                [
-                    26,
-                    29
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "Pronoun": {
-            "Pronoun Tag": null,
-            "Number Tag": null,
-            "Honorificity": null,
-            "Case": null,
-            "Proximity": null,
-            "Encoding": null
-        },
-        "PoS": null,
-        "Composite_Word": {
-            "Suffix": null,
-            "Prefix": null,
-            "Stand_Alone_Words": []
-        },
-        "Special_Entity": {
-            "Definition": null,
-            "Related_Indices": [],
-            "SpaceIndices": []
-        }
-    },
-    "পড়াই": {
-        "Global_Index": [
-            [
-                31,
-                34
-            ]
-        ],
-        "Punctuation_Flag": false,
-        "Numeric": {
-            "Digit": null,
-            "Literal": null,
-            "Weight": null,
-            "Suffix": []
-        },
-        "Verb": {
-            "Parent_Verb": "পড়ানো",
-            "Emphasizer": [
-                null
-            ],
-            "TP": [
-                {
-                    "tense": "sb",
-                    "person": "am"
-                }
-            ],
-            "Non_Finite": false,
-            "Form": null,
-            "Related_Indices": [
-                [
-                    31,
-                    34
-                ]
-            ],
-            "Language_Form": "standard"
+            "Related_Indices": []
         },
         "Pronoun": {
             "Pronoun Tag": null,

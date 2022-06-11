@@ -9,9 +9,11 @@ class Utils:
             word_obj = res[word]
             
             indexes = word_obj['Global_Index']
-            if type(indexes[0]) is list:
-                if indexes[0][0] == related_index:
-                    return word
+            for index in indexes:
+                if type(index) is list:
+                    if index == related_index:
+                        return word
+                        
         return -1
 
     def serializeSets(self, obj):
