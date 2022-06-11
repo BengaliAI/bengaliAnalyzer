@@ -7,7 +7,7 @@ setuptools.setup(
     name="bengalianalyzer",
     license="BSD 3-Clause ""New"" or ""Revised"" License",
     license_files=('LICENSE.txt',),
-    version="0.0.105",
+    version="0.0.107",
     author="A. A. Noman Ansary",
     author_email="showrav.ansary.bd@gmail.com",
     description="A package for analyzing entities present in Bengali sentence",
@@ -19,7 +19,7 @@ setuptools.setup(
     },
     install_requires=['pandas', 'indicparser', 'bnunicodenormalizer'],
     include_package_data=True,
-    package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt']},
+    package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt', 'include src/bengali_analyzer/assets/*.json']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",

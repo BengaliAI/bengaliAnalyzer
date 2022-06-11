@@ -6,13 +6,17 @@ import json
 import csv
 from bnunicodenormalizer import Normalizer
 
-
+# ## Uncomment for package installation
 # from libs import verbs
 # from libs import composite_words
 # from libs import non_verbs
 # from libs import numerics
 # from libs import special_entity
+# from utilis import utils
 
+
+
+## Uncomment for local testing
 from .libs import verbs
 from .libs import composite_words
 from .libs import non_verbs
@@ -114,6 +118,7 @@ def prepare_non_verb_data(data_file):
     return data_dict
 
 def prepare_word_list_data(data_file):
+    print("prepare_word_list_data")
     data = pandas.read_csv(
         data_file, encoding="utf8", header=None,
     )
@@ -290,7 +295,7 @@ def load_data():
 
 class BengaliAnalyzer:
     def __init__(self):
-        load_data()
+        load_data()   
         self.numeric_analyzer = numerics.NumericAnalyzer(
             numeric_digit,
             numeric_literals,
