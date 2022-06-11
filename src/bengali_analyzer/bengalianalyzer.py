@@ -429,7 +429,7 @@ class BengaliAnalyzer:
         non_verb_flags = self.non_verbs_analyzer.get_non_verbs(tokens)
         flags.extend(non_verb_flags)
 
-        #self.composite_words_analyzer.analyze_composite_words(tokens, flags)
+        self.composite_words_analyzer.analyze_composite_words(tokens, flags)
         self.utils.updateLog(tokens)
         simplifiedJson = self.utils.fixJSONFormat(tokens)
         return simplifiedJson

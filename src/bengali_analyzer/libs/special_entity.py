@@ -9,7 +9,7 @@ class SpecialEntityAnalyzer:
         token_candidate = None
         for token in tokens.keys():
             if len(token) > len(entity) and token[len(entity):] in self.suffixes:
-                tokens[token]["Special_Entity"]["Suffix"] = token[-len(entity):]
+                tokens[token]["Special_Entity"]["Suffix"] = token[len(entity):]
                 token_index = tokens[token]["Global_Index"]
                 token_candidate = token
                 break
