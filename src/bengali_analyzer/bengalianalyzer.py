@@ -4,7 +4,7 @@ import string
 import pandas
 import json
 import csv
-
+from .normalizer import normalize
 from bnunicodenormalizer import Normalizer
 
 
@@ -14,7 +14,6 @@ from bnunicodenormalizer import Normalizer
 # from libs import numerics
 # from libs import special_entity
 
-from .normalizer import normalize
 from .libs import verbs
 from .libs import composite_words
 from .libs import non_verbs
@@ -294,9 +293,9 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
-        IGNORE_FILES = []
-        FILE_DIR = "../assets/"
-        normalize.normalize_assets(file_dir=FILE_DIR, ignore_files=IGNORE_FILES)
+        # IGNORE_FILES = []
+        # FILE_DIR = "../assets_tmp/"
+        # normalize.normalize_assets(file_dir=FILE_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
@@ -510,58 +509,52 @@ class BengaliAnalyzer:
         res = self.analyze_sentence(sentence)
         for word in res:
             word_obj = res[word]
-            indexes = word_obj["Global_Index"]
-            appearence_already_covered = 0
-            for index in indexes:
-                if type(index) is list:
-                    if index[0] in covered_by_related_indexes:
-                        appearence_already_covered = appearence_already_covered + 1
+            indexes = word_obj['Global_Index']
 
-            words = []
-            # checked if all the appearence is already covered by other words through related_indices
-            # if not, then will run
-            if len(indexes) > appearence_already_covered:
-
-                if "Verb" in word_obj:
-                    if "Related_Indices" in word_obj["Verb"]:
+            for global_index in indexes:
+                words = []
+                if global_index not in covered_by_related_indexes:
+                    if 'Verb' in word_obj:
                         full_word = word
-                        for related_index in word_obj["Verb"]["Related_Indices"]:
-                            covered_by_related_indexes.append(related_index[0])
-                            relatedWord = self.utils.getRelatedWords(
-                                res, related_index[0]
-                            )
-                            if relatedWord != -1:
-                                full_word = (
-                                    full_word
-                                    + " "
-                                    + self.utils.getRelatedWords(res, related_index[0])
-                                )
-                        words.append(full_word)
+                        useOriginalWord = False
+                        
+                        for related_index in word_obj['Verb']['Related_Indices']:
+                            if related_index not in indexes and related_index not in covered_by_related_indexes:
+                                relatedWord = self.utils.getRelatedWords(res,related_index)
+                                if relatedWord != -1:
+                                    covered_by_related_indexes.append(related_index)
+                                    full_word = full_word + " " + relatedWord
+                                    useOriginalWord = True
+                                    break
+
+                        if useOriginalWord:
+                            words.append(full_word)
+                        else:
+                            words.append(word_obj['Verb']['Parent_Verb'])
+                            if 'Emphasizer' in word_obj['Verb']:
+                                for emphasizer in word_obj['Verb']['Emphasizer']:
+                                    words.append(emphasizer)
+                        
+                    elif 'Composite_Word' in word_obj:
+                        if 'Prefix' in word_obj['Composite_Word']:
+                            words.append(word_obj['Composite_Word']['Prefix'])
+
+                        if 'Stand_Alone_Words' in word_obj['Composite_Word']:
+                            words.append(word_obj['Composite_Word']['Stand_Alone_Words'])
+
+                        if 'Suffix' in word_obj['Composite_Word']:
+                            words.append(word_obj['Composite_Word']['Suffix'])
+                        
                     else:
-                        words.append(word_obj["Verb"]["Parent_Verb"])
-                        if "Emphasizer" in word_obj["Verb"]:
-                            for emphasizer in word_obj["Verb"]["Emphasizer"]:
-                                words.append(emphasizer)
+                        words.append(word)
 
-                elif "Composite_Word" in word_obj:
-                    if "Prefix" in word_obj["Composite_Word"]:
-                        words.append(word_obj["Composite_Word"]["Prefix"])
+                    covered_by_related_indexes.append(global_index)
 
-                    if "Stand_Alone_Words" in word_obj["Composite_Word"]:
-                        words.append(word_obj["Composite_Word"]["Stand_Alone_Words"])
-
-                    if "Suffix" in word_obj["Composite_Word"]:
-                        words.append(word_obj["Composite_Word"]["Suffix"])
-
-                else:
-                    words.append(word)
-
-                for index in indexes:
-                    if type(index) is list:
-                        word_objects.append({"word": words, "index": index[0]})
-                    else:
-                        word_objects.append({"word": words, "index": index})
-
+                    if type(global_index) is list:
+                        word_objects.append({'word':words, 'index':global_index[0]})
+                    else: 
+                        word_objects.append({'word': words, 'index': global_index})
+            
         word_objects.sort(key=self.utils.sortFunc)
 
         for word_object in word_objects:
