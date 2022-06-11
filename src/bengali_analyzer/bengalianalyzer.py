@@ -4,7 +4,7 @@ import string
 import pandas
 import json
 import csv
-from .normalizer import normalize
+from .normalizer import normalize_assets
 from bnunicodenormalizer import Normalizer
 
 
@@ -295,7 +295,7 @@ class BengaliAnalyzer:
         # Normalizing the assets
         # IGNORE_FILES = []
         # FILE_DIR = "../assets/"
-        # normalize.normalize_assets(file_dir=FILE_DIR, ignore_files=IGNORE_FILES)
+        # normalize_assets.normalize(file_dir=FILE_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 

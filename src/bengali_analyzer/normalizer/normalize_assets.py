@@ -135,7 +135,7 @@ def get_non_normalized_files(files, file_dir):
     return [file_dir + i for i in diff]
 
 
-def normalize_assets(file_dir, ignore_files=[]):
+def normalize(file_dir, ignore_files=[]):
     all_files = glob.glob(file_dir + "*")
     supported_extensions = [".csv", ".CSV", ".txt", ".TXT", ".json", ".JSON"]
     files = [
