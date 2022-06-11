@@ -294,7 +294,7 @@ class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
         # IGNORE_FILES = []
-        # FILE_DIR = "../assets_tmp/"
+        # FILE_DIR = "../assets/"
         # normalize.normalize_assets(file_dir=FILE_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
@@ -509,18 +509,23 @@ class BengaliAnalyzer:
         res = self.analyze_sentence(sentence)
         for word in res:
             word_obj = res[word]
-            indexes = word_obj['Global_Index']
+            indexes = word_obj["Global_Index"]
 
             for global_index in indexes:
                 words = []
                 if global_index not in covered_by_related_indexes:
-                    if 'Verb' in word_obj:
+                    if "Verb" in word_obj:
                         full_word = word
                         useOriginalWord = False
-                        
-                        for related_index in word_obj['Verb']['Related_Indices']:
-                            if related_index not in indexes and related_index not in covered_by_related_indexes:
-                                relatedWord = self.utils.getRelatedWords(res,related_index)
+
+                        for related_index in word_obj["Verb"]["Related_Indices"]:
+                            if (
+                                related_index not in indexes
+                                and related_index not in covered_by_related_indexes
+                            ):
+                                relatedWord = self.utils.getRelatedWords(
+                                    res, related_index
+                                )
                                 if relatedWord != -1:
                                     covered_by_related_indexes.append(related_index)
                                     full_word = full_word + " " + relatedWord
@@ -530,31 +535,33 @@ class BengaliAnalyzer:
                         if useOriginalWord:
                             words.append(full_word)
                         else:
-                            words.append(word_obj['Verb']['Parent_Verb'])
-                            if 'Emphasizer' in word_obj['Verb']:
-                                for emphasizer in word_obj['Verb']['Emphasizer']:
+                            words.append(word_obj["Verb"]["Parent_Verb"])
+                            if "Emphasizer" in word_obj["Verb"]:
+                                for emphasizer in word_obj["Verb"]["Emphasizer"]:
                                     words.append(emphasizer)
-                        
-                    elif 'Composite_Word' in word_obj:
-                        if 'Prefix' in word_obj['Composite_Word']:
-                            words.append(word_obj['Composite_Word']['Prefix'])
 
-                        if 'Stand_Alone_Words' in word_obj['Composite_Word']:
-                            words.append(word_obj['Composite_Word']['Stand_Alone_Words'])
+                    elif "Composite_Word" in word_obj:
+                        if "Prefix" in word_obj["Composite_Word"]:
+                            words.append(word_obj["Composite_Word"]["Prefix"])
 
-                        if 'Suffix' in word_obj['Composite_Word']:
-                            words.append(word_obj['Composite_Word']['Suffix'])
-                        
+                        if "Stand_Alone_Words" in word_obj["Composite_Word"]:
+                            words.append(
+                                word_obj["Composite_Word"]["Stand_Alone_Words"]
+                            )
+
+                        if "Suffix" in word_obj["Composite_Word"]:
+                            words.append(word_obj["Composite_Word"]["Suffix"])
+
                     else:
                         words.append(word)
 
                     covered_by_related_indexes.append(global_index)
 
                     if type(global_index) is list:
-                        word_objects.append({'word':words, 'index':global_index[0]})
-                    else: 
-                        word_objects.append({'word': words, 'index': global_index})
-            
+                        word_objects.append({"word": words, "index": global_index[0]})
+                    else:
+                        word_objects.append({"word": words, "index": global_index})
+
         word_objects.sort(key=self.utils.sortFunc)
 
         for word_object in word_objects:
