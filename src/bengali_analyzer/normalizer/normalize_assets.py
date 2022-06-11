@@ -8,8 +8,8 @@ from termcolor import colored
 from bnunicodenormalizer import Normalizer
 
 CHUNK_SIZE = 8192
-CHECKSUM_DIR = "./checksum.json"
-ERROR_DIR = "./defective_assests/"
+CHECKSUM_DIR = os.path.dirname(os.path.abspath(__file__)) + "/checksum.json"
+ERROR_DIR = os.path.dirname(os.path.abspath(__file__)) + "/defective_assests/"
 
 error_count = 0
 
@@ -78,7 +78,7 @@ def normalize_sentence(sentence):
 
 # Only csv and txt handled here
 def normalize_other(asset_path):
-    tmp_path = "./tmp.txt"
+    tmp_path = os.path.dirname(os.path.abspath(__file__)) + "/tmp.txt"
 
     with open(asset_path, "r") as f:
         lines = sorted(set(f.readlines()))
@@ -105,7 +105,7 @@ def normalize_other(asset_path):
 
 
 def normalize_json(asset_path):
-    tmp_path = "./tmp.json"
+    tmp_path = os.path.dirname(os.path.abspath(__file__)) + "/tmp.json"
 
     with open(asset_path, "r") as f:
         data = json.dumps(json.load(f), ensure_ascii=False)

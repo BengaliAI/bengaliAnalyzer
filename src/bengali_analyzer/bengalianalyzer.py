@@ -293,9 +293,9 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
-        # IGNORE_FILES = []
-        # FILE_DIR = "../assets/"
-        # normalize_assets.normalize(file_dir=FILE_DIR, ignore_files=IGNORE_FILES)
+        IGNORE_FILES = []
+        ASSET_DIR = os.path.dirname(os.path.abspath(__file__)) + "/assets/"
+        normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
