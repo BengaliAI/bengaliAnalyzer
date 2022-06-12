@@ -295,7 +295,7 @@ class BengaliAnalyzer:
         # Normalizing the assets
         IGNORE_FILES = []
         THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-        ASSET_DIR = os.path.join(THIS_DIR, "assets/")
+        ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
         normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 

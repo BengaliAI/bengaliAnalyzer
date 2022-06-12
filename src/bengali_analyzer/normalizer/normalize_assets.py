@@ -17,7 +17,7 @@ error_count = 0
 
 def get_error_dir():
     return os.path.join(
-        pathlib.Path().resolve().as_posix(), "/" + ERROR_DIR.split("/")[-2] + "/"
+        pathlib.Path().resolve().as_posix(), os.sep + ERROR_DIR.split("/")[-2] + os.sep
     )
 
 
