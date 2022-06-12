@@ -460,7 +460,10 @@ class BengaliAnalyzer:
             "অব্যয়": "Adjective",
             "ক্রিয়া": "Verb",
             "ক্রিয়াবিশেষণ": "Adverb",
-            "ক্রিয়াবিশেষ্য": "Adeverb",
+            "ক্রিয়াবিশেষ্য": "Adverb",
+            "obboy": "Adjective",
+            "kriya": "ক্রিয়া",
+            "bisheshon": "বিশেষণ"
         }
 
         res = self.analyze_sentence(sentence)
@@ -472,16 +475,21 @@ class BengaliAnalyzer:
             pos = ["undefined"]
 
             if "Verb" in body:
-                pos = ["Verb"]
+                pos = []
+                if "PoS" in body:
+                    for p in body["PoS"]:
+                        pos.append(bangla_pos_to_english_pos[p])
 
                 if "TP" in body["Verb"]:
-                    pos.append("Finite")
+                    pos.append("Finite_Verb")
 
                 if "Non_Finite" in body["Verb"] and body["Verb"]["Non_Finite"] == True:
-                    pos.append("Non-Finite")
+                    pos.append("Non-Finite_Verb")
 
             elif "Pronoun" in body:
                 pos = ["Pronoun"]
+                for p in body["PoS"]:
+                        pos.append(bangla_pos_to_english_pos[p])
 
             elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
                 pos = ["Punctuation"]
