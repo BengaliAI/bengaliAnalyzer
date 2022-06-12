@@ -10,7 +10,7 @@ from bnunicodenormalizer import Normalizer
 CHUNK_SIZE = 8192
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 CHECKSUM_DIR = os.path.join(THIS_DIR, "checksum.json")
-ERROR_DIR = os.path.join(THIS_DIR, "defective_assets/")
+ERROR_DIR = os.path.join(THIS_DIR, "defective_assets" + os.sep)
 
 error_count = 0
 
