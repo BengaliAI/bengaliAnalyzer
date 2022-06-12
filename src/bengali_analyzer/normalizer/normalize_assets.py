@@ -1,13 +1,13 @@
 import os
 import json
 import glob
-import pathlib
 import hashlib
 from tqdm import tqdm
 from termcolor import colored
 from bnunicodenormalizer import Normalizer
 
 CHUNK_SIZE = 8192
+ENCODING_FORMAT = "utf-8"
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 CHECKSUM_DIR = os.path.join(THIS_DIR, "checksum.json")
 ERROR_DIR = os.path.join(THIS_DIR, "defective_assets" + os.sep)
@@ -15,14 +15,8 @@ ERROR_DIR = os.path.join(THIS_DIR, "defective_assets" + os.sep)
 error_count = 0
 
 
-def get_error_dir():
-    return os.path.join(
-        pathlib.Path().resolve().as_posix(), os.sep + ERROR_DIR.split("/")[-2] + os.sep
-    )
-
-
 def get_file_name(asset_path):
-    return asset_path.split("/")[-1]
+    return asset_path.split(os.sep)[-1]
 
 
 def get_file_extension(asset_path):
@@ -33,12 +27,12 @@ def generate_error_report(asset_path, line):
     global error_count
 
     error_count += 1
-    file_name = get_file_name(asset_path)
+    error_dir = os.path.join(ERROR_DIR, get_file_name(asset_path))
 
-    if not os.path.exists(ERROR_DIR):
-        os.makedirs(ERROR_DIR)
+    if not os.path.exists(error_dir):
+        os.makedirs(error_dir)
 
-    with open(ERROR_DIR + file_name, "a") as outfile:
+    with open(error_dir, "a", encoding=ENCODING_FORMAT) as outfile:
         outfile.write(line)
 
 
@@ -83,7 +77,7 @@ def normalize_sentence(sentence):
 def normalize_other(asset_path):
     tmp_path = os.path.join(THIS_DIR, "tmp.txt")
 
-    with open(asset_path, "r") as f:
+    with open(asset_path, "r", encoding=ENCODING_FORMAT) as f:
         lines = sorted(set(f.readlines()))
 
         for i, line in enumerate(lines):
@@ -91,7 +85,7 @@ def normalize_other(asset_path):
                 line = normalize_sentence(sentence=line)
 
                 # after normalizing every line it is being written to tmp file
-                with open(tmp_path, "a") as f2:
+                with open(tmp_path, "a", encoding=ENCODING_FORMAT) as f2:
                     f2.writelines(line + "\n")
             except:
                 # print(
@@ -110,13 +104,13 @@ def normalize_other(asset_path):
 def normalize_json(asset_path):
     tmp_path = os.path.join(THIS_DIR, "tmp.json")
 
-    with open(asset_path, "r") as f:
+    with open(asset_path, "r", encoding=ENCODING_FORMAT) as f:
         data = json.dumps(json.load(f), ensure_ascii=False)
 
         data = normalize_sentence(sentence=data)
 
         # Writing to temporary json
-        with open(tmp_path, "w") as outfile:
+        with open(tmp_path, "w", encoding=ENCODING_FORMAT) as outfile:
             outfile.write(data)
 
     # Replacing the original file after a successful normalization
@@ -126,7 +120,7 @@ def normalize_json(asset_path):
 def get_non_normalized_files(files):
     checksums = generate_checksum(files)
 
-    with open(CHECKSUM_DIR) as json_file:
+    with open(CHECKSUM_DIR, encoding=ENCODING_FORMAT) as json_file:
         original_checksums = json.load(json_file)
 
     return [
@@ -166,13 +160,13 @@ def normalize(file_dir, ignore_files=[]):
 
         # Update file's checksum
         new_checksum = generate_checksum(files=files)
-        with open(CHECKSUM_DIR, "w") as outfile:
+        with open(CHECKSUM_DIR, "w", encoding=ENCODING_FORMAT) as outfile:
             json.dump(new_checksum, outfile)
 
         if error_count:
             print(
                 colored(
-                    f"{error_count} errors occured\nCheck {get_error_dir()} to identify which type of patterns we can't currently normalize!!!\n",
+                    f"{error_count} errors occured\nCheck {ERROR_DIR} to identify which type of patterns we can't currently normalize!!!\n",
                     "red",
                 )
             )
