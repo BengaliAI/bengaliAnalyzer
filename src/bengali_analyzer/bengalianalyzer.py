@@ -4,7 +4,7 @@ import string
 import pandas
 import json
 import csv
-from .normalizer import normalize_assets
+
 from bnunicodenormalizer import Normalizer
 
 
@@ -14,6 +14,7 @@ from bnunicodenormalizer import Normalizer
 # from libs import numerics
 # from libs import special_entity
 
+from .normalizer import normalize_assets
 from .libs import verbs
 from .libs import composite_words
 from .libs import non_verbs

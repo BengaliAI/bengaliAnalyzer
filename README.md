@@ -44,12 +44,11 @@ This is the environment in which the package was developed:
 ## Usage
 Import the module first.
 ```python
-from bengali_analyzer import bengali_analyzer 
+from bengali_analyzer import bengali_analyzer as bla
 ```
 And then pass the text for analysis.
 ```python
-bl = bengali_analyzer
-tokens = bl.analyze_sentence(text)
+tokens = bla.analyze_sentence(text)
 ```
 ### Response
 The response will return `tokens` (data type : `dictionary`) which has each `token` as its `key`. The following dimension will be present for each `token`:
