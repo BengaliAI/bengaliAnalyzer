@@ -20,7 +20,7 @@ Our package analyzes the given text and returns the word configurations of the t
 ## Installation
 The package can be installed in any fashion. It is highly recommended to install [Conda](https://conda.io/) and then run the following command to install the package:
 
-`pip install bengalianlyzer`
+`pip install bengalianalyzer`
 
 ## Local Environment
 This is the environment in which the package was developed:
@@ -30,8 +30,8 @@ This is the environment in which the package was developed:
  ██████████████████  ████████     Kernel: x86_64 Linux 5.15.21-1-MANJARO
  ██████████████████  ████████     Conda: 4.10.3
  ████████            ████████     CPU: 11th Gen Intel Core i7-11370H @ 8x 4.8GHz 
- ████████  ████████  ████████     GPU: NVIDIA GeForce RTX 3060 Laptop GPU
- ████████  ████████  ████████     RAM: 15694MiB
+ ████████  ████████  ████████      RAM: 15694MiB
+ ████████  ████████  ████████     
  ████████  ████████  ████████     
  ████████  ████████  ████████     
  ████████  ████████  ████████     
@@ -44,48 +44,54 @@ This is the environment in which the package was developed:
 ## Usage
 Import the module first.
 ```python
-from bengalianalyzer import BengaliAnalyzer 
+from bengali_analyzer import bengali_analyzer 
 ```
 And then pass the text for analysis.
 ```python
-bl = BengaliAnalyzer()
+bl = bengali_analyzer
 tokens = bl.analyze_sentence(text)
 ```
 ### Response
 The response will return `tokens` (data type : `dictionary`) which has each `token` as its `key`. The following dimension will be present for each `token`:
 
 ```python
-tokens[token] = {
-            "Global_Index": [int or (int, int)],
+token = {
+            "Global_Index": [int or (int,int)],
             "Punctuation_Flag": bool,
-            "Numeric":
-                {
-                    "Digit": int,
-                    "Literal": str,
-                    "Weight": str,
-                    "Suffix": [str]
-                },
-            "Verb":
-                {
-                    "Parent_Verb": str,
-                    "Tense": str,
-                    "Emphasis": [str],
-                    "Form": str,
-                    "Person": str,
-                    "Related_Indices": [[int or (int,int)]]
-                },
-            "Non_Verb": str,
-            "Composite_Word":
-                {
-                    "Suffix": str,
-                    "Prefix": str,
-                    "Stand_Alone_Words": {str},
-                },
-            "Special_Entity":
-                {
-                    "Definition": str,
-                    "Related_Indices": [[int or (int,int)]]
-                }
+            "Numeric": {
+                "Digit": int, 
+                "Literal": str, 
+                "Weight": str, 
+                "Suffix": [str]
+            },
+            "Verb": {
+                "Parent_Verb": str,
+                "Emphasizer": str,
+                "TP": str,
+                "Non_Finite": bool,
+                "Form": str,
+                "Related_Indices": [int or (int,int)],
+            },
+            "Pronoun": {
+                "Pronoun Tag": str,
+                "Number Tag": str,
+                "Honorificity": str,
+                "Case": str,
+                "Proximity": str,
+                "Encoding": str,
+            },
+            "PoS": [str],
+            "Composite_Word": {
+                "Suffix": str,
+                "Prefix": str,
+                "Stand_Alone_Words": set(),
+            },
+            "Special_Entity": {
+                "Definition": str,
+                "Related_Indices": [int or (int,int)],
+                "SpaceIndices": set(),
+                "Suffix": str,
+            },
         }
 ```
 
@@ -104,8 +110,8 @@ This tool is developed by people with diverse affiliations. The following are th
 | [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |[comment]: #| [Dr. {Farig vai}]()                                                  |||| [Dr. {Mamun sir}]()                                                  |      | Jahangirnagar University, Dhaka                      |
 | [Asif Shahriyar Shushmit]()                                          | sushmit@ieee.org             | Bengali.ai                                           |
-| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | Govt. Laboratory High School, Rajshahi               |
+| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  |                |
 
-Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose `indic grapheme` parser, which is a required dependency in this tool. 
+Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose `indic grapheme` parser and `bn unicode normalizer`, which are required dependencies in this tool.
 
-In collaboration with: [Bengali.ai](https://bengali.ai/), [SUST](https://www.sust.edu/), [RGLHS](http://rglhs.edu.bd/), [Jahangirnagar University](https://www.jnu.ac.bd/)
+In collaboration with: [Bengali.ai](https://bengali.ai/), [SUST](https://www.sust.edu/), [Jahangirnagar University](https://www.jnu.ac.bd/)
