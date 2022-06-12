@@ -327,7 +327,12 @@ class BengaliAnalyzer:
         token = {
             "Global_Index": [],
             "Punctuation_Flag": True,
-            "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
+            "Numeric": {
+                "Digit": None, 
+                "Literal": None, 
+                "Weight": None, 
+                "Suffix": []
+            },
             "Verb": {
                 "Parent_Verb": None,
                 "Emphasizer": None,
@@ -354,6 +359,7 @@ class BengaliAnalyzer:
                 "Definition": None,
                 "Related_Indices": [],
                 "SpaceIndices": set(),
+                "Suffix": None,
             },
         }
         tokens = {}
