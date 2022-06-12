@@ -123,19 +123,17 @@ def normalize_json(asset_path):
     file_replace(tmp_path=tmp_path, asset_path=asset_path)
 
 
-def get_non_normalized_files(files, file_dir):
+def get_non_normalized_files(files):
     checksums = generate_checksum(files)
 
     with open(CHECKSUM_DIR) as json_file:
         original_checksums = json.load(json_file)
 
-    diff = [
+    return [
         c
         for c in checksums
         if c not in original_checksums or original_checksums[c] != checksums[c]
     ]
-
-    return [file_dir + i for i in diff]
 
 
 def normalize(file_dir, ignore_files=[]):
@@ -148,7 +146,7 @@ def normalize(file_dir, ignore_files=[]):
         and get_file_extension(files) in supported_extensions
     ]
 
-    non_normalized_files = get_non_normalized_files(files=files, file_dir=file_dir)
+    non_normalized_files = get_non_normalized_files(files=files)
 
     if len(non_normalized_files):
         print(
@@ -159,6 +157,8 @@ def normalize(file_dir, ignore_files=[]):
         )
 
         for asset_path in tqdm(non_normalized_files):
+            asset_path = os.path.join(file_dir, asset_path)
+
             if get_file_extension(asset_path) in [".json", ".JSON"]:
                 normalize_json(asset_path)
             else:
