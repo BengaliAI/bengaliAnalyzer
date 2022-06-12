@@ -8,14 +8,17 @@ from termcolor import colored
 from bnunicodenormalizer import Normalizer
 
 CHUNK_SIZE = 8192
-CHECKSUM_DIR = os.path.dirname(os.path.abspath(__file__)) + "/checksum.json"
-ERROR_DIR = os.path.dirname(os.path.abspath(__file__)) + "/defective_assests/"
+THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+CHECKSUM_DIR = os.path.join(THIS_DIR, "checksum.json")
+ERROR_DIR = os.path.join(THIS_DIR, "defective_assets/")
 
 error_count = 0
 
 
 def get_error_dir():
-    return pathlib.Path().resolve().as_posix() + "/" + ERROR_DIR.split("/")[-2] + "/"
+    return os.path.join(
+        pathlib.Path().resolve().as_posix(), "/" + ERROR_DIR.split("/")[-2] + "/"
+    )
 
 
 def get_file_name(asset_path):
@@ -78,7 +81,7 @@ def normalize_sentence(sentence):
 
 # Only csv and txt handled here
 def normalize_other(asset_path):
-    tmp_path = os.path.dirname(os.path.abspath(__file__)) + "/tmp.txt"
+    tmp_path = os.path.join(THIS_DIR, "tmp.txt")
 
     with open(asset_path, "r") as f:
         lines = sorted(set(f.readlines()))
@@ -105,7 +108,7 @@ def normalize_other(asset_path):
 
 
 def normalize_json(asset_path):
-    tmp_path = os.path.dirname(os.path.abspath(__file__)) + "/tmp.json"
+    tmp_path = os.path.join(THIS_DIR, "tmp.json")
 
     with open(asset_path, "r") as f:
         data = json.dumps(json.load(f), ensure_ascii=False)

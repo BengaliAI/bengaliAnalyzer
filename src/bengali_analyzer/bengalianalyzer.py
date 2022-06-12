@@ -294,7 +294,9 @@ class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
         IGNORE_FILES = []
-        ASSET_DIR = os.path.dirname(os.path.abspath(__file__)) + "/assets/"
+        THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+        ASSET_DIR = os.path.join(THIS_DIR, "assets/")
+
         normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
@@ -327,12 +329,7 @@ class BengaliAnalyzer:
         token = {
             "Global_Index": [],
             "Punctuation_Flag": True,
-            "Numeric": {
-                "Digit": None, 
-                "Literal": None, 
-                "Weight": None, 
-                "Suffix": []
-            },
+            "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
             "Verb": {
                 "Parent_Verb": None,
                 "Emphasizer": None,
@@ -463,7 +460,7 @@ class BengaliAnalyzer:
             "ক্রিয়াবিশেষ্য": "Adverb",
             "obboy": "Adjective",
             "kriya": "ক্রিয়া",
-            "bisheshon": "বিশেষণ"
+            "bisheshon": "বিশেষণ",
         }
 
         res = self.analyze_sentence(sentence)
@@ -489,7 +486,7 @@ class BengaliAnalyzer:
             elif "Pronoun" in body:
                 pos = ["Pronoun"]
                 for p in body["PoS"]:
-                        pos.append(bangla_pos_to_english_pos[p])
+                    pos.append(bangla_pos_to_english_pos[p])
 
             elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
                 pos = ["Punctuation"]
