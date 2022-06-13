@@ -27,7 +27,7 @@ global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes
 
 
 def normalize_token(word):
-    bn_normalizer = Normalizer()
+    bn_normalizer = Normalizer(allow_english=True)
     normalized_token = bn_normalizer(word)
     # return word
     return normalized_token["normalized"]
@@ -298,7 +298,7 @@ class BengaliAnalyzer:
         THIS_DIR = os.path.dirname(os.path.abspath(__file__))
         ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
-        normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
+        # normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
@@ -390,12 +390,17 @@ class BengaliAnalyzer:
 
         end_index = 0
         start_index = 0
+
+        # Had to do :(
+        sentence = sentence.replace("\n", " ").strip()
+
         for index in range(len(sentence)):
             if sentence[index] not in punctuations:
                 string_buffer += sentence[index]
                 end_index = index
                 if index == len(sentence) - 1:
                     if string_buffer != "":
+                        string_buffer = normalize_token(string_buffer)
                         global_index = (start_index, end_index)
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
@@ -419,8 +424,10 @@ class BengaliAnalyzer:
                     tokens[punctuation] = copy.deepcopy(token)
                 tokens[punctuation]["Punctuation_Flag"] = True
                 tokens[punctuation]["Global_Index"].append(index)
-        if " " in tokens:
-            tokens.pop(" ")
+
+        unwanted_token = [" ", None]
+        tokens = {k: v for k, v in tokens.items() if k not in unwanted_token}
+
         return tokens, punctuation_flags
 
     def analyze_sentence(self, sentence):
