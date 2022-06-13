@@ -103,6 +103,7 @@ class VerbAnalyzer:
                     second.append(second[0][:-1])
 
                 # creating bigrams with every possible combination
+
                 for i, f in enumerate(first):
                     for j, s in enumerate(second):
                         bigrams.append(f + " " + s)
@@ -121,8 +122,9 @@ class VerbAnalyzer:
                                     "original_verb": bigrams[0],
                                 }
                             )
-                            tokens[f]["Verb"]["Bigram"] = True
-                            tokens[s]["Verb"]["Bigram"] = True
+                            tempTokens = bigrams[0].split()
+                            tokens[tempTokens[0]]["Verb"]["Bigram"] = True
+                            tokens[tempTokens[1]]["Verb"]["Bigram"] = True
 
                             non_finte[len(verb_locations)-1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
@@ -133,13 +135,13 @@ class VerbAnalyzer:
         sentence_x_tokens = sentence_x.split()
 
         # for handling single-word verb
-        emphasizer = [[None]]
         for idx, each in enumerate(sentence_x_tokens):
+
             # check verb which last char doesn't emphasize, that emphasizer char is part of the word
             alreadyFound = False
             if each in self.data1["word"].values:
                 alreadyFound = True
-                emphasizer_list.append(emphasizer)
+                emphasizer_list.append([[None]])
                 verb_locations.append(
                     {
                         "verb": each,
@@ -156,8 +158,7 @@ class VerbAnalyzer:
 
                     # check verb which last char does emphasize
                     if temp in self.data1["word"].values:
-                        emphasizer = [[lastChar]]
-                        emphasizer_list.append(emphasizer)
+                        emphasizer_list.append([[lastChar]])
                         alreadyFound = True
                         verb_locations.append(
                             {
@@ -201,6 +202,7 @@ class VerbAnalyzer:
                 non_finte[vlen] = [non_F, alreadyFound]
 
         # generating information for every found verbs
+
         for i, each in enumerate(verb_locations):
             info = []
             tense_person_emp = []
