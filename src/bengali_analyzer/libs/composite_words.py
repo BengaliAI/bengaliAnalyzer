@@ -135,8 +135,8 @@ class CompositeWordAnalyzer:
             if stand_alone_words is not None:
                 tokens[key]['Composite_Word']["Stand_Alone_Words"] = stand_alone_words
                 tokens[key]['Composite_Word']['Suffix'] = suffix
-                if suffix:
-                    if special_suffixes == 'য়':
+                if special_suffix_flag:
+                    if suffix == 'য়':
                         tokens[key]['Composite_Word']['Suffix'] = suffix
                     else:
                         tokens[key]['Composite_Word']['Suffix'] = self.special_suffixes[suffix]
