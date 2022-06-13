@@ -260,7 +260,8 @@ def load_data():
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
-    nonFiniteVerb_data = os.path.join(asset_directory, "banglaNonFiniteVerbs.csv")
+    nonFiniteVerb_data = os.path.join(
+        asset_directory, "banglaNonFiniteVerbs.csv")
     verb_data, verb_data_1, verb_data_2, non_finite_verbs = prepare_verb_data(
         verb_data, nonFiniteVerb_data
     )
@@ -278,10 +279,12 @@ def load_data():
     pronoun_data = prepare_pronoun_data(pronoun_data)
 
     # Generate other data,
-    not_to_be_broken_file = os.path.join(asset_directory, "not_to_be_broken.txt")
+    not_to_be_broken_file = os.path.join(
+        asset_directory, "not_to_be_broken.txt")
     suffix_file = os.path.join(asset_directory, "suffixes.csv")
     prefix_file = os.path.join(asset_directory, "prefixes.csv")
-    special_suffixes_file = os.path.join(asset_directory, "special_suffixes.csv")
+    special_suffixes_file = os.path.join(
+        asset_directory, "special_suffixes.csv")
 
     special_suffixes = prepare_special_suffixes(special_suffixes_file)
     not_to_be_broken = generate_special_entity(not_to_be_broken_file)
@@ -336,8 +339,10 @@ class BengaliAnalyzer:
                 "Emphasizer": None,
                 "TP": None,
                 "Non_Finite": False,
+                "Bigram": False,
                 "Form": None,
                 "Related_Indices": [],
+
             },
             "Pronoun": {
                 "Pronoun Tag": None,
@@ -405,7 +410,8 @@ class BengaliAnalyzer:
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
                         tokens[string_buffer]["Punctuation_Flag"] = False
-                        tokens[string_buffer]["Global_Index"].append(global_index)
+                        tokens[string_buffer]["Global_Index"].append(
+                            global_index)
             else:
                 if string_buffer != "":
                     string_buffer = normalize_token(string_buffer)
@@ -552,7 +558,8 @@ class BengaliAnalyzer:
                                     res, related_index
                                 )
                                 if relatedWord != -1:
-                                    covered_by_related_indexes.append(related_index)
+                                    covered_by_related_indexes.append(
+                                        related_index)
                                     full_word = full_word + " " + relatedWord
                                     useOriginalWord = True
                                     break
@@ -566,7 +573,7 @@ class BengaliAnalyzer:
                                     words.append(emphasizer)
 
                     elif "Composite_Word" in word_obj:
-                        if pure_lemmatize: 
+                        if pure_lemmatize:
                             if "Stand_Alone_Words" in word_obj["Composite_Word"]:
                                 composite_word = ''
                                 for word in word_obj["Composite_Word"]["Stand_Alone_Words"]:
@@ -574,7 +581,8 @@ class BengaliAnalyzer:
                                 words.append(composite_word)
                         else:
                             if "Prefix" in word_obj["Composite_Word"]:
-                                words.append(word_obj["Composite_Word"]["Prefix"])
+                                words.append(
+                                    word_obj["Composite_Word"]["Prefix"])
 
                             if "Stand_Alone_Words" in word_obj["Composite_Word"]:
                                 words.append(
@@ -582,7 +590,8 @@ class BengaliAnalyzer:
                                 )
 
                             if "Suffix" in word_obj["Composite_Word"]:
-                                words.append(word_obj["Composite_Word"]["Suffix"])
+                                words.append(
+                                    word_obj["Composite_Word"]["Suffix"])
 
                     else:
                         if special_entity_suffix != '':
@@ -592,9 +601,11 @@ class BengaliAnalyzer:
                     covered_by_related_indexes.append(global_index)
 
                     if type(global_index) is list:
-                        word_objects.append({"word": words, "index": global_index[0]})
+                        word_objects.append(
+                            {"word": words, "index": global_index[0]})
                     else:
-                        word_objects.append({"word": words, "index": global_index})
+                        word_objects.append(
+                            {"word": words, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
 
