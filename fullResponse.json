@@ -1,0 +1,208 @@
+{
+    "থাকবে": {
+        "Global_Index": [
+            [
+                0,
+                4
+            ],
+            [
+                11,
+                15
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "থাকা",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "sv",
+                    "person": "tm"
+                },
+                {
+                    "tense": "sv",
+                    "person": "ae"
+                },
+                {
+                    "tense": "sv",
+                    "person": "er"
+                },
+                {
+                    "tense": "vo",
+                    "person": "tm"
+                }
+            ],
+            "Non_Finite": false,
+            "Bigram": true,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    6,
+                    9
+                ],
+                [
+                    0,
+                    4
+                ],
+                [
+                    11,
+                    15
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [
+                [
+                    0,
+                    4
+                ],
+                [
+                    11,
+                    15
+                ]
+            ],
+            "SpaceIndices": [],
+            "Suffix": "ে"
+        }
+    },
+    "খেতে": {
+        "Global_Index": [
+            [
+                6,
+                9
+            ]
+        ],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "খাওয়া",
+            "Emphasizer": [
+                null
+            ],
+            "TP": [
+                {
+                    "tense": "gv",
+                    "person": "tm"
+                },
+                {
+                    "tense": "gv",
+                    "person": "ae"
+                },
+                {
+                    "tense": "gv",
+                    "person": "er"
+                }
+            ],
+            "Non_Finite": true,
+            "Bigram": true,
+            "Form": null,
+            "Related_Indices": [
+                [
+                    6,
+                    9
+                ],
+                [
+                    0,
+                    4
+                ],
+                [
+                    11,
+                    15
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": "ে",
+            "Prefix": null,
+            "Stand_Alone_Words": [
+                "খেত"
+            ]
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": [],
+            "Suffix": null
+        }
+    },
+    ",": {
+        "Global_Index": [
+            16
+        ],
+        "Punctuation_Flag": true,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Bigram": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": [],
+            "Suffix": null
+        }
+    }
+}

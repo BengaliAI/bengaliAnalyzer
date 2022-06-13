@@ -1,17 +1,41 @@
 import json
+from copy import deepcopy
 
 class Utils:
     def sortFunc(self, word):
         return word["index"]
 
-    def getRelatedWords(self, res,related_index):
+    def getSortedObjectList(self, res):
+        sortedRes = []
+        sortedList = []
+        for word in res:
+            indexes = res[word]['Global_Index']
+            for index in indexes:
+                if not isinstance(index, int):
+                    sortedRes.append({'word': word, 'index':index[0], 'Global_Index': index})
+                else:
+                    sortedRes.append({'word': word, 'index':index, 'Global_Index': index})
+        sortedRes.sort(key=self.sortFunc)
+        for element in sortedRes:
+            obj = {}
+            word = element['word']
+            global_index = element['Global_Index']
+            obj = deepcopy(res[word])
+            obj['Global_Index'] = [global_index]
+            obj['word'] = word
+            sortedList.append(obj)
+        return sortedList
+
+
+
+    def getRelatedWords(self, res,related_index, parent_index):
         for word in res:
             word_obj = res[word]
             
             indexes = word_obj['Global_Index']
             for index in indexes:
                 if type(index) is list:
-                    if index == related_index:
+                    if index == related_index and index[0] > parent_index[0]:
                         return word
                         
         return -1

@@ -527,13 +527,15 @@ class BengaliAnalyzer:
         return pos_list
 
     def lemmatize_sentence(self, sentence, pure_lemmatize=True):
+        # res = self.utils.sortResponse(res)
         word_objects = []
         word_list = []
-        covered_by_related_indexes = []
+        already_covered_words = []
 
-        res = self.analyze_sentence(sentence)
-        for word in res:
-            word_obj = res[word]
+        analyzed_res = self.analyze_sentence(sentence)
+        res = self.utils.getSortedObjectList(analyzed_res)
+        for word_obj in res:
+            word = word_obj['word']
             indexes = word_obj["Global_Index"]
 
             special_entity_suffix = ''
@@ -544,22 +546,22 @@ class BengaliAnalyzer:
 
             for global_index in indexes:
                 words = []
-                if global_index not in covered_by_related_indexes:
+                if global_index not in already_covered_words:
                     if "Verb" in word_obj:
                         full_word = word
                         useOriginalWord = False
-
-                        for related_index in word_obj["Verb"]["Related_Indices"]:
+                        related_indexes = word_obj["Verb"]["Related_Indices"]
+                        related_indexes.sort(key=lambda x: x[0])
+                        for related_index in related_indexes:
                             if (
                                 related_index not in indexes
-                                and related_index not in covered_by_related_indexes
+                                and related_index not in already_covered_words
                             ):
                                 relatedWord = self.utils.getRelatedWords(
-                                    res, related_index
+                                    analyzed_res, related_index, global_index
                                 )
                                 if relatedWord != -1:
-                                    covered_by_related_indexes.append(
-                                        related_index)
+                                    already_covered_words.append(related_index)
                                     full_word = full_word + " " + relatedWord
                                     useOriginalWord = True
                                     break
@@ -598,17 +600,17 @@ class BengaliAnalyzer:
                             word = word[0:-len(special_entity_suffix)]
                         words.append(word)
 
-                    covered_by_related_indexes.append(global_index)
+                    already_covered_words.append(global_index)
 
                     if type(global_index) is list:
                         word_objects.append(
-                            {"word": words, "index": global_index[0]})
+                            {"lemma": words, "index": global_index[0]})
                     else:
                         word_objects.append(
-                            {"word": words, "index": global_index})
+                            {"lemma": words, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
 
         for word_object in word_objects:
-            word_list.append(word_object["word"])
+            word_list.append(word_object["lemma"])
         return word_list
