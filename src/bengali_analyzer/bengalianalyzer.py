@@ -520,7 +520,7 @@ class BengaliAnalyzer:
 
         return pos_list
 
-    def lemmatize_sentence(self, sentence):
+    def lemmatize_sentence(self, sentence, pure_lemmatize=True):
         word_objects = []
         word_list = []
         covered_by_related_indexes = []
@@ -529,6 +529,12 @@ class BengaliAnalyzer:
         for word in res:
             word_obj = res[word]
             indexes = word_obj["Global_Index"]
+
+            special_entity_suffix = ''
+            if 'Special_Entity' in word_obj:
+                special_entity = word_obj['Special_Entity']
+                if 'Suffix' in special_entity:
+                    special_entity_suffix = special_entity['Suffix']
 
             for global_index in indexes:
                 words = []
@@ -560,18 +566,27 @@ class BengaliAnalyzer:
                                     words.append(emphasizer)
 
                     elif "Composite_Word" in word_obj:
-                        if "Prefix" in word_obj["Composite_Word"]:
-                            words.append(word_obj["Composite_Word"]["Prefix"])
+                        if pure_lemmatize: 
+                            if "Stand_Alone_Words" in word_obj["Composite_Word"]:
+                                composite_word = ''
+                                for word in word_obj["Composite_Word"]["Stand_Alone_Words"]:
+                                    composite_word = composite_word + word
+                                words.append(composite_word)
+                        else:
+                            if "Prefix" in word_obj["Composite_Word"]:
+                                words.append(word_obj["Composite_Word"]["Prefix"])
 
-                        if "Stand_Alone_Words" in word_obj["Composite_Word"]:
-                            words.append(
-                                word_obj["Composite_Word"]["Stand_Alone_Words"]
-                            )
+                            if "Stand_Alone_Words" in word_obj["Composite_Word"]:
+                                words.append(
+                                    word_obj["Composite_Word"]["Stand_Alone_Words"]
+                                )
 
-                        if "Suffix" in word_obj["Composite_Word"]:
-                            words.append(word_obj["Composite_Word"]["Suffix"])
+                            if "Suffix" in word_obj["Composite_Word"]:
+                                words.append(word_obj["Composite_Word"]["Suffix"])
 
                     else:
+                        if special_entity_suffix != '':
+                            word = word[0:-len(special_entity_suffix)]
                         words.append(word)
 
                     covered_by_related_indexes.append(global_index)

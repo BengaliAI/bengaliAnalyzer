@@ -1,23 +1,294 @@
-[
-  ["আমার"],
-  [["ফযামিলি"]],
-  ["প্র", ["বলে", "বলেমের"]],
-  [["কারণ"], "ে"],
-  [["কুয়েটে"]],
-  ["পড়ানো"],
-  ["হওয়া"],
-  ["না"],
-  ["কিন্তু"],
-  ["অনতিবিলম্বে"],
-  [["টিউশন"]],
-  ["করা"],
-  ["সা", ["পোর্ট"]],
-  ["লাগা"],
-  ["এজন্য"],
-  [["চুয়েট"]],
-  [["চুজ"]],
-  ["করানো"],
-  ["ভুল"],
-  ["হওয়া"],
-  ["?"]
-]
+{
+    "সুঅর্থনীতিবোকাদের": {
+        "Global_Index": [[0, 16]],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": "দের",
+            "Prefix": "সু",
+            "Stand_Alone_Words": ["অর্থ", "নীতি", "বোকা"]
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": [],
+            "Suffix": null
+        }
+    },
+    "বঙ্গবন্ধু": {
+        "Global_Index": [[18, 26]],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": ["বিশেষ্য"],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [
+                [18, 26],
+                [28, 30],
+                [32, 38],
+                [40, 46]
+            ],
+            "SpaceIndices": [9, 21, 13],
+            "Suffix": null
+        }
+    },
+    "শেখ": {
+        "Global_Index": [[28, 30]],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": "শেখা",
+            "Emphasizer": [null],
+            "TP": [
+                {
+                    "tense": "bo",
+                    "person": "tu"
+                }
+            ],
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": [[28, 30]],
+            "Language_Form": "standard"
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": ["বিশেষ্য"],
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [
+                [18, 26],
+                [28, 30],
+                [32, 38],
+                [40, 46]
+            ],
+            "SpaceIndices": [9, 21, 13],
+            "Suffix": null
+        }
+    },
+    "মুজিবুর": {
+        "Global_Index": [[32, 38]],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [
+                [18, 26],
+                [28, 30],
+                [32, 38],
+                [40, 46]
+            ],
+            "SpaceIndices": [9, 21, 13],
+            "Suffix": null
+        }
+    },
+    "রহমানকে": {
+        "Global_Index": [[40, 46]],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [
+                [18, 26],
+                [28, 30],
+                [32, 38],
+                [40, 46]
+            ],
+            "SpaceIndices": [9, 21, 13],
+            "Suffix": "কে"
+        }
+    },
+    "ভালোবাসিকে": {
+        "Global_Index": [[48, 57]],
+        "Punctuation_Flag": false,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [[48, 57]],
+            "SpaceIndices": [],
+            "Suffix": "কে"
+        }
+    },
+    "।": {
+        "Global_Index": [58],
+        "Punctuation_Flag": true,
+        "Numeric": {
+            "Digit": null,
+            "Literal": null,
+            "Weight": null,
+            "Suffix": []
+        },
+        "Verb": {
+            "Parent_Verb": null,
+            "Emphasizer": null,
+            "TP": null,
+            "Non_Finite": false,
+            "Form": null,
+            "Related_Indices": []
+        },
+        "Pronoun": {
+            "Pronoun Tag": null,
+            "Number Tag": null,
+            "Honorificity": null,
+            "Case": null,
+            "Proximity": null,
+            "Encoding": null
+        },
+        "PoS": null,
+        "Composite_Word": {
+            "Suffix": null,
+            "Prefix": null,
+            "Stand_Alone_Words": []
+        },
+        "Special_Entity": {
+            "Definition": null,
+            "Related_Indices": [],
+            "SpaceIndices": [],
+            "Suffix": null
+        }
+    }
+}
