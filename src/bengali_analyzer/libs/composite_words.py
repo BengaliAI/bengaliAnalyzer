@@ -32,15 +32,16 @@ class CompositeWordAnalyzer:
     # Normal dataset based suffix extraction
     def get_general_suffix_extraction(self, word):
         matched_suffixes = []
-        longest_suffix = None
         for suffix in self.suffixes.keys():
             if suffix in word[len(word) - len(suffix):]:
                 matched_suffixes.append(suffix)
-        if matched_suffixes:
-            longest_suffix = max(matched_suffixes, key=len)
-            word_copy = word[:-len(longest_suffix)]
+        
+        for suffix in matched_suffixes:
+            word_copy = word[:-len(suffix)]
+            if word_copy.endswith("্"):
+                continue
             if self.validate_suffix(word_copy):
-                return word_copy, longest_suffix
+                return word_copy, suffix
         return None, None       
 
     # Rule based suffix extraction
