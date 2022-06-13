@@ -8,6 +8,8 @@ defective_assets
 # test files
 test.ipynb
 info.json
+response.json
+fullResponse.json
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
