@@ -21,6 +21,7 @@ class Utils:
             word = element['word']
             global_index = element['Global_Index']
             obj = deepcopy(res[word])
+            obj['Orginal_Global_Index'] = obj['Global_Index']
             obj['Global_Index'] = [global_index]
             obj['word'] = word
             sortedList.append(obj)
@@ -31,11 +32,15 @@ class Utils:
     def getRelatedWords(self, res,related_index, parent_index):
         for word in res:
             word_obj = res[word]
-            
             indexes = word_obj['Global_Index']
+            nonFinite = False
+            if 'Verb' in word_obj:
+                if 'Non_Finite' in word_obj['Verb']:
+                    nonFinite = word_obj['Verb']['Non_Finite']
             for index in indexes:
                 if type(index) is list:
-                    if index == related_index and index[0] > parent_index[0]:
+                    if index == related_index and index[0] > parent_index[0] and not nonFinite:
+                        print('related word', word)
                         return word
                         
         return -1

@@ -335,7 +335,7 @@ class BengaliAnalyzer:
             "Punctuation_Flag": True,
             "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
             "Verb": {
-                "Parent_Verb": None,
+                "Parent_Verb": [],
                 "Emphasizer": None,
                 "TP": None,
                 "Non_Finite": False,
@@ -554,7 +554,7 @@ class BengaliAnalyzer:
                         related_indexes.sort(key=lambda x: x[0])
                         for related_index in related_indexes:
                             if (
-                                related_index not in indexes
+                                related_index not in word_obj['Orginal_Global_Index']
                                 and related_index not in already_covered_words
                             ):
                                 relatedWord = self.utils.getRelatedWords(
