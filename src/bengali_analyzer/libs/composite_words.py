@@ -135,8 +135,11 @@ class CompositeWordAnalyzer:
             if stand_alone_words is not None:
                 tokens[key]['Composite_Word']["Stand_Alone_Words"] = stand_alone_words
                 tokens[key]['Composite_Word']['Suffix'] = suffix
-                if special_suffix_flag:
-                    tokens[key]['Composite_Word']['Suffix'] = self.special_suffixes[suffix]
+                if suffix:
+                    if special_suffixes == 'য়':
+                        tokens[key]['Composite_Word']['Suffix'] = suffix
+                    else:
+                        tokens[key]['Composite_Word']['Suffix'] = self.special_suffixes[suffix]
                 tokens[key]['Composite_Word']['Prefix'] = prefix
         elif suffix is not None:
             word = word[:-len(suffix)]
@@ -145,7 +148,10 @@ class CompositeWordAnalyzer:
                 tokens[key]['Composite_Word']["Stand_Alone_Words"] = stand_alone_words
                 tokens[key]['Composite_Word']['Suffix'] = suffix
                 if special_suffix_flag:
-                    tokens[key]['Composite_Word']['Suffix'] = self.special_suffixes[suffix]
+                    if suffix == 'য়':
+                        tokens[key]['Composite_Word']['Suffix'] = suffix
+                    else:
+                        tokens[key]['Composite_Word']['Suffix'] = self.special_suffixes[suffix]
         elif prefix is not None:
             word = word[len(prefix):]
             stand_alone_words = self.get_constructing_substrings(word)
