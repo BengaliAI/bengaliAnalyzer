@@ -335,7 +335,7 @@ class BengaliAnalyzer:
             "Punctuation_Flag": True,
             "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
             "Verb": {
-                "Parent_Verb": None,
+                "Parent_Verb": [],
                 "Emphasizer": None,
                 "TP": None,
                 "Non_Finite": False,

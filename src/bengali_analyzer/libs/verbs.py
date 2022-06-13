@@ -232,6 +232,7 @@ class VerbAnalyzer:
             )
 
         flag = []
+
         for x in verb:
             keys = []
             index = []
@@ -247,9 +248,11 @@ class VerbAnalyzer:
                     if ind not in tokens[y]["Verb"]["Related_Indices"]:
                         tokens[y]["Verb"]["Related_Indices"].append(ind)
                 tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
+
                 tokens[y]["Verb"]["TP"] = x["TP"]
+
                 tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"] if i == 0 else False
-                tokens[y]["Verb"]["Parent_Verb"] = x["Parent_Verb"]
+                tokens[y]["Verb"]["Parent_Verb"].append(x["Parent_Verb"])
                 # tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"]
                 tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
         return verb_indexes
