@@ -499,8 +499,9 @@ class BengaliAnalyzer:
 
             elif "Pronoun" in body:
                 pos = ["Pronoun"]
-                for p in body["PoS"]:
-                    pos.append(bangla_pos_to_english_pos[p])
+                if "PoS" in body:
+                    for p in body["PoS"]:
+                        pos.append(bangla_pos_to_english_pos[p])
 
             elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
                 pos = ["Punctuation"]
