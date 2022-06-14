@@ -9,8 +9,8 @@ class SpecialEntityAnalyzer:
         token_candidate = None
         for token in tokens.keys():
             if len(token) > len(entity) and token[len(entity) :] in self.suffixes:
-                tokens[token]["Special_Entity"]["Suffix"] = token[len(entity) :]
-                token_index = tokens[token]["Global_Index"]
+                tokens[token]["special_entity"]["suffix"] = token[len(entity) :]
+                token_index = tokens[token]["global_index"]
                 token_candidate = token
                 break
         return token_candidate, token_index
@@ -52,7 +52,7 @@ class SpecialEntityAnalyzer:
 
         punctuation_list = [p for p in punctuations if p in entity and p != " "]
         for punctuation in punctuation_list:
-            related_indices.add(tokens[punctuation]["Global_Index"])
+            related_indices.add(tokens[punctuation]["global_index"])
             releated_tokens.add(punctuation)
 
         for p in punctuation_list:
@@ -60,7 +60,7 @@ class SpecialEntityAnalyzer:
         words = entity.split(" ")
         for word in words:
             if word in tokens.keys():
-                related_indices.extend(tokens[word]["Global_Index"])
+                related_indices.extend(tokens[word]["global_index"])
                 releated_tokens.add(word)
             else:
                 token, index = self.validate_suffix(tokens, word)
@@ -72,8 +72,8 @@ class SpecialEntityAnalyzer:
             related_indices, key=lambda a: a[0] if type(a) is tuple else a
         )
         for token in releated_tokens:
-            tokens[token]["Special_Entity"]["Related_Indices"] = related_indices
-            tokens[token]["Special_Entity"]["SpaceIndices"] = space_index
+            tokens[token]["special_entity"]["related_indices"] = related_indices
+            tokens[token]["special_entity"]["space_indices"] = space_index
         return related_indices
 
     # A slave function to find special entities in a sentence

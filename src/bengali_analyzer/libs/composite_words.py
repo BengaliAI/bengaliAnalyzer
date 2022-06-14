@@ -129,7 +129,7 @@ class CompositeWordAnalyzer:
 
     def analyze_composite_words(self, tokens, flags):
         for word, value in tokens.items():
-            indices = tokens[word]["Global_Index"]
+            indices = tokens[word]["global_index"]
             if set(indices).isdisjoint(set(flags)):
                 self.generate_word_configuration(word, tokens)
 
@@ -149,32 +149,32 @@ class CompositeWordAnalyzer:
             word = word[: -len(suffix)]
             stand_alone_words = self.get_constructing_substrings(word)
             if stand_alone_words is not None:
-                tokens[key]["Composite_Word"]["Stand_Alone_Words"] = stand_alone_words
-                tokens[key]["Composite_Word"]["Suffix"] = suffix
+                tokens[key]["composite_word"]["stand_alone_words"] = stand_alone_words
+                tokens[key]["composite_word"]["suffix"] = suffix
                 if special_suffix_flag:
                     if suffix == "য়":
-                        tokens[key]["Composite_Word"]["Suffix"] = suffix
+                        tokens[key]["composite_word"]["suffix"] = suffix
                     else:
-                        tokens[key]["Composite_Word"]["Suffix"] = self.special_suffixes[
+                        tokens[key]["composite_word"]["suffix"] = self.special_suffixes[
                             suffix
                         ]
-                tokens[key]["Composite_Word"]["Prefix"] = prefix
+                tokens[key]["composite_word"]["prefix"] = prefix
         elif suffix is not None:
             word = word[: -len(suffix)]
             stand_alone_words = self.get_constructing_substrings(word)
             if stand_alone_words is not None:
-                tokens[key]["Composite_Word"]["Stand_Alone_Words"] = stand_alone_words
-                tokens[key]["Composite_Word"]["Suffix"] = suffix
+                tokens[key]["composite_word"]["stand_alone_words"] = stand_alone_words
+                tokens[key]["composite_word"]["suffix"] = suffix
                 if special_suffix_flag:
                     if suffix == "য়":
-                        tokens[key]["Composite_Word"]["Suffix"] = suffix
+                        tokens[key]["composite_word"]["suffix"] = suffix
                     else:
-                        tokens[key]["Composite_Word"]["Suffix"] = self.special_suffixes[
+                        tokens[key]["composite_word"]["suffix"] = self.special_suffixes[
                             suffix
                         ]
         elif prefix is not None:
             word = word[len(prefix) :]
             stand_alone_words = self.get_constructing_substrings(word)
             if stand_alone_words is not None:
-                tokens[key]["Composite_Word"]["Stand_Alone_Words"] = stand_alone_words
-                tokens[key]["Composite_Word"]["Prefix"] = prefix
+                tokens[key]["composite_word"]["stand_alone_words"] = stand_alone_words
+                tokens[key]["composite_word"]["prefix"] = prefix

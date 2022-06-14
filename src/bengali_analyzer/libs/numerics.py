@@ -28,12 +28,12 @@ class NumericAnalyzer:
                 digit += char
                 flag = True
         if flag:
-            tokens[text]["Numeric"]["Digit"] = digit
+            tokens[text]["numeric"]["digit"] = digit
         return flag
 
     def validate_literal(self, tokens, text, text_copy):
         if text_copy in self.literals:
-            tokens[text]["Numeric"]["Literal"] = text_copy
+            tokens[text]["numeric"]["literal"] = text_copy
             return True
         return False
 
@@ -66,9 +66,9 @@ class NumericAnalyzer:
             verdict = True
 
         if suffix and verdict:
-            tokens[text]["Numeric"]["Suffix"] = suffix
+            tokens[text]["numeric"]["suffix"] = suffix
         if weight and verdict:
-            tokens[text]["Numeric"]["Weight"] = weight
+            tokens[text]["numeric"]["weight"] = weight
 
         return verdict
 
@@ -76,6 +76,6 @@ class NumericAnalyzer:
         flags = []
         for key, value in tokens.items():
             if self.validate_numeric(tokens, key):
-                flags.extend(tokens[key]["Global_Index"])
+                flags.extend(tokens[key]["global_index"])
 
         return flags

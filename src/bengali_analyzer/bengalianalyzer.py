@@ -328,37 +328,37 @@ class BengaliAnalyzer:
     @staticmethod
     def tokenize_sentence(sentence):
         token = {
-            "Global_Index": [],
-            "Punctuation_Flag": True,
-            "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
-            "Verb": {
-                "Parent_Verb": [],
-                "Emphasizer": None,
-                "TP": None,
-                "Non_Finite": False,
-                "Bigram": False,
-                "Form": None,
-                "Related_Indices": [],
+            "global_index": [],
+            "punctuation_flag": True,
+            "numeric": {"digit": None, "literal": None, "weight": None, "suffix": []},
+            "verb": {
+                "parent_verb": [],
+                "emphasizer": None,
+                "tp": None,
+                "non_finite": False,
+                "bigram": False,
+                "form": None,
+                "related_indices": [],
             },
-            "Pronoun": {
-                "Pronoun Tag": None,
-                "Number Tag": None,
-                "Honorificity": None,
-                "Case": None,
-                "Proximity": None,
-                "Encoding": None,
+            "pronoun": {
+                "pronoun_tag": None,
+                "number_tag": None,
+                "honorificity": None,
+                "case": None,
+                "proximity": None,
+                "encoding": None,
             },
-            "PoS": None,
-            "Composite_Word": {
-                "Suffix": None,
-                "Prefix": None,
-                "Stand_Alone_Words": set(),
+            "pos": None,
+            "composite_word": {
+                "suffix": None,
+                "prefix": None,
+                "stand_alone_words": set(),
             },
-            "Special_Entity": {
-                "Definition": None,
-                "Related_Indices": [],
-                "SpaceIndices": set(),
-                "Suffix": None,
+            "special_entity": {
+                "definition": None,
+                "related_indices": [],
+                "space_indices": set(),
+                "suffix": None,
             },
         }
         tokens = {}
@@ -405,16 +405,16 @@ class BengaliAnalyzer:
                         global_index = (start_index, end_index)
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
-                        tokens[string_buffer]["Punctuation_Flag"] = False
-                        tokens[string_buffer]["Global_Index"].append(global_index)
+                        tokens[string_buffer]["punctuation_flag"] = False
+                        tokens[string_buffer]["global_index"].append(global_index)
             else:
                 if string_buffer != "":
                     string_buffer = normalize_token(string_buffer)
                     global_index = (start_index, end_index)
                     if string_buffer not in tokens.keys():
                         tokens[string_buffer] = copy.deepcopy(token)
-                    tokens[string_buffer]["Punctuation_Flag"] = False
-                    tokens[string_buffer]["Global_Index"].append(global_index)
+                    tokens[string_buffer]["punctuation_flag"] = False
+                    tokens[string_buffer]["global_index"].append(global_index)
                     string_buffer = ""
 
                 punctuation_flags.append(index)
@@ -423,8 +423,8 @@ class BengaliAnalyzer:
 
                 if punctuation not in tokens.keys():
                     tokens[punctuation] = copy.deepcopy(token)
-                tokens[punctuation]["Punctuation_Flag"] = True
-                tokens[punctuation]["Global_Index"].append(index)
+                tokens[punctuation]["punctuation_flag"] = True
+                tokens[punctuation]["global_index"].append(index)
 
         unwanted_token = [" ", None]
         tokens = {k: v for k, v in tokens.items() if k not in unwanted_token}
@@ -462,9 +462,9 @@ class BengaliAnalyzer:
         bangla_pos_to_english_pos = {
             "বিশেষণ": "Adjective",
             "বিশেষ্য": "Noun",
-            "সর্বনাম": "Pronoun",
+            "সর্বনাম": "pronoun",
             "অব্যয়": "Adjective",
-            "ক্রিয়া": "Verb",
+            "ক্রিয়া": "verb",
             "ক্রিয়াবিশেষণ": "Adverb",
             "ক্রিয়াবিশেষ্য": "Adverb",
             "obboy": "Adjective",
@@ -480,33 +480,33 @@ class BengaliAnalyzer:
             body = res[word]
             pos = ["undefined"]
 
-            if "Verb" in body:
+            if "verb" in body:
                 pos = []
-                if "PoS" in body:
-                    for p in body["PoS"]:
+                if "pos" in body:
+                    for p in body["pos"]:
                         pos.append(bangla_pos_to_english_pos[p])
 
-                if "TP" in body["Verb"]:
+                if "tp" in body["verb"]:
                     pos.append("Finite_Verb")
 
-                if "Non_Finite" in body["Verb"] and body["Verb"]["Non_Finite"] == True:
+                if "non_finite" in body["verb"] and body["verb"]["non_finite"] == True:
                     pos.append("Non-Finite_Verb")
 
-            elif "Pronoun" in body:
-                pos = ["Pronoun"]
-                for p in body["PoS"]:
+            elif "pronoun" in body:
+                pos = ["pronoun"]
+                for p in body["pos"]:
                     pos.append(bangla_pos_to_english_pos[p])
 
-            elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
+            elif "punctuation_flag" in body and body["punctuation_flag"] == True:
                 pos = ["Punctuation"]
 
-            elif "PoS" in body:
+            elif "pos" in body:
                 t = []
-                for p in body["PoS"]:
+                for p in body["pos"]:
                     t.append(bangla_pos_to_english_pos[p])
                 pos = t
 
-            indexes = body["Global_Index"]
+            indexes = body["global_index"]
 
             for index in indexes:
                 if type(index) is list:
@@ -531,21 +531,21 @@ class BengaliAnalyzer:
         res = self.utils.getSortedObjectList(analyzed_res)
         for word_obj in res:
             word = word_obj["word"]
-            indexes = word_obj["Global_Index"]
+            indexes = word_obj["global_index"]
 
             special_entity_suffix = ""
-            if "Special_Entity" in word_obj:
-                special_entity = word_obj["Special_Entity"]
-                if "Suffix" in special_entity:
-                    special_entity_suffix = special_entity["Suffix"]
+            if "special_entity" in word_obj:
+                special_entity = word_obj["special_entity"]
+                if "suffix" in special_entity:
+                    special_entity_suffix = special_entity["suffix"]
 
             for global_index in indexes:
                 words = []
                 if global_index not in already_covered_words:
-                    if "Verb" in word_obj:
+                    if "verb" in word_obj:
                         full_word = word
                         useOriginalWord = False
-                        related_indexes = word_obj["Verb"]["Related_Indices"]
+                        related_indexes = word_obj["verb"]["related_indices"]
                         related_indexes.sort(key=lambda x: x[0])
                         for related_index in related_indexes:
                             if (
@@ -564,31 +564,31 @@ class BengaliAnalyzer:
                         if useOriginalWord:
                             words.append(full_word)
                         else:
-                            words.append(word_obj["Verb"]["Parent_Verb"][-1])
-                            if "Emphasizer" in word_obj["Verb"]:
-                                for emphasizer in word_obj["Verb"]["Emphasizer"]:
+                            words.append(word_obj["verb"]["parent_verb"][-1])
+                            if "emphasizer" in word_obj["verb"]:
+                                for emphasizer in word_obj["verb"]["emphasizer"]:
                                     words.append(emphasizer)
 
-                    elif "Composite_Word" in word_obj:
+                    elif "composite_word" in word_obj:
                         if pure_lemmatize:
-                            if "Stand_Alone_Words" in word_obj["Composite_Word"]:
+                            if "stand_alone_words" in word_obj["composite_word"]:
                                 composite_word = ""
-                                for word in word_obj["Composite_Word"][
-                                    "Stand_Alone_Words"
+                                for word in word_obj["composite_word"][
+                                    "stand_alone_words"
                                 ]:
                                     composite_word = composite_word + word
                                 words.append(composite_word)
                         else:
-                            if "Prefix" in word_obj["Composite_Word"]:
-                                words.append(word_obj["Composite_Word"]["Prefix"])
+                            if "prefix" in word_obj["composite_word"]:
+                                words.append(word_obj["composite_word"]["prefix"])
 
-                            if "Stand_Alone_Words" in word_obj["Composite_Word"]:
+                            if "stand_alone_words" in word_obj["composite_word"]:
                                 words.append(
-                                    word_obj["Composite_Word"]["Stand_Alone_Words"]
+                                    word_obj["composite_word"]["stand_alone_words"]
                                 )
 
-                            if "Suffix" in word_obj["Composite_Word"]:
-                                words.append(word_obj["Composite_Word"]["Suffix"])
+                            if "suffix" in word_obj["composite_word"]:
+                                words.append(word_obj["composite_word"]["suffix"])
 
                     else:
                         if special_entity_suffix != "":
