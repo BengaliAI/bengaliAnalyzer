@@ -17,9 +17,9 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/BengaliAI/bengaliAnalyzer/issues",
     },
-    install_requires=['pandas', 'indicparser', 'bnunicodenormalizer'],
+    install_requires=['pandas', 'indicparser', 'bnunicodenormalizer', 'tqdm', 'termcolor'],
     include_package_data=True,
-    package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt', 'include src/bengali_analyzer/assets/*.json']},
+    package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt', 'include src/bengali_analyzer/assets/*.json', 'src/bengali_analyzer/assets_orig/*.csv', 'src/bengali_analyzer/assets_orig/*.txt', 'include src/bengali_analyzer/assets_orig/*.json']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
