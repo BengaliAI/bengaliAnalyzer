@@ -569,7 +569,7 @@ class BengaliAnalyzer:
                         if useOriginalWord:
                             words.append(full_word)
                         else:
-                            words.append(word_obj["Verb"]["Parent_Verb"])
+                            words.append(word_obj["Verb"]["Parent_Verb"][-1])
                             if "Emphasizer" in word_obj["Verb"]:
                                 for emphasizer in word_obj["Verb"]["Emphasizer"]:
                                     words.append(emphasizer)

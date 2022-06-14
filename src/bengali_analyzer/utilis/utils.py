@@ -40,7 +40,6 @@ class Utils:
             for index in indexes:
                 if type(index) is list:
                     if index == related_index and index[0] > parent_index[0] and not nonFinite:
-                        print('related word', word)
                         return word
                         
         return -1
