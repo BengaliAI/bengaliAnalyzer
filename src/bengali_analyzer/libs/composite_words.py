@@ -70,15 +70,19 @@ class CompositeWordAnalyzer:
         matched_prefixes = []
         max_length_prefix = max(self.prefixes.keys(), key=len)
         longest_prefix = None
+        
         for prefix in self.prefixes.keys():
             if len(max_length_prefix) < len(word) and prefix in word[:-(len(word) - len(prefix))]:
                 matched_prefixes.append(prefix)
+        
         if matched_prefixes:
-            longest_prefix = max(matched_prefixes, key=len)
-            word_copy = word[len(longest_prefix):]
-            if self.validate_prefix(word_copy):
-                return word_copy, longest_prefix
-
+            for prefix in matched_prefixes:
+                word_copy = word[len(prefix):]
+                try:
+                    if self.validate_prefix(word_copy):
+                        return word_copy, prefix
+                except:
+                    continue
         return None, None 
 
     def get_all_possible_substrings(self, graphemes):
