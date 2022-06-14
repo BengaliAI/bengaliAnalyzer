@@ -110,9 +110,9 @@ class VerbAnalyzer:
                         if bigrams[-1] in self.data2["word"].values:
                             em1 = [None]
                             em2 = [None]
-                            if (f != first[0]):
+                            if f != first[0]:
                                 em1 = emphasizer[0]
-                            if(s != second[0]):
+                            if s != second[0]:
                                 em2 = emphasizer[1]
                             emphasizer_list.append([em1, em2])
                             verb_locations.append(
@@ -126,7 +126,7 @@ class VerbAnalyzer:
                             tokens[tempTokens[0]]["Verb"]["Bigram"] = True
                             tokens[tempTokens[1]]["Verb"]["Bigram"] = True
 
-                            non_finte[len(verb_locations)-1] = [True, True]
+                            non_finte[len(verb_locations) - 1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
                             break
             except:
@@ -169,7 +169,10 @@ class VerbAnalyzer:
                         )
             non_F = False
             if alreadyFound:
-                if each in self.non_finite_verbs["word"].values or (each[-1] in emphasizer_characters and each[0:-1] in self.non_finite_verbs["word"].values):
+                if each in self.non_finite_verbs["word"].values or (
+                    each[-1] in emphasizer_characters
+                    and each[0:-1] in self.non_finite_verbs["word"].values
+                ):
                     non_F = True
 
             else:
@@ -184,7 +187,10 @@ class VerbAnalyzer:
                         }
                     )
 
-                elif each[-1] in emphasizer_characters and each[:-1] in self.non_finite_verbs["word"].values:
+                elif (
+                    each[-1] in emphasizer_characters
+                    and each[:-1] in self.non_finite_verbs["word"].values
+                ):
                     non_F = True
                     emphasizer_list.append([[each[-1]]])
                     verb_locations.append(
@@ -209,15 +215,13 @@ class VerbAnalyzer:
             if non_finte[i][1]:
                 info = self.data[self.data["word"] == each["verb"]]
                 for eachx in zip(info["tense"], info["person"]):
-                    obj = {
-                        "tense": eachx[0],
-                        "person": eachx[1]
-                    }
-                    if(obj not in tense_person_emp):
+                    obj = {"tense": eachx[0], "person": eachx[1]}
+                    if obj not in tense_person_emp:
                         tense_person_emp.append(obj)
             else:
-                info = self.non_finite_verbs[self.non_finite_verbs["word"]
-                                             == each["verb"]]
+                info = self.non_finite_verbs[
+                    self.non_finite_verbs["word"] == each["verb"]
+                ]
 
             verb.append(
                 {
@@ -249,10 +253,10 @@ class VerbAnalyzer:
                         tokens[y]["Verb"]["Related_Indices"].append(ind)
                 tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
 
-                if(tokens[y]["Verb"]["TP"]):
+                if tokens[y]["Verb"]["TP"]:
                     for line in x["TP"]:
                         if line not in tokens[y]["Verb"]["TP"]:
-                            tokens[y]["Verb"]["TP"] = tokens[y]["Verb"]["TP"]+[line]
+                            tokens[y]["Verb"]["TP"] = tokens[y]["Verb"]["TP"] + [line]
                 else:
                     tokens[y]["Verb"]["TP"] = x["TP"]
 
