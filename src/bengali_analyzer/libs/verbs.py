@@ -249,10 +249,16 @@ class VerbAnalyzer:
                         tokens[y]["Verb"]["Related_Indices"].append(ind)
                 tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
 
-                tokens[y]["Verb"]["TP"] = x["TP"]
+                if(tokens[y]["Verb"]["TP"]):
+                    for line in x["TP"]:
+                        if line not in tokens[y]["Verb"]["TP"]:
+                            tokens[y]["Verb"]["TP"] = tokens[y]["Verb"]["TP"]+[line]
+                else:
+                    tokens[y]["Verb"]["TP"] = x["TP"]
 
                 tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"] if i == 0 else False
-                tokens[y]["Verb"]["Parent_Verb"].append(x["Parent_Verb"])
+                if x["Parent_Verb"] not in tokens[y]["Verb"]["Parent_Verb"]:
+                    tokens[y]["Verb"]["Parent_Verb"].append(x["Parent_Verb"])
                 # tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"]
                 tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
         return verb_indexes
