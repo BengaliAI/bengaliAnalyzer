@@ -472,50 +472,75 @@ class BengaliAnalyzer:
             "bisheshon": "বিশেষণ",
         }
 
-        res = self.analyze_sentence(sentence)
+        analyzed_res = self.analyze_sentence(sentence)
+        res = self.utils.getSortedObjectList(analyzed_res)
 
+        # with open("./testing-souhardya.json", "w", encoding="utf-8") as f:
+        #     json.dump(res, f, ensure_ascii=False,
+        #               default=self.utils.serializeSets, indent=4)
         word_objects = []
         pos_list = []
-        for word in res:
-            body = res[word]
+        already_covered_words = []
+
+        for word_obj in res:
+            word = word_obj['word']
+            body = word_obj
             pos = ["undefined"]
 
-            if "verb" in body:
-                pos = []
-                if "pos" in body:
-                    for p in body["pos"]:
-                        pos.append(bangla_pos_to_english_pos[p])
+            indexes = body["Global_Index"]
+            for global_index in indexes:
+                if global_index not in already_covered_words:
+                    if "Verb" in word_obj:
+                        pos = []
+                        if "PoS" in body:
+                            for p in body["PoS"]:
+                                pos.append(bangla_pos_to_english_pos[p])
 
-                if "tp" in body["verb"]:
-                    pos.append("Finite_Verb")
+                        if "TP" in body["Verb"]:
+                            pos.append("Finite_Verb")
 
-                if "non_finite" in body["verb"] and body["verb"]["non_finite"] == True:
-                    pos.append("Non-Finite_Verb")
+                        if "Non_Finite" in body["Verb"] and body["Verb"]["Non_Finite"] == True:
+                            pos.append("Non-Finite_Verb")
 
-            elif "pronoun" in body:
-                pos = ["pronoun"]
-                for p in body["pos"]:
-                    pos.append(bangla_pos_to_english_pos[p])
+                        related_indexes = word_obj["Verb"]["Related_Indices"]
+                        related_indexes.sort(key=lambda x: x[0])
+                        for related_index in related_indexes:
+                            if (
+                                related_index not in word_obj['Orginal_Global_Index']
+                                and related_index not in already_covered_words
+                            ):
+                                relatedWord = self.utils.getRelatedWords(
+                                    analyzed_res, related_index, global_index
+                                )
+                                if relatedWord != -1:
+                                    already_covered_words.append(related_index)
+                                    break
 
-            elif "punctuation_flag" in body and body["punctuation_flag"] == True:
-                pos = ["Punctuation"]
+                    elif "Pronoun" in body:
+                        pos = ["Pronoun"]
+                        if "PoS" in body:
+                            for p in body["PoS"]:
+                                pos.append(bangla_pos_to_english_pos[p])
 
-            elif "pos" in body:
-                t = []
-                for p in body["pos"]:
-                    t.append(bangla_pos_to_english_pos[p])
-                pos = t
+                    elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
+                        pos = ["Punctuation"]
 
-            indexes = body["global_index"]
+                    elif "PoS" in body:
+                        t = []
+                        for p in body["PoS"]:
+                            t.append(bangla_pos_to_english_pos[p])
+                        pos = t
 
-            for index in indexes:
-                if type(index) is list:
-                    word_objects.append({"pos": pos, "index": index[0]})
-                else:
-                    word_objects.append({"pos": pos, "index": index})
+                    already_covered_words.append(global_index)
+                    if type(global_index) is list:
+                        word_objects.append(
+                            {"pos": pos, "index": global_index[0]})
+                    else:
+                        word_objects.append(
+                            {"pos": pos, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
-
+        
         for entry in word_objects:
             pos_list.append(entry["pos"])
 
