@@ -110,9 +110,9 @@ class VerbAnalyzer:
                         if bigrams[-1] in self.data2["word"].values:
                             em1 = [None]
                             em2 = [None]
-                            if (f != first[0]):
+                            if f != first[0]:
                                 em1 = emphasizer[0]
-                            if(s != second[0]):
+                            if s != second[0]:
                                 em2 = emphasizer[1]
                             emphasizer_list.append([em1, em2])
                             verb_locations.append(
@@ -123,10 +123,10 @@ class VerbAnalyzer:
                                 }
                             )
                             tempTokens = bigrams[0].split()
-                            tokens[tempTokens[0]]["Verb"]["Bigram"] = True
-                            tokens[tempTokens[1]]["Verb"]["Bigram"] = True
+                            tokens[tempTokens[0]]["verb"]["bigram"] = True
+                            tokens[tempTokens[1]]["verb"]["bigram"] = True
 
-                            non_finte[len(verb_locations)-1] = [True, True]
+                            non_finte[len(verb_locations) - 1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
                             break
             except:
@@ -169,7 +169,10 @@ class VerbAnalyzer:
                         )
             non_F = False
             if alreadyFound:
-                if each in self.non_finite_verbs["word"].values or (each[-1] in emphasizer_characters and each[0:-1] in self.non_finite_verbs["word"].values):
+                if each in self.non_finite_verbs["word"].values or (
+                    each[-1] in emphasizer_characters
+                    and each[0:-1] in self.non_finite_verbs["word"].values
+                ):
                     non_F = True
 
             else:
@@ -184,7 +187,10 @@ class VerbAnalyzer:
                         }
                     )
 
-                elif each[-1] in emphasizer_characters and each[:-1] in self.non_finite_verbs["word"].values:
+                elif (
+                    each[-1] in emphasizer_characters
+                    and each[:-1] in self.non_finite_verbs["word"].values
+                ):
                     non_F = True
                     emphasizer_list.append([[each[-1]]])
                     verb_locations.append(
@@ -209,24 +215,22 @@ class VerbAnalyzer:
             if non_finte[i][1]:
                 info = self.data[self.data["word"] == each["verb"]]
                 for eachx in zip(info["tense"], info["person"]):
-                    obj = {
-                        "tense": eachx[0],
-                        "person": eachx[1]
-                    }
-                    if(obj not in tense_person_emp):
+                    obj = {"tense": eachx[0], "person": eachx[1]}
+                    if obj not in tense_person_emp:
                         tense_person_emp.append(obj)
             else:
-                info = self.non_finite_verbs[self.non_finite_verbs["word"]
-                                             == each["verb"]]
+                info = self.non_finite_verbs[
+                    self.non_finite_verbs["word"] == each["verb"]
+                ]
 
             verb.append(
                 {
                     "Index": each["location"],
                     "original_word": each["original_verb"],
-                    "Parent_Verb": info["parent_word"].iloc[0],
-                    "Emphasizer": emphasizer_list[i],
-                    "TP": tense_person_emp,
-                    "Non_Finite": non_finte[i][0],
+                    "parent_verb": info["parent_word"].iloc[0],
+                    "emphasizer": emphasizer_list[i],
+                    "tp": tense_person_emp,
+                    "non_finite": non_finte[i][0],
                     "Language_Form": "standard",
                 }
             )
@@ -240,27 +244,27 @@ class VerbAnalyzer:
 
             for y in x_bar:
                 keys.append(y)
-                flag.extend(tokens[y]["Global_Index"])
-                index.extend(tokens[y]["Global_Index"])
+                flag.extend(tokens[y]["global_index"])
+                index.extend(tokens[y]["global_index"])
 
             for i, y in enumerate(keys):
                 for ind in index:
-                    if ind not in tokens[y]["Verb"]["Related_Indices"]:
-                        tokens[y]["Verb"]["Related_Indices"].append(ind)
-                tokens[y]["Verb"]["Emphasizer"] = x["Emphasizer"][i]
+                    if ind not in tokens[y]["verb"]["related_indices"]:
+                        tokens[y]["verb"]["related_indices"].append(ind)
+                tokens[y]["verb"]["emphasizer"] = x["emphasizer"][i]
 
-                if(tokens[y]["Verb"]["TP"]):
-                    for line in x["TP"]:
-                        if line not in tokens[y]["Verb"]["TP"]:
-                            tokens[y]["Verb"]["TP"] = tokens[y]["Verb"]["TP"]+[line]
+                if tokens[y]["verb"]["tp"]:
+                    for line in x["tp"]:
+                        if line not in tokens[y]["verb"]["tp"]:
+                            tokens[y]["verb"]["tp"] = tokens[y]["verb"]["tp"] + [line]
                 else:
-                    tokens[y]["Verb"]["TP"] = x["TP"]
+                    tokens[y]["verb"]["tp"] = x["tp"]
 
-                tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"] if i == 0 else False
-                if x["Parent_Verb"] not in tokens[y]["Verb"]["Parent_Verb"]:
-                    tokens[y]["Verb"]["Parent_Verb"].append(x["Parent_Verb"])
-                # tokens[y]["Verb"]["Non_Finite"] = x["Non_Finite"]
-                tokens[y]["Verb"]["Language_Form"] = x["Language_Form"]
+                tokens[y]["verb"]["non_finite"] = x["non_finite"] if i == 0 else False
+                if x["parent_verb"] not in tokens[y]["verb"]["parent_verb"]:
+                    tokens[y]["verb"]["parent_verb"].append(x["parent_verb"])
+                # tokens[y]["verb"]["non_finite"] = x["non_finite"]
+                tokens[y]["verb"]["Language_Form"] = x["Language_Form"]
         return verb_indexes
 
     # print(sentence)
