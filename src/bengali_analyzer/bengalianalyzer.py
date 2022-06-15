@@ -463,11 +463,11 @@ class BengaliAnalyzer:
             "বিশেষণ": "Adjective",
             "বিশেষ্য": "Noun",
             "সর্বনাম": "pronoun",
-            "অব্যয়": "Adjective",
+            "অব্যয়": "Conjunction",
             "ক্রিয়া": "verb",
             "ক্রিয়াবিশেষণ": "Adverb",
             "ক্রিয়াবিশেষ্য": "Adverb",
-            "obboy": "Adjective",
+            "obboy": "Conjunction",
             "kriya": "ক্রিয়া",
             "bisheshon": "বিশেষণ",
         }
@@ -483,30 +483,33 @@ class BengaliAnalyzer:
         already_covered_words = []
 
         for word_obj in res:
-            word = word_obj['word']
+            word = word_obj["word"]
             body = word_obj
             pos = ["undefined"]
 
-            indexes = body["Global_Index"]
+            indexes = body["global_index"]
             for global_index in indexes:
                 if global_index not in already_covered_words:
-                    if "Verb" in word_obj:
+                    if "verb" in word_obj:
                         pos = []
-                        if "PoS" in body:
-                            for p in body["PoS"]:
+                        if "pos" in body:
+                            for p in body["pos"]:
                                 pos.append(bangla_pos_to_english_pos[p])
 
-                        if "TP" in body["Verb"]:
-                            pos.append("Finite_Verb")
+                        if "tp" in body["verb"]:
+                            pos.append("finite_verb")
 
-                        if "Non_Finite" in body["Verb"] and body["Verb"]["Non_Finite"] == True:
+                        if (
+                            "non_finite" in body["verb"]
+                            and body["verb"]["non_finite"] == True
+                        ):
                             pos.append("Non-Finite_Verb")
 
-                        related_indexes = word_obj["Verb"]["Related_Indices"]
+                        related_indexes = word_obj["verb"]["related_indices"]
                         related_indexes.sort(key=lambda x: x[0])
                         for related_index in related_indexes:
                             if (
-                                related_index not in word_obj['Orginal_Global_Index']
+                                related_index not in word_obj["Orginal_Global_Index"]
                                 and related_index not in already_covered_words
                             ):
                                 relatedWord = self.utils.getRelatedWords(
@@ -516,31 +519,31 @@ class BengaliAnalyzer:
                                     already_covered_words.append(related_index)
                                     break
 
-                    elif "Pronoun" in body:
-                        pos = ["Pronoun"]
-                        if "PoS" in body:
-                            for p in body["PoS"]:
+                    elif "pronoun" in body:
+                        pos = ["pronoun"]
+                        if "pos" in body:
+                            for p in body["pos"]:
                                 pos.append(bangla_pos_to_english_pos[p])
 
-                    elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
-                        pos = ["Punctuation"]
+                    elif (
+                        "punctuation_flag" in body and body["punctuation_flag"] == True
+                    ):
+                        pos = ["punctuation"]
 
-                    elif "PoS" in body:
+                    elif "pos" in body:
                         t = []
-                        for p in body["PoS"]:
+                        for p in body["pos"]:
                             t.append(bangla_pos_to_english_pos[p])
                         pos = t
 
                     already_covered_words.append(global_index)
                     if type(global_index) is list:
-                        word_objects.append(
-                            {"pos": pos, "index": global_index[0]})
+                        word_objects.append({"pos": pos, "index": global_index[0]})
                     else:
-                        word_objects.append(
-                            {"pos": pos, "index": global_index})
+                        word_objects.append({"pos": pos, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
-        
+
         for entry in word_objects:
             pos_list.append(entry["pos"])
 
