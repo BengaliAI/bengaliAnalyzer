@@ -123,8 +123,8 @@ class VerbAnalyzer:
                                 }
                             )
                             tempTokens = bigrams[0].split()
-                            tokens[tempTokens[0]]["verb"]["bigram"] = True
-                            tokens[tempTokens[1]]["verb"]["bigram"] = True
+                            tokens[tempTokens[0]]["verb"]["contentative_verb"] = True
+                            tokens[tempTokens[1]]["verb"]["contentative_verb"] = True
 
                             non_finte[len(verb_locations) - 1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
@@ -265,6 +265,7 @@ class VerbAnalyzer:
                     tokens[y]["verb"]["parent_verb"].append(x["parent_verb"])
                 # tokens[y]["verb"]["non_finite"] = x["non_finite"]
                 tokens[y]["verb"]["Language_Form"] = x["Language_Form"]
+                tokens[y]["pos"].append("verb")
         return verb_indexes
 
     # print(sentence)

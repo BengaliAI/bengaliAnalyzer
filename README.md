@@ -64,7 +64,7 @@ The response will return `tokens` (data type : `dictionary`) which has each `tok
 
 ```python
 token = {
-            "global_index": [int or (int,int)],
+            "global_index": [(int,int)],
             "punctuation_flag": bool,
             "numeric": {
                 "digit": int,
@@ -75,10 +75,11 @@ token = {
             "verb": {
                 "parent_verb": str,
                 "emphasizer": str,
+                "contentative_verb": bool,
                 "tp": str,
                 "non_finite": bool,
                 "form": str,
-                "related_indices": [int or (int,int)],
+                "related_indices": [(int,int)],
             },
             "pronoun": {
                 "pronoun_tag": str,
@@ -89,6 +90,7 @@ token = {
                 "encoding": str,
             },
             "pos": [str],
+            "composite_flag": bool,
             "composite_word": {
                 "suffix": str,
                 "prefix": str,
@@ -96,7 +98,7 @@ token = {
             },
             "special_entity": {
                 "definition": str,
-                "related_indices": [int or (int,int)],
+                "related_indices": [(int,int)],
                 "space_indices": set(),
                 "suffix": str,
             },

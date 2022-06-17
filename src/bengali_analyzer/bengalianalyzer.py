@@ -294,11 +294,11 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
-        IGNORE_FILES = []
-        THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-        ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
+        #IGNORE_FILES = []
+        #THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+        #ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
-        normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
+        #normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
@@ -336,7 +336,7 @@ class BengaliAnalyzer:
                 "emphasizer": None,
                 "tp": None,
                 "non_finite": False,
-                "bigram": False,
+                "contentative_verb": False,
                 "form": None,
                 "related_indices": [],
             },
@@ -348,11 +348,12 @@ class BengaliAnalyzer:
                 "proximity": None,
                 "encoding": None,
             },
-            "pos": None,
+            "pos": [],
+            "composite_flag": False,
             "composite_word": {
                 "suffix": None,
                 "prefix": None,
-                "stand_alone_words": set(),
+                "stand_alone_words": [],
             },
             "special_entity": {
                 "definition": None,
@@ -424,8 +425,9 @@ class BengaliAnalyzer:
                 if punctuation not in tokens.keys():
                     tokens[punctuation] = copy.deepcopy(token)
                 tokens[punctuation]["punctuation_flag"] = True
-                tokens[punctuation]["global_index"].append(index)
-
+                idx = (index,index)
+                tokens[punctuation]["global_index"].append(idx)
+                tokens[punctuation]["pos"] = ["punc"]
         unwanted_token = [" ", None]
         tokens = {k: v for k, v in tokens.items() if k not in unwanted_token}
 

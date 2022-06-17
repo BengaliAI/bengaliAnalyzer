@@ -43,13 +43,14 @@ class CompositeWordAnalyzer:
         for suffix in self.suffixes.keys():
             if suffix in word[len(word) - len(suffix) :]:
                 matched_suffixes.append(suffix)
-
+        matched_suffixes.sort(reverse=True)
         for suffix in matched_suffixes:
             word_copy = word[: -len(suffix)]
-            if word_copy.endswith("্"):
+            try:
+                if self.validate_suffix(word_copy):
+                    return word_copy, suffix
+            except: 
                 continue
-            if self.validate_suffix(word_copy):
-                return word_copy, suffix
         return None, None
 
     # Rule based suffix extraction
@@ -139,11 +140,13 @@ class CompositeWordAnalyzer:
 
         special_suffix_flag = False
         word_without_suffix, suffix = self.get_general_suffix_extraction(word)
+        
         if suffix is None:
             special_suffix_flag = True
             word_without_suffix, suffix = self.get_rule_based_suffix_extraction(word)
+        
         word_without_prefix, prefix = self.get_prefix_extraction(word)
-
+        
         if suffix is not None and prefix is not None:
             word = word[len(prefix) :]
             word = word[: -len(suffix)]
@@ -169,12 +172,14 @@ class CompositeWordAnalyzer:
                     if suffix == "য়":
                         tokens[key]["composite_word"]["suffix"] = suffix
                     else:
-                        tokens[key]["composite_word"]["suffix"] = self.special_suffixes[
-                            suffix
-                        ]
+                        tokens[key]["composite_word"]["suffix"] = self.special_suffixes[suffix]
         elif prefix is not None:
             word = word[len(prefix) :]
             stand_alone_words = self.get_constructing_substrings(word)
             if stand_alone_words is not None:
                 tokens[key]["composite_word"]["stand_alone_words"] = stand_alone_words
                 tokens[key]["composite_word"]["prefix"] = prefix
+        else:
+            stand_alone_words = self.get_constructing_substrings(word)
+            if stand_alone_words is not None:
+                tokens[key]["composite_word"]["stand_alone_words"] = stand_alone_words
