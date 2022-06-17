@@ -2,17 +2,17 @@
 
 This package provides an analyzer for Bengali (Bangla) language. We have gone through a dictionary entry based approach with grammatical sanitizing for this project. Here in our implementation we have 5 different type of entities:
 
--   _Prefix_: _Prefix_ or _উপসর্গ_ is a substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
+- _Prefix_: _Prefix_ or _উপসর্গ_ is a substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
 
--   _Suffix_: _Suffix_ or _অনুসর্গ_ is a trailing substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
+- _Suffix_: _Suffix_ or _অনুসর্গ_ is a trailing substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
 
--   _Verb_: Any word or group of words that describe the action, state or occurrence of an event in a Bengali sentence. For example - খাওয়া, চলে যাওয়া etc. etc
+- _Verb_: Any word or group of words that describe the action, state or occurrence of an event in a Bengali sentence. For example - খাওয়া, চলে যাওয়া etc. etc
     .
--   _Non-verb_: Any other remaining parts of speech that are not recognized as a verb in a Bengali sentence. For example - আমি, খুব, তারা, বাংলা, বয়স, etc. etc.
+- _Non-verb_: Any other remaining parts of speech that are not recognized as a verb in a Bengali sentence. For example - আমি, খুব, তারা, বাংলা, বয়স, etc. etc.
 
--   _Special entity_: As the name suggests, a _special entity_ can be a special date (for example, ২১ শে ফেব্রুয়ারী which is the International Mother Language Day), a person (for example - ড. মুহাম্মদ জাফর ইকবাল a famous author of science fictions and well-known professor), institute (for example - জাবি which is the abbreviation of Jahangirnagar University) or any other multi-word single entity.
+- _Special entity_: As the name suggests, a _special entity_ can be a special date (for example, ২১ শে ফেব্রুয়ারী which is the International Mother Language Day), a person (for example - ড. মুহাম্মদ জাফর ইকবাল a famous author of science fictions and well-known professor), institute (for example - জাবি which is the abbreviation of Jahangirnagar University) or any other multi-word single entity.
 
--   _Composite word_: Our structural definition of composite Bengali word is -
+- _Composite word_: Our structural definition of composite Bengali word is -
     prefix (optional) + (One or) Multiple stand-alone Bengali words + suffix (optional)
 
 Our package analyzes the given text and returns the word configurations of the text according to the definitions we have chosen to give to the entities which could be present in a bengali sentence.
@@ -23,25 +23,23 @@ The package can be installed in any fashion. It is highly recommended to install
 
 `pip install bengalianalyzer`
 
+Or,
+
+1. Download the whole repo as a compressed file.
+2. Extract the compressed file.
+3. OPen
+
 ## Local Environment
 
 This is the environment in which the package was developed:
 
-```
- ██████████████████  ████████     Python: 3.9.0
- ██████████████████  ████████     OS: Manjaro 21.2.3 Qonos
- ██████████████████  ████████     Kernel: x86_64 Linux 5.15.21-1-MANJARO
- ██████████████████  ████████     Conda: 4.10.3
- ████████            ████████     CPU: 11th Gen Intel Core i7-11370H @ 8x 4.8GHz
- ████████  ████████  ████████      RAM: 15694MiB
- ████████  ████████  ████████
- ████████  ████████  ████████
- ████████  ████████  ████████
- ████████  ████████  ████████
- ████████  ████████  ████████
- ████████  ████████  ████████
- ████████  ████████  ████████
- ████████  ████████  ████████
+```md
+Python: 3.9.0
+OS: Manjaro 21.2.3 Qonos
+Kernel: x86_64 Linux 5.15.21-1-MANJARO
+Conda: 4.10.3
+CPU: 11th Gen Intel Core i7-11370H @ 8x 4.8GHz
+RAM: 15694MiB
 ```
 
 ## Usage
@@ -107,8 +105,8 @@ token = {
 
 ## Quick Guide
 
--   [What does the response mean?](./documentation/response.md)
--   [How does we generate the response?](./documentation/breakdown.md)
+- [What does the response mean?](./documentation/response.md)
+- [How do we generate the response?](./documentation/breakdown.md)
 
 ## Team
 
@@ -116,15 +114,17 @@ This tool is developed by people with diverse affiliations. The following are th
 
 | Name                                                                 | Email                        | Affiliation                                          |
 |----------------------------------------------------------------------|------------------------------|------------------------------------------------------|
-| [Shahriar Elahi Dhruvo]()                                            | shahriardhruvo119@gmail.com  | Shahjalal University of Science & Technology, Sylhet |
+| [Shahriar Elahi Dhruvo](https://www.linkedin.com/in/shahriardhruvo/)                                            | shahriardhruvo119@gmail.com  | Shahjalal University of Science & Technology, Sylhet |
 | [Md. Rakibul Hasan Ranak](https://www.linkedin.com/in/rakibulranak/) | rakibulhasanranak1@gmail.com | Shahjalal University of Science & Technology, Sylhet |
-| [Mahfuzur Rahman Emon]()                                             | emon.swe.sust@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
+| [Mahfuzur Rahman Emon](https://www.linkedin.com/in/emon-swe-sust/)                                             | emon.swe.sust@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
-| [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |[comment]: #| [Dr. {Farig vai}]()                                                  |||| [Dr. {Mamun sir}]()                                                  |      | Jahangirnagar University, Dhaka                      |
-| [Asif Shahriyar Shushmit]()                                          | sushmit@ieee.org             | Bengali.ai                                           |
-| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | |
+| [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |
+| [Dr. Farig Yousuf Sadeque](https://www.bracu.ac.bd/about/people/farig-yousuf-sadeque)|farigsadeque@gmail.com | BRAC University, Dhaka|
+| [Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
+| [Asif Shahriyar Shushmit](https://bd.linkedin.com/in/sushmit109)                                          | sushmit@ieee.org             | Bengali.ai                                           |
+| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | BRAC University, Dhaka|
 
 
-Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose `indic grapheme` parser and `bn unicode normalizer`, which are required dependencies in this tool.
+Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose [`indic grapheme parser`](https://github.com/mnansary/indicparser) and [`bn unicode normalizer`](https://github.com/mnansary/bnUnicodeNormalizer), which are required dependencies in this tool.
 
-In collaboration with: [Bengali.ai](https://bengali.ai/), [SUST](https://www.sust.edu/), [Jahangirnagar University](https://www.jnu.ac.bd/)
+In collaboration with: [Bengali.ai](https://bengali.ai/), [SUST](https://www.sust.edu/), [Jahangirnagar University](https://www.jnu.ac.bd/), [BRAC University](https://www.bracu.ac.bd)
