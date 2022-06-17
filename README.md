@@ -122,7 +122,9 @@ This tool is developed by people with diverse affiliations. The following are th
 | [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |[comment]: #| [Dr. {Farig vai}]()                                                  |||| [Dr. {Mamun sir}]()                                                  |      | Jahangirnagar University, Dhaka                      |
 | [Asif Shahriyar Shushmit]()                                          | sushmit@ieee.org             | Bengali.ai                                           |
-| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  |
+| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | |
+
+
 Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose `indic grapheme` parser and `bn unicode normalizer`, which are required dependencies in this tool.
 
 In collaboration with: [Bengali.ai](https://bengali.ai/), [SUST](https://www.sust.edu/), [Jahangirnagar University](https://www.jnu.ac.bd/)
