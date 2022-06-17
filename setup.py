@@ -21,6 +21,7 @@ setuptools.setup(
     include_package_data=True,
     package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt', 'include src/bengali_analyzer/assets/*.json', 'src/bengali_analyzer/assets_orig/*.csv', 'src/bengali_analyzer/assets_orig/*.txt', 'include src/bengali_analyzer/assets_orig/*.json']},
     classifiers=[
+        "Development Status :: 3 - Alpha"
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: BSD License",
         "Operating System :: OS Independent",
