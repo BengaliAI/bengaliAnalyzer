@@ -33,57 +33,6 @@ def normalize_token(word):
     return normalized_token["normalized"]
 
 
-def remove_symbols(string_line):
-    clean_string = string_line
-    symbols = [
-        "০",
-        "১",
-        "২",
-        "৩",
-        "৪",
-        "৫",
-        "৬",
-        "৭",
-        "৮",
-        "৯",
-        "_",
-        "-",
-        "(",
-        ")",
-        " ",
-        ".",
-        ";",
-        "[",
-        "]",
-        "'",
-        "&",
-        ".",
-        ",",
-        ";",
-        ":",
-        "!",
-        "?",
-        '"',
-        "'",
-        "`",
-        "~",
-        "^",
-        "*",
-        "(",
-        ")",
-        "[",
-        "]",
-        "{",
-        "}",
-        "।",
-    ]  # Add more if necessary # ? -> '’'
-    symbols += string.ascii_letters
-    for symbol in symbols:
-        if symbol in clean_string:
-            clean_string = clean_string.replace(symbol, "")
-    return clean_string
-
-
 def prepare_special_suffixes(datafile):
     data = pandas.read_csv(
         datafile, encoding="utf8", header=None, names=["keys", "values"]
@@ -96,24 +45,6 @@ def prepare_special_suffixes(datafile):
         _value = data.iloc[idx, 1]
         dictionary[_key] = _value
     return dictionary
-
-
-def prepare_non_verb_data(data_file):
-    data = pandas.read_csv(
-        data_file, encoding="utf8", header=None, names=["keys", "values"]
-    )
-    data.dropna(inplace=True)
-    data.reset_index(drop=True, inplace=True)
-    data_dict = {}
-
-    for idx in range(len(data)):
-        _key = remove_symbols(data.iloc[idx, 0])
-        _value = remove_symbols(data.iloc[idx, 1])
-        if data_dict.get(_key):
-            data_dict[_key].append(_value)
-        else:
-            data_dict[_key] = [_value]
-    return data_dict
 
 
 def prepare_word_list_data(data_file):
@@ -138,7 +69,6 @@ def prepare_word_list_data(data_file):
 
 
 def prepare_pronoun_data(data_file):
-    data = pandas.read_csv(data_file, encoding="utf8", delimiter=",")
     data_dict = {}
     with open(data_file, "r", encoding="utf8") as csvfile:
         datareader = csv.reader(csvfile)
@@ -229,13 +159,12 @@ def generate_dictionary(file):
                     line = line.replace(noisy_separator, ",")
                 line = line.split(",")
                 for word in line:
-                    word = remove_symbols(word).strip()
+                    word = word.strip()
                     if word != "" and word[-1] != "্":
                         dictionary[word] = []
             else:
-                line = remove_symbols(line)
                 if line != "" and line[-1] != "্":
-                    dictionary[remove_symbols(line.strip())] = []
+                    dictionary[(line.strip())] = []
     return dictionary
 
 
@@ -264,10 +193,6 @@ def load_data():
     verb_data, verb_data_1, verb_data_2, non_finite_verbs = prepare_verb_data(
         verb_data, nonFiniteVerb_data
     )
-
-    # Generate non-verb data
-    # non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
-    # non_verb_words = prepare_non_verb_data(non_verb_words)
 
     # Generate word-list data
     big_word_list = os.path.join(asset_directory, "wordListPoS.csv")

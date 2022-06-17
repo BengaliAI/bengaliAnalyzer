@@ -28,7 +28,7 @@ Or,
 1. Download the whole repo as a compressed file.
 2. Extract the compressed file.
 3. Open a terminal at the base directory of the extracted folder.
-4. Type `pip install .`.
+4. Type `pip install .` and hit enter.
 
 ## Local Environment
 
@@ -53,13 +53,29 @@ from bengali_analyzer import bengali_analyzer as bla
 
 And then pass the text for analysis.
 
+- For text analyzing:
+
 ```python
 tokens = bla.analyze_sentence(text)
 ```
 
+- For Parts of Speech tagging:
+
+```python
+tokens = bla.analyze_pos(text)
+```
+
+- For lemma parsing:
+
+```python
+tokens = bla.lemmatize_sentence(text)
+```
+
 ### Response
 
-The response will return `tokens` (data type : `dictionary`) which has each `token` as its `key`. The following dimension will be present for each `token`:
+- For `analyze_sentence(text)` :
+
+Structure:
 
 ```python
 token = {
@@ -104,6 +120,106 @@ token = {
         }
 ```
 
+Example:
+
+```md
+text: "২১শে বক বোকাদের একটা ভাল দিন?"
+
+response:
+{'২১শে': {'global_index': [[0, 3]],
+  'numeric': {'digit': '২১', 'weight': 'শ', 'suffix': ['ে']},
+  'composite_flag': False,
+  'special_entity': {'related_indices': [[0, 3], [5, 6], [8, 14]],
+   'space_indices': [4, 7]}},
+ 'বক': {'global_index': [[5, 6]],
+  'pos': ['বিশেষ্য'],
+  'composite_flag': False,
+  'special_entity': {'related_indices': [[0, 3], [5, 6], [8, 14]],
+   'space_indices': [4, 7]}},
+ 'বোকাদের': {'global_index': [[8, 14]],
+  'composite_flag': False,
+  'special_entity': {'related_indices': [[0, 3], [5, 6], [8, 14]],
+   'space_indices': [4, 7],
+   'suffix': 'দের'}},
+ 'একটা': {'global_index': [[16, 19]],
+  'numeric': {'literal': 'এক', 'suffix': ['টা']},
+  'pronoun': {'pronoun_tag': 'Pro.Indef', 'number_tag': 'Sing'},
+  'pos': ['বিশেষণ'],
+  'composite_flag': False},
+ 'ভাল': {'global_index': [[21, 23]],
+  'verb': {'parent_verb': ['ভালা'],
+   'tp': [{'tense': 'bo', 'person': 'tu'}],
+   'related_indices': [[21, 23]],
+   'Language_Form': 'standard'},
+  'pos': ['বিশেষ্য'],
+  'composite_flag': False},
+ 'দিন': {'global_index': [[25, 27]],
+  'verb': {'parent_verb': ['দেওয়া'],
+   'tp': [{'tense': 'bo', 'person': 'ap'}],
+   'related_indices': [[25, 27]],
+   'Language_Form': 'standard'},
+  'pos': ['বিশেষ্য'],
+  'composite_flag': False,
+  'special_entity': {'related_indices': [[25, 27]]}},
+ '?': {'global_index': [[28, 28]],
+  'punctuation_flag': True,
+  'pos': ['punc'],
+  'composite_flag': False}}
+```
+
+- For `analyze_pos(text)`:
+The the mother list will contain all the tokens and each child list contains the `PoS` taggins of that token.
+
+Structure :
+
+```python
+list(list())
+```
+
+Example:
+
+```md
+text: "আমার ফ্যামিলি প্রবলেমের কারণে কুয়েটে পড়াই হবে না কিন্তু টিউশন করে সাপোর্ট লাগবে এজন্য চুয়েট চুজ করা ভুল হবে? খেতে থাকবই খেতে থাকব"
+
+response:
+[['pronoun', 'pronoun'],
+ ['undefined'],
+ ['undefined'],
+ ['undefined'],
+ ['undefined'],
+ ['verb', 'finite_verb', 'non_finite_verb'],
+ ['verb', 'verb', 'finite_verb'],
+ ['conjunction', 'noun'],
+ ['conjunction'],
+ ['undefined'],
+ ['verb', 'finite_verb', 'non_finite_verb'],
+ ['undefined'],
+ ['verb', 'finite_verb'],
+ ['conjunction', 'adverb'],
+ ['undefined'],
+ ['undefined'],
+ ['adverb', 'finite_verb', 'non_finite_verb'],
+ ['noun', 'adjective'],
+ ['verb', 'verb', 'finite_verb'],
+ ['punctuation'],
+ ['verb', 'verb', 'finite_verb', 'non_finite_verb'],
+ ['verb', 'verb', 'finite_verb', 'non_finite_verb']]
+```
+
+- For `lemmatize_sentence(text)`:
+Structure :
+
+```python
+list(list())
+```
+
+Example:
+
+```md
+text : "অর্থনীতিবিদদের ভালো কাজ দেয়া উচিত।"
+respone : [['অর্থনীতিবিদ'], ['ভালা'], ['কাজ'], ['দেয়ানো'], ['উচিত'], ['।']]
+```
+
 ## Quick Guide
 
 - [What does the response mean?](./documentation/response.md)
@@ -124,7 +240,6 @@ This tool is developed by people with diverse affiliations. The following are th
 | [Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
 | [Asif Shahriyar Shushmit](https://bd.linkedin.com/in/sushmit109)                                          | sushmit@ieee.org             | Bengali.ai                                           |
 | [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | BRAC University, Dhaka|
-
 
 Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose [`indic grapheme parser`](https://github.com/mnansary/indicparser) and [`bn unicode normalizer`](https://github.com/mnansary/bnUnicodeNormalizer), which are required dependencies in this tool.
 
