@@ -462,16 +462,18 @@ class BengaliAnalyzer:
 
     def analyze_pos(self, sentence):
         bangla_pos_to_english_pos = {
-            "বিশেষণ": "Adjective",
-            "বিশেষ্য": "Noun",
+            "বিশেষণ": "adjective",
+            "বিশেষ্য": "noun",
             "সর্বনাম": "pronoun",
-            "অব্যয়": "Conjunction",
+            "অব্যয়": "conjunction",
             "ক্রিয়া": "verb",
-            "ক্রিয়াবিশেষণ": "Adverb",
-            "ক্রিয়াবিশেষ্য": "Adverb",
-            "obboy": "Conjunction",
+            "ক্রিয়াবিশেষণ": "adverb",
+            "ক্রিয়াবিশেষ্য": "adverb",
+            "obboy": "conjunction",
             "kriya": "ক্রিয়া",
             "bisheshon": "বিশেষণ",
+            "pronoun":"pronoun",
+            "verb": "verb"
         }
 
         analyzed_res = self.analyze_sentence(sentence)
@@ -505,7 +507,7 @@ class BengaliAnalyzer:
                             "non_finite" in body["verb"]
                             and body["verb"]["non_finite"] == True
                         ):
-                            pos.append("Non-Finite_Verb")
+                            pos.append("non_finite_verb")
 
                         related_indexes = word_obj["verb"]["related_indices"]
                         related_indexes.sort(key=lambda x: x[0])
