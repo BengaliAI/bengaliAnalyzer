@@ -27,7 +27,8 @@ Or,
 
 1. Download the whole repo as a compressed file.
 2. Extract the compressed file.
-3. OPen
+3. Open a terminal at the base directory of the extracted folder.
+4. Type `pip install .`.
 
 ## Local Environment
 
