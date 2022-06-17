@@ -294,11 +294,11 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
-        #IGNORE_FILES = []
-        #THIS_DIR = os.path.dirname(os.path.abspath(__file__))
-        #ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
+        IGNORE_FILES = ["prefixes.csv", "suffixes.csv", "special_suffixes.csv"]
+        THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+        ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
-        #normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
+        normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
