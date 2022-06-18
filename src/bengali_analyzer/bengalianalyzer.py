@@ -426,19 +426,19 @@ class BengaliAnalyzer:
                 if global_index not in already_covered_words:
                     if "verb" in word_obj:
                         full_word = word
-                        pos = []
-                        if "pos" in body:
-                            for p in body["pos"]:
-                                pos.append(bangla_pos_to_english_pos[p])
+                        pos = ["verb"]
+                        # if "pos" in body:
+                        #     for p in body["pos"]:
+                        #         pos.append(bangla_pos_to_english_pos[p])
 
-                        if "tp" in body["verb"]:
-                            pos.append("finite_verb")
+                        # if "tp" in body["verb"]:
+                        #     pos.append("finite_verb")
 
-                        if (
-                            "non_finite" in body["verb"]
-                            and body["verb"]["non_finite"] == True
-                        ):
-                            pos.append("non_finite_verb")
+                        # if (
+                        #     "non_finite" in body["verb"]
+                        #     and body["verb"]["non_finite"] == True
+                        # ):
+                        #     pos.append("non_finite_verb")
 
                         related_indexes = word_obj["verb"]["related_indices"]
                         related_indexes.sort(key=lambda x: x[0])
@@ -453,8 +453,7 @@ class BengaliAnalyzer:
                                 if relatedWord != -1:
                                     word = word + " " + relatedWord
                                     already_covered_words.append(related_index)
-                                    if "finite_verb" in pos:
-                                        pos = ["finite_verb"]
+                                    pos = ["contentative_verb"]
                                     break
 
                     elif "pronoun" in body:
