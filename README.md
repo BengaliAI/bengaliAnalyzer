@@ -78,7 +78,8 @@ tokens = bla.lemmatize_sentence(text)
 Structure:
 
 ```python
-token = {
+token = {   
+            "numeric_flag": bool,
             "global_index": [(int,int)],
             "punctuation_flag": bool,
             "numeric": {
@@ -123,45 +124,41 @@ token = {
 Example:
 
 ```md
-text: "২১শে বক বোকাদের একটা ভাল দিন?"
+text: "অর্থনীতিবিদদের ভালো কাজ দেয়া উচিত।"
 
 response:
-{'২১শে': {'global_index': [[0, 3]],
-  'numeric': {'digit': '২১', 'weight': 'শ', 'suffix': ['ে']},
-  'composite_flag': False,
-  'special_entity': {'related_indices': [[0, 3], [5, 6], [8, 14]],
-   'space_indices': [4, 7]}},
- 'বক': {'global_index': [[5, 6]],
+{'অর্থনীতিবিদদের': {'numeric_flag': False,
+  'global_index': [[0, 13]],
   'pos': ['বিশেষ্য'],
   'composite_flag': False,
-  'special_entity': {'related_indices': [[0, 3], [5, 6], [8, 14]],
-   'space_indices': [4, 7]}},
- 'বোকাদের': {'global_index': [[8, 14]],
-  'composite_flag': False,
-  'special_entity': {'related_indices': [[0, 3], [5, 6], [8, 14]],
-   'space_indices': [4, 7],
-   'suffix': 'দের'}},
- 'একটা': {'global_index': [[16, 19]],
-  'numeric': {'literal': 'এক', 'suffix': ['টা']},
-  'pronoun': {'pronoun_tag': 'Pro.Indef', 'number_tag': 'Sing'},
+  'composite_word': {'suffix': 'দের',
+   'stand_alone_words': ['অর্থ', 'নীতি', 'বিদ']}},
+ 'ভালো': {'numeric_flag': False,
+  'global_index': [[15, 18]],
+  'verb': {'parent_verb': ['ভালা'],
+   'tp': [{'tense': 'bo', 'person': 'tm'}, {'tense': 'sb', 'person': 'tm'}],
+   'related_indices': [[15, 18]],
+   'Language_Form': 'standard'},
+  'pos': ['বিশেষ্য', 'বিশেষণ', 'অব্যয়'],
+  'composite_flag': False},
+ 'কাজ': {'numeric_flag': False,
+  'global_index': [[20, 22]],
+  'pos': ['বিশেষ্য'],
+  'composite_flag': False},
+ 'দেয়া': {'numeric_flag': False,
+  'global_index': [[24, 27]],
+  'verb': {'parent_verb': ['দেয়ানো'],
+   'tp': [{'tense': 'bo', 'person': 'tu'}],
+   'related_indices': [[24, 27]],
+   'Language_Form': 'standard'},
+  'pos': ['বিশেষ্য'],
+  'composite_flag': False},
+ 'উচিত': {'numeric_flag': False,
+  'global_index': [[29, 32]],
   'pos': ['বিশেষণ'],
   'composite_flag': False},
- 'ভাল': {'global_index': [[21, 23]],
-  'verb': {'parent_verb': ['ভালা'],
-   'tp': [{'tense': 'bo', 'person': 'tu'}],
-   'related_indices': [[21, 23]],
-   'Language_Form': 'standard'},
-  'pos': ['বিশেষ্য'],
-  'composite_flag': False},
- 'দিন': {'global_index': [[25, 27]],
-  'verb': {'parent_verb': ['দেওয়া'],
-   'tp': [{'tense': 'bo', 'person': 'ap'}],
-   'related_indices': [[25, 27]],
-   'Language_Form': 'standard'},
-  'pos': ['বিশেষ্য'],
-  'composite_flag': False,
-  'special_entity': {'related_indices': [[25, 27]]}},
- '?': {'global_index': [[28, 28]],
+ '।': {'numeric_flag': False,
+  'global_index': [[33, 33]],
   'punctuation_flag': True,
   'pos': ['punc'],
   'composite_flag': False}}
@@ -217,7 +214,7 @@ Example:
 
 ```md
 text : "অর্থনীতিবিদদের ভালো কাজ দেয়া উচিত।"
-respone : [['অর্থনীতিবিদ'], ['ভালা'], ['কাজ'], ['দেয়ানো'], ['উচিত'], ['।']]
+respone : ['অর্থনীতিবিদ', 'ভালা/ভালো, 'কাজ', 'দেয়ানো', 'উচিত', '।']
 ```
 
 ## Quick Guide
@@ -237,9 +234,10 @@ This tool is developed by people with diverse affiliations. The following are th
 | [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |
 | [Dr. Farig Yousuf Sadeque](https://www.bracu.ac.bd/about/people/farig-yousuf-sadeque)|farigsadeque@gmail.com | BRAC University, Dhaka|
-| [Dr. Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
+| [Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
 | [Asif Shahriyar Shushmit](https://bd.linkedin.com/in/sushmit109)                                          | sushmit@ieee.org             | Bengali.ai                                           |
 | [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | BRAC University, Dhaka|
+|[Sazia Mehnaz](https://www.linkedin.com/in/sazia-mehnaz-196756202)|sayma.iict@gmail.com|Bengali.ai|
 
 Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose [`indic grapheme parser`](https://github.com/mnansary/indicparser) and [`bn unicode normalizer`](https://github.com/mnansary/bnUnicodeNormalizer), which are required dependencies in this tool.
 

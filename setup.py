@@ -7,7 +7,7 @@ setuptools.setup(
     name="bengalianalyzer",
     license="BSD 3-Clause " "New" " or " "Revised" " License",
     license_files=("LICENSE.txt",),
-    version="0.0.108",
+    version="0.0.109",
     author="A. A. Noman Ansary",
     author_email="showrav.ansary.bd@gmail.com",
     description="A package for analyzing entities present in Bengali sentence",

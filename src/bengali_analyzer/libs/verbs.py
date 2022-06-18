@@ -265,7 +265,7 @@ class VerbAnalyzer:
                     tokens[y]["verb"]["parent_verb"].append(x["parent_verb"])
                 # tokens[y]["verb"]["non_finite"] = x["non_finite"]
                 tokens[y]["verb"]["Language_Form"] = x["Language_Form"]
-                tokens[y]["pos"].append("verb")
+                tokens[y]["pos"].append("ক্রিয়া")
         return verb_indexes
 
     # print(sentence)

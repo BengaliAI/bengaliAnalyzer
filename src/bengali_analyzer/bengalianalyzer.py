@@ -257,6 +257,7 @@ class BengaliAnalyzer:
     @staticmethod
     def tokenize_sentence(sentence):
         token = {
+            "numeric_flag": False,
             "global_index": [],
             "punctuation_flag": True,
             "numeric": {"digit": None, "literal": None, "weight": None, "suffix": []},
@@ -307,6 +308,7 @@ class BengaliAnalyzer:
             "`",
             "~",
             "^",
+            '"',
             "*",
             "(",
             ")",
@@ -314,7 +316,22 @@ class BengaliAnalyzer:
             "]",
             "{",
             "}",
+            "|",
             "।",
+            "৳",
+            "@",
+            "#",
+            "$",
+            "%",
+            "&",
+            "_",
+            "+",
+            "=",
+            "-",
+            "<",
+            ">",
+            "/",
+            "\\"
         }
 
         string_buffer = ""
@@ -427,9 +444,9 @@ class BengaliAnalyzer:
                     if "verb" in word_obj:
                         full_word = word
                         pos = ["verb"]
-                        # if "pos" in body:
-                        #     for p in body["pos"]:
-                        #         pos.append(bangla_pos_to_english_pos[p])
+                        if "pos" in body:
+                            for p in body["pos"]:
+                                pos.append(bangla_pos_to_english_pos[p])
 
                         # if "tp" in body["verb"]:
                         #     pos.append("finite_verb")
