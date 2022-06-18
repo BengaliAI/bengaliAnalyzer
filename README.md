@@ -168,12 +168,12 @@ response:
 ```
 
 - For `analyze_pos(text)`:
-The the mother list will contain all the tokens and each child list contains the `PoS` taggins of that token.
+The the mother list will contain all the tokens and each child list contains the `PoS` taggings of that token.
 
 Structure :
 
 ```python
-list(list())
+dict(str:dict(str:list()))
 ```
 
 Example:
@@ -182,31 +182,31 @@ Example:
 text: "আমার ফ্যামিলি প্রবলেমের কারণে কুয়েটে পড়াই হবে না কিন্তু টিউশন করে সাপোর্ট লাগবে এজন্য চুয়েট চুজ করা ভুল হবে? খেতে থাকবই খেতে থাকব"
 
 response:
-[['pronoun', 'pronoun'],
- ['undefined'],
- ['undefined'],
- ['undefined'],
- ['undefined'],
- ['verb', 'finite_verb', 'non_finite_verb'],
- ['verb', 'verb', 'finite_verb'],
- ['conjunction', 'noun'],
- ['conjunction'],
- ['undefined'],
- ['verb', 'finite_verb', 'non_finite_verb'],
- ['undefined'],
- ['verb', 'finite_verb'],
- ['conjunction', 'adverb'],
- ['undefined'],
- ['undefined'],
- ['adverb', 'finite_verb', 'non_finite_verb'],
- ['noun', 'adjective'],
- ['verb', 'verb', 'finite_verb'],
- ['punctuation'],
- ['verb', 'verb', 'finite_verb', 'non_finite_verb'],
- ['verb', 'verb', 'finite_verb', 'non_finite_verb']]
+{'আমার': {'pos': ['pronoun']},
+ 'ফযামিলি': {'pos': ['undefined']},
+ 'প্রবলেমের': {'pos': ['undefined']},
+ 'কারণে': {'pos': ['undefined']},
+ 'কুয়েটে': {'pos': ['undefined']},
+ 'পড়াই': {'pos': ['verb']},
+ 'হবে': {'pos': ['verb']},
+ 'না': {'pos': ['conjunction', 'noun']},
+ 'কিন্তু': {'pos': ['conjunction']},
+ 'টিউশন': {'pos': ['undefined']},
+ 'করে': {'pos': ['verb']},
+ 'সাপোর্ট': {'pos': ['undefined']},
+ 'লাগবে': {'pos': ['verb']},
+ 'এজন্য': {'pos': ['conjunction', 'adverb']},
+ 'চুয়েট': {'pos': ['undefined']},
+ 'চুজ': {'pos': ['undefined']},
+ 'করা': {'pos': ['verb']},
+ 'ভুল': {'pos': ['adjective', 'noun']},
+ '?': {'pos': ['punctuation']},
+ 'খেতে থাকবই': {'pos': ['contentative_verb']},
+ 'খেতে থাকব': {'pos': ['contentative_verb']}}
 ```
 
 - For `lemmatize_sentence(text)`:
+
 Structure :
 
 ```python
@@ -237,7 +237,7 @@ This tool is developed by people with diverse affiliations. The following are th
 | [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |
 | [Dr. Farig Yousuf Sadeque](https://www.bracu.ac.bd/about/people/farig-yousuf-sadeque)|farigsadeque@gmail.com | BRAC University, Dhaka|
-| [Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
+| [Dr. Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
 | [Asif Shahriyar Shushmit](https://bd.linkedin.com/in/sushmit109)                                          | sushmit@ieee.org             | Bengali.ai                                           |
 | [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | BRAC University, Dhaka|
 
