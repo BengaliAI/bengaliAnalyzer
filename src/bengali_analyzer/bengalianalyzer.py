@@ -400,8 +400,8 @@ class BengaliAnalyzer:
             "ক্রিয়াবিশেষণ": "adverb",
             "ক্রিয়াবিশেষ্য": "adverb",
             "obboy": "conjunction",
-            "kriya": "ক্রিয়া",
-            "bisheshon": "বিশেষণ",
+            "kriya": "verb",
+            "bisheshon": "adjective",
             "pronoun": "pronoun",
             "verb": "verb"
         }
@@ -413,7 +413,7 @@ class BengaliAnalyzer:
         #     json.dump(res, f, ensure_ascii=False,
         #               default=self.utils.serializeSets, indent=4)
         word_objects = []
-        pos_list = []
+
         already_covered_words = []
 
         for word_obj in res:
@@ -425,6 +425,7 @@ class BengaliAnalyzer:
             for global_index in indexes:
                 if global_index not in already_covered_words:
                     if "verb" in word_obj:
+                        full_word = word
                         pos = []
                         if "pos" in body:
                             for p in body["pos"]:
@@ -450,7 +451,10 @@ class BengaliAnalyzer:
                                     analyzed_res, related_index, global_index
                                 )
                                 if relatedWord != -1:
+                                    word = word + " " + relatedWord
                                     already_covered_words.append(related_index)
+                                    if "finite_verb" in pos:
+                                        pos = ["finite_verb"]
                                     break
 
                     elif "pronoun" in body:
@@ -473,17 +477,27 @@ class BengaliAnalyzer:
                     already_covered_words.append(global_index)
                     if type(global_index) is list:
                         word_objects.append(
-                            {"pos": pos, "index": global_index[0]})
+                            {"pos": pos, "index": global_index[0], "word": word})
                     else:
                         word_objects.append(
-                            {"pos": pos, "index": global_index})
+                            {"pos": pos, "index": global_index, "word": word})
 
         word_objects.sort(key=self.utils.sortFunc)
 
+        pos_dict = {}
         for entry in word_objects:
-            pos_list.append(entry["pos"])
+            uniquePos = set()
+            for p in entry["pos"]:
+                uniquePos.add(p)
 
-        return pos_list
+            entry["pos"] = []
+            for u in uniquePos:
+                entry["pos"].append(u)
+
+            pos_dict[entry["word"]] = {
+                "pos": entry["pos"]
+            }
+        return pos_dict
 
     def lemmatize_sentence(self, sentence, pure_lemmatize=True):
         # res = self.utils.sortResponse(res)
