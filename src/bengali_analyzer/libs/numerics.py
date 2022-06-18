@@ -1,6 +1,15 @@
 class NumericAnalyzer:
-    def __init__(self, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes,
-                 numeric_months, numeric_special_cases, numeric_days):
+    def __init__(
+        self,
+        numeric_digit,
+        numeric_literals,
+        numeric_weights,
+        numeric_suffixes,
+        numeric_prefixes,
+        numeric_months,
+        numeric_special_cases,
+        numeric_days,
+    ):
         self.digits = numeric_digit
         self.literals = numeric_literals
         self.numerical_suffix = numeric_suffixes
@@ -19,12 +28,12 @@ class NumericAnalyzer:
                 digit += char
                 flag = True
         if flag:
-            tokens[text]['Numeric']['Digit'] = digit
+            tokens[text]["numeric"]["digit"] = digit
         return flag
 
     def validate_literal(self, tokens, text, text_copy):
         if text_copy in self.literals:
-            tokens[text]['Numeric']['Literal'] = text_copy
+            tokens[text]["numeric"]["literal"] = text_copy
             return True
         return False
 
@@ -38,7 +47,7 @@ class NumericAnalyzer:
 
         if suffix:
             longest_suffix = max(suffix, key=len)
-            text_copy = text_copy[:- len(longest_suffix)]
+            text_copy = text_copy[: -len(longest_suffix)]
 
         weight = ""
         for x in self.numerical_weight:
@@ -49,24 +58,24 @@ class NumericAnalyzer:
         verdict = False
 
         if weight:
-            text_copy = text_copy[:- len(weight)]
-            
+            text_copy = text_copy[: -len(weight)]
 
-        if self.validate_literal(tokens, text, text_copy) or self.validate_digit(tokens, text, text_copy):
+        if self.validate_literal(tokens, text, text_copy) or self.validate_digit(
+            tokens, text, text_copy
+        ):
             verdict = True
-        
 
         if suffix and verdict:
-            tokens[text]['Numeric']['Suffix'] = suffix
+            tokens[text]["numeric"]["suffix"] = suffix
         if weight and verdict:
-            tokens[text]['Numeric']['Weight'] = weight
-            
+            tokens[text]["numeric"]["weight"] = weight
+
         return verdict
 
     def get_numerics(self, tokens):
         flags = []
         for key, value in tokens.items():
             if self.validate_numeric(tokens, key):
-                flags.extend(tokens[key]["Global_Index"])
+                flags.extend(tokens[key]["global_index"])
 
         return flags

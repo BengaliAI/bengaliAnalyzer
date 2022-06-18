@@ -1,6 +1,7 @@
 import json
 from copy import deepcopy
 
+
 class Utils:
     def sortFunc(self, word):
         return word["index"]
@@ -9,39 +10,45 @@ class Utils:
         sortedRes = []
         sortedList = []
         for word in res:
-            indexes = res[word]['Global_Index']
+            indexes = res[word]["global_index"]
             for index in indexes:
                 if not isinstance(index, int):
-                    sortedRes.append({'word': word, 'index':index[0], 'Global_Index': index})
+                    sortedRes.append(
+                        {"word": word, "index": index[0], "global_index": index}
+                    )
                 else:
-                    sortedRes.append({'word': word, 'index':index, 'Global_Index': index})
+                    sortedRes.append(
+                        {"word": word, "index": index, "global_index": index}
+                    )
         sortedRes.sort(key=self.sortFunc)
         for element in sortedRes:
             obj = {}
-            word = element['word']
-            global_index = element['Global_Index']
+            word = element["word"]
+            global_index = element["global_index"]
             obj = deepcopy(res[word])
-            obj['Orginal_Global_Index'] = obj['Global_Index']
-            obj['Global_Index'] = [global_index]
-            obj['word'] = word
+            obj["Orginal_Global_Index"] = obj["global_index"]
+            obj["global_index"] = [global_index]
+            obj["word"] = word
             sortedList.append(obj)
         return sortedList
 
-
-
-    def getRelatedWords(self, res,related_index, parent_index):
+    def getRelatedWords(self, res, related_index, parent_index):
         for word in res:
             word_obj = res[word]
-            indexes = word_obj['Global_Index']
+            indexes = word_obj["global_index"]
             nonFinite = False
-            if 'Verb' in word_obj:
-                if 'Non_Finite' in word_obj['Verb']:
-                    nonFinite = word_obj['Verb']['Non_Finite']
+            if "verb" in word_obj:
+                if "non_finite" in word_obj["verb"]:
+                    nonFinite = word_obj["verb"]["non_finite"]
             for index in indexes:
                 if type(index) is list:
-                    if index == related_index and index[0] > parent_index[0] and not nonFinite:
+                    if (
+                        index == related_index
+                        and index[0] > parent_index[0]
+                        and not nonFinite
+                    ):
                         return word
-                        
+
         return -1
 
     def serializeSets(self, obj):
@@ -51,7 +58,9 @@ class Utils:
 
     def updateLog(self, dataDict):
         with open("./fullResponse.json", "w", encoding="utf-8") as f:
-            json.dump(dataDict, f, ensure_ascii=False, default=self.serializeSets, indent=4)
+            json.dump(
+                dataDict, f, ensure_ascii=False, default=self.serializeSets, indent=4
+            )
 
     def fixJSONFormat(self, dataDict):
         dataDict = self.simplifyJson(dataDict)
@@ -60,55 +69,54 @@ class Utils:
 
     def simplifyJson(self, data):
         for x in data.copy():
-            # Numeric
-            dataNumeric = data[x]["Numeric"]
+            # numeric
+            dataNumeric = data[x]["numeric"]
             for y in dataNumeric.copy():
-                if(not dataNumeric[y]):
-                    del(data[x]["Numeric"][y])
+                if not dataNumeric[y]:
+                    del data[x]["numeric"][y]
                     ok = 1
-            if(not dataNumeric):
-                del(data[x]["Numeric"])
-            
-            # Punctuation
-            dataPunction = data[x]["Punctuation_Flag"]
-            if(not dataPunction):
-                del(data[x]["Punctuation_Flag"])
-            
-            # Verb
-            dataVerb = data[x]["Verb"]
-            for y in dataVerb.copy():
-                if(not dataVerb[y] or (y=='Emphasizer' and not dataVerb[y][0])):
-                    del(data[x]["Verb"][y])
-                    ok = 1
-            if(not dataVerb):
-                del(data[x]["Verb"])
+            if not dataNumeric:
+                del data[x]["numeric"]
 
-            # Pronoun
-            dataPronoun = data[x]["Pronoun"]
+            # Punctuation
+            dataPunction = data[x]["punctuation_flag"]
+            if not dataPunction:
+                del data[x]["punctuation_flag"]
+
+            # verb
+            dataVerb = data[x]["verb"]
+            for y in dataVerb.copy():
+                if not dataVerb[y] or (y == "emphasizer" and not dataVerb[y][0]):
+                    del data[x]["verb"][y]
+                    ok = 1
+            if not dataVerb:
+                del data[x]["verb"]
+
+            # pronoun
+            dataPronoun = data[x]["pronoun"]
             for y in dataPronoun.copy():
-                if(not dataPronoun[y]):
-                    del(data[x]["Pronoun"][y])
-            if(not dataPronoun):
-                del(data[x]["Pronoun"])
+                if not dataPronoun[y]:
+                    del data[x]["pronoun"][y]
+            if not dataPronoun:
+                del data[x]["pronoun"]
 
             # Pos
-            if(not data[x]["PoS"]):
-                del(data[x]["PoS"])
+            if not data[x]["pos"]:
+                del data[x]["pos"]
 
             # Composite Word
-            dataComposite = data[x]["Composite_Word"]
+            dataComposite = data[x]["composite_word"]
             for y in dataComposite.copy():
-                if(not dataComposite[y]):
-                    del(data[x]["Composite_Word"][y])
-            if(not dataComposite):
-                del(data[x]["Composite_Word"])
+                if not dataComposite[y]:
+                    del data[x]["composite_word"][y]
+            if not dataComposite:
+                del data[x]["composite_word"]
 
             # Special Entity
-            dataSpecial = data[x]["Special_Entity"]
+            dataSpecial = data[x]["special_entity"]
             for y in dataSpecial.copy():
-                if(not dataSpecial[y]):
-                    del(data[x]["Special_Entity"][y])
-            if(not dataSpecial):
-                del(data[x]["Special_Entity"])
+                if not dataSpecial[y]:
+                    del data[x]["special_entity"][y]
+            if not dataSpecial:
+                del data[x]["special_entity"]
         return data
-

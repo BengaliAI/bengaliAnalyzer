@@ -6,6 +6,7 @@ class PronounAnalyzer:
         new_flags = []
         for key, value in tokens.items():
             if key in self.pronoun_words.keys():
-                new_flags.extend(tokens[key]["Global_Index"])
-                tokens[key]["Pronoun"] = self.pronoun_words[key]
+                new_flags.extend(tokens[key]["global_index"])
+                tokens[key]["pronoun"] = self.pronoun_words[key]
+                tokens[key]["pos"].append("pronoun")
         return new_flags

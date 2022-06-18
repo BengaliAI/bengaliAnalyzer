@@ -33,57 +33,6 @@ def normalize_token(word):
     return normalized_token["normalized"]
 
 
-def remove_symbols(string_line):
-    clean_string = string_line
-    symbols = [
-        "০",
-        "১",
-        "২",
-        "৩",
-        "৪",
-        "৫",
-        "৬",
-        "৭",
-        "৮",
-        "৯",
-        "_",
-        "-",
-        "(",
-        ")",
-        " ",
-        ".",
-        ";",
-        "[",
-        "]",
-        "'",
-        "&",
-        ".",
-        ",",
-        ";",
-        ":",
-        "!",
-        "?",
-        '"',
-        "'",
-        "`",
-        "~",
-        "^",
-        "*",
-        "(",
-        ")",
-        "[",
-        "]",
-        "{",
-        "}",
-        "।",
-    ]  # Add more if necessary # ? -> '’'
-    symbols += string.ascii_letters
-    for symbol in symbols:
-        if symbol in clean_string:
-            clean_string = clean_string.replace(symbol, "")
-    return clean_string
-
-
 def prepare_special_suffixes(datafile):
     data = pandas.read_csv(
         datafile, encoding="utf8", header=None, names=["keys", "values"]
@@ -96,24 +45,6 @@ def prepare_special_suffixes(datafile):
         _value = data.iloc[idx, 1]
         dictionary[_key] = _value
     return dictionary
-
-
-def prepare_non_verb_data(data_file):
-    data = pandas.read_csv(
-        data_file, encoding="utf8", header=None, names=["keys", "values"]
-    )
-    data.dropna(inplace=True)
-    data.reset_index(drop=True, inplace=True)
-    data_dict = {}
-
-    for idx in range(len(data)):
-        _key = remove_symbols(data.iloc[idx, 0])
-        _value = remove_symbols(data.iloc[idx, 1])
-        if data_dict.get(_key):
-            data_dict[_key].append(_value)
-        else:
-            data_dict[_key] = [_value]
-    return data_dict
 
 
 def prepare_word_list_data(data_file):
@@ -138,7 +69,6 @@ def prepare_word_list_data(data_file):
 
 
 def prepare_pronoun_data(data_file):
-    data = pandas.read_csv(data_file, encoding="utf8", delimiter=",")
     data_dict = {}
     with open(data_file, "r", encoding="utf8") as csvfile:
         datareader = csv.reader(csvfile)
@@ -229,13 +159,12 @@ def generate_dictionary(file):
                     line = line.replace(noisy_separator, ",")
                 line = line.split(",")
                 for word in line:
-                    word = remove_symbols(word).strip()
+                    word = word.strip()
                     if word != "" and word[-1] != "্":
                         dictionary[word] = []
             else:
-                line = remove_symbols(line)
                 if line != "" and line[-1] != "্":
-                    dictionary[remove_symbols(line.strip())] = []
+                    dictionary[(line.strip())] = []
     return dictionary
 
 
@@ -266,10 +195,6 @@ def load_data():
         verb_data, nonFiniteVerb_data
     )
 
-    # Generate non-verb data
-    # non_verb_words = os.path.join(asset_directory, "non_verbs.csv")
-    # non_verb_words = prepare_non_verb_data(non_verb_words)
-
     # Generate word-list data
     big_word_list = os.path.join(asset_directory, "wordListPoS.csv")
     non_verb_words = prepare_word_list_data(big_word_list)
@@ -297,11 +222,12 @@ def load_data():
 class BengaliAnalyzer:
     def __init__(self):
         # Normalizing the assets
-        IGNORE_FILES = []
+        IGNORE_FILES = ["prefixes.csv", "suffixes.csv", "special_suffixes.csv"]
         THIS_DIR = os.path.dirname(os.path.abspath(__file__))
         ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
-        # normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
+        normalize_assets.normalize(
+            file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
@@ -331,38 +257,38 @@ class BengaliAnalyzer:
     @staticmethod
     def tokenize_sentence(sentence):
         token = {
-            "Global_Index": [],
-            "Punctuation_Flag": True,
-            "Numeric": {"Digit": None, "Literal": None, "Weight": None, "Suffix": []},
-            "Verb": {
-                "Parent_Verb": [],
-                "Emphasizer": None,
-                "TP": None,
-                "Non_Finite": False,
-                "Bigram": False,
-                "Form": None,
-                "Related_Indices": [],
-
+            "global_index": [],
+            "punctuation_flag": True,
+            "numeric": {"digit": None, "literal": None, "weight": None, "suffix": []},
+            "verb": {
+                "parent_verb": [],
+                "emphasizer": None,
+                "tp": None,
+                "non_finite": False,
+                "contentative_verb": False,
+                "form": None,
+                "related_indices": [],
             },
-            "Pronoun": {
-                "Pronoun Tag": None,
-                "Number Tag": None,
-                "Honorificity": None,
-                "Case": None,
-                "Proximity": None,
-                "Encoding": None,
+            "pronoun": {
+                "pronoun_tag": None,
+                "number_tag": None,
+                "honorificity": None,
+                "case": None,
+                "proximity": None,
+                "encoding": None,
             },
-            "PoS": None,
-            "Composite_Word": {
-                "Suffix": None,
-                "Prefix": None,
-                "Stand_Alone_Words": set(),
+            "pos": [],
+            "composite_flag": False,
+            "composite_word": {
+                "suffix": None,
+                "prefix": None,
+                "stand_alone_words": [],
             },
-            "Special_Entity": {
-                "Definition": None,
-                "Related_Indices": [],
-                "SpaceIndices": set(),
-                "Suffix": None,
+            "special_entity": {
+                "definition": None,
+                "related_indices": [],
+                "space_indices": set(),
+                "suffix": None,
             },
         }
         tokens = {}
@@ -409,8 +335,8 @@ class BengaliAnalyzer:
                         global_index = (start_index, end_index)
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
-                        tokens[string_buffer]["Punctuation_Flag"] = False
-                        tokens[string_buffer]["Global_Index"].append(
+                        tokens[string_buffer]["punctuation_flag"] = False
+                        tokens[string_buffer]["global_index"].append(
                             global_index)
             else:
                 if string_buffer != "":
@@ -418,8 +344,8 @@ class BengaliAnalyzer:
                     global_index = (start_index, end_index)
                     if string_buffer not in tokens.keys():
                         tokens[string_buffer] = copy.deepcopy(token)
-                    tokens[string_buffer]["Punctuation_Flag"] = False
-                    tokens[string_buffer]["Global_Index"].append(global_index)
+                    tokens[string_buffer]["punctuation_flag"] = False
+                    tokens[string_buffer]["global_index"].append(global_index)
                     string_buffer = ""
 
                 punctuation_flags.append(index)
@@ -428,9 +354,10 @@ class BengaliAnalyzer:
 
                 if punctuation not in tokens.keys():
                     tokens[punctuation] = copy.deepcopy(token)
-                tokens[punctuation]["Punctuation_Flag"] = True
-                tokens[punctuation]["Global_Index"].append(index)
-
+                tokens[punctuation]["punctuation_flag"] = True
+                idx = (index, index)
+                tokens[punctuation]["global_index"].append(idx)
+                tokens[punctuation]["pos"] = ["punc"]
         unwanted_token = [" ", None]
         tokens = {k: v for k, v in tokens.items() if k not in unwanted_token}
 
@@ -465,60 +392,91 @@ class BengaliAnalyzer:
 
     def analyze_pos(self, sentence):
         bangla_pos_to_english_pos = {
-            "বিশেষণ": "Adjective",
-            "বিশেষ্য": "Noun",
-            "সর্বনাম": "Pronoun",
-            "অব্যয়": "Adjective",
-            "ক্রিয়া": "Verb",
-            "ক্রিয়াবিশেষণ": "Adverb",
-            "ক্রিয়াবিশেষ্য": "Adverb",
-            "obboy": "Adjective",
+            "বিশেষণ": "adjective",
+            "বিশেষ্য": "noun",
+            "সর্বনাম": "pronoun",
+            "অব্যয়": "conjunction",
+            "ক্রিয়া": "verb",
+            "ক্রিয়াবিশেষণ": "adverb",
+            "ক্রিয়াবিশেষ্য": "adverb",
+            "obboy": "conjunction",
             "kriya": "ক্রিয়া",
             "bisheshon": "বিশেষণ",
+            "pronoun": "pronoun",
+            "verb": "verb"
         }
 
-        res = self.analyze_sentence(sentence)
+        analyzed_res = self.analyze_sentence(sentence)
+        res = self.utils.getSortedObjectList(analyzed_res)
 
+        # with open("./testing-souhardya.json", "w", encoding="utf-8") as f:
+        #     json.dump(res, f, ensure_ascii=False,
+        #               default=self.utils.serializeSets, indent=4)
         word_objects = []
         pos_list = []
-        for word in res:
-            body = res[word]
+        already_covered_words = []
+
+        for word_obj in res:
+            word = word_obj["word"]
+            body = word_obj
             pos = ["undefined"]
 
-            if "Verb" in body:
-                pos = []
-                if "PoS" in body:
-                    for p in body["PoS"]:
-                        pos.append(bangla_pos_to_english_pos[p])
+            indexes = body["global_index"]
+            for global_index in indexes:
+                if global_index not in already_covered_words:
+                    if "verb" in word_obj:
+                        pos = []
+                        if "pos" in body:
+                            for p in body["pos"]:
+                                pos.append(bangla_pos_to_english_pos[p])
 
-                if "TP" in body["Verb"]:
-                    pos.append("Finite_Verb")
+                        if "tp" in body["verb"]:
+                            pos.append("finite_verb")
 
-                if "Non_Finite" in body["Verb"] and body["Verb"]["Non_Finite"] == True:
-                    pos.append("Non-Finite_Verb")
+                        if (
+                            "non_finite" in body["verb"]
+                            and body["verb"]["non_finite"] == True
+                        ):
+                            pos.append("non_finite_verb")
 
-            elif "Pronoun" in body:
-                pos = ["Pronoun"]
-                if "PoS" in body:
-                    for p in body["PoS"]:
-                        pos.append(bangla_pos_to_english_pos[p])
+                        related_indexes = word_obj["verb"]["related_indices"]
+                        related_indexes.sort(key=lambda x: x[0])
+                        for related_index in related_indexes:
+                            if (
+                                related_index not in word_obj["Orginal_Global_Index"]
+                                and related_index not in already_covered_words
+                            ):
+                                relatedWord = self.utils.getRelatedWords(
+                                    analyzed_res, related_index, global_index
+                                )
+                                if relatedWord != -1:
+                                    already_covered_words.append(related_index)
+                                    break
 
-            elif "Punctuation_Flag" in body and body["Punctuation_Flag"] == True:
-                pos = ["Punctuation"]
+                    elif "pronoun" in body:
+                        pos = ["pronoun"]
+                        if "pos" in body:
+                            for p in body["pos"]:
+                                pos.append(bangla_pos_to_english_pos[p])
 
-            elif "PoS" in body:
-                t = []
-                for p in body["PoS"]:
-                    t.append(bangla_pos_to_english_pos[p])
-                pos = t
+                    elif (
+                        "punctuation_flag" in body and body["punctuation_flag"] == True
+                    ):
+                        pos = ["punctuation"]
 
-            indexes = body["Global_Index"]
+                    elif "pos" in body:
+                        t = []
+                        for p in body["pos"]:
+                            t.append(bangla_pos_to_english_pos[p])
+                        pos = t
 
-            for index in indexes:
-                if type(index) is list:
-                    word_objects.append({"pos": pos, "index": index[0]})
-                else:
-                    word_objects.append({"pos": pos, "index": index})
+                    already_covered_words.append(global_index)
+                    if type(global_index) is list:
+                        word_objects.append(
+                            {"pos": pos, "index": global_index[0]})
+                    else:
+                        word_objects.append(
+                            {"pos": pos, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
 
@@ -536,26 +494,26 @@ class BengaliAnalyzer:
         analyzed_res = self.analyze_sentence(sentence)
         res = self.utils.getSortedObjectList(analyzed_res)
         for word_obj in res:
-            word = word_obj['word']
-            indexes = word_obj["Global_Index"]
+            word = word_obj["word"]
+            indexes = word_obj["global_index"]
 
-            special_entity_suffix = ''
-            if 'Special_Entity' in word_obj:
-                special_entity = word_obj['Special_Entity']
-                if 'Suffix' in special_entity:
-                    special_entity_suffix = special_entity['Suffix']
+            special_entity_suffix = ""
+            if "special_entity" in word_obj:
+                special_entity = word_obj["special_entity"]
+                if "suffix" in special_entity:
+                    special_entity_suffix = special_entity["suffix"]
 
             for global_index in indexes:
                 words = []
                 if global_index not in already_covered_words:
-                    if "Verb" in word_obj:
+                    if "verb" in word_obj:
                         full_word = word
                         useOriginalWord = False
-                        related_indexes = word_obj["Verb"]["Related_Indices"]
+                        related_indexes = word_obj["verb"]["related_indices"]
                         related_indexes.sort(key=lambda x: x[0])
                         for related_index in related_indexes:
                             if (
-                                related_index not in word_obj['Orginal_Global_Index']
+                                related_index not in word_obj["Orginal_Global_Index"]
                                 and related_index not in already_covered_words
                             ):
                                 relatedWord = self.utils.getRelatedWords(
@@ -570,35 +528,37 @@ class BengaliAnalyzer:
                         if useOriginalWord:
                             words.append(full_word)
                         else:
-                            words.append(word_obj["Verb"]["Parent_Verb"][-1])
-                            if "Emphasizer" in word_obj["Verb"]:
-                                for emphasizer in word_obj["Verb"]["Emphasizer"]:
+                            words.append(word_obj["verb"]["parent_verb"][-1])
+                            if "emphasizer" in word_obj["verb"]:
+                                for emphasizer in word_obj["verb"]["emphasizer"]:
                                     words.append(emphasizer)
 
-                    elif "Composite_Word" in word_obj:
+                    elif "composite_word" in word_obj:
                         if pure_lemmatize:
-                            if "Stand_Alone_Words" in word_obj["Composite_Word"]:
-                                composite_word = ''
-                                for word in word_obj["Composite_Word"]["Stand_Alone_Words"]:
+                            if "stand_alone_words" in word_obj["composite_word"]:
+                                composite_word = ""
+                                for word in word_obj["composite_word"][
+                                    "stand_alone_words"
+                                ]:
                                     composite_word = composite_word + word
                                 words.append(composite_word)
                         else:
-                            if "Prefix" in word_obj["Composite_Word"]:
+                            if "prefix" in word_obj["composite_word"]:
                                 words.append(
-                                    word_obj["Composite_Word"]["Prefix"])
+                                    word_obj["composite_word"]["prefix"])
 
-                            if "Stand_Alone_Words" in word_obj["Composite_Word"]:
+                            if "stand_alone_words" in word_obj["composite_word"]:
                                 words.append(
-                                    word_obj["Composite_Word"]["Stand_Alone_Words"]
+                                    word_obj["composite_word"]["stand_alone_words"]
                                 )
 
-                            if "Suffix" in word_obj["Composite_Word"]:
+                            if "suffix" in word_obj["composite_word"]:
                                 words.append(
-                                    word_obj["Composite_Word"]["Suffix"])
+                                    word_obj["composite_word"]["suffix"])
 
                     else:
-                        if special_entity_suffix != '':
-                            word = word[0:-len(special_entity_suffix)]
+                        if special_entity_suffix != "":
+                            word = word[0: -len(special_entity_suffix)]
                         words.append(word)
 
                     already_covered_words.append(global_index)
