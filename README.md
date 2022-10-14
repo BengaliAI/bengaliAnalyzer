@@ -229,7 +229,7 @@ This tool is developed by people with diverse affiliations. The following are th
 | Name                                                                 | Email                        | Affiliation                                          |
 |----------------------------------------------------------------------|------------------------------|------------------------------------------------------|
 | [Shahriar Elahi Dhruvo](https://www.linkedin.com/in/shahriardhruvo/)                                            | shahriardhruvo119@gmail.com  | Shahjalal University of Science & Technology, Sylhet |
-| [Md. Rakibul Hasan Ranak](https://www.linkedin.com/in/rakibulranak/) | rakibulhasanranak1@gmail.com | Shahjalal University of Science & Technology, Sylhet |
+| [Md. Rakibul Hasan](https://www.linkedin.com/in/rakibulranak/) | rakibulhasanranak1@gmail.com | Shahjalal University of Science & Technology, Sylhet |
 | [Mahfuzur Rahman Emon](https://www.linkedin.com/in/emon-swe-sust/)                                             | emon.swe.sust@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
 | [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |
