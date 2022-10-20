@@ -1,0 +1,36 @@
+{
+    "অর্থনীতিবিদদের": {
+        "pos": [
+            "noun"
+        ]
+    },
+    "ভালো": {
+        "pos": [
+            "verb",
+            "conjunction",
+            "adjective",
+            "noun"
+        ]
+    },
+    "কাজ": {
+        "pos": [
+            "noun"
+        ]
+    },
+    "দেয়া": {
+        "pos": [
+            "verb",
+            "noun"
+        ]
+    },
+    "উচিত": {
+        "pos": [
+            "adjective"
+        ]
+    },
+    "।": {
+        "pos": [
+            "punctuation"
+        ]
+    }
+}
