@@ -1,143 +1,120 @@
 {
-    "ঢাকা": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                0,
-                3
-            ]
-        ],
-        "verb": {
-            "parent_verb": [
-                "ঢাকানো"
-            ],
-            "tp": [
-                {
-                    "tense": "bo",
-                    "person": "tu"
-                }
-            ],
-            "non_finite": true,
-            "related_indices": [
-                [
-                    0,
-                    3
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "pos": [
-            "ক্রিয়া",
-            "বিশেষ্য",
-            "বিশেষণ",
-            "ক্রিয়াবিশেষ্য"
-        ],
-        "composite_flag": false
+  "আমি": {
+    "numeric_flag": false,
+    "global_index": [[0, 2]],
+    "pronoun": {
+      "pronoun_tag": "Pro.Pers1",
+      "number_tag": "Sing",
+      "honorificity": "None",
+      "case": "direct",
+      "proximity": "None",
+      "encoding": "Pro.Pers1.Sing.Non.dir.Non"
     },
-    "অর্থনীতিবিদদের": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                5,
-                18
-            ]
-        ],
-        "pos": [
-            "বিশেষ্য"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": "দের",
-            "stand_alone_words": [
-                "অর্থ",
-                "নীতি",
-                "বিদ"
-            ]
+    "pos": ["pronoun"],
+    "composite_flag": false
+  },
+  "খাই": {
+    "numeric_flag": false,
+    "global_index": [[4, 6]],
+    "verb": {
+      "parent_verb": ["খাওয়া"],
+      "tp": [
+        {
+          "tense": "sb",
+          "person": "am"
         }
+      ],
+      "related_indices": [[4, 6]],
+      "Language_Form": "standard"
     },
-    "আঁকিয়া": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                20,
-                25
-            ]
-        ],
-        "verb": {
-            "parent_verb": [
-                "আঁকা"
-            ],
-            "non_finite": true,
-            "related_indices": [
-                [
-                    20,
-                    25
-                ]
-            ],
-            "Language_Form": "standard"
+    "pos": ["ক্রিয়া", "বিশেষ্য", "ক্রিয়াবিশেষ্য"],
+    "composite_flag": false
+  },
+  "খাইনা": {
+    "numeric_flag": false,
+    "global_index": [[8, 12]],
+    "verb": {
+      "parent_verb": ["খাওয়া"],
+      "tp": [
+        {
+          "tense": "sb",
+          "person": "am"
+        }
+      ],
+      "negation": true,
+      "related_indices": [[8, 12]],
+      "Language_Form": "standard"
+    },
+    "pos": ["ক্রিয়া"],
+    "composite_flag": false
+  },
+  "খাবেনা": {
+    "numeric_flag": false,
+    "global_index": [[14, 19]],
+    "verb": {
+      "parent_verb": ["খাওয়া"],
+      "tp": [
+        {
+          "tense": "sv",
+          "person": "ae"
         },
-        "pos": [
-            "ক্রিয়া"
-        ],
-        "composite_flag": false
-    },
-    "দেয়া": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                27,
-                30
-            ]
-        ],
-        "verb": {
-            "parent_verb": [
-                "দেয়ানো"
-            ],
-            "tp": [
-                {
-                    "tense": "bo",
-                    "person": "tu"
-                }
-            ],
-            "related_indices": [
-                [
-                    27,
-                    30
-                ]
-            ],
-            "Language_Form": "standard"
+        {
+          "tense": "sv",
+          "person": "er"
         },
-        "pos": [
-            "ক্রিয়া",
-            "বিশেষ্য"
-        ],
-        "composite_flag": false
+        {
+          "tense": "sv",
+          "person": "tm"
+        },
+        {
+          "tense": "vo",
+          "person": "tm"
+        }
+      ],
+      "negation": true,
+      "related_indices": [[14, 19]],
+      "Language_Form": "standard"
     },
-    "উচিত": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                32,
-                35
-            ]
-        ],
-        "pos": [
-            "বিশেষণ"
-        ],
-        "composite_flag": false
+    "pos": ["ক্রিয়া"],
+    "composite_flag": false
+  },
+  "খাবনা": {
+    "numeric_flag": false,
+    "global_index": [[21, 25]],
+    "verb": {
+      "parent_verb": ["খাওয়া"],
+      "tp": [
+        {
+          "tense": "sv",
+          "person": "am"
+        }
+      ],
+      "negation": true,
+      "related_indices": [[21, 25]],
+      "Language_Form": "standard"
     },
-    "।": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                36,
-                36
-            ]
-        ],
-        "punctuation_flag": true,
-        "pos": [
-            "punc"
-        ],
-        "composite_flag": false
+    "pos": ["ক্রিয়া"],
+    "composite_flag": false
+  },
+  "হেলেননি": {
+    "numeric_flag": false,
+    "global_index": [[27, 33]],
+    "verb": {
+      "parent_verb": ["হেলা"],
+      "tp": [
+        {
+          "tense": "so",
+          "person": "ap"
+        }
+      ],
+      "negation": true,
+      "related_indices": [[27, 33]],
+      "Language_Form": "standard"
+    },
+    "pos": ["ক্রিয়া", "বিশেষ্য", "বিশেষণ"],
+    "composite_flag": false,
+    "composite_word": {
+      "stand_alone_words": ["হেলে", "ননি"]
     }
+  }
 }

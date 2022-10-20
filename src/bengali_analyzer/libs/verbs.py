@@ -20,13 +20,11 @@ from tkinter.tix import Tree
 
 
 class VerbAnalyzer:
-    def __init__(self, data, data1, data2, non_finite_verbs, verb_negation):
+    def __init__(self, data, data1, data2, non_finite_verbs):
         self.data = data
         self.data1 = data1
         self.data2 = data2
         self.non_finite_verbs = non_finite_verbs
-        self.verb_negation = verb_negation
-        print(verb_negation)
 
     @staticmethod
     def punctuation_remover(sentence):
@@ -71,10 +69,12 @@ class VerbAnalyzer:
         emphasizer_list = []
         emphasizer_characters = ["ই", "ও"]
         non_finte = dict()
+        negation_list = []
 
         # for handling multi-word verb
         # currently only bigrams are being handled
         for idx, each in enumerate(sentence_x_tokens):
+
             first = []
             second = []
             emphasizer_list_temp = []
@@ -117,6 +117,7 @@ class VerbAnalyzer:
                             if s != second[0]:
                                 em2 = emphasizer[1]
                             emphasizer_list.append([em1, em2])
+                            negation_list.append(False)
                             verb_locations.append(
                                 {
                                     "verb": bigrams[-1],
@@ -146,6 +147,8 @@ class VerbAnalyzer:
             if each in self.data1["word"].values:
                 alreadyFound = True
                 emphasizer_list.append([[None]])
+                negation_list.append(self.data[self.data["word"] ==
+                                               each].values[0][4] == 1)
                 verb_locations.append(
                     {
                         "verb": each,
@@ -157,12 +160,14 @@ class VerbAnalyzer:
             if not alreadyFound:
                 # removing last char if it is an emphasis char, and checking the word without it
                 lastChar = each[-1]
+                neg = 'না'
                 if lastChar in emphasizer_characters:
                     temp = each[:-1]
 
                     # check verb which last char does emphasize
                     if temp in self.data1["word"].values:
                         emphasizer_list.append([[lastChar]])
+                        negation_list.append(False)
                         alreadyFound = True
                         verb_locations.append(
                             {
@@ -171,6 +176,18 @@ class VerbAnalyzer:
                                 "original_verb": each,
                             }
                         )
+                elif each[-2:] == neg and each[:-2] in self.data1["word"].values:
+                    alreadyFound = True
+                    emphasizer_list.append([[None]])
+                    negation_list.append(True)
+                    verb_locations.append(
+                        {
+                            "verb": each[:-2],
+                            "location": [idx],
+                            "original_verb": each,
+                            "negation": True
+                        }
+                    )
             non_F = False
             if alreadyFound:
                 if each in self.non_finite_verbs["word"].values or (
@@ -183,6 +200,7 @@ class VerbAnalyzer:
                 if each in self.non_finite_verbs["word"].values:
                     non_F = True
                     emphasizer_list.append([[None]])
+                    negation_list.append(False)
                     verb_locations.append(
                         {
                             "verb": each,
@@ -197,6 +215,7 @@ class VerbAnalyzer:
                 ):
                     non_F = True
                     emphasizer_list.append([[each[-1]]])
+                    negation_list.append(False)
                     verb_locations.append(
                         {
                             "verb": each[:-1],
@@ -236,6 +255,7 @@ class VerbAnalyzer:
                     "tp": tense_person_emp,
                     "non_finite": non_finte[i][0],
                     "Language_Form": "standard",
+                    "negation": negation_list[i]
                 }
             )
 
@@ -269,6 +289,7 @@ class VerbAnalyzer:
                     tokens[y]["verb"]["parent_verb"].append(x["parent_verb"])
                 # tokens[y]["verb"]["non_finite"] = x["non_finite"]
                 tokens[y]["verb"]["Language_Form"] = x["Language_Form"]
+                tokens[y]["verb"]["negation"] = x["negation"]
                 tokens[y]["pos"].append("ক্রিয়া")
         return verb_indexes
 
