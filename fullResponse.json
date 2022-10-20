@@ -1,5 +1,6 @@
 {
     "অর্থনীতিবিদদের": {
+        "numeric_flag": false,
         "global_index": [
             [
                 0,
@@ -30,7 +31,9 @@
             "proximity": null,
             "encoding": null
         },
-        "pos": [],
+        "pos": [
+            "বিশেষ্য"
+        ],
         "composite_flag": false,
         "composite_word": {
             "suffix": "দের",
@@ -49,6 +52,7 @@
         }
     },
     "ভালো": {
+        "numeric_flag": false,
         "global_index": [
             [
                 15,
@@ -99,6 +103,7 @@
             "encoding": null
         },
         "pos": [
+            "ক্রিয়া",
             "বিশেষ্য",
             "বিশেষণ",
             "অব্যয়"
@@ -117,6 +122,7 @@
         }
     },
     "কাজ": {
+        "numeric_flag": false,
         "global_index": [
             [
                 20,
@@ -164,6 +170,7 @@
         }
     },
     "দেয়া": {
+        "numeric_flag": false,
         "global_index": [
             [
                 24,
@@ -210,6 +217,7 @@
             "encoding": null
         },
         "pos": [
+            "ক্রিয়া",
             "বিশেষ্য"
         ],
         "composite_flag": false,
@@ -226,6 +234,7 @@
         }
     },
     "উচিত": {
+        "numeric_flag": false,
         "global_index": [
             [
                 29,
@@ -273,6 +282,7 @@
         }
     },
     "।": {
+        "numeric_flag": false,
         "global_index": [
             [
                 33,

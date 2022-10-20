@@ -1,4 +1,4 @@
-bnunicodenormalizer==0.0.18
+bnunicodenormalizer==0.1.0
 indicparser==0.0.7
 termcolor==1.1.0
 tqdm==4.64.0

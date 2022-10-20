@@ -77,5 +77,6 @@ class NumericAnalyzer:
         for key, value in tokens.items():
             if self.validate_numeric(tokens, key):
                 flags.extend(tokens[key]["global_index"])
+                tokens[key]["numeric_flag"] = True
 
         return flags

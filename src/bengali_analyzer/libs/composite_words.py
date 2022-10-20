@@ -147,6 +147,8 @@ class CompositeWordAnalyzer:
         
         word_without_prefix, prefix = self.get_prefix_extraction(word)
         
+        stand_alone_words = []
+
         if suffix is not None and prefix is not None:
             word = word[len(prefix) :]
             word = word[: -len(suffix)]
@@ -162,6 +164,8 @@ class CompositeWordAnalyzer:
                             suffix
                         ]
                 tokens[key]["composite_word"]["prefix"] = prefix
+
+        
         elif suffix is not None:
             word = word[: -len(suffix)]
             stand_alone_words = self.get_constructing_substrings(word)
@@ -183,3 +187,7 @@ class CompositeWordAnalyzer:
             stand_alone_words = self.get_constructing_substrings(word)
             if stand_alone_words is not None:
                 tokens[key]["composite_word"]["stand_alone_words"] = stand_alone_words
+        
+        if stand_alone_words:
+            longest_stand_alone_word = max(stand_alone_words, key=len)
+            tokens[key]["pos"].extend(self.dictionary_words[longest_stand_alone_word])

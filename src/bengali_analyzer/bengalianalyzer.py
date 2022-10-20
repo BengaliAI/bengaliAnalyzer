@@ -189,7 +189,8 @@ def load_data():
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
-    nonFiniteVerb_data = os.path.join(asset_directory, "banglaNonFiniteVerbs.csv")
+    nonFiniteVerb_data = os.path.join(
+        asset_directory, "banglaNonFiniteVerbs.csv")
     verb_data, verb_data_1, verb_data_2, non_finite_verbs = prepare_verb_data(
         verb_data, nonFiniteVerb_data
     )
@@ -203,10 +204,12 @@ def load_data():
     pronoun_data = prepare_pronoun_data(pronoun_data)
 
     # Generate other data,
-    not_to_be_broken_file = os.path.join(asset_directory, "not_to_be_broken.txt")
+    not_to_be_broken_file = os.path.join(
+        asset_directory, "not_to_be_broken.txt")
     suffix_file = os.path.join(asset_directory, "suffixes.csv")
     prefix_file = os.path.join(asset_directory, "prefixes.csv")
-    special_suffixes_file = os.path.join(asset_directory, "special_suffixes.csv")
+    special_suffixes_file = os.path.join(
+        asset_directory, "special_suffixes.csv")
 
     special_suffixes = prepare_special_suffixes(special_suffixes_file)
     not_to_be_broken = generate_special_entity(not_to_be_broken_file)
@@ -223,7 +226,8 @@ class BengaliAnalyzer:
         THIS_DIR = os.path.dirname(os.path.abspath(__file__))
         ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
-        normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
+        normalize_assets.normalize(
+            file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
@@ -253,6 +257,7 @@ class BengaliAnalyzer:
     @staticmethod
     def tokenize_sentence(sentence):
         token = {
+            "numeric_flag": False,
             "global_index": [],
             "punctuation_flag": True,
             "numeric": {"digit": None, "literal": None, "weight": None, "suffix": []},
@@ -303,6 +308,7 @@ class BengaliAnalyzer:
             "`",
             "~",
             "^",
+            '"',
             "*",
             "(",
             ")",
@@ -310,7 +316,22 @@ class BengaliAnalyzer:
             "]",
             "{",
             "}",
+            "|",
             "।",
+            "৳",
+            "@",
+            "#",
+            "$",
+            "%",
+            "&",
+            "_",
+            "+",
+            "=",
+            "-",
+            "<",
+            ">",
+            "/",
+            "\\"
         }
 
         string_buffer = ""
@@ -332,7 +353,8 @@ class BengaliAnalyzer:
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
                         tokens[string_buffer]["punctuation_flag"] = False
-                        tokens[string_buffer]["global_index"].append(global_index)
+                        tokens[string_buffer]["global_index"].append(
+                            global_index)
             else:
                 if string_buffer != "":
                     string_buffer = normalize_token(string_buffer)
@@ -350,7 +372,7 @@ class BengaliAnalyzer:
                 if punctuation not in tokens.keys():
                     tokens[punctuation] = copy.deepcopy(token)
                 tokens[punctuation]["punctuation_flag"] = True
-                idx = (index,index)
+                idx = (index, index)
                 tokens[punctuation]["global_index"].append(idx)
                 tokens[punctuation]["pos"] = ["punc"]
         unwanted_token = [" ", None]
@@ -395,9 +417,9 @@ class BengaliAnalyzer:
             "ক্রিয়াবিশেষণ": "adverb",
             "ক্রিয়াবিশেষ্য": "adverb",
             "obboy": "conjunction",
-            "kriya": "ক্রিয়া",
-            "bisheshon": "বিশেষণ",
-            "pronoun":"pronoun",
+            "kriya": "verb",
+            "bisheshon": "adjective",
+            "pronoun": "pronoun",
             "verb": "verb"
         }
 
@@ -408,7 +430,7 @@ class BengaliAnalyzer:
         #     json.dump(res, f, ensure_ascii=False,
         #               default=self.utils.serializeSets, indent=4)
         word_objects = []
-        pos_list = []
+
         already_covered_words = []
 
         for word_obj in res:
@@ -420,19 +442,20 @@ class BengaliAnalyzer:
             for global_index in indexes:
                 if global_index not in already_covered_words:
                     if "verb" in word_obj:
-                        pos = []
+                        full_word = word
+                        pos = ["verb"]
                         if "pos" in body:
                             for p in body["pos"]:
                                 pos.append(bangla_pos_to_english_pos[p])
 
-                        if "tp" in body["verb"]:
-                            pos.append("finite_verb")
+                        # if "tp" in body["verb"]:
+                        #     pos.append("finite_verb")
 
-                        if (
-                            "non_finite" in body["verb"]
-                            and body["verb"]["non_finite"] == True
-                        ):
-                            pos.append("non_finite_verb")
+                        # if (
+                        #     "non_finite" in body["verb"]
+                        #     and body["verb"]["non_finite"] == True
+                        # ):
+                        #     pos.append("non_finite_verb")
 
                         related_indexes = word_obj["verb"]["related_indices"]
                         related_indexes.sort(key=lambda x: x[0])
@@ -445,7 +468,9 @@ class BengaliAnalyzer:
                                     analyzed_res, related_index, global_index
                                 )
                                 if relatedWord != -1:
+                                    word = word + " " + relatedWord
                                     already_covered_words.append(related_index)
+                                    pos = ["contentative_verb"]
                                     break
 
                     elif "pronoun" in body:
@@ -467,16 +492,28 @@ class BengaliAnalyzer:
 
                     already_covered_words.append(global_index)
                     if type(global_index) is list:
-                        word_objects.append({"pos": pos, "index": global_index[0]})
+                        word_objects.append(
+                            {"pos": pos, "index": global_index[0], "word": word})
                     else:
-                        word_objects.append({"pos": pos, "index": global_index})
+                        word_objects.append(
+                            {"pos": pos, "index": global_index, "word": word})
 
         word_objects.sort(key=self.utils.sortFunc)
 
+        pos_dict = {}
         for entry in word_objects:
-            pos_list.append(entry["pos"])
+            uniquePos = set()
+            for p in entry["pos"]:
+                uniquePos.add(p)
 
-        return pos_list
+            entry["pos"] = []
+            for u in uniquePos:
+                entry["pos"].append(u)
+
+            pos_dict[entry["word"]] = {
+                "pos": entry["pos"]
+            }
+        return pos_dict
 
     def lemmatize_sentence(self, sentence, pure_lemmatize=True):
         # res = self.utils.sortResponse(res)
@@ -537,7 +574,8 @@ class BengaliAnalyzer:
                                 words.append(composite_word)
                         else:
                             if "prefix" in word_obj["composite_word"]:
-                                words.append(word_obj["composite_word"]["prefix"])
+                                words.append(
+                                    word_obj["composite_word"]["prefix"])
 
                             if "stand_alone_words" in word_obj["composite_word"]:
                                 words.append(
@@ -545,19 +583,22 @@ class BengaliAnalyzer:
                                 )
 
                             if "suffix" in word_obj["composite_word"]:
-                                words.append(word_obj["composite_word"]["suffix"])
+                                words.append(
+                                    word_obj["composite_word"]["suffix"])
 
                     else:
                         if special_entity_suffix != "":
-                            word = word[0 : -len(special_entity_suffix)]
+                            word = word[0: -len(special_entity_suffix)]
                         words.append(word)
 
                     already_covered_words.append(global_index)
 
                     if type(global_index) is list:
-                        word_objects.append({"lemma": words, "index": global_index[0]})
+                        word_objects.append(
+                            {"lemma": words, "index": global_index[0]})
                     else:
-                        word_objects.append({"lemma": words, "index": global_index})
+                        word_objects.append(
+                            {"lemma": words, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
 

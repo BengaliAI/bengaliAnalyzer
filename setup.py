@@ -5,9 +5,9 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="bengalianalyzer",
-    license="BSD 3-Clause ""New"" or ""Revised"" License",
-    license_files=('LICENSE.txt',),
-    version="0.0.107",
+    license="BSD 3-Clause " "New" " or " "Revised" " License",
+    license_files=("LICENSE.txt",),
+    version="0.0.109",
     author="A. A. Noman Ansary",
     author_email="showrav.ansary.bd@gmail.com",
     description="A package for analyzing entities present in Bengali sentence",
@@ -17,9 +17,24 @@ setuptools.setup(
     project_urls={
         "Bug Tracker": "https://github.com/BengaliAI/bengaliAnalyzer/issues",
     },
-    install_requires=['pandas', 'indicparser', 'bnunicodenormalizer', 'tqdm', 'termcolor'],
+    install_requires=[
+        "pandas",
+        "indicparser",
+        "bnunicodenormalizer",
+        "tqdm",
+        "termcolor",
+    ],
     include_package_data=True,
-    package_data={'': ['src/bengali_analyzer/assets/*.csv', 'src/bengali_analyzer/assets/*.txt', 'include src/bengali_analyzer/assets/*.json', 'src/bengali_analyzer/assets_orig/*.csv', 'src/bengali_analyzer/assets_orig/*.txt', 'include src/bengali_analyzer/assets_orig/*.json']},
+    package_data={
+        "": [
+            "src/bengali_analyzer/assets/*.csv",
+            "src/bengali_analyzer/assets/*.txt",
+            "include src/bengali_analyzer/assets/*.json",
+            "src/bengali_analyzer/assets_orig/*.csv",
+            "src/bengali_analyzer/assets_orig/*.txt",
+            "include src/bengali_analyzer/assets_orig/*.json",
+        ]
+    },
     classifiers=[
         "Development Status :: 2 - Pre-Alpha",
         "Programming Language :: Python :: 3",
