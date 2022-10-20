@@ -23,7 +23,7 @@ from .libs import special_entity
 from .libs import pronouns
 from .utilis import utils
 
-global verb_data, verb_data_1, verb_data_2, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+global verb_data, verb_data_1, verb_data_2, verb_negation, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
 
 
 def normalize_token(word):
@@ -109,7 +109,7 @@ def prepare_numeric_data(file):
     )
 
 
-def prepare_verb_data(allVerbData, nonFiniteVerbData):
+def prepare_verb_data(allVerbData, nonFiniteVerbData, verb_negation_data):
     data = pandas.read_csv(allVerbData)
     count = []
     for each in data["word"].values:
@@ -118,7 +118,8 @@ def prepare_verb_data(allVerbData, nonFiniteVerbData):
     data2 = data[data["count"] == 2]
     data1 = data[data["count"] == 1]
     nonFiniteVerbs = pandas.read_csv(nonFiniteVerbData)
-    return data, data1, data2, nonFiniteVerbs
+    verb_negation = pandas.read_csv(verb_negation_data)
+    return data, data1, data2, nonFiniteVerbs, verb_negation
 
 
 def clean_generated_dictionary(dictionary):
@@ -170,7 +171,7 @@ def generate_dictionary(file):
 
 # Required to preload datasets
 def load_data():
-    global verb_data, verb_data_1, verb_data_2, non_finite_verbs, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
+    global verb_data, verb_data_1, verb_data_2, non_finite_verbs, verb_negation, not_to_be_broken, prefixes, suffixes, special_cases, non_verb_words, special_suffixes, pronoun_data, numeric_digit, numeric_literals, numeric_weights, numeric_suffixes, numeric_prefixes, numeric_months, numeric_special_cases, numeric_days
     path = os.path.dirname(os.path.abspath(__file__))
     asset_directory = os.path.join(path, "assets")
 
@@ -189,10 +190,11 @@ def load_data():
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
+    verb_negation = os.path.join(asset_directory, "verb_negation.csv")
     nonFiniteVerb_data = os.path.join(
         asset_directory, "banglaNonFiniteVerbs.csv")
-    verb_data, verb_data_1, verb_data_2, non_finite_verbs = prepare_verb_data(
-        verb_data, nonFiniteVerb_data
+    verb_data, verb_data_1, verb_data_2, non_finite_verbs, verb_negation = prepare_verb_data(
+        verb_data, nonFiniteVerb_data, verb_negation
     )
 
     # Generate word-list data
@@ -242,7 +244,7 @@ class BengaliAnalyzer:
             numeric_days,
         )
         self.verbs_analyzer = verbs.VerbAnalyzer(
-            verb_data, verb_data_1, verb_data_2, non_finite_verbs
+            verb_data, verb_data_1, verb_data_2, non_finite_verbs, verb_negation
         )
         self.non_verbs_analyzer = non_verbs.NonVerbAnalyzer(non_verb_words)
         self.pronoun_analyzer = pronouns.PronounAnalyzer(pronoun_data)
@@ -267,6 +269,7 @@ class BengaliAnalyzer:
                 "tp": None,
                 "non_finite": False,
                 "contentative_verb": False,
+                "negation": False,
                 "form": None,
                 "related_indices": [],
             },

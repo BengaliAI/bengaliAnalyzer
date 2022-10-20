@@ -20,11 +20,13 @@ from tkinter.tix import Tree
 
 
 class VerbAnalyzer:
-    def __init__(self, data, data1, data2, non_finite_verbs):
+    def __init__(self, data, data1, data2, non_finite_verbs, verb_negation):
         self.data = data
         self.data1 = data1
         self.data2 = data2
         self.non_finite_verbs = non_finite_verbs
+        self.verb_negation = verb_negation
+        print(verb_negation)
 
     @staticmethod
     def punctuation_remover(sentence):
@@ -123,8 +125,10 @@ class VerbAnalyzer:
                                 }
                             )
                             tempTokens = bigrams[0].split()
-                            tokens[tempTokens[0]]["verb"]["contentative_verb"] = True
-                            tokens[tempTokens[1]]["verb"]["contentative_verb"] = True
+                            tokens[tempTokens[0]
+                                   ]["verb"]["contentative_verb"] = True
+                            tokens[tempTokens[1]
+                                   ]["verb"]["contentative_verb"] = True
 
                             non_finte[len(verb_locations) - 1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")

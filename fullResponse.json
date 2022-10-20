@@ -1,332 +1,91 @@
 {
-    "অর্থনীতিবিদদের": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                0,
-                13
-            ]
-        ],
-        "punctuation_flag": false,
-        "numeric": {
-            "digit": null,
-            "literal": null,
-            "weight": null,
-            "suffix": []
-        },
-        "verb": {
-            "parent_verb": [],
-            "emphasizer": null,
-            "tp": null,
-            "non_finite": false,
-            "contentative_verb": false,
-            "form": null,
-            "related_indices": []
-        },
-        "pronoun": {
-            "pronoun_tag": null,
-            "number_tag": null,
-            "honorificity": null,
-            "case": null,
-            "proximity": null,
-            "encoding": null
-        },
-        "pos": [
-            "বিশেষ্য"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": "দের",
-            "prefix": null,
-            "stand_alone_words": [
-                "অর্থ",
-                "নীতি",
-                "বিদ"
-            ]
-        },
-        "special_entity": {
-            "definition": null,
-            "related_indices": [],
-            "space_indices": [],
-            "suffix": null
-        }
+  "তোমাকে": {
+    "numeric_flag": false,
+    "global_index": [[0, 5]],
+    "punctuation_flag": false,
+    "numeric": {
+      "digit": null,
+      "literal": null,
+      "weight": null,
+      "suffix": []
     },
-    "ভালো": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                15,
-                18
-            ]
-        ],
-        "punctuation_flag": false,
-        "numeric": {
-            "digit": null,
-            "literal": null,
-            "weight": null,
-            "suffix": []
-        },
-        "verb": {
-            "parent_verb": [
-                "ভালা"
-            ],
-            "emphasizer": [
-                null
-            ],
-            "tp": [
-                {
-                    "tense": "bo",
-                    "person": "tm"
-                },
-                {
-                    "tense": "sb",
-                    "person": "tm"
-                }
-            ],
-            "non_finite": false,
-            "contentative_verb": false,
-            "form": null,
-            "related_indices": [
-                [
-                    15,
-                    18
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "pronoun": {
-            "pronoun_tag": null,
-            "number_tag": null,
-            "honorificity": null,
-            "case": null,
-            "proximity": null,
-            "encoding": null
-        },
-        "pos": [
-            "ক্রিয়া",
-            "বিশেষ্য",
-            "বিশেষণ",
-            "অব্যয়"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": null,
-            "prefix": null,
-            "stand_alone_words": []
-        },
-        "special_entity": {
-            "definition": null,
-            "related_indices": [],
-            "space_indices": [],
-            "suffix": null
-        }
+    "verb": {
+      "parent_verb": [],
+      "emphasizer": null,
+      "tp": null,
+      "non_finite": false,
+      "contentative_verb": false,
+      "negation": false,
+      "form": null,
+      "related_indices": []
     },
-    "কাজ": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                20,
-                22
-            ]
-        ],
-        "punctuation_flag": false,
-        "numeric": {
-            "digit": null,
-            "literal": null,
-            "weight": null,
-            "suffix": []
-        },
-        "verb": {
-            "parent_verb": [],
-            "emphasizer": null,
-            "tp": null,
-            "non_finite": false,
-            "contentative_verb": false,
-            "form": null,
-            "related_indices": []
-        },
-        "pronoun": {
-            "pronoun_tag": null,
-            "number_tag": null,
-            "honorificity": null,
-            "case": null,
-            "proximity": null,
-            "encoding": null
-        },
-        "pos": [
-            "বিশেষ্য"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": null,
-            "prefix": null,
-            "stand_alone_words": []
-        },
-        "special_entity": {
-            "definition": null,
-            "related_indices": [],
-            "space_indices": [],
-            "suffix": null
-        }
+    "pronoun": {
+      "pronoun_tag": "Pro.Pers2",
+      "number_tag": "Sing",
+      "honorificity": "informal",
+      "case": "objective",
+      "proximity": "None"
     },
-    "দেয়া": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                24,
-                27
-            ]
-        ],
-        "punctuation_flag": false,
-        "numeric": {
-            "digit": null,
-            "literal": null,
-            "weight": null,
-            "suffix": []
-        },
-        "verb": {
-            "parent_verb": [
-                "দেয়ানো"
-            ],
-            "emphasizer": [
-                null
-            ],
-            "tp": [
-                {
-                    "tense": "bo",
-                    "person": "tu"
-                }
-            ],
-            "non_finite": false,
-            "contentative_verb": false,
-            "form": null,
-            "related_indices": [
-                [
-                    24,
-                    27
-                ]
-            ],
-            "Language_Form": "standard"
-        },
-        "pronoun": {
-            "pronoun_tag": null,
-            "number_tag": null,
-            "honorificity": null,
-            "case": null,
-            "proximity": null,
-            "encoding": null
-        },
-        "pos": [
-            "ক্রিয়া",
-            "বিশেষ্য"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": null,
-            "prefix": null,
-            "stand_alone_words": []
-        },
-        "special_entity": {
-            "definition": null,
-            "related_indices": [],
-            "space_indices": [],
-            "suffix": null
-        }
+    "pos": ["pronoun"],
+    "composite_flag": false,
+    "composite_word": {
+      "suffix": null,
+      "prefix": null,
+      "stand_alone_words": []
     },
-    "উচিত": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                29,
-                32
-            ]
-        ],
-        "punctuation_flag": false,
-        "numeric": {
-            "digit": null,
-            "literal": null,
-            "weight": null,
-            "suffix": []
-        },
-        "verb": {
-            "parent_verb": [],
-            "emphasizer": null,
-            "tp": null,
-            "non_finite": false,
-            "contentative_verb": false,
-            "form": null,
-            "related_indices": []
-        },
-        "pronoun": {
-            "pronoun_tag": null,
-            "number_tag": null,
-            "honorificity": null,
-            "case": null,
-            "proximity": null,
-            "encoding": null
-        },
-        "pos": [
-            "বিশেষণ"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": null,
-            "prefix": null,
-            "stand_alone_words": []
-        },
-        "special_entity": {
-            "definition": null,
-            "related_indices": [],
-            "space_indices": [],
-            "suffix": null
-        }
-    },
-    "।": {
-        "numeric_flag": false,
-        "global_index": [
-            [
-                33,
-                33
-            ]
-        ],
-        "punctuation_flag": true,
-        "numeric": {
-            "digit": null,
-            "literal": null,
-            "weight": null,
-            "suffix": []
-        },
-        "verb": {
-            "parent_verb": [],
-            "emphasizer": null,
-            "tp": null,
-            "non_finite": false,
-            "contentative_verb": false,
-            "form": null,
-            "related_indices": []
-        },
-        "pronoun": {
-            "pronoun_tag": null,
-            "number_tag": null,
-            "honorificity": null,
-            "case": null,
-            "proximity": null,
-            "encoding": null
-        },
-        "pos": [
-            "punc"
-        ],
-        "composite_flag": false,
-        "composite_word": {
-            "suffix": null,
-            "prefix": null,
-            "stand_alone_words": []
-        },
-        "special_entity": {
-            "definition": null,
-            "related_indices": [],
-            "space_indices": [],
-            "suffix": null
-        }
+    "special_entity": {
+      "definition": null,
+      "related_indices": [],
+      "space_indices": [],
+      "suffix": null
     }
+  },
+  "দেই": {
+    "numeric_flag": false,
+    "global_index": [[7, 9]],
+    "punctuation_flag": false,
+    "numeric": {
+      "digit": null,
+      "literal": null,
+      "weight": null,
+      "suffix": []
+    },
+    "verb": {
+      "parent_verb": ["দেওয়া"],
+      "emphasizer": ["ই"],
+      "tp": [
+        {
+          "tense": "bo",
+          "person": "tu"
+        }
+      ],
+      "non_finite": false,
+      "contentative_verb": false,
+      "negation": false,
+      "form": null,
+      "related_indices": [[7, 9]],
+      "Language_Form": "standard"
+    },
+    "pronoun": {
+      "pronoun_tag": null,
+      "number_tag": null,
+      "honorificity": null,
+      "case": null,
+      "proximity": null,
+      "encoding": null
+    },
+    "pos": ["ক্রিয়া", "ক্রিয়াবিশেষ্য"],
+    "composite_flag": false,
+    "composite_word": {
+      "suffix": null,
+      "prefix": null,
+      "stand_alone_words": []
+    },
+    "special_entity": {
+      "definition": null,
+      "related_indices": [],
+      "space_indices": [],
+      "suffix": null
+    }
+  }
 }

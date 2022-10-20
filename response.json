@@ -1,20 +1,143 @@
-[
-    [
-        "অর্থনীতিবিদ"
-    ],
-    [
-        "ভালা"
-    ],
-    [
-        "কাজ"
-    ],
-    [
-        "দেয়ানো"
-    ],
-    [
-        "উচিত"
-    ],
-    [
-        "।"
-    ]
-]
+{
+    "ঢাকা": {
+        "numeric_flag": false,
+        "global_index": [
+            [
+                0,
+                3
+            ]
+        ],
+        "verb": {
+            "parent_verb": [
+                "ঢাকানো"
+            ],
+            "tp": [
+                {
+                    "tense": "bo",
+                    "person": "tu"
+                }
+            ],
+            "non_finite": true,
+            "related_indices": [
+                [
+                    0,
+                    3
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "pos": [
+            "ক্রিয়া",
+            "বিশেষ্য",
+            "বিশেষণ",
+            "ক্রিয়াবিশেষ্য"
+        ],
+        "composite_flag": false
+    },
+    "অর্থনীতিবিদদের": {
+        "numeric_flag": false,
+        "global_index": [
+            [
+                5,
+                18
+            ]
+        ],
+        "pos": [
+            "বিশেষ্য"
+        ],
+        "composite_flag": false,
+        "composite_word": {
+            "suffix": "দের",
+            "stand_alone_words": [
+                "অর্থ",
+                "নীতি",
+                "বিদ"
+            ]
+        }
+    },
+    "আঁকিয়া": {
+        "numeric_flag": false,
+        "global_index": [
+            [
+                20,
+                25
+            ]
+        ],
+        "verb": {
+            "parent_verb": [
+                "আঁকা"
+            ],
+            "non_finite": true,
+            "related_indices": [
+                [
+                    20,
+                    25
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "pos": [
+            "ক্রিয়া"
+        ],
+        "composite_flag": false
+    },
+    "দেয়া": {
+        "numeric_flag": false,
+        "global_index": [
+            [
+                27,
+                30
+            ]
+        ],
+        "verb": {
+            "parent_verb": [
+                "দেয়ানো"
+            ],
+            "tp": [
+                {
+                    "tense": "bo",
+                    "person": "tu"
+                }
+            ],
+            "related_indices": [
+                [
+                    27,
+                    30
+                ]
+            ],
+            "Language_Form": "standard"
+        },
+        "pos": [
+            "ক্রিয়া",
+            "বিশেষ্য"
+        ],
+        "composite_flag": false
+    },
+    "উচিত": {
+        "numeric_flag": false,
+        "global_index": [
+            [
+                32,
+                35
+            ]
+        ],
+        "pos": [
+            "বিশেষণ"
+        ],
+        "composite_flag": false
+    },
+    "।": {
+        "numeric_flag": false,
+        "global_index": [
+            [
+                36,
+                36
+            ]
+        ],
+        "punctuation_flag": true,
+        "pos": [
+            "punc"
+        ],
+        "composite_flag": false
+    }
+}
