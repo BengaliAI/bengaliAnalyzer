@@ -377,7 +377,7 @@ class BengaliAnalyzer:
 
         return tokens, punctuation_flags
 
-    def analyze_sentence(self, sentence):
+    def analyze_sentence(self, sentence, simplified=True):
 
         flags = []
 
@@ -400,9 +400,9 @@ class BengaliAnalyzer:
         flags.extend(non_verb_flags)
 
         self.composite_words_analyzer.analyze_composite_words(tokens, flags)
-        self.utils.updateLog(tokens)
-        simplifiedJson = self.utils.fixJSONFormat(tokens)
-        return simplifiedJson
+        # self.utils.updateLog(tokens)
+
+        return self.utils.fixJSONFormat(tokens) if simplified else tokens
 
     def analyze_pos(self, sentence):
         bangla_pos_to_english_pos = {
