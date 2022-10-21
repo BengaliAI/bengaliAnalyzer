@@ -220,12 +220,12 @@
             "suffix": null
         }
     },
-    "ও": {
+    "অপরে": {
         "numeric_flag": false,
         "global_index": [
             [
                 30,
-                30
+                33
             ]
         ],
         "punctuation_flag": false,
@@ -246,17 +246,16 @@
             "related_indices": []
         },
         "pronoun": {
-            "pronoun_tag": "Pro.Pers3",
+            "pronoun_tag": "Pro.Het",
             "number_tag": "Sing",
-            "honorificity": "informal",
-            "case": "direct",
-            "proximity": "medial",
-            "encoding": null
+            "honorificity": null,
+            "case": null,
+            "proximity": null,
+            "encoding": null,
+            "index": "1"
         },
         "pos": [
-            "pronoun",
-            "অব্যয়",
-            "বিশেষণ"
+            "pronoun"
         ],
         "composite_flag": false,
         "composite_word": {

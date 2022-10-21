@@ -1,112 +1,112 @@
-pronoun,pronoun_tag,number_tag,honorificity,case,proximity,encoding
-অন্যে,Pro.Het,Sing,,,,
-অপরে,Pro.Het,Sing,,,,
-অমুক,Pro.Het,Sing,,,,
-আপনাকে,Pro.Pers2,Sing,intimate,genitive,None,
-আপনাদের,Pro.Pers2,Plu,intimate,genitive,None,
-আপনাদেরকে,Pro.Pers2,Plu,informal,genitive,None,
-আপনার,Pro.Pers2,Sing,informal,direct,None,
-আপনারা,Pro.Pers2,Plu,informal,objective,None,
-আপনি,Pro.Pers2,Sing,informal,genitive,None,
-আমরা,Pro.Pers1,Plu,None,direct,None,
-আমাকে,Pro.Pers1,Sing,None,objective,None,Pro.Pers1.Sing.Non.obj.Non
-আমাদের,Pro.Pers1,Plu,None,genitive,None,
-আমাদেরকে,Pro.Pers1,Plu,None,objective,None,
-আমার,Pro.Pers1,Sing,None,genitive,None,
-আমি,Pro.Pers1,Sing,None,direct,None,Pro.Pers1.Sing.Non.dir.Non
-ইনি,Pro.Pers3,Sing,formal,genitive,proximal,
-উনি,Pro.Pers3,Sing,formal,genitive,medial,
-এ ,Pro.Dem,Sing,,,,
-এ,Pro.Dem,Sing,informal,direct,None,
-এঁকে / এনাকে / ইনাকে,Pro.Pers3,Sing,formal,direct,proximal,
-এঁদের / এনাদের / ইনাদের ,Pro.Pers3,Plu,formal,objective,proximal,
-এঁদেরকে / এনাদেরকে / ইনাদেরকে,Pro.Pers3,Plu,formal,direct,proximal,
-এঁর / এঁনার / ইনার,Pro.Pers3,Sing,formal,objective,proximal,
-এঁরা / ইনারা,Pro.Pers3,Plu,formal,genitive,proximal,
-একজন,Pro.Indef,Sing,,,,
-একজনকে,Pro.Indef,Sing,,,,
-একটা,Pro.Indef,Sing,,,,
-একটাকে,Pro.Indef,Sing,,,,
-একে,Pro.Pers3,Sing,informal,objective,None,
-এগুলি,Pro.Dem,Plu,,,,
-এগুলো,Pro.Dem,Plu,,,,
-এদের,Pro.Pers3,Plu,informal,genitive,proximal,
-এদেরকে,Pro.Pers3,Plu,informal,objective,proximal,
-এর,Pro.Dem,Sing,informal,genitive,proximal,
-এরা,Pro.Dem,Plu,,,,
-এরা,Pro.Dem,Plu,informal,direct,proximal,
-ও,Pro.Pers3,Sing,informal,direct,medial,
-ওঁকে / ওনাকে / উনাকে,Pro.Pers3,Sing,formal,direct,medial,
-ওঁদের / ওনাদের / উনাদের,Pro.Pers3,Plu,formal,genitive,medial,
-ওঁদেরকে / ওনাদেরকে / উনাদেরকে,Pro.Pers3,Plu,formal,objective,medial,
-ওঁর / ওনাদের / উনাদের,Pro.Pers3,Plu,formal,objective,medial,
-ওঁরা / উনারা,Pro.Pers3,Plu,formal,direct,medial,
-ওই,Pro.Dem,Sing,,,,
-ওকে,Pro.Pers3,Sing,informal,objective,medial,
-ওগুলি,Pro.Dem,Plu,,,,
-ওগুলো,Pro.Dem,Plu,,,,
-ওদের,Pro.Pers3,Plu,informal,objective,medial,
-ওদেরকে,Pro.Pers3,Plu,informal,direct,medial,
-ওর,Pro.Pers3,Sing,informal,genitive,medial,
-ওরা,Pro.Pers3,Plu,informal,direct,medial,
-কাকে,Pro.Inter,Sing,,,,
-কার,Pro.Inter,Sing,,,,
-কারা,Pro.Inter,Plu,,,,
-কিছু,Pro.Indef,Plu,,,,
-কী,Pro.Rel,Sing,,,,
-কে,Pro.Inter,Sing,,,,
-কেউ কেউ,Pro.Indef,Plu,,,,
-কেউ,Pro.Indef,Sing,,,,
-কোথাও,Pro.Indef,Sing,,,,
-তমুক,Pro.Het,Sing,,,,
-তা,Pro.Rel,Sing,,,,
-তাঁকে,Pro.Pers3,Sing,formal,objective,distal,
-তাঁদের,Pro.Pers3,Plu,formal,genitive,distal,
-তাঁদেরকে,Pro.Pers3,Plu,formal,objective,distal,
-তাঁর,Pro.Pers3,Sing,formal,genitive,distal,
-তাঁরা,Pro.Pers3,Plu,formal,direct,distal,
-তাই,Pro.Rel,Sing,,,,
-তাকে,Pro.Pers3,Sing,informal,direct,distal,
-তাদের,Pro.Pers3,Plu,informal,objective,distal,
-তাদেরকে,Pro.Pers3,Plu,informal,direct,distal,
-তার,Pro.Pers3,Sing,informal,objective,distal,
-তারা,Pro.Pers3,Plu,informal,genitive,distal,
-তিনি,Pro.Pers3,Sing,formal,direct,distal,
-তুই,Pro.Pers3,Sing,intimate,direct,None,
-তুমি,Pro.Pers2,Sing,informal,direct,None,
-তেমন,Pro.Rel,Sing,,,,
-তোকে,Pro.Pers3,Sing,intimate,objective,None,
-তোদের,Pro.Pers3,Plu,intimate,genitive,None,
-তোদেরকে,Pro.Pers3,Plu,intimate,objective,None,
-তোমরা,Pro.Pers2,Plu,informal,genitive,None,
-তোমাকে,Pro.Pers2,Sing,informal,objective,None,
-তোমাদের,Pro.Pers2,Plu,informal,objective,None,
-তোমাদেরকে,Pro.Pers2,Plu,informal,direct,None,
-তোমার,Pro.Pers2,Sing,informal,genitive,None,
-তোর,Pro.Pers3,Sing,intimate,genitive,None,
-তোরা,Pro.Pers3,Plu,intimate,direct,None,
-নিজে নিজে,Pro.Ref,Sing,None,,,
-নিজে,Pro.Ref,Sing,None,,,
-নিজেদের,Pro.Ref,Plu,None,,,
-নিজের,Pro.Ref,Sing,None,,,
-নিজেরা নিজেরা,Pro.Rec,Plu,,,,
-নিজেরা,Pro.Ref,Plu,None,,,
-পরস্পর,Pro.Rec,Plu,,,,
-যা,Pro.CoRel,Sing,,,,
-যাকে,Pro.CoRel,Sing,,,,
-যাদের,Pro.CoRel,Plu,,,,
-যার,Pro.CoRel,Sing,,,,
-যে ,Pro.Rel.CoRel,Sing,,,,
-যেটার,Pro.Rel,Sing,,,,
-যেটি,Pro.Rel,Sing,,,,
-যেটির,Pro.Rel,Sing,,,,
-যেমন,Pro.Rel,Sing,,,,
-সকলকে,Pro.Inc,Plu,,,,
-সকলেই,Pro.Inc,Plu,,,,
-সবাই,Pro.Inc,Plu,,,,
-সবাইকে,Pro.Pers3,Plu,None,,,
-সবার,Pro.Inc,Plu,,,,
-সবার,Pro.Pers3,Plu,None,,,
-সে,Pro.Pers3.CoRel,Sing,informal,genitive,distal,
-স্ব স্ব ,Pro.Ref,Sing,None,,,
-স্বয়ং,Pro.Ref,Sing,None,,,
+pronoun,pronoun_tag,number_tag,honorificity,case,proximity,encoding,index
+অন্যে,Pro.Het,Sing,,,,,0
+অপরে,Pro.Het,Sing,,,,,1
+অমুক,Pro.Het,Sing,,,,,2
+আপনাকে,Pro.Pers2,Sing,intimate,genitive,None,,3
+আপনাদের,Pro.Pers2,Plu,intimate,genitive,None,,4
+আপনাদেরকে,Pro.Pers2,Plu,informal,genitive,None,,5
+আপনার,Pro.Pers2,Sing,informal,direct,None,,6
+আপনারা,Pro.Pers2,Plu,informal,objective,None,,7
+আপনি,Pro.Pers2,Sing,informal,genitive,None,,8
+আমরা,Pro.Pers1,Plu,None,direct,None,,9
+আমাকে,Pro.Pers1,Sing,None,objective,None,Pro.Pers1.Sing.Non.obj.Non,10
+আমাদের,Pro.Pers1,Plu,None,genitive,None,,11
+আমাদেরকে,Pro.Pers1,Plu,None,objective,None,,12
+আমার,Pro.Pers1,Sing,None,genitive,None,,13
+আমি,Pro.Pers1,Sing,None,direct,None,Pro.Pers1.Sing.Non.dir.Non,14
+ইনি,Pro.Pers3,Sing,formal,genitive,proximal,,15
+উনি,Pro.Pers3,Sing,formal,genitive,medial,,16
+এ ,Pro.Dem,Sing,,,,,17
+এ,Pro.Dem,Sing,informal,direct,None,,18
+এঁকে / এনাকে / ইনাকে,Pro.Pers3,Sing,formal,direct,proximal,,19
+এঁদের / এনাদের / ইনাদের ,Pro.Pers3,Plu,formal,objective,proximal,,20
+এঁদেরকে / এনাদেরকে / ইনাদেরকে,Pro.Pers3,Plu,formal,direct,proximal,,21
+এঁর / এঁনার / ইনার,Pro.Pers3,Sing,formal,objective,proximal,,22
+এঁরা / ইনারা,Pro.Pers3,Plu,formal,genitive,proximal,,23
+একজন,Pro.Indef,Sing,,,,,24
+একজনকে,Pro.Indef,Sing,,,,,25
+একটা,Pro.Indef,Sing,,,,,26
+একটাকে,Pro.Indef,Sing,,,,,27
+একে,Pro.Pers3,Sing,informal,objective,None,,28
+এগুলি,Pro.Dem,Plu,,,,,29
+এগুলো,Pro.Dem,Plu,,,,,30
+এদের,Pro.Pers3,Plu,informal,genitive,proximal,,31
+এদেরকে,Pro.Pers3,Plu,informal,objective,proximal,,32
+এর,Pro.Dem,Sing,informal,genitive,proximal,,33
+এরা,Pro.Dem,Plu,,,,,34
+এরা,Pro.Dem,Plu,informal,direct,proximal,,35
+ও,Pro.Pers3,Sing,informal,direct,medial,,36
+ওঁকে / ওনাকে / উনাকে,Pro.Pers3,Sing,formal,direct,medial,,37
+ওঁদের / ওনাদের / উনাদের,Pro.Pers3,Plu,formal,genitive,medial,,38
+ওঁদেরকে / ওনাদেরকে / উনাদেরকে,Pro.Pers3,Plu,formal,objective,medial,,39
+ওঁর / ওনাদের / উনাদের,Pro.Pers3,Plu,formal,objective,medial,,40
+ওঁরা / উনারা,Pro.Pers3,Plu,formal,direct,medial,,41
+ওই,Pro.Dem,Sing,,,,,42
+ওকে,Pro.Pers3,Sing,informal,objective,medial,,43
+ওগুলি,Pro.Dem,Plu,,,,,44
+ওগুলো,Pro.Dem,Plu,,,,,45
+ওদের,Pro.Pers3,Plu,informal,objective,medial,,46
+ওদেরকে,Pro.Pers3,Plu,informal,direct,medial,,47
+ওর,Pro.Pers3,Sing,informal,genitive,medial,,48
+ওরা,Pro.Pers3,Plu,informal,direct,medial,,49
+কাকে,Pro.Inter,Sing,,,,,50
+কার,Pro.Inter,Sing,,,,,51
+কারা,Pro.Inter,Plu,,,,,52
+কিছু,Pro.Indef,Plu,,,,,53
+কী,Pro.Rel,Sing,,,,,54
+কে,Pro.Inter,Sing,,,,,55
+কেউ কেউ,Pro.Indef,Plu,,,,,56
+কেউ,Pro.Indef,Sing,,,,,57
+কোথাও,Pro.Indef,Sing,,,,,58
+তমুক,Pro.Het,Sing,,,,,59
+তা,Pro.Rel,Sing,,,,,60
+তাঁকে,Pro.Pers3,Sing,formal,objective,distal,,61
+তাঁদের,Pro.Pers3,Plu,formal,genitive,distal,,62
+তাঁদেরকে,Pro.Pers3,Plu,formal,objective,distal,,63
+তাঁর,Pro.Pers3,Sing,formal,genitive,distal,,64
+তাঁরা,Pro.Pers3,Plu,formal,direct,distal,,65
+তাই,Pro.Rel,Sing,,,,,66
+তাকে,Pro.Pers3,Sing,informal,direct,distal,,67
+তাদের,Pro.Pers3,Plu,informal,objective,distal,,68
+তাদেরকে,Pro.Pers3,Plu,informal,direct,distal,,69
+তার,Pro.Pers3,Sing,informal,objective,distal,,70
+তারা,Pro.Pers3,Plu,informal,genitive,distal,,71
+তিনি,Pro.Pers3,Sing,formal,direct,distal,,72
+তুই,Pro.Pers3,Sing,intimate,direct,None,,73
+তুমি,Pro.Pers2,Sing,informal,direct,None,,74
+তেমন,Pro.Rel,Sing,,,,,75
+তোকে,Pro.Pers3,Sing,intimate,objective,None,,76
+তোদের,Pro.Pers3,Plu,intimate,genitive,None,,77
+তোদেরকে,Pro.Pers3,Plu,intimate,objective,None,,78
+তোমরা,Pro.Pers2,Plu,informal,genitive,None,,79
+তোমাকে,Pro.Pers2,Sing,informal,objective,None,,80
+তোমাদের,Pro.Pers2,Plu,informal,objective,None,,81
+তোমাদেরকে,Pro.Pers2,Plu,informal,direct,None,,82
+তোমার,Pro.Pers2,Sing,informal,genitive,None,,83
+তোর,Pro.Pers3,Sing,intimate,genitive,None,,84
+তোরা,Pro.Pers3,Plu,intimate,direct,None,,85
+নিজে নিজে,Pro.Ref,Sing,None,,,,86
+নিজে,Pro.Ref,Sing,None,,,,87
+নিজেদের,Pro.Ref,Plu,None,,,,88
+নিজের,Pro.Ref,Sing,None,,,,89
+নিজেরা নিজেরা,Pro.Rec,Plu,,,,,90
+নিজেরা,Pro.Ref,Plu,None,,,,91
+পরস্পর,Pro.Rec,Plu,,,,,92
+যা,Pro.CoRel,Sing,,,,,93
+যাকে,Pro.CoRel,Sing,,,,,94
+যাদের,Pro.CoRel,Plu,,,,,95
+যার,Pro.CoRel,Sing,,,,,96
+যে ,Pro.Rel.CoRel,Sing,,,,,97
+যেটার,Pro.Rel,Sing,,,,,98
+যেটি,Pro.Rel,Sing,,,,,99
+যেটির,Pro.Rel,Sing,,,,,100
+যেমন,Pro.Rel,Sing,,,,,101
+সকলকে,Pro.Inc,Plu,,,,,102
+সকলেই,Pro.Inc,Plu,,,,,103
+সবাই,Pro.Inc,Plu,,,,,104
+সবাইকে,Pro.Pers3,Plu,None,,,,105
+সবার,Pro.Inc,Plu,,,,,106
+সবার,Pro.Pers3,Plu,None,,,,107
+সে,Pro.Pers3.CoRel,Sing,informal,genitive,distal,,108
+স্ব স্ব ,Pro.Ref,Sing,None,,,,109
+স্বয়ং,Pro.Ref,Sing,None,,,,110

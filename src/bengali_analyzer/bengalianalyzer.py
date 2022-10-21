@@ -518,6 +518,7 @@ class BengaliAnalyzer:
         pv_file = os.path.join(asset_directory, "parent_verbs.csv")
         sf_file = os.path.join(asset_directory, "suffixes.csv")
         pf_file = os.path.join(asset_directory, "prefixes.csv")
+        # pr_file = os.path.join(asset_directory, "pronouns.csv")
 
         pos_map = {
             "বিশেষণ": 0,
@@ -559,6 +560,29 @@ class BengaliAnalyzer:
             "in": 5,
             "er": 6,
             "eR": 7,
+        }
+
+        pronoun_map = {
+            "pronoun_tag": {
+                "Pro.Het": 0,
+                "Pro.Pers2": 1,
+                "Pro.Pers1": 2,
+                "Pro.Pers3": 3,
+                "Pro.Dem": 4,
+                "Pro.Indef": 5,
+                "Pro.Inter": 6,
+                "Pro.Rel": 7,
+                "Pro.Ref": 8,
+                "Pro.Rec": 9,
+                "Pro.CoRel": 10,
+                "Pro.Rel.CoRel": 11,
+                "Pro.Inc": 12,
+                "Pro.Pers3.CoRel": 13,
+            },
+            "number_tag": {"Sing": 0, "Plu": 1},
+            "honorificity": {"intimate": 0, "informal": 1, "formal": 2},
+            "case": {"genitive": 0, "direct": 1, "objective": 2},
+            "proximity": {"proximal": 0, "medial": 1, "distal": 2},
         }
 
         pos_vect = {}
@@ -605,6 +629,73 @@ class BengaliAnalyzer:
                                         ]
                                     )
                                 break
+
+                if ar in pos_vect:
+                    pos_vect[ar].append(vect)
+                else:
+                    pos_vect[ar] = [vect]
+
+            if "pronoun" in analyzed_res[ar]:
+                vect = [pos_map["pronoun"]]
+
+                case = (
+                    analyzed_res[ar]["pronoun"]["case"]
+                    if "case" in analyzed_res[ar]["pronoun"]
+                    else None
+                )
+                index = (
+                    analyzed_res[ar]["pronoun"]["index"]
+                    if "index" in analyzed_res[ar]["pronoun"]
+                    else None
+                )
+                proximity = (
+                    analyzed_res[ar]["pronoun"]["proximity"]
+                    if "proximity" in analyzed_res[ar]["pronoun"]
+                    else None
+                )
+                number_tag = (
+                    analyzed_res[ar]["pronoun"]["number_tag"]
+                    if "number_tag" in analyzed_res[ar]["pronoun"]
+                    else None
+                )
+                pronoun_tag = (
+                    analyzed_res[ar]["pronoun"]["pronoun_tag"]
+                    if "pronoun_tag" in analyzed_res[ar]["pronoun"]
+                    else None
+                )
+                honorificity = (
+                    analyzed_res[ar]["pronoun"]["honorificity"]
+                    if "honorificity" in analyzed_res[ar]["pronoun"]
+                    else None
+                )
+
+                vect.extend(
+                    [
+                        int(index),
+                        pronoun_map["pronoun_tag"][pronoun_tag]
+                        if pronoun_tag
+                        else None,
+                        pronoun_map["number_tag"][number_tag] if number_tag else None,
+                        pronoun_map["honorificity"][honorificity]
+                        if honorificity
+                        else None,
+                        pronoun_map["case"][case] if case else None,
+                        pronoun_map["proximity"][proximity] if proximity else None,
+                    ]
+                )
+
+                # with open(pr_file, "r", encoding="utf-8") as f:
+                #     lines = f.readlines()
+
+                #     for line in lines:
+                #         p, _, _, _, _, _, _, i = line.split(",")
+
+                #         if ar == p:
+                #             vect.append(
+                #                 int(i),
+                #                 pronoun_map[]
+                #             )
+                #             break
 
                 if ar in pos_vect:
                     pos_vect[ar].append(vect)
@@ -660,14 +751,6 @@ class BengaliAnalyzer:
                             pos_vect[ar].append(vect)
                         else:
                             pos_vect[ar] = [vect]
-
-            if "pronoun" in analyzed_res[ar]:
-                vect = [pos_map["pronoun"], "TODO"]
-
-                if ar in pos_vect:
-                    pos_vect[ar].append(vect)
-                else:
-                    pos_vect[ar] = [vect]
 
         return pos_vect
 
