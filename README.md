@@ -53,7 +53,7 @@ from bengali_analyzer import bengali_analyzer as bla
 
 And then pass the text for analysis.
 
--   For text analyzing:
+-   For text analyzing: [(Preview method details)](./documentation/analyze_sentence.md)
 
 ```python
 tokens = bla.analyze_sentence(text)
@@ -69,6 +69,12 @@ tokens = bla.analyze_pos(text)
 
 ```python
 tokens = bla.lemmatize_sentence(text)
+```
+
+-   For voctorized form: [(Preview method details)](./documentation/vectorized_pos.md)
+
+```python
+tokens = bla.vectorize_pos(text)
 ```
 
 ### Response
@@ -215,6 +221,25 @@ Example:
 ```md
 text : "অর্থনীতিবিদদের ভালো কাজ দেয়া উচিত।"
 respone : ['অর্থনীতিবিদ', 'ভালা/ভালো, 'কাজ', 'দেয়ানো', 'উচিত', '।']
+```
+
+-   For `vectorize_pos(text)`:
+
+Structure :
+
+```python
+dict(str:list(list()))
+```
+
+Example:
+
+```md
+text : "ঢাকা অর্থনৈতিক রাজধানী।"
+respone : 
+{'ঢাকা': [[[4, 185, 3, 3, False]],[1, None, None],[0, None, None],[5, None, None]],
+ 'অর্থনৈতিক': [[0, None, None]],
+ 'রাজধানী': [[1, None, None]]
+ '।': [[6, None, None]]}
 ```
 
 ## Quick Guide
