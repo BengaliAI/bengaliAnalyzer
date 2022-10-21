@@ -2,17 +2,17 @@
 
 This package provides an analyzer for Bengali (Bangla) language. We have gone through a dictionary entry based approach with grammatical sanitizing for this project. Here in our implementation we have 5 different type of entities:
 
-- _Prefix_: _Prefix_ or _উপসর্গ_ is a substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
+-   _Prefix_: _Prefix_ or _উপসর্গ_ is a substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
 
-- _Suffix_: _Suffix_ or _অনুসর্গ_ is a trailing substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
+-   _Suffix_: _Suffix_ or _অনুসর্গ_ is a trailing substring in a word that generally does not hold a meaning of its own but when added to a word that has its own meaning, gets a new definition on it.
 
-- _Verb_: Any word or group of words that describe the action, state or occurrence of an event in a Bengali sentence. For example - খাওয়া, চলে যাওয়া etc. etc
+-   _Verb_: Any word or group of words that describe the action, state or occurrence of an event in a Bengali sentence. For example - খাওয়া, চলে যাওয়া etc. etc
     .
-- _Non-verb_: Any other remaining parts of speech that are not recognized as a verb in a Bengali sentence. For example - আমি, খুব, তারা, বাংলা, বয়স, etc. etc.
+-   _Non-verb_: Any other remaining parts of speech that are not recognized as a verb in a Bengali sentence. For example - আমি, খুব, তারা, বাংলা, বয়স, etc. etc.
 
-- _Special entity_: As the name suggests, a _special entity_ can be a special date (for example, ২১ শে ফেব্রুয়ারী which is the International Mother Language Day), a person (for example - ড. মুহাম্মদ জাফর ইকবাল a famous author of science fictions and well-known professor), institute (for example - জাবি which is the abbreviation of Jahangirnagar University) or any other multi-word single entity.
+-   _Special entity_: As the name suggests, a _special entity_ can be a special date (for example, ২১ শে ফেব্রুয়ারী which is the International Mother Language Day), a person (for example - ড. মুহাম্মদ জাফর ইকবাল a famous author of science fictions and well-known professor), institute (for example - জাবি which is the abbreviation of Jahangirnagar University) or any other multi-word single entity.
 
-- _Composite word_: Our structural definition of composite Bengali word is -
+-   _Composite word_: Our structural definition of composite Bengali word is -
     prefix (optional) + (One or) Multiple stand-alone Bengali words + suffix (optional)
 
 Our package analyzes the given text and returns the word configurations of the text according to the definitions we have chosen to give to the entities which could be present in a bengali sentence.
@@ -53,19 +53,19 @@ from bengali_analyzer import bengali_analyzer as bla
 
 And then pass the text for analysis.
 
-- For text analyzing:
+-   For text analyzing:
 
 ```python
 tokens = bla.analyze_sentence(text)
 ```
 
-- For Parts of Speech tagging:
+-   For Parts of Speech tagging:
 
 ```python
 tokens = bla.analyze_pos(text)
 ```
 
-- For lemma parsing:
+-   For lemma parsing:
 
 ```python
 tokens = bla.lemmatize_sentence(text)
@@ -73,12 +73,12 @@ tokens = bla.lemmatize_sentence(text)
 
 ### Response
 
-- For `analyze_sentence(text)` :
+-   For `analyze_sentence(text)` :
 
 Structure:
 
 ```python
-token = {   
+token = {
             "numeric_flag": bool,
             "global_index": [(int,int)],
             "punctuation_flag": bool,
@@ -128,44 +128,44 @@ text: "অর্থনীতিবিদদের ভালো কাজ দে�
 
 response:
 {'অর্থনীতিবিদদের': {'numeric_flag': False,
-  'global_index': [[0, 13]],
-  'pos': ['বিশেষ্য'],
-  'composite_flag': False,
-  'composite_word': {'suffix': 'দের',
-   'stand_alone_words': ['অর্থ', 'নীতি', 'বিদ']}},
- 'ভালো': {'numeric_flag': False,
-  'global_index': [[15, 18]],
-  'verb': {'parent_verb': ['ভালা'],
-   'tp': [{'tense': 'bo', 'person': 'tm'}, {'tense': 'sb', 'person': 'tm'}],
-   'related_indices': [[15, 18]],
-   'Language_Form': 'standard'},
-  'pos': ['বিশেষ্য', 'বিশেষণ', 'অব্যয়'],
-  'composite_flag': False},
- 'কাজ': {'numeric_flag': False,
-  'global_index': [[20, 22]],
-  'pos': ['বিশেষ্য'],
-  'composite_flag': False},
- 'দেয়া': {'numeric_flag': False,
-  'global_index': [[24, 27]],
-  'verb': {'parent_verb': ['দেয়ানো'],
-   'tp': [{'tense': 'bo', 'person': 'tu'}],
-   'related_indices': [[24, 27]],
-   'Language_Form': 'standard'},
-  'pos': ['বিশেষ্য'],
-  'composite_flag': False},
- 'উচিত': {'numeric_flag': False,
-  'global_index': [[29, 32]],
-  'pos': ['বিশেষণ'],
-  'composite_flag': False},
- '।': {'numeric_flag': False,
-  'global_index': [[33, 33]],
-  'punctuation_flag': True,
-  'pos': ['punc'],
-  'composite_flag': False}}
+'global_index': [[0, 13]],
+'pos': ['বিশেষ্য'],
+'composite_flag': False,
+'composite_word': {'suffix': 'দের',
+'stand_alone_words': ['অর্থ', 'নীতি', 'বিদ']}},
+'ভালো': {'numeric_flag': False,
+'global_index': [[15, 18]],
+'verb': {'parent_verb': ['ভালা'],
+'tp': [{'tense': 'bo', 'person': 'tm'}, {'tense': 'sb', 'person': 'tm'}],
+'related_indices': [[15, 18]],
+'language_form': 'standard'},
+'pos': ['বিশেষ্য', 'বিশেষণ', 'অব্যয়'],
+'composite_flag': False},
+'কাজ': {'numeric_flag': False,
+'global_index': [[20, 22]],
+'pos': ['বিশেষ্য'],
+'composite_flag': False},
+'দেয়া': {'numeric_flag': False,
+'global_index': [[24, 27]],
+'verb': {'parent_verb': ['দেয়ানো'],
+'tp': [{'tense': 'bo', 'person': 'tu'}],
+'related_indices': [[24, 27]],
+'language_form': 'standard'},
+'pos': ['বিশেষ্য'],
+'composite_flag': False},
+'উচিত': {'numeric_flag': False,
+'global_index': [[29, 32]],
+'pos': ['বিশেষণ'],
+'composite_flag': False},
+'।': {'numeric_flag': False,
+'global_index': [[33, 33]],
+'punctuation_flag': True,
+'pos': ['punc'],
+'composite_flag': False}}
 ```
 
-- For `analyze_pos(text)`:
-The the mother list will contain all the tokens and each child list contains the `PoS` taggings of that token.
+-   For `analyze_pos(text)`:
+    The the mother list will contain all the tokens and each child list contains the `PoS` taggings of that token.
 
 Structure :
 
@@ -180,29 +180,29 @@ text: "আমার ফ্যামিলি প্রবলেমের কা�
 
 response:
 {'আমার': {'pos': ['pronoun']},
- 'ফযামিলি': {'pos': ['undefined']},
- 'প্রবলেমের': {'pos': ['undefined']},
- 'কারণে': {'pos': ['undefined']},
- 'কুয়েটে': {'pos': ['undefined']},
- 'পড়াই': {'pos': ['verb']},
- 'হবে': {'pos': ['verb']},
- 'না': {'pos': ['conjunction', 'noun']},
- 'কিন্তু': {'pos': ['conjunction']},
- 'টিউশন': {'pos': ['undefined']},
- 'করে': {'pos': ['verb']},
- 'সাপোর্ট': {'pos': ['undefined']},
- 'লাগবে': {'pos': ['verb']},
- 'এজন্য': {'pos': ['conjunction', 'adverb']},
- 'চুয়েট': {'pos': ['undefined']},
- 'চুজ': {'pos': ['undefined']},
- 'করা': {'pos': ['verb']},
- 'ভুল': {'pos': ['adjective', 'noun']},
- '?': {'pos': ['punctuation']},
- 'খেতে থাকবই': {'pos': ['contentative_verb']},
- 'খেতে থাকব': {'pos': ['contentative_verb']}}
+'ফযামিলি': {'pos': ['undefined']},
+'প্রবলেমের': {'pos': ['undefined']},
+'কারণে': {'pos': ['undefined']},
+'কুয়েটে': {'pos': ['undefined']},
+'পড়াই': {'pos': ['verb']},
+'হবে': {'pos': ['verb']},
+'না': {'pos': ['conjunction', 'noun']},
+'কিন্তু': {'pos': ['conjunction']},
+'টিউশন': {'pos': ['undefined']},
+'করে': {'pos': ['verb']},
+'সাপোর্ট': {'pos': ['undefined']},
+'লাগবে': {'pos': ['verb']},
+'এজন্য': {'pos': ['conjunction', 'adverb']},
+'চুয়েট': {'pos': ['undefined']},
+'চুজ': {'pos': ['undefined']},
+'করা': {'pos': ['verb']},
+'ভুল': {'pos': ['adjective', 'noun']},
+'?': {'pos': ['punctuation']},
+'খেতে থাকবই': {'pos': ['contentative_verb']},
+'খেতে থাকব': {'pos': ['contentative_verb']}}
 ```
 
-- For `lemmatize_sentence(text)`:
+-   For `lemmatize_sentence(text)`:
 
 Structure :
 
@@ -219,25 +219,25 @@ respone : ['অর্থনীতিবিদ', 'ভালা/ভালো, 'ক
 
 ## Quick Guide
 
-- [What does the response mean?](./documentation/response.md)
-- [How do we generate the response?](./documentation/breakdown.md)
+-   [What does the response mean?](./documentation/response.md)
+-   [How do we generate the response?](./documentation/breakdown.md)
 
 ## Team
 
 This tool is developed by people with diverse affiliations. The following are the people behind this effort.
 
-| Name                                                                 | Email                        | Affiliation                                          |
-|----------------------------------------------------------------------|------------------------------|------------------------------------------------------|
-| [Shahriar Elahi Dhruvo](https://www.linkedin.com/in/shahriardhruvo/)                                            | shahriardhruvo119@gmail.com  | Shahjalal University of Science & Technology, Sylhet |
-| [Md. Rakibul Hasan](https://www.linkedin.com/in/rakibulranak/) | rakibulhasanranak1@gmail.com | Shahjalal University of Science & Technology, Sylhet |
-| [Mahfuzur Rahman Emon](https://www.linkedin.com/in/emon-swe-sust/)                                             | emon.swe.sust@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
-| [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)        | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
-| [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)    | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |
-| [Dr. Farig Yousuf Sadeque](https://www.bracu.ac.bd/about/people/farig-yousuf-sadeque)|farigsadeque@gmail.com | BRAC University, Dhaka|
-| [Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541)                                                  |   mamunbd@juniv.edu   | Jahangirnagar University, Dhaka                      |
-| [Asif Shahriyar Shushmit](https://bd.linkedin.com/in/sushmit109)                                          | sushmit@ieee.org             | Bengali.ai                                           |
-| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                                               | showrav.ansary.bd@gmail.com  | BRAC University, Dhaka|
-|[Sazia Mehnaz](https://www.linkedin.com/in/sazia-mehnaz-196756202)|sayma.iict@gmail.com|Bengali.ai|
+| Name                                                                                      | Email                        | Affiliation                                          |
+| ----------------------------------------------------------------------------------------- | ---------------------------- | ---------------------------------------------------- |
+| [Shahriar Elahi Dhruvo](https://www.linkedin.com/in/shahriardhruvo/)                      | shahriardhruvo119@gmail.com  | Shahjalal University of Science & Technology, Sylhet |
+| [Md. Rakibul Hasan](https://www.linkedin.com/in/rakibulranak/)                            | rakibulhasanranak1@gmail.com | Shahjalal University of Science & Technology, Sylhet |
+| [Mahfuzur Rahman Emon](https://www.linkedin.com/in/emon-swe-sust/)                        | emon.swe.sust@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
+| [Fazle Rabbi Rakib](https://www.linkedin.com/in/fazle-rakib/)                             | fazlerakib009@gmail.com      | Shahjalal University of Science & Technology, Sylhet |
+| [Souhardya Saha Dip](https://www.linkedin.com/in/souhardya-saha/)                         | souhardyasaha98@gmail.com    | Shahjalal University of Science & Technology, Sylhet |
+| [Dr. Farig Yousuf Sadeque](https://www.bracu.ac.bd/about/people/farig-yousuf-sadeque)     | farigsadeque@gmail.com       | BRAC University, Dhaka                               |
+| [Mohammad Mamun Or Rashid](https://www.linkedin.com/in/mohammad-mamun-or-rashid-57207541) | mamunbd@juniv.edu            | Jahangirnagar University, Dhaka                      |
+| [Asif Shahriyar Shushmit](https://bd.linkedin.com/in/sushmit109)                          | sushmit@ieee.org             | Bengali.ai                                           |
+| [A. A. Noman Ansary](https://www.linkedin.com/in/showrav-ansary/)                         | showrav.ansary.bd@gmail.com  | BRAC University, Dhaka                               |
+| [Sazia Mehnaz](https://www.linkedin.com/in/sazia-mehnaz-196756202)                        | sayma.iict@gmail.com         | Bengali.ai                                           |
 
 Special thanks to [Md Nazmuddoha Ansary](https://github.com/mnansary) for implementing an open source general purpose [`indic grapheme parser`](https://github.com/mnansary/indicparser) and [`bn unicode normalizer`](https://github.com/mnansary/bnUnicodeNormalizer), which are required dependencies in this tool.
 

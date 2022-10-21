@@ -126,10 +126,8 @@ class VerbAnalyzer:
                                 }
                             )
                             tempTokens = bigrams[0].split()
-                            tokens[tempTokens[0]
-                                   ]["verb"]["contentative_verb"] = True
-                            tokens[tempTokens[1]
-                                   ]["verb"]["contentative_verb"] = True
+                            tokens[tempTokens[0]]["verb"]["contentative_verb"] = True
+                            tokens[tempTokens[1]]["verb"]["contentative_verb"] = True
 
                             non_finte[len(verb_locations) - 1] = [True, True]
                             sentence_x = sentence_x.replace(bigrams[0], "x x")
@@ -147,8 +145,9 @@ class VerbAnalyzer:
             if each in self.data1["word"].values:
                 alreadyFound = True
                 emphasizer_list.append([[None]])
-                negation_list.append(self.data[self.data["word"] ==
-                                               each].values[0][4] == 1)
+                negation_list.append(
+                    self.data[self.data["word"] == each].values[0][4] == 1
+                )
                 verb_locations.append(
                     {
                         "verb": each,
@@ -160,7 +159,7 @@ class VerbAnalyzer:
             if not alreadyFound:
                 # removing last char if it is an emphasis char, and checking the word without it
                 lastChar = each[-1]
-                neg = 'না'
+                neg = "না"
                 if lastChar in emphasizer_characters:
                     temp = each[:-1]
 
@@ -185,7 +184,7 @@ class VerbAnalyzer:
                             "verb": each[:-2],
                             "location": [idx],
                             "original_verb": each,
-                            "negation": True
+                            "negation": True,
                         }
                     )
             non_F = False
@@ -254,8 +253,8 @@ class VerbAnalyzer:
                     "emphasizer": emphasizer_list[i],
                     "tp": tense_person_emp,
                     "non_finite": non_finte[i][0],
-                    "Language_Form": "standard",
-                    "negation": negation_list[i]
+                    "language_form": "standard",
+                    "negation": negation_list[i],
                 }
             )
 
@@ -288,7 +287,7 @@ class VerbAnalyzer:
                 if x["parent_verb"] not in tokens[y]["verb"]["parent_verb"]:
                     tokens[y]["verb"]["parent_verb"].append(x["parent_verb"])
                 # tokens[y]["verb"]["non_finite"] = x["non_finite"]
-                tokens[y]["verb"]["Language_Form"] = x["Language_Form"]
+                tokens[y]["verb"]["language_form"] = x["language_form"]
                 tokens[y]["verb"]["negation"] = x["negation"]
                 tokens[y]["pos"].append("ক্রিয়া")
         return verb_indexes
