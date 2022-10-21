@@ -673,14 +673,20 @@ class BengaliAnalyzer:
                     [
                         int(index),
                         pronoun_map["pronoun_tag"][pronoun_tag]
-                        if pronoun_tag
+                        if pronoun_tag and pronoun_tag in pronoun_map.keys()
                         else None,
-                        pronoun_map["number_tag"][number_tag] if number_tag else None,
+                        pronoun_map["number_tag"][number_tag]
+                        if number_tag and number_tag in pronoun_map.keys()
+                        else None,
                         pronoun_map["honorificity"][honorificity]
-                        if honorificity
+                        if honorificity and honorificity in pronoun_map.keys()
                         else None,
-                        pronoun_map["case"][case] if case else None,
-                        pronoun_map["proximity"][proximity] if proximity else None,
+                        pronoun_map["case"][case]
+                        if case and case in pronoun_map.keys()
+                        else None,
+                        pronoun_map["proximity"][proximity]
+                        if proximity and proximity in pronoun_map.keys()
+                        else None,
                     ]
                 )
 
