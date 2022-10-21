@@ -37,7 +37,7 @@ adverb_response = [ POS_type, verb_id, tense_id, person_id, negation_id]
 puncuation_response = [ POS_type, prefix_id, suffix_id]
 ```
 
-```json
+```md
   tense_map = 
     {   
         "sb": 0,
@@ -54,7 +54,7 @@ puncuation_response = [ POS_type, prefix_id, suffix_id]
     }
 ```
 
-```json
+```md
 person_map = 
     {
         "am": 0,
@@ -68,7 +68,7 @@ person_map =
     }
 ```
 
-```json
+```md
 pronoun_map = 
     "pronoun_tag": {
         "Pro.Het": 0,
@@ -87,15 +87,15 @@ pronoun_map =
         "Pro.Pers3.CoRel": 13,
     }
 ```
-```json
+```md
 number_tag: {"Sing": 0, "Plu": 1},
 ```
-```json
+```md
 honorificity: {"intimate": 0, "informal": 1, "formal": 2},
 ```
-```json
+```md
 case: {"genitive": 0, "direct": 1, "objective": 2},
 ```
-```json
+```md
 proximity: {"proximal": 0, "medial": 1, "distal": 2},
 ```
