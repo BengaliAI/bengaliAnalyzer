@@ -1,36 +1,86 @@
 {
-    "আমি": {
-        "pos": [
-            "pronoun"
-        ]
+    "ঢাকা": {
+        "pos": ["adjective", "verb", "adverb", "noun"]
     },
-    "খাই": {
-        "pos": [
-            "verb",
-            "adverb",
-            "noun"
-        ]
+    "অর্থনীতিবিদদের": {
+        "pos": ["noun"]
     },
-    "খাইনা": {
-        "pos": [
-            "verb"
-        ]
+    "আঁকিয়া": {
+        "pos": ["verb"]
     },
-    "খাবেনা": {
-        "pos": [
-            "verb"
-        ]
+    "দেয়া": {
+        "pos": ["verb", "noun"]
     },
-    "খাবনা": {
-        "pos": [
-            "verb"
-        ]
+    "উচিত": {
+        "pos": ["adjective"]
     },
-    "হেলেননি": {
-        "pos": [
-            "adjective",
-            "verb",
-            "noun"
-        ]
+    "।": {
+        "pos": ["punctuation"]
     }
 }
+
+////////
+"খাবনা": {
+    "numeric_flag": false,
+    "global_index": [
+        [
+            21,
+            25
+        ]
+    ],
+    "punctuation_flag": false,
+    "numeric": {
+        "digit": null,
+        "literal": null,
+        "weight": null,
+        "suffix": []
+    },
+    "verb": {
+        "parent_verb": [
+            "খাওয়া"
+        ],
+        "emphasizer": [
+            null
+        ],
+        "tp": [
+            {
+                "tense": "sv",
+                "person": "am"
+            }
+        ],
+        "non_finite": false,
+        "contentative_verb": false,
+        "negation": true,
+        "form": null,
+        "related_indices": [
+            [
+                21,
+                25
+            ]
+        ],
+        "Language_Form": "standard"
+    },
+    "pronoun": {
+        "pronoun_tag": null,
+        "number_tag": null,
+        "honorificity": null,
+        "case": null,
+        "proximity": null,
+        "encoding": null
+    },
+    "pos": [
+        "ক্রিয়া"
+    ],
+    "composite_flag": false,
+    "composite_word": {
+        "suffix": null,
+        "prefix": null,
+        "stand_alone_words": []
+    },
+    "special_entity": {
+        "definition": null,
+        "related_indices": [],
+        "space_indices": [],
+        "suffix": null
+    }
+},

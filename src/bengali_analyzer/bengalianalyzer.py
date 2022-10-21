@@ -1,6 +1,7 @@
 import copy
 import os
 import string
+from numpy import append
 import pandas
 import json
 import csv
@@ -189,8 +190,7 @@ def load_data():
 
     # Generate verb data
     verb_data = os.path.join(asset_directory, "verbs.csv")
-    nonFiniteVerb_data = os.path.join(
-        asset_directory, "banglaNonFiniteVerbs.csv")
+    nonFiniteVerb_data = os.path.join(asset_directory, "banglaNonFiniteVerbs.csv")
     verb_data, verb_data_1, verb_data_2, non_finite_verbs = prepare_verb_data(
         verb_data, nonFiniteVerb_data
     )
@@ -204,12 +204,10 @@ def load_data():
     pronoun_data = prepare_pronoun_data(pronoun_data)
 
     # Generate other data,
-    not_to_be_broken_file = os.path.join(
-        asset_directory, "not_to_be_broken.txt")
+    not_to_be_broken_file = os.path.join(asset_directory, "not_to_be_broken.txt")
     suffix_file = os.path.join(asset_directory, "suffixes.csv")
     prefix_file = os.path.join(asset_directory, "prefixes.csv")
-    special_suffixes_file = os.path.join(
-        asset_directory, "special_suffixes.csv")
+    special_suffixes_file = os.path.join(asset_directory, "special_suffixes.csv")
 
     special_suffixes = prepare_special_suffixes(special_suffixes_file)
     not_to_be_broken = generate_special_entity(not_to_be_broken_file)
@@ -226,8 +224,7 @@ class BengaliAnalyzer:
         THIS_DIR = os.path.dirname(os.path.abspath(__file__))
         ASSET_DIR = os.path.join(THIS_DIR, "assets" + os.sep)
 
-        normalize_assets.normalize(
-            file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
+        normalize_assets.normalize(file_dir=ASSET_DIR, ignore_files=IGNORE_FILES)
 
         load_data()
 
@@ -332,7 +329,7 @@ class BengaliAnalyzer:
             "<",
             ">",
             "/",
-            "\\"
+            "\\",
         }
 
         string_buffer = ""
@@ -354,8 +351,7 @@ class BengaliAnalyzer:
                         if string_buffer not in tokens.keys():
                             tokens[string_buffer] = copy.deepcopy(token)
                         tokens[string_buffer]["punctuation_flag"] = False
-                        tokens[string_buffer]["global_index"].append(
-                            global_index)
+                        tokens[string_buffer]["global_index"].append(global_index)
             else:
                 if string_buffer != "":
                     string_buffer = normalize_token(string_buffer)
@@ -421,7 +417,7 @@ class BengaliAnalyzer:
             "kriya": "verb",
             "bisheshon": "adjective",
             "pronoun": "pronoun",
-            "verb": "verb"
+            "verb": "verb",
         }
 
         analyzed_res = self.analyze_sentence(sentence)
@@ -494,10 +490,12 @@ class BengaliAnalyzer:
                     already_covered_words.append(global_index)
                     if type(global_index) is list:
                         word_objects.append(
-                            {"pos": pos, "index": global_index[0], "word": word})
+                            {"pos": pos, "index": global_index[0], "word": word}
+                        )
                     else:
                         word_objects.append(
-                            {"pos": pos, "index": global_index, "word": word})
+                            {"pos": pos, "index": global_index, "word": word}
+                        )
 
         word_objects.sort(key=self.utils.sortFunc)
 
@@ -511,10 +509,167 @@ class BengaliAnalyzer:
             for u in uniquePos:
                 entry["pos"].append(u)
 
-            pos_dict[entry["word"]] = {
-                "pos": entry["pos"]
-            }
+            pos_dict[entry["word"]] = {"pos": entry["pos"]}
         return pos_dict
+
+    def vectorize_pos(self, sentence):
+        path = os.path.dirname(os.path.abspath(__file__))
+        asset_directory = os.path.join(path, "assets")
+        pv_file = os.path.join(asset_directory, "parent_verbs.csv")
+        sf_file = os.path.join(asset_directory, "suffixes.csv")
+        pf_file = os.path.join(asset_directory, "prefixes.csv")
+
+        pos_map = {
+            "বিশেষণ": 0,
+            "bisheshon": 0,
+            "বিশেষ্য": 1,
+            "noun": 1,
+            "সর্বনাম": 2,
+            "pronoun": 2,
+            "অব্যয়": 3,
+            "obboy": 3,
+            "ক্রিয়া": 4,
+            "kriya": 4,
+            "verb": 4,
+            "ক্রিয়াবিশেষণ": 5,
+            "ক্রিয়াবিশেষ্য": 5,
+            "punc": 6,
+        }
+
+        tense_map = {
+            "sb": 0,
+            "gb": 1,
+            "pb": 2,
+            "bo": 3,
+            "so": 4,
+            "no": 5,
+            "go": 6,
+            "po": 7,
+            "sv": 8,
+            "gv": 9,
+            "vo": 10,
+        }
+
+        person_map = {
+            "am": 0,
+            "ap": 1,
+            "tm": 2,
+            "tu": 3,
+            "ae": 4,
+            "in": 5,
+            "er": 6,
+            "eR": 7,
+        }
+
+        pos_vect = {}
+        analyzed_res = self.analyze_sentence(sentence)
+
+        for ar in analyzed_res.keys():
+            if "verb" in analyzed_res[ar]:
+                vect = []
+                tps = (
+                    analyzed_res[ar]["verb"]["tp"]
+                    if "tp" in analyzed_res[ar]["verb"]
+                    else None
+                )
+                ng = "negation" in analyzed_res[ar]["verb"]
+                pvs = analyzed_res[ar]["verb"]["parent_verb"]
+
+                with open(pv_file, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+
+                    for pv in pvs:
+                        for line in lines:
+                            v, i = line.split(",")
+
+                            if pv == v:
+                                if tps:
+                                    for tp in tps:
+                                        vect.append(
+                                            [
+                                                pos_map["verb"],
+                                                int(i[:-1]),
+                                                tense_map[tp["tense"]],
+                                                person_map[tp["person"]],
+                                                ng,
+                                            ]
+                                        )
+                                else:
+                                    vect.append(
+                                        [
+                                            pos_map["verb"],
+                                            int(i[:-1]),
+                                            None,
+                                            None,
+                                            ng,
+                                        ]
+                                    )
+                                break
+
+                if ar in pos_vect:
+                    pos_vect[ar].append(vect)
+                else:
+                    pos_vect[ar] = [vect]
+
+            if "pos" in analyzed_res[ar]:
+                for pos in analyzed_res[ar]["pos"]:
+                    if pos not in ["ক্রিয়া", "pronoun"]:
+                        vect = [pos_map[pos]]
+                        sf, pf = None, None
+
+                        if "composite_word" in analyzed_res[ar]:
+                            if "suffix" in analyzed_res[ar]["composite_word"]:
+                                sf = analyzed_res[ar]["composite_word"]["suffix"]
+
+                            if "prefix" in analyzed_res[ar]["composite_word"]:
+                                pf = analyzed_res[ar]["composite_word"]["prefix"]
+
+                        if pf:
+                            tmp = None
+                            with open(pf_file, "r", encoding="utf-8") as f:
+                                lines = f.readlines()
+
+                                for line in lines:
+                                    p, i, _ = line.split(",")
+
+                                    if pf == p:
+                                        tmp = int(i)
+                                        break
+
+                            vect.append(tmp)
+                        else:
+                            vect.append(None)
+
+                        if sf:
+                            tmp = None
+                            with open(sf_file, "r", encoding="utf-8") as f:
+                                lines = f.readlines()
+
+                                for line in lines:
+                                    s, i, _ = line.split(",")
+
+                                    if sf == s:
+                                        tmp = int(i)
+                                        break
+
+                            vect.append(tmp)
+                        else:
+                            vect.append(None)
+
+                        if ar in pos_vect:
+                            pos_vect[ar].append(vect)
+                        else:
+                            pos_vect[ar] = [vect]
+
+            if "pronoun" in analyzed_res[ar]:
+                vect = [pos_map["pronoun"], "TODO"]
+
+                if ar in pos_vect:
+                    pos_vect[ar].append(vect)
+                else:
+                    pos_vect[ar] = [vect]
+
+        return pos_vect
 
     def lemmatize_sentence(self, sentence, pure_lemmatize=True):
         # res = self.utils.sortResponse(res)
@@ -575,8 +730,7 @@ class BengaliAnalyzer:
                                 words.append(composite_word)
                         else:
                             if "prefix" in word_obj["composite_word"]:
-                                words.append(
-                                    word_obj["composite_word"]["prefix"])
+                                words.append(word_obj["composite_word"]["prefix"])
 
                             if "stand_alone_words" in word_obj["composite_word"]:
                                 words.append(
@@ -584,22 +738,19 @@ class BengaliAnalyzer:
                                 )
 
                             if "suffix" in word_obj["composite_word"]:
-                                words.append(
-                                    word_obj["composite_word"]["suffix"])
+                                words.append(word_obj["composite_word"]["suffix"])
 
                     else:
                         if special_entity_suffix != "":
-                            word = word[0: -len(special_entity_suffix)]
+                            word = word[0 : -len(special_entity_suffix)]
                         words.append(word)
 
                     already_covered_words.append(global_index)
 
                     if type(global_index) is list:
-                        word_objects.append(
-                            {"lemma": words, "index": global_index[0]})
+                        word_objects.append({"lemma": words, "index": global_index[0]})
                     else:
-                        word_objects.append(
-                            {"lemma": words, "index": global_index})
+                        word_objects.append({"lemma": words, "index": global_index})
 
         word_objects.sort(key=self.utils.sortFunc)
 
